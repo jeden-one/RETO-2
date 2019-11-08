@@ -1,4 +1,4 @@
-<script src="CryptoJS%20v3.1.2/rollups/aes.js"></script>
+<script src="../../librerias/CryptoJS%20v3.1.2/rollups/aes.js"></script>
 <script>
     /**
      * encriptar un string mediante una clave
