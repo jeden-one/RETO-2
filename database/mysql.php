@@ -38,7 +38,7 @@ function close($dbh)
 function searchSubcategoriaAll($dbh)
 {
     $stmt = $dbh->prepare("SELECT s.id id_subcategoria, s.nombre subcategoria, c.id id_Categoria, c.nombre categoria
-FROM Subcategorias s, Categorias c
+FROM subcategorias s, categorias c
 WHERE c.id=s.id_categoria;");
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -57,7 +57,7 @@ function searchSubcategoriaOne($dbh, $nombre)
         'nombre' => $nombre,
     );
     $stmt = $dbh->prepare("SELECT s.id id_subcategoria, s.nombre subcategoria, c.id id_Categoria, c.nombre categoria
-FROM Subcategorias s, Categorias c
+FROM subcategorias s, categorias c
 WHERE c.id=s.id_categoria AND s.nombre=:nombre;");
     $stmt->execute($data);
     return $stmt->fetchObject();
@@ -71,7 +71,7 @@ WHERE c.id=s.id_categoria AND s.nombre=:nombre;");
  */
 function searchCategoriaAll($dbh)
 {
-    $stmt = $dbh->prepare("SELECT id, nombre FROM Categoria;");
+    $stmt = $dbh->prepare("SELECT id, nombre FROM categorias;");
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_OBJ);
 }
@@ -88,7 +88,7 @@ function searchCategoriaOne($dbh, $nombre)
     $data = array(
         'nombre' => $nombre,
     );
-    $stmt = $dbh->prepare("SELECT id, nombre FROM Categorias WHERE nombre=:nombre;");
+    $stmt = $dbh->prepare("SELECT id, nombre FROM categorias WHERE nombre=:nombre;");
     $stmt->execute($data);
     return $stmt->fetchObject();
 }
@@ -102,7 +102,7 @@ function searchCategoriaOne($dbh, $nombre)
 function searchAnuncioAll($dbh)
 {
     $stmt = $dbh->prepare("SELECT id, titulo, descripcion, foto, s.nombre subcategoria, c.nombre categria, usuario 
-FROM Anuncios a, Subcategorias s, Categorias c, Usuarios u 
+FROM anuncios a, subcategorias s, categorias c, usuarios u 
 WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario;");
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -121,7 +121,7 @@ function searchAnuncioByTitulo($dbh, $titulo)
         'titulo' => $titulo,
     );
     $stmt = $dbh->prepare("SELECT id, titulo, descripcion, foto, s.nombre subcategoria, c.nombre categria, usuario 
-FROM Anuncios a, Subcategorias s, Categorias c, Usuarios u 
+FROM anuncios a, subcategorias s, categorias c, usuarios u 
 WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario AND titulo=:titulo;");
     $stmt->execute($data);
     return $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -140,7 +140,7 @@ function searchAnuncioByUsuario($dbh, $id_usuario)
         'id_usuario' => $id_usuario,
     );
     $stmt = $dbh->prepare("SELECT id, titulo, descripcion, foto, s.nombre subcategoria, c.nombre categria, usuario 
-FROM Anuncios a, Subcategorias s, Categorias c, Usuarios u 
+FROM anuncios a, subcategorias s, categorias c, usuarios u 
 WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario AND id_usuario=:id_usuario;");
     $stmt->execute($data);
     return $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -159,7 +159,7 @@ function searchAnuncioBySubcategoria($dbh, $id_subcategoria)
         'id_subcategoria' => $id_subcategoria,
     );
     $stmt = $dbh->prepare("SELECT id, titulo, descripcion, foto, s.nombre subcategoria, c.nombre categria, usuario 
-FROM Anuncios a, Subcategorias s, Categorias c, Usuarios u 
+FROM anuncios a, subcategorias s, categorias c, usuarios u 
 WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario AND id_subcategoria=:id_subcategoria;");
     $stmt->execute($data);
     return $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -178,7 +178,7 @@ function searchAnuncioByCategoria($dbh, $id_categoria)
         'id_categoria' => $id_categoria,
     );
     $stmt = $dbh->prepare("SELECT id, titulo, descripcion, foto, s.nombre subcategoria, c.nombre categria, usuario 
-FROM Anuncios a, Subcategorias s, Categorias c, Usuarios u 
+FROM anuncios a, subcategorias s, categorias c, usuarios u 
 WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario AND id_categoria=:id_categoria;");
     $stmt->execute($data);
     return $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -192,7 +192,7 @@ WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario AND i
  */
 function searchUsuarioAll($dbh)
 {
-    $stmt = $dbh->prepare("SELECT id, usuario FROM Usuarios;");
+    $stmt = $dbh->prepare("SELECT id, usuario FROM usuarios;");
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_OBJ);
 }
@@ -209,7 +209,7 @@ function searchUsuarioOne($dbh, $usuario)
     $data = array(
         'usuario' => $usuario,
     );
-    $stmt = $dbh->prepare("SELECT id, usuario FROM Usuarios WHERE usuario=:usuario;");
+    $stmt = $dbh->prepare("SELECT id, usuario FROM usuarios WHERE usuario=:usuario;");
     $stmt->execute($data);
     return $stmt->fetchObject();
 }
@@ -223,7 +223,7 @@ function searchUsuarioOne($dbh, $usuario)
  */
 function insertAnuncio($dbh, $data)
 {
-    $stmt = $dbh->prepare("INSERT INTO Anuncios(titulo,descripcion,foto,id_subcategoria,id_usuario)
+    $stmt = $dbh->prepare("INSERT INTO anuncios(titulo,descripcion,foto,id_subcategoria,id_usuario)
     VALUES (:titulo,:descripcion,:foto,:id_subcategoria,:id_usuario);");
     $stmt->execute($data);
     return $stmt->rowCount();
@@ -241,7 +241,7 @@ function deleteAnuncio($dbh, $id)
     $data = array(
         'id' => $id,
     );
-    $stmt = $dbh->prepare("DELETE FROM Anuncios WHERE id=:id;");
+    $stmt = $dbh->prepare("DELETE FROM anuncios WHERE id=:id;");
     $stmt->execute($data);
     return $stmt->rowCount();
 }
@@ -255,9 +255,16 @@ function deleteAnuncio($dbh, $id)
  */
 function updateAnuncioOne($dbh, $data)
 {
-    $stmt = $dbh->prepare("UPDATE Anuncios 
+    $stmt = $dbh->prepare("UPDATE anuncios 
 SET titulo=:titulo,descripcion=:descripcion, foto=:foto, id_subcategoria=:id_subcategoria,id_usuario=:usuario
 where id=:id;");
     $stmt->execute($data);
     return $stmt->rowCount();
+}
+
+$dbh=connect();
+$categorias=searchCategoriaAll($dbh);
+foreach ($categorias as $value){
+    echo $value->id;
+    echo $value->nombre;
 }
