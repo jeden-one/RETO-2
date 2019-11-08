@@ -10,7 +10,7 @@ USE proyecto_ajebask;
 
 CREATE TABLE Usuarios (
 	id int NOT NULL AUTO_INCREMENT,
-	usuario varchar(50) NOT NULL,
+	usuario varchar(50) NOT NULL UNIQUE,
 	password varchar(50) NOT NULL,
 	PRIMARY KEY (id)
 );
@@ -19,7 +19,7 @@ CREATE TABLE Usuarios (
 
 CREATE TABLE Categorias (
 	id int NOT NULL AUTO_INCREMENT,
-	nombre varchar(50) NOT NULL,
+	nombre varchar(50) NOT NULL UNIQUE,
 	PRIMARY KEY (id)
 );
 
@@ -27,7 +27,7 @@ CREATE TABLE Categorias (
 
 CREATE TABLE Subcategorias (
 	id int NOT NULL AUTO_INCREMENT,
-	nombre varchar(50) NOT NULL,
+	nombre varchar(50) NOT NULL UNIQUE,
 	id_categoria int NOT NULL,
 	PRIMARY KEY(id),
 	CONSTRAINT Subcategorias_Categorias_FK FOREIGN KEY (id_categoria) REFERENCES Categorias (id)
@@ -38,7 +38,7 @@ CREATE TABLE Subcategorias (
 CREATE TABLE Anuncios (
 	id int NOT NULL AUTO_INCREMENT,
 	titulo varchar(50) NOT NULL,
-	descripción varchar(500) NOT NULL,
+	descripcion varchar(500) NOT NULL,
 	foto varchar(200) NULL,
 	id_subcategoria int NOT NULL,
 	id_usuario int NOT NULL,
@@ -82,15 +82,15 @@ INSERT INTO Subcategorias (nombre,id_categoria) VALUES ('sub9',3);
 
 /*INSERTAR ANUNCIOS*/
 
-INSERT INTO Anuncios (titulo, descripción,id_subcategoria,id_usuario) VALUES
+INSERT INTO Anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
 ('Vendo coches', 'cosas de vender coches', 1,1);
-INSERT INTO Anuncios (titulo, descripción,id_subcategoria,id_usuario) VALUES
+INSERT INTO Anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
 ('Ps4 chachi', 'cosas de afasfafsafasfgasga', 3,3);
-INSERT INTO Anuncios (titulo, descripción,id_subcategoria,id_usuario) VALUES
+INSERT INTO Anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
 ('Barcos virtuales', 'cosas de barcos bien chulos', 8,2);
-INSERT INTO Anuncios (titulo, descripción,id_subcategoria,id_usuario) VALUES
+INSERT INTO Anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
 ('rpg barato', 'para usar con tu vecino', 6,1);
-INSERT INTO Anuncios (titulo, descripción,id_subcategoria,id_usuario) VALUES
+INSERT INTO Anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
 ('Teles random', 'tele plasma lap', 3,3);
-INSERT INTO Anuncios (titulo, descripción,id_subcategoria,id_usuario) VALUES
+INSERT INTO Anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
 ('Calzoncillos', 'estas usados', 5,3);
