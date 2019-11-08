@@ -71,7 +71,7 @@ WHERE c.id=s.id_categoria AND s.nombre=:nombre;");
  */
 function searchCategoriaAll($dbh)
 {
-    $stmt = $dbh->prepare("SELECT id, nombre FROM Categoria;");
+    $stmt = $dbh->prepare("SELECT id, nombre FROM Categorias;");
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_OBJ);
 }
@@ -260,4 +260,11 @@ SET titulo=:titulo,descripcion=:descripcion, foto=:foto, id_subcategoria=:id_sub
 where id=:id;");
     $stmt->execute($data);
     return $stmt->rowCount();
+}
+
+$dbh=connect();
+$categorias=searchCategoriaAll($dbh);
+foreach ($categorias as $value){
+    echo $value->id;
+    echo $value->nombre;
 }
