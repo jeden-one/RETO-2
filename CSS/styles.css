@@ -62,7 +62,7 @@ footer a img {
 }
 
 
-/* REGISTRO.HTML */
+/* REGISTRO.PHP y LOGIN.PHP */
 
 #contenedor2 {
     height: 130%;
@@ -128,7 +128,7 @@ form input[type="button"] {
 }
 
 
-/* INDEX.HTML */
+/* INDEX.PHP */
 
 #contenedor {
     display: grid;
@@ -147,7 +147,7 @@ nav {
 
 nav input[type="text"] {
     width: 75%;
-    background: url("lupa.svg") no-repeat 7px;
+    background: url("../img/lupa.svg") no-repeat 7px;
     padding: 5px;
     padding-left: 40px;
 }
