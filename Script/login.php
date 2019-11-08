@@ -2,9 +2,9 @@
 
 <form>
     <h1>Inica sesión y empieza a publicitar tus productos </h1>
-    <input type="text" placeholder="Usuario">
-    <input type="text" placeholder="Contraseña">
-    <input type="button" value="Iniciar sesión">
+    <input type="text" id="usuario" placeholder="Usuario">
+    <input type="text" id="pass" placeholder="Contraseña">
+    <input type="submit" id="login" value="Iniciar sesión">
 
     <div id="separar"></div>
 
@@ -14,5 +14,5 @@
     </div>
 
 </form>
-
+<script src="login.js"></script>
 <?php include("Includes/inc_footer")?>
