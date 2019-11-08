@@ -8,7 +8,7 @@
 function connect()
 {
     $dbname = 'proyecto_ajebask';
-    $host = 'localhost';
+    $host = '172.20.224.133';
     $user = 'root';
     $pass = '';
     try {
@@ -71,7 +71,7 @@ WHERE c.id=s.id_categoria AND s.nombre=:nombre;");
  */
 function searchCategoriaAll($dbh)
 {
-    $stmt = $dbh->prepare("SELECT id, nombre FROM Categoria;");
+    $stmt = $dbh->prepare("SELECT id, nombre FROM Categorias;");
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_OBJ);
 }
