@@ -22,7 +22,7 @@ header {
 
 header p {
     margin: 0;
-    font-size: 30px;
+    font-size: 24px;
 }
 
 header img {
@@ -61,7 +61,46 @@ footer a img {
     width: 100%;
 }
 
+#contenedor {
+    display: grid;
+    grid-template-rows: 25% 15% 70% 14%;
+    grid-template-columns: 100%;
+}
 
+/* CATEGORIA.PHP */
+#anuncios {
+    background-color: #cececa;
+    padding: 20px;
+    grid-template-columns: 1/2;
+    grid-template-rows: 3/4;
+}
+
+.anuncio {
+    padding: 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.anuncio > * {
+    width: 100%;
+}
+
+.anuncio img {
+    width: 75%;
+}
+
+.anuncio p {
+    line-height: 1.5em;
+    width: 100%;
+    font-size: 20px;
+}
+
+.anuncio h2 {
+    margin: 0;
+}
 /* REGISTRO.PHP y LOGIN.PHP */
 
 #contenedor2 {
@@ -129,13 +168,6 @@ form input[type="button"] {
 
 
 /* INDEX.PHP */
-
-#contenedor {
-    display: grid;
-    grid-template-rows: 25% 15% 70% 14%;
-    grid-template-columns: 100%;
-}
-
 nav {
     grid-column: 1/2;
     grid-row: 2/3;
