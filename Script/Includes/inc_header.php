@@ -6,14 +6,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../../CSS/styles.css">
+    <link rel="stylesheet" href="../../CSS/index.css">
     <script src="../index.js"></script>
 </head>
 
 <body>
 <div id="contenedor">
     <header id="header">
-        <img src="ajebask.jpeg">
+        <img src="../../img/ajebask.jpeg">
         <p>Mas de "numero" de anuncios publicados en nuestra pagina web</p>
     </header>
 

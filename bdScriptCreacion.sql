@@ -6,36 +6,36 @@ USE proyecto_ajebask;
 
 /*————————————————CREAR TABLAS————————————————————*/
 
-/*CREAR TABLA USUARIOS*/
+/*CREAR TABLA usuarios*/
 
-CREATE TABLE Usuarios (
+CREATE TABLE usuarios (
 	id int NOT NULL AUTO_INCREMENT,
 	usuario varchar(50) NOT NULL UNIQUE,
 	password varchar(50) NOT NULL,
 	PRIMARY KEY (id)
 );
 
-/*CREAR TABLA CATEGORIAS*/
+/*CREAR TABLA categorias*/
 
-CREATE TABLE Categorias (
+CREATE TABLE categorias (
 	id int NOT NULL AUTO_INCREMENT,
 	nombre varchar(50) NOT NULL UNIQUE,
 	PRIMARY KEY (id)
 );
 
-/*CREAR TABLA SUBCATEGORIAS*/
+/*CREAR TABLA subcategorias*/
 
-CREATE TABLE Subcategorias (
+CREATE TABLE subcategorias (
 	id int NOT NULL AUTO_INCREMENT,
 	nombre varchar(50) NOT NULL UNIQUE,
 	id_categoria int NOT NULL,
 	PRIMARY KEY(id),
-	CONSTRAINT Subcategorias_Categorias_FK FOREIGN KEY (id_categoria) REFERENCES Categorias (id)
+	CONSTRAINT subcategorias_categorias_FK FOREIGN KEY (id_categoria) REFERENCES categorias (id)
 );
 
-/*CREAR TABLA ANUNCIOS*/
+/*CREAR TABLA anuncios*/
 
-CREATE TABLE Anuncios (
+CREATE TABLE anuncios (
 	id int NOT NULL AUTO_INCREMENT,
 	titulo varchar(50) NOT NULL,
 	descripcion varchar(500) NOT NULL,
@@ -43,54 +43,54 @@ CREATE TABLE Anuncios (
 	id_subcategoria int NOT NULL,
 	id_usuario int NOT NULL,
 	PRIMARY KEY(id),
-	CONSTRAINT Anuncios_Subcategorias_FK FOREIGN KEY (id_subcategoria) REFERENCES
-Subcategorias (id),
-	CONSTRAINT Anuncios_Usuarios_FK FOREIGN KEY (id_usuario) REFERENCES Usuarios (id)
+	CONSTRAINT anuncios_subcategorias_FK FOREIGN KEY (id_subcategoria) REFERENCES
+subcategorias (id),
+	CONSTRAINT anuncios_usuarios_FK FOREIGN KEY (id_usuario) REFERENCES usuarios (id)
 );
 
 /*————————————————CREAR INSERTS————————————————————*/
 
-/*INSERTAR USUARIOS*/
+/*INSERTAR usuarios*/
 
-INSERT INTO Usuarios (usuario,password) VALUES ('usuario1', 123);
-INSERT INTO Usuarios (usuario,password) VALUES ('usuario2', 123);
-INSERT INTO Usuarios (usuario,password) VALUES ('usuario3', 123);
-INSERT INTO Usuarios (usuario,password) VALUES ('usuario4', 123);
-INSERT INTO Usuarios (usuario,password) VALUES ('usuario5', 123);
+INSERT INTO usuarios (usuario,password) VALUES ('usuario1', 123);
+INSERT INTO usuarios (usuario,password) VALUES ('usuario2', 123);
+INSERT INTO usuarios (usuario,password) VALUES ('usuario3', 123);
+INSERT INTO usuarios (usuario,password) VALUES ('usuario4', 123);
+INSERT INTO usuarios (usuario,password) VALUES ('usuario5', 123);
 
-/*INSERTAR CATEGORIAS*/
+/*INSERTAR categorias*/
 
-INSERT INTO Categorias(nombre) Values ('categoria1');
-INSERT INTO Categorias(nombre) Values ('categoria2');
-INSERT INTO Categorias(nombre) Values ('categoria3');
-INSERT INTO Categorias(nombre) Values ('categoria4');
-INSERT INTO Categorias(nombre) Values ('categoria5');
-INSERT INTO Categorias(nombre) Values ('categoria6');
-INSERT INTO Categorias(nombre) Values ('categoria7');
+INSERT INTO categorias(nombre) Values ('categoria1');
+INSERT INTO categorias(nombre) Values ('categoria2');
+INSERT INTO categorias(nombre) Values ('categoria3');
+INSERT INTO categorias(nombre) Values ('categoria4');
+INSERT INTO categorias(nombre) Values ('categoria5');
+INSERT INTO categorias(nombre) Values ('categoria6');
+INSERT INTO categorias(nombre) Values ('categoria7');
 
-/*INSERTAR SUBCATEGORIAS*/
+/*INSERTAR subcategorias*/
 
-INSERT INTO Subcategorias (nombre,id_categoria) VALUES ('sub1',1);
-INSERT INTO Subcategorias (nombre,id_categoria) VALUES ('sub2',1);
-INSERT INTO Subcategorias (nombre,id_categoria) VALUES ('sub3',2);
-INSERT INTO Subcategorias (nombre,id_categoria) VALUES ('sub4',3);
-INSERT INTO Subcategorias (nombre,id_categoria) VALUES ('sub5',4);
-INSERT INTO Subcategorias (nombre,id_categoria) VALUES ('sub6',4);
-INSERT INTO Subcategorias (nombre,id_categoria) VALUES ('sub7',5);
-INSERT INTO Subcategorias (nombre,id_categoria) VALUES ('sub8',2);
-INSERT INTO Subcategorias (nombre,id_categoria) VALUES ('sub9',3);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('sub1',1);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('sub2',1);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('sub3',2);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('sub4',3);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('sub5',4);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('sub6',4);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('sub7',5);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('sub8',2);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('sub9',3);
 
-/*INSERTAR ANUNCIOS*/
+/*INSERTAR anuncios*/
 
-INSERT INTO Anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
 ('Vendo coches', 'cosas de vender coches', 1,1);
-INSERT INTO Anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
 ('Ps4 chachi', 'cosas de afasfafsafasfgasga', 3,3);
-INSERT INTO Anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
 ('Barcos virtuales', 'cosas de barcos bien chulos', 8,2);
-INSERT INTO Anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
 ('rpg barato', 'para usar con tu vecino', 6,1);
-INSERT INTO Anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
 ('Teles random', 'tele plasma lap', 3,3);
-INSERT INTO Anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
 ('Calzoncillos', 'estas usados', 5,3);
