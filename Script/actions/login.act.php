@@ -5,6 +5,7 @@ if (isset($_POST["usuario"]) && isset($_POST["pass"])) {
     $usuario = $_POST["usuario"];
     $dbh = connect();
     $resultado = searchUsuarioAndPassword($dbh, $usuario, $pass);
+    close($dbh);
     if ($resultado == false) {
         echo 'datos erroneos';
         header("location: ../login.php?error=1");
