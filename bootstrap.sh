@@ -3,7 +3,7 @@
 apt-get update
 
 # unzip is for composer
-apt-get install vim unzip  -y
+apt-get install vim unzip -y
 
 apt-get install apache2 -y
 
@@ -17,13 +17,13 @@ apt-get install --reinstall ca-certificates -y
 apt-get install php-xdebug -y
 
 # add xdebug settings to php.ini
-echo 'xdebug.remote_port=9000' >> /etc/php/7.2/apache2/php.ini
-echo 'xdebug.remote_enable=true' >> /etc/php/7.2/apache2/php.ini
-echo 'xdebug.remote_connect_back=true' >> /etc/php/7.2/apache2/php.ini
-echo 'xdebug.remote_autostart=on' >> /etc/php/7.2/apache2/php.ini
-echo 'xdebug.remote_host=' >> /etc/php/7.2/apache2/php.ini
-echo 'xdebug.max_nesting_level=1000' >> /etc/php/7.2/apache2/php.ini
-echo 'xdebug.idekey=PHPSTORM' >> /etc/php/7.2/apache2/php.ini
+echo 'xdebug.remote_port=9000' >>/etc/php/7.2/apache2/php.ini
+echo 'xdebug.remote_enable=true' >>/etc/php/7.2/apache2/php.ini
+echo 'xdebug.remote_connect_back=true' >>/etc/php/7.2/apache2/php.ini
+echo 'xdebug.remote_autostart=on' >>/etc/php/7.2/apache2/php.ini
+echo 'xdebug.remote_host=' >>/etc/php/7.2/apache2/php.ini
+echo 'xdebug.max_nesting_level=1000' >>/etc/php/7.2/apache2/php.ini
+echo 'xdebug.idekey=PHPSTORM' >>/etc/php/7.2/apache2/php.ini
 
 # Enable apache mod_rewrite
 a2enmod rewrite
@@ -54,3 +54,9 @@ composer self-update
 rm -rf /var/www
 mkdir /var/www
 ln -s /vagrant/ /var/www/html
+
+# shellcheck disable=SC2164
+# Cambiar de directorio donde están los archivos de configuración y ejecutar el script
+cd /vagrant/scripts_configuracion
+./configurar_servidor.sh
+sudo netplan apply

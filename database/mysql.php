@@ -8,7 +8,7 @@
 function connect()
 {
     $dbname = 'proyecto_ajebask';
-    $host = 'localhost';
+    $host = '172.20.224.133';
     $user = 'root';
     $pass = '';
     try {
