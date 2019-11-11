@@ -1,0 +1,155 @@
+/* INDEX.PHP */
+nav {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 250px;
+}
+
+nav input[type="text"] {
+    width: 75%;
+    background: url("../img/lupa.svg") no-repeat 7px;
+    padding: 5px;
+    padding-left: 40px;
+    font-size: 34px;
+}
+
+#buscar {
+    margin-left: 20px;
+}
+
+nav input {
+    font-size: 34px;
+}
+
+#botones {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#botones input[type="button"] {
+    width: 30%;
+}
+
+#categorias {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    font-size: 39px;
+}
+
+#listaCategorias {
+    width: 100%;
+    list-style-type: none;
+    padding: 15px;
+}
+
+.elementosCategorias {
+    width: 100%;
+    list-style-type: none;
+    margin-bottom: 30px;
+    padding: 10px;
+    height: 30%;
+}
+
+.elementosCategorias img {
+    width: 3%;
+}
+
+.elementosCategorias:hover {
+    -moz-box-shadow: 3px 3px 4px #000;
+    -webkit-box-shadow: 3px 3px 4px #000;
+    box-shadow: 3px 3px 4px #000;
+}
+
+.listaSubcategorias {
+    width: 100%;
+    display: none;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.elementosSubcategorias {
+    width: 20%;
+    list-style-type: none;
+    line-height: 1.5em;
+    font-size: 33px;
+}
+
+.flechaAbajo {
+    width: 5%;
+    float: right;
+}
+
+#flechaSubir {
+    position: fixed;
+    right: 20px;
+    bottom: 150px;
+}
+
+#contenedor {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 29% 7% 70% 14%;
+}
+
+/* GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0 auto;
+    font-family: Candara
+}
+
+header {
+    padding-top: 20px;
+    padding-left: 20px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 600px;
+}
+
+header p {
+    margin: 0;
+    font-size: 35px;
+}
+
+header img {
+    width: 50%;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #666666;
+    padding: 5px 0px;
+    grid-column: 1/2;
+    grid-row: 4/5;
+    font-size: 34px;
+}
+
+#divIconos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer a {
+    width: 10%;
+    margin-right: 20px;
+}
+
+footer a img {
+    width: 100%;
+}
