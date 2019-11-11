@@ -13,7 +13,7 @@ form {
     flex-wrap: wrap;
     justify-content: center;
     grid-row: 2/4;
-    grid-colum: 1/2;
+    grid-column: 1/2;
 }
 
 form p {
