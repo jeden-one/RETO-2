@@ -8,6 +8,7 @@
     <title>Title</title>
     <link href="../../CSS/loginRegistro.css">
     <script src="../index.js"></script>
+    <script src="../../librerias/jQuery/jquery-3.4.1.js"></script>
 </head>
 
 <body>
