@@ -1,9 +1,17 @@
-<?php include("Includes/inc_header2.php")?>
+<?php include("Includes/inc_header2.php");
+include "../Includes/inc_cifradoPassword.php";
+if (isset($_GET['error'])) {
+    if ($_GET['error'] = 1) {
+        ?>
+        <script>alert('datos incorrectos')</script>
+        <?php
+    }
+} ?>
 
-<form>
-    <h1>Inica sesión y empieza a publicitar tus productos </h1>
-    <input type="text" id="usuario" placeholder="Usuario">
-    <input type="text" id="pass" placeholder="Contraseña">
+<form method="post" action="actions/login.act.php">
+    <h1>Inicia sesión y empieza a publicitar tus productos </h1>
+    <input type="text" id="usuario" name="usuario" placeholder="Usuario">
+    <input type="text" id="pass" name="pass" placeholder="Contraseña">
     <input type="submit" id="login" value="Iniciar sesión">
 
     <div id="separar"></div>
@@ -15,4 +23,4 @@
 
 </form>
 <script src="login.js"></script>
-<?php include("Includes/inc_footer")?>
+<?php include("Includes/inc_footer") ?>
