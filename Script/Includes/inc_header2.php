@@ -6,7 +6,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="../../CSS/styles.css">
+    <link href="../../CSS/loginRegistro.css">
+    <script src="../index.js"></script>
 </head>
 
 <body>
