@@ -10,7 +10,7 @@ nav {
 
 nav input[type="text"] {
     width: 75%;
-    background: url("../img/lupa.svg") no-repeat 7px;
+    background: url("../img/lupa.svg") no-repeat 10px;
     padding: 5px;
     padding-left: 40px;
 }
@@ -82,6 +82,20 @@ nav input[type="text"] {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 27% 7% 70% 14%;
+}
+
+nav input[type="text"] {
+    height: 30%;
+    font-size: 30px;
+}
+
+nav input[type="button"]{
+    font-size: 24px;
+    border: 1px solid black;
+}
+
+#buscar {
+    margin-left: 20px;
 }
 
 /* GENERAL */

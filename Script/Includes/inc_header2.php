@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="../../CSS/loginRegistro.css">
+    <link href="../../CSS/loginRegistro.css" rel="stylesheet">
     <script src="../index.js"></script>
 </head>
 

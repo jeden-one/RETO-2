@@ -1,5 +1,7 @@
 <?php
+
 ?>
+
 <div id="categorias">
     <ul id="listaCategorias">
         <li class="elementosCategorias" onclick="mostrarSubcategorias(0)">
@@ -8,7 +10,7 @@
         </li>
 
         <ul class="listaSubcategorias">
-            <li class="elementosSubcategorias"><a>hrfd</a></li>
+            <li class="elementosSubcategorias"><a>fbge</a></li>
             <li class="elementosSubcategorias"><a>htd</a></li>
             <li class="elementosSubcategorias"><a>hdt</a></li>
             <li class="elementosSubcategorias"><a>hdt</a></li>
