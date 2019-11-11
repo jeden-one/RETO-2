@@ -6,8 +6,6 @@
 
 html,
 body {
-    width: 90%;
-    height: 100%;
     margin: 0 auto;
     font-family: Candara;
     font-size: 30px;
@@ -30,6 +28,7 @@ header img {
 }
 
 footer {
+    width: 100%;
     display: flex;
     text-align: center;
     align-items: center;
@@ -48,10 +47,6 @@ footer {
     justify-content: center;
 }
 
-footer p {
-    margin: 0;
-}
-
 footer a {
     width: 10%;
     margin-right: 20px;
@@ -63,33 +58,91 @@ footer a img {
 
 #contenedor {
     display: grid;
-    grid-template-rows: 25% 15% 70% 14%;
+    grid-template-rows: 27% 15% 65% 13%;
     grid-template-columns: 100%;
 }
 
-/* CATEGORIA.PHP */
-#anuncios {
-    background-color: #cececa;
+
+/* ANUNCIO.PHP */
+
+#navAnuncio {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+#navAnuncio img {
+    width: 10%;
+    border-radius: 50%;
+}
+
+#imgAnuncio {
+    width: 100%;
+    border-radius: 15px;
+}
+
+#containerAnuncio {
     padding: 20px;
     grid-template-columns: 1/2;
+    grid-template-rows: 2/3;
+    border-radius: 15px;
+}
+
+#contenedor4 {
+    grid-template-rows: 13% 25% 80% 6%;
+    grid-template-columns: 100%;
+}
+
+#containerAnuncio input[type="button"] {
+    font-size: 24px;
+}
+
+
+/* CATEGORIA.PHP */
+
+#contenedor3 {
+    display: grid;
+    grid-template-rows: 30% 10% 55% 16%;
+    grid-template-columns: 100%;
+}
+
+#anuncios {
+    flex-wrap: wrap;
+    display: flex;
+    background-color: #cececa;
+    grid-template-columns: 1/2;
     grid-template-rows: 3/4;
+    justify-content: center;
+}
+
+#imagenDiv {
+    margin-bottom: 10px;
+}
+
+#imagenDiv img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .anuncio {
+    margin: 20px 10px 20px 10px;
+    width: 47%;
+    border-radius: 15px;
     padding: 15px;
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
-.anuncio > * {
+.anuncio>* {
     width: 100%;
 }
 
 .anuncio img {
-    width: 75%;
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 10px;
 }
 
 .anuncio p {
@@ -101,12 +154,14 @@ footer a img {
 .anuncio h2 {
     margin: 0;
 }
+
+
 /* REGISTRO.PHP y LOGIN.PHP */
 
 #contenedor2 {
     height: 130%;
     display: grid;
-    grid-template-rows: 24% 1% 55% 14%;
+    grid-template-rows: 30% 1% 60% 16%;
     grid-template-columns: 100%;
 }
 
@@ -168,6 +223,7 @@ form input[type="button"] {
 
 
 /* INDEX.PHP */
+
 nav {
     grid-column: 1/2;
     grid-row: 2/3;
