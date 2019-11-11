@@ -6,6 +6,7 @@
             Alimentación
             <img src="../../img/flechaAbajo.svg" class="flechaAbajo">
         </li>
+
         <ul class="listaSubcategorias">
             <li class="elementosSubcategorias"><a>hrfd</a></li>
             <li class="elementosSubcategorias"><a>htd</a></li>
@@ -17,6 +18,7 @@
             Videojuegos
             <img src="../../img/flechaAbajo.svg" class="flechaAbajo">
         </li>
+
         <ul class="listaSubcategorias">
             <li class="elementosSubcategorias"><a>hrfd</a></li>
             <li class="elementosSubcategorias"><a>htd</a></li>
@@ -28,6 +30,7 @@
             Motor
             <img src="../../img/flechaAbajo.svg" class="flechaAbajo">
         </li>
+
         <ul class="listaSubcategorias">
             <li class="elementosSubcategorias"><a>hrfd</a></li>
             <li class="elementosSubcategorias"><a>htd</a></li>
@@ -39,6 +42,7 @@
             Bricolaje
             <img src="../../img/flechaAbajo.svg" class="flechaAbajo">
         </li>
+
         <ul class="listaSubcategorias">
             <li class="elementosSubcategorias"><a>hrfd</a></li>
             <li class="elementosSubcategorias"><a>htd</a></li>
@@ -50,6 +54,7 @@
             Deporte
             <img src="../../img/flechaAbajo.svg" class="flechaAbajo">
         </li>
+
         <ul class="listaSubcategorias">
             <li class="elementosSubcategorias"><a>hrfd</a></li>
             <li class="elementosSubcategorias"><a>htd</a></li>
@@ -61,6 +66,7 @@
             Electrónica
             <img src="../../img/flechaAbajo.svg" class="flechaAbajo">
         </li>
+
         <ul class="listaSubcategorias">
             <li class="elementosSubcategorias"><a>hrfd</a></li>
             <li class="elementosSubcategorias"><a>htd</a></li>
@@ -72,6 +78,7 @@
             Informática
             <img src="../../img/flechaAbajo.svg" class="flechaAbajo">
         </li>
+
         <ul class="listaSubcategorias">
             <li class="elementosSubcategorias"><a>hrfd</a></li>
             <li class="elementosSubcategorias"><a>htd</a></li>
