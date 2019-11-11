@@ -3,6 +3,6 @@
 
 .vagrant/
 
-.DS_Store
+vagrantServidor/
 
-./Vagrantfile
+.DS_Store
