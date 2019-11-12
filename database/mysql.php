@@ -8,7 +8,7 @@
 function connect()
 {
     $dbname = 'proyecto_ajebask';
-    $host = '172.20.224.133';
+    $host = 'localhost';
     $user = 'root';
     $pass = '';
     try {
@@ -62,6 +62,28 @@ function searchSubcategoriaOne($dbh, $nombre)
     $stmt = $dbh->prepare("SELECT s.id id_subcategoria, s.nombre subcategoria, c.id id_Categoria, c.nombre categoria
 FROM subcategorias s, categorias c
 WHERE c.id=s.id_categoria AND s.nombre=:nombre;");
+    if ($stmt->execute($data) === true) {
+        return $stmt->fetchObject();
+    } else {
+        return false;
+    }
+}
+
+/**
+ * Buscar subcategoria a partir del i de la categoria
+ *
+ * @param $dbh
+ * @param $id_Categoria
+ * @return bool
+ */
+function searchSubcategoriaByIdCategoria($dbh, $id_Categoria)
+{
+    $data = array(
+        'id_Categoria' => $id_Categoria,
+    );
+    $stmt = $dbh->prepare("SELECT s.id id_subcategoria, s.nombre subcategoria, c.id id_Categoria, c.nombre categoria
+FROM subcategorias s, categorias c
+WHERE c.id=s.id_categoria AND s.id_categoria=:id_Categoria;");
     if ($stmt->execute($data) === true) {
         return $stmt->fetchObject();
     } else {
@@ -228,18 +250,38 @@ function searchUsuarioAll($dbh)
 }
 
 /**
- * buscar un usuario por nombre
+ * buscar un usuario por email
  *
  * @param $dbh variable para conectarse a la base de datos
  * @param $usuario nombre del usuario
  * @return mixed un objeto de la busqueda
  */
-function searchUsuarioOne($dbh, $usuario)
+function searchUsuarioOneEmail($dbh, $usuario)
 {
     $data = array(
         'usuario' => $usuario,
     );
-    $stmt = $dbh->prepare("SELECT id, usuario FROM usuarios WHERE usuario=:usuario;");
+    $stmt = $dbh->prepare("SELECT id, usuario,password FROM usuarios WHERE usuario=:usuario;");
+    if ($stmt->execute($data) === true) {
+        return $stmt->fetchObject();
+    } else {
+        return false;
+    }
+}
+
+/**
+ * buscar un usuario por nombre
+ *
+ * @param $dbh variable para conectarse a la base de datos
+ * @param $nombre nombre del usuario
+ * @return mixed un objeto de la busqueda
+ */
+function searchUsuarioOneNombre($dbh, $nombre)
+{
+    $data = array(
+        'nombre' => $nombre,
+    );
+    $stmt = $dbh->prepare("SELECT id, usuario FROM usuarios WHERE nombre=:nombre;");
     if ($stmt->execute($data) === true) {
         return $stmt->fetchObject();
     } else {
@@ -315,11 +357,4 @@ SET titulo=:titulo,descripcion=:descripcion, foto=:foto, id_subcategoria=:id_sub
 where id=:id;");
     $stmt->execute($data);
     return $stmt->rowCount();
-}
-
-$dbh = connect();
-$categorias = searchCategoriaAll($dbh);
-foreach ($categorias as $value) {
-    echo $value->id;
-    echo $value->nombre;
 }

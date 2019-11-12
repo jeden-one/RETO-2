@@ -1,9 +1,4 @@
 /* CATEGORIA.PHP */
-#contenedor3 {
-    display: grid;
-    grid-template-rows: 30% 10% 55% 16%;
-    grid-template-columns: 100%;
-}
 
 #anuncios {
     flex-wrap: wrap;
@@ -14,11 +9,7 @@
     justify-content: center;
 }
 
-#imagenDiv {
-    margin-bottom: 10px;
-}
-
-#imagenDiv img {
+.imagenDiv img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -34,7 +25,7 @@
     flex-direction: column;
 }
 
-.anuncio>* {
+.anuncio > * {
     width: 100%;
 }
 
@@ -52,6 +43,43 @@
 
 .anuncio h2 {
     margin: 0;
+}
+
+nav input {
+    font-size: 34px;
+}
+
+#buscar {
+    margin-left: 20px;
+    width: 15%;
+}
+
+nav {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 250px;
+}
+
+nav input[type="text"] {
+    width: 75%;
+    background: url("../img/lupa.svg") no-repeat 7px;
+    padding: 5px;
+    padding-left: 40px;
+    font-size: 34px;
+}
+
+nav input[type="button"] {
+    width: 30%;
+}
+
+#botones {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 /* GENERAL */
@@ -75,7 +103,7 @@ header {
 
 header p {
     margin: 0;
-    font-size: 24px;
+    font-size: 35px;
 }
 
 header img {
@@ -93,6 +121,7 @@ footer {
     padding: 5px 0px;
     grid-column: 1/2;
     grid-row: 4/5;
+
 }
 
 #divIconos {

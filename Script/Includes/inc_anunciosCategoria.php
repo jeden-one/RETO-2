@@ -1,9 +1,20 @@
-<?php
-?>
+<div>
+    <?php
+
+    include "../../database/mysql.php";
+    $dbh = connect();
+
+    echo "Hola mundo";
+
+    ?>
+</div>
+<br>
+
+<!--
 <div id="anuncios">
     <div class="anuncio">
-        <div id="imagenDiv">
-            <img src="../../img/coche.jpeg">
+        <div class="imagenDiv">
+            <img src="../img/coche.jpeg">
         </div>
         <h2>Titulo de anuncio</h2>
         <label>1500$</label>
@@ -11,8 +22,8 @@
     </div>
     <br>
     <div class="anuncio">
-        <div id="imagenDiv">
-            <img src="../../img/coche.jpeg">
+        <div class="imagenDiv">
+            <img src="../img/coche.jpeg">
         </div>
         <h2>Titulo de anuncio</h2>
         <label>1500$</label>
@@ -20,10 +31,9 @@
         </p>
     </div>
     <br>
-    <h2>Productos que te pueden interesar</h2>
     <div class="anuncio">
-        <div id="imagenDiv">
-            <img src="../../img/coche.jpeg">
+        <div class="imagenDiv">
+            <img src="../img/coche.jpeg">
         </div>
         <h2>Titulo de anuncio</h2>
         <label>1500$</label>
@@ -33,8 +43,8 @@
     </div>
     <br>
     <div class="anuncio">
-        <div id="imagenDiv">
-            <img src="../../img/coche.jpeg">
+        <div class="imagenDiv">
+            <img src="../img/coche.jpeg">
         </div>
         <h2>Titulo de anuncio</h2>
         <label>1500$</label>

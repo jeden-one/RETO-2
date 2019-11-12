@@ -1,7 +1,7 @@
-<?php include("Includes/inc_header.php")?>
+<?php include "Includes/inc_header.php"; ?>
     <nav>
         <input type="text">
-        <input type="button" name="buscar" value="Buscar">
+        <input type="button" name="buscar" value="Buscar" id="buscar">
 
         <div id="botones">
             <input type="button" value="Mis Anuncios">
@@ -11,6 +11,9 @@
     </nav>
     <a href="#header"><img src="../img/flecha.svg" id="flechaSubir"></a>
 
-<?php include("Includes/inc_categorias.php") ?>
+<?php
 
-<?php include("Includes/inc_footer.php")?>
+include "Includes/inc_categorias.php";
+include "Includes/inc_footer.php";
+
+?>
