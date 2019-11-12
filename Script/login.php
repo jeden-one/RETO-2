@@ -1,9 +1,13 @@
 <?php include("Includes/inc_header2.php");
-include "../Includes/inc_cifradoPassword.php";
 if (isset($_GET['error'])) {
-    if ($_GET['error'] = 1) {
+    if ($_GET['error'] == 1) {
         ?>
-        <script>alert('datos incorrectos')</script>
+        <script>alert('contraseña incorrecta')</script>
+        <?php
+    }
+    if ($_GET['error'] == 2) {
+        ?>
+        <script>alert('usuario no encontrado')</script>
         <?php
     }
 } ?>
@@ -22,6 +26,7 @@ if (isset($_GET['error'])) {
     </div>
 
 </form>
-
+</div>
+<script src="../librerias/CryptoJS%20v3.1.2/rollups/aes.js"></script>
 <script src="login.js"></script>
 <?php include("Includes/inc_footer.php") ?>

@@ -11,7 +11,7 @@ USE proyecto_ajebask;
 CREATE TABLE usuarios (
 	id int NOT NULL AUTO_INCREMENT,
 	usuario varchar(50) NOT NULL UNIQUE,
-	password varchar(50) NOT NULL,
+	password varchar(200) NOT NULL,
 	PRIMARY KEY (id)
 );
 
@@ -52,11 +52,11 @@ subcategorias (id),
 
 /*INSERTAR usuarios*/
 
-INSERT INTO usuarios (usuario,password) VALUES ('usuario1', 123);
-INSERT INTO usuarios (usuario,password) VALUES ('usuario2', 123);
-INSERT INTO usuarios (usuario,password) VALUES ('usuario3', 123);
-INSERT INTO usuarios (usuario,password) VALUES ('usuario4', 123);
-INSERT INTO usuarios (usuario,password) VALUES ('usuario5', 123);
+INSERT INTO usuarios (usuario,password) VALUES ('usuario1', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q');
+INSERT INTO usuarios (usuario,password) VALUES ('usuario2', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q');
+INSERT INTO usuarios (usuario,password) VALUES ('usuario3', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q');
+INSERT INTO usuarios (usuario,password) VALUES ('usuario4', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q');
+INSERT INTO usuarios (usuario,password) VALUES ('usuario5', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q');
 
 /*INSERTAR categorias*/
 
