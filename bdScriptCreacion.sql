@@ -11,7 +11,10 @@ USE proyecto_ajebask;
 CREATE TABLE usuarios (
 	id int NOT NULL AUTO_INCREMENT,
 	usuario varchar(50) NOT NULL UNIQUE,
-	password varchar(50) NOT NULL,
+	password varchar(200) NOT NULL,
+	nombre varchar(50) NOT NULL UNIQUE,
+	foto varchar(200) NULL,
+	descripcion varchar(500) NULL,
 	PRIMARY KEY (id)
 );
 
@@ -40,6 +43,7 @@ CREATE TABLE anuncios (
 	titulo varchar(50) NOT NULL,
 	descripcion varchar(500) NOT NULL,
 	foto varchar(200) NULL,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	id_subcategoria int NOT NULL,
 	id_usuario int NOT NULL,
 	PRIMARY KEY(id),
@@ -52,11 +56,11 @@ subcategorias (id),
 
 /*INSERTAR usuarios*/
 
-INSERT INTO usuarios (usuario,password) VALUES ('usuario1', 123);
-INSERT INTO usuarios (usuario,password) VALUES ('usuario2', 123);
-INSERT INTO usuarios (usuario,password) VALUES ('usuario3', 123);
-INSERT INTO usuarios (usuario,password) VALUES ('usuario4', 123);
-INSERT INTO usuarios (usuario,password) VALUES ('usuario5', 123);
+INSERT INTO usuarios (usuario,password,nombre) VALUES ('usuario1', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','enpresa1');
+INSERT INTO usuarios (usuario,password,nombre) VALUES ('usuario2', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','enpresa2');
+INSERT INTO usuarios (usuario,password,nombre) VALUES ('usuario3', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','enpresa3');
+INSERT INTO usuarios (usuario,password,nombre) VALUES ('usuario4', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','enpresa4');
+INSERT INTO usuarios (usuario,password,nombre) VALUES ('usuario5', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','enpresa5');
 
 /*INSERTAR categorias*/
 
