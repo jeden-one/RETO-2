@@ -8,7 +8,7 @@
 function connect()
 {
     $dbname = 'proyecto_ajebask';
-    $host = '172.20.224.133';
+    $host = 'localhost';
     $user = 'root';
     $pass = '';
     try {
@@ -62,6 +62,28 @@ function searchSubcategoriaOne($dbh, $nombre)
     $stmt = $dbh->prepare("SELECT s.id id_subcategoria, s.nombre subcategoria, c.id id_Categoria, c.nombre categoria
 FROM subcategorias s, categorias c
 WHERE c.id=s.id_categoria AND s.nombre=:nombre;");
+    if ($stmt->execute($data) === true) {
+        return $stmt->fetchObject();
+    } else {
+        return false;
+    }
+}
+
+/**
+ * Buscar subcategoria a partir del i de la categoria
+ *
+ * @param $dbh
+ * @param $id_Categoria
+ * @return bool
+ */
+function searchSubcategoriaByIdCategoria($dbh, $id_Categoria)
+{
+    $data = array(
+        'id_Categoria' => $id_Categoria,
+    );
+    $stmt = $dbh->prepare("SELECT s.id id_subcategoria, s.nombre subcategoria, c.id id_Categoria, c.nombre categoria
+FROM subcategorias s, categorias c
+WHERE c.id=s.id_categoria AND s.id_categoria=:id_Categoria;");
     if ($stmt->execute($data) === true) {
         return $stmt->fetchObject();
     } else {
@@ -317,9 +339,11 @@ where id=:id;");
     return $stmt->rowCount();
 }
 
+/*
 $dbh = connect();
 $categorias = searchCategoriaAll($dbh);
 foreach ($categorias as $value) {
     echo $value->id;
     echo $value->nombre;
 }
+*/

@@ -1,9 +1,4 @@
 /* CATEGORIA.PHP */
-#contenedor3 {
-    display: grid;
-    grid-template-rows: 30% 10% 55% 16%;
-    grid-template-columns: 100%;
-}
 
 #anuncios {
     flex-wrap: wrap;
@@ -30,7 +25,7 @@
     flex-direction: column;
 }
 
-.anuncio>* {
+.anuncio > * {
     width: 100%;
 }
 
@@ -56,6 +51,7 @@ nav input {
 
 #buscar {
     margin-left: 20px;
+    width: 15%;
 }
 
 nav {
@@ -74,6 +70,16 @@ nav input[type="text"] {
     padding: 5px;
     padding-left: 40px;
     font-size: 34px;
+}
+
+nav input[type="button"] {
+    width: 30%;
+}
+
+#botones {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 /* GENERAL */
@@ -97,7 +103,7 @@ header {
 
 header p {
     margin: 0;
-    font-size: 24px;
+    font-size: 35px;
 }
 
 header img {
@@ -115,6 +121,7 @@ footer {
     padding: 5px 0px;
     grid-column: 1/2;
     grid-row: 4/5;
+
 }
 
 #divIconos {
