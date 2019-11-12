@@ -1,4 +1,4 @@
-<?php include("Includes/inc_header2.php") ?>
+<?php include("includes/inc_header2.php") ?>
 <form method="post">
     <h1>Petición de registro</h1>
     <input type="text" name="nif" id="nif" placeholder="NIF">
@@ -13,6 +13,6 @@
         <a href="login.php">Inicia sesión</a>
     </div>
 </form>
-<script src="../librerias/SmtpJS.com-v3.0.0/SmtpJS.js"></script>
-<script src="envioCorreo.js"></script>
-<?php include("Includes/inc_footer.php") ?>
+<script src="../script/librerias/SmtpJS.com-v3.0.0/SmtpJS.js"></script>
+<script src="../script/envioCorreo.js"></script>
+<?php include("includes/inc_footer.php") ?>

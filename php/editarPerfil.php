@@ -6,8 +6,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../CSS/editarPerfil.css">
-    <script src="index.js"></script>
+    <link rel="stylesheet" href="../css/editarPerfil.css">
+    <script src="../script/index.js"></script>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
         <input type="button" value="Guardar">
     </div>
 
-    <?php include("Includes/inc_footer.php")?>
+    <?php include("includes/inc_footer.php") ?>
 </div>
 
 </body>

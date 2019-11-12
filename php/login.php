@@ -1,4 +1,4 @@
-<?php include("Includes/inc_header2.php");
+<?php include("includes/inc_header2.php");
 if (isset($_GET['error'])) {
     if ($_GET['error'] == 1) {
         ?>
@@ -27,5 +27,5 @@ if (isset($_GET['error'])) {
 
 </form>
 </div>
-<script src="login.js"></script>
-<?php include("Includes/inc_footer.php") ?>
+<script src="../script/login.js"></script>
+<?php include("includes/inc_footer.php") ?>
