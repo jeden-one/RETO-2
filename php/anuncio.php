@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../CSS/anuncio.css">
+    <link rel="stylesheet" href="../css/anuncio.css">
 </head>
 
 <body>
@@ -26,8 +26,8 @@
         <label>1500$</label>
         <p>sdrglafffffffffeiughslrfs ajgfsbkdfsfjlblds kdfvdfnhyjntdjhnyjtyyyy yyyyyyyyyyyyf</p>
     </div>
-    <?php include("Includes/inc_anunciosCategoria.php")?>
-    <?php include("Includes/inc_footer.php")?>
+    <?php include("includes/inc_anunciosCategoria.php") ?>
+    <?php include("includes/inc_footer.php") ?>
 
 </body>
 

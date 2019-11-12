@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../CSS/categoria.css">
+    <link rel="stylesheet" href="../../CSS/categoria.css">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
     </header>
     <nav>
         <input type="text">
-        <input type="button" name="buscar" value="Buscar">
+        <input type="button" name="buscar" value="Buscar" id="buscar">
 
         <div id="botones">
             <input type="button" value="Mis Anuncios">
@@ -26,8 +26,8 @@
         </div>
     </nav>
 
-    <?php include("Includes/inc_anunciosCategoria.php") ?>
-    <?php include("Includes/inc_footer.php") ?>
+    <?php include("includes/inc_anunciosCategoria.php") ?>
+    <?php include("includes/inc_footer.php") ?>
 
 
 </body>

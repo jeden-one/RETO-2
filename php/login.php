@@ -1,4 +1,4 @@
-<?php include("Includes/inc_header2.php");
+<?php include("includes/inc_header2.php");
 if (isset($_GET['error'])) {
     if ($_GET['error'] == 1) {
         ?>
@@ -16,7 +16,7 @@ if (isset($_GET['error'])) {
     <h1>Inicia sesión y empieza a publicitar tus productos </h1>
     <input type="text" id="usuario" name="usuario" placeholder="Usuario" autofocus>
     <input type="text" id="pass" name="pass" placeholder="Contraseña">
-    <input type="submit" id="login" value="Iniciar sesión">
+    <input type="button" id="login" value="Iniciar sesión">
 
     <div id="separar"></div>
 
@@ -27,5 +27,5 @@ if (isset($_GET['error'])) {
 
 </form>
 </div>
-<script src="login.js"></script>
-<?php include("Includes/inc_footer.php") ?>
+<script src="../script/login.js"></script>
+<?php include("includes/inc_footer.php") ?>

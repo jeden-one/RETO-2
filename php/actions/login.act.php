@@ -1,5 +1,5 @@
 <?php
-include "../../database/mysql.php";
+include "../database/mysql.php";
 
 if (isset($_POST["usuario"]) && isset($_POST["pass"])) {
     $pass = $_POST["pass"];
@@ -11,7 +11,7 @@ if (isset($_POST["usuario"]) && isset($_POST["pass"])) {
         header("location: ../login.php?error=2");
     } else {
         if (password_verify($pass, $resultado->password)) {
-            header("location: ../index.php");
+            header("location: ../../index.php");
         } else {
             header("location: ../login.php?error=1");
         }
@@ -21,4 +21,3 @@ if (isset($_POST["usuario"]) && isset($_POST["pass"])) {
 } else {
     echo 'no datos';
 }
-?>
