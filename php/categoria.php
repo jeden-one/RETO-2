@@ -26,7 +26,7 @@
         </div>
     </nav>
 
-    <?php include("includes/inc_anunciosCategoria.php") ?>
+    <?php include("includes/inc_categorias.php") ?>
     <?php include("includes/inc_footer.php") ?>
 
 
