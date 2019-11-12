@@ -1,4 +1,4 @@
-<?php include "php/includes/inc_header.php"; ?>
+<?php require_once "php/includes/inc_header_ind.php"; ?>
     <nav>
         <input type="text">
         <input type="button" name="buscar" value="Buscar" id="buscar">
@@ -12,7 +12,7 @@
     <a href="#header"><img src="img/flecha.svg" id="flechaSubir"></a>
 
 <?php
-include "php/includes/inc_categorias.php";
-include "php/includes/inc_footer.php";
+/* require_once "php/includes/inc_categorias.php"; */
+require_once "php/includes/inc_footer.php";
 
 ?>
