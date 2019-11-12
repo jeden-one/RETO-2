@@ -8,6 +8,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="../CSS/anuncio.css">
 </head>
+
 <body>
 <div id="contenedor4">
     <header>
@@ -18,7 +19,7 @@
         <div id="navAnuncio">
             <img src="../img/ajebask.jpeg">
             <p>Nombre del anunciante</p>
-            <input type="button" value="Contactar">
+            <input type="button" value="Contactar" id="contactar">
         </div>
         <img src="../img/coche.jpeg" id="imgAnuncio">
         <h2>Titulo del producto</h2>
@@ -27,7 +28,7 @@
     </div>
     <?php include("Includes/inc_anunciosCategoria.php")?>
     <?php include("Includes/inc_footer.php")?>
-</div>
+
 </body>
 
 </html>

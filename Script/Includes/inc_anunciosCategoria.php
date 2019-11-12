@@ -2,7 +2,7 @@
 ?>
 <div id="anuncios">
     <div class="anuncio">
-        <div id="imagenDiv">
+        <div class="imagenDiv">
             <img src="../../img/coche.jpeg">
         </div>
         <h2>Titulo de anuncio</h2>
@@ -11,7 +11,7 @@
     </div>
     <br>
     <div class="anuncio">
-        <div id="imagenDiv">
+        <div class="imagenDiv">
             <img src="../../img/coche.jpeg">
         </div>
         <h2>Titulo de anuncio</h2>
@@ -22,7 +22,7 @@
     <br>
     <h2>Productos que te pueden interesar</h2>
     <div class="anuncio">
-        <div id="imagenDiv">
+        <div class="imagenDiv">
             <img src="../../img/coche.jpeg">
         </div>
         <h2>Titulo de anuncio</h2>
@@ -33,7 +33,7 @@
     </div>
     <br>
     <div class="anuncio">
-        <div id="imagenDiv">
+        <div class="imagenDiv">
             <img src="../../img/coche.jpeg">
         </div>
         <h2>Titulo de anuncio</h2>

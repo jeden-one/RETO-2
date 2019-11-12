@@ -1,7 +1,7 @@
 <?php include("Includes/inc_header.php")?>
     <nav>
-        <input type="text">
-        <input type="button" name="buscar" value="Buscar">
+        <input type="text" size="42">
+        <input type="button" name="buscar" value="Buscar" id="buscar">
 
         <div id="botones">
             <input type="button" value="Mis Anuncios">

@@ -14,11 +14,7 @@
     justify-content: center;
 }
 
-#imagenDiv {
-    margin-bottom: 10px;
-}
-
-#imagenDiv img {
+.imagenDiv img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -52,6 +48,32 @@
 
 .anuncio h2 {
     margin: 0;
+}
+
+nav input {
+    font-size: 34px;
+}
+
+#buscar {
+    margin-left: 20px;
+}
+
+nav {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 250px;
+}
+
+nav input[type="text"] {
+    width: 75%;
+    background: url("../img/lupa.svg") no-repeat 7px;
+    padding: 5px;
+    padding-left: 40px;
+    font-size: 34px;
 }
 
 /* GENERAL */
