@@ -72,20 +72,20 @@ WHERE c.id=s.id_categoria AND s.nombre=:nombre;");
 /**
  * Buscar subcategoria a partir del i de la categoria
  *
- * @param $dbh
- * @param $id_Categoria
+ * @param $dbh variable para conectarse a la base de datos
+ * @param $id_categoria id de la categoria
  * @return bool
  */
-function searchSubcategoriaByIdCategoria($dbh, $id_Categoria)
+function searchSubcategoriaByIdCategoria($dbh, $id_categoria)
 {
     $data = array(
-        'id_Categoria' => $id_Categoria,
+        'id_categoria' => $id_categoria,
     );
-    $stmt = $dbh->prepare("SELECT s.id id_subcategoria, s.nombre subcategoria, c.id id_Categoria, c.nombre categoria
+    $stmt = $dbh->prepare("SELECT s.id id_subcategoria, s.nombre subcategoria, c.id id_categoria, c.nombre categoria
 FROM subcategorias s, categorias c
-WHERE c.id=s.id_categoria AND s.id_categoria=:id_Categoria;");
+WHERE c.id=s.id_categoria AND s.id_categoria=:id_categoria;");
     if ($stmt->execute($data) === true) {
-        return $stmt->fetchObject();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
     } else {
         return false;
     }

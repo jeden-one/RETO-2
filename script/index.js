@@ -5,11 +5,12 @@
  */
 function mostrarSubcategorias(numero) {
     let subCategorias = document.getElementsByClassName("listaSubcategorias");
+    alert(numero);
 
-        if (subCategorias[numero].style.display === "none") {
-            subCategorias[numero].style.display = "inline-flex";
+        if (subCategorias[numero-1].style.display === "none") {
+            subCategorias[numero-1].style.display = "inline-flex";
        } else {
-            subCategorias[numero].style.display = "none";
+            subCategorias[numero-1].style.display = "none";
         }
 }
 
