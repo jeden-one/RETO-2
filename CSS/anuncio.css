@@ -1,18 +1,15 @@
 /* ANUNCIO.PHP */
-#contenedor4 {
-    display: grid;
-    grid-template-rows: 13% 25% 80% 6%;
-    grid-template-columns: 100%;
-}
-
 #navAnuncio {
     flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
+    height: 100px;
+    font-size: 35px;
+    align-items: center;
 }
 
 #navAnuncio img {
-    width: 10%;
+    width: 15%;
     border-radius: 50%;
 }
 
@@ -23,17 +20,72 @@
 
 #containerAnuncio {
     padding: 20px;
-    grid-colum: 1/2;
+    grid-column: 1/2;
     grid-row: 2/3;
     border-radius: 15px;
+    font-size: 34px;
 }
 
+#contenedor4 {
+    display: grid;
+    grid-template-rows: 13% 25% 80% 6%;
+    grid-template-columns: 100%;
+}
 
+#contactar {
+    height: 75px;
+}
 
 #containerAnuncio input[type="button"] {
-    font-size: 24px;
+    font-size: 34px;
+    padding: 20px;
 }
 
+#anuncios {
+    flex-wrap: wrap;
+    display: flex;
+    background-color: #cececa;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    justify-content: center;
+}
+
+.imagenDiv img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.anuncio {
+    margin: 20px 10px 20px 10px;
+    width: 47%;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 34px;
+}
+
+.anuncio>* {
+    width: 100%;
+}
+
+.anuncio img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.anuncio p {
+    line-height: 1.5em;
+    width: 100%;
+    font-size: 20px;
+}
+
+.anuncio h2 {
+    margin: 0;
+}
 /* GENERAL */
 * {
     box-sizing: border-box;
@@ -43,7 +95,6 @@ html,
 body {
     margin: 0 auto;
     font-family: Candara;
-    font-size: 30px;
 }
 
 header {
@@ -51,11 +102,12 @@ header {
     padding-left: 20px;
     grid-column: 1/2;
     grid-row: 1/2;
+    height: 600px;
 }
 
 header p {
     margin: 0;
-    font-size: 24px;
+    font-size: 34px;
 }
 
 header img {
@@ -73,6 +125,7 @@ footer {
     padding: 5px 0px;
     grid-column: 1/2;
     grid-row: 4/5;
+    font-size: 34px;
 }
 
 #divIconos {

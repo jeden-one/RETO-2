@@ -6,8 +6,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../../CSS/index.css">
-    <script src="../index.js"></script>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <script src="index.js"></script>
 </head>
 
 <body>

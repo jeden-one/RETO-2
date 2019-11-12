@@ -6,7 +6,7 @@
     <ul id="listaCategorias">
         <li class="elementosCategorias" onclick="mostrarSubcategorias(0)">
             Alimentación
-            <img src="../../img/flechaAbajo.svg" class="flechaAbajo">
+            <img src="../img/flechaAbajo.svg" class="flechaAbajo">
         </li>
 
         <ul class="listaSubcategorias">
@@ -18,7 +18,7 @@
 
         <li class="elementosCategorias" onclick="mostrarSubcategorias(1)">
             Videojuegos
-            <img src="../../img/flechaAbajo.svg" class="flechaAbajo">
+            <img src="../img/flechaAbajo.svg" class="flechaAbajo">
         </li>
 
         <ul class="listaSubcategorias">
@@ -30,7 +30,7 @@
 
         <li class="elementosCategorias" onclick="mostrarSubcategorias(2)">
             Motor
-            <img src="../../img/flechaAbajo.svg" class="flechaAbajo">
+            <img src="../img/flechaAbajo.svg" class="flechaAbajo">
         </li>
 
         <ul class="listaSubcategorias">
@@ -42,7 +42,7 @@
 
         <li class="elementosCategorias" onclick="mostrarSubcategorias(3)">
             Bricolaje
-            <img src="../../img/flechaAbajo.svg" class="flechaAbajo">
+            <img src="../img/flechaAbajo.svg" class="flechaAbajo">
         </li>
 
         <ul class="listaSubcategorias">

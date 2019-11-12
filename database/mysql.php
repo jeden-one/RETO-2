@@ -8,7 +8,7 @@
 function connect()
 {
     $dbname = 'proyecto_ajebask';
-    $host = 'localhost';
+    $host = '172.20.224.133';
     $user = 'root';
     $pass = '';
     try {
@@ -40,8 +40,11 @@ function searchSubcategoriaAll($dbh)
     $stmt = $dbh->prepare("SELECT s.id id_subcategoria, s.nombre subcategoria, c.id id_Categoria, c.nombre categoria
 FROM subcategorias s, categorias c
 WHERE c.id=s.id_categoria;");
-    $stmt->execute();
-    return $stmt->fetchAll(PDO::FETCH_OBJ);
+    if ($stmt->execute() === true) {
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -59,8 +62,11 @@ function searchSubcategoriaOne($dbh, $nombre)
     $stmt = $dbh->prepare("SELECT s.id id_subcategoria, s.nombre subcategoria, c.id id_Categoria, c.nombre categoria
 FROM subcategorias s, categorias c
 WHERE c.id=s.id_categoria AND s.nombre=:nombre;");
-    $stmt->execute($data);
-    return $stmt->fetchObject();
+    if ($stmt->execute($data) === true) {
+        return $stmt->fetchObject();
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -72,8 +78,11 @@ WHERE c.id=s.id_categoria AND s.nombre=:nombre;");
 function searchCategoriaAll($dbh)
 {
     $stmt = $dbh->prepare("SELECT id, nombre FROM categorias;");
-    $stmt->execute();
-    return $stmt->fetchAll(PDO::FETCH_OBJ);
+    if ($stmt->execute() === true) {
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -89,8 +98,11 @@ function searchCategoriaOne($dbh, $nombre)
         'nombre' => $nombre,
     );
     $stmt = $dbh->prepare("SELECT id, nombre FROM categorias WHERE nombre=:nombre;");
-    $stmt->execute($data);
-    return $stmt->fetchObject();
+    if ($stmt->execute($data) === true) {
+        return $stmt->fetchObject();
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -104,8 +116,11 @@ function searchAnuncioAll($dbh)
     $stmt = $dbh->prepare("SELECT id, titulo, descripcion, foto, s.nombre subcategoria, c.nombre categria, usuario 
 FROM anuncios a, subcategorias s, categorias c, usuarios u 
 WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario;");
-    $stmt->execute();
-    return $stmt->fetchAll(PDO::FETCH_OBJ);
+    if ($stmt->execute() === true) {
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -123,8 +138,11 @@ function searchAnuncioByTitulo($dbh, $titulo)
     $stmt = $dbh->prepare("SELECT id, titulo, descripcion, foto, s.nombre subcategoria, c.nombre categria, usuario 
 FROM anuncios a, subcategorias s, categorias c, usuarios u 
 WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario AND titulo=:titulo;");
-    $stmt->execute($data);
-    return $stmt->fetchAll(PDO::FETCH_OBJ);
+    if ($stmt->execute($data) === true) {
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -142,8 +160,11 @@ function searchAnuncioByUsuario($dbh, $id_usuario)
     $stmt = $dbh->prepare("SELECT id, titulo, descripcion, foto, s.nombre subcategoria, c.nombre categria, usuario 
 FROM anuncios a, subcategorias s, categorias c, usuarios u 
 WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario AND id_usuario=:id_usuario;");
-    $stmt->execute($data);
-    return $stmt->fetchAll(PDO::FETCH_OBJ);
+    if ($stmt->execute($data) === true) {
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -161,8 +182,11 @@ function searchAnuncioBySubcategoria($dbh, $id_subcategoria)
     $stmt = $dbh->prepare("SELECT id, titulo, descripcion, foto, s.nombre subcategoria, c.nombre categria, usuario 
 FROM anuncios a, subcategorias s, categorias c, usuarios u 
 WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario AND id_subcategoria=:id_subcategoria;");
-    $stmt->execute($data);
-    return $stmt->fetchAll(PDO::FETCH_OBJ);
+    if ($stmt->execute($data) === true) {
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -180,8 +204,11 @@ function searchAnuncioByCategoria($dbh, $id_categoria)
     $stmt = $dbh->prepare("SELECT id, titulo, descripcion, foto, s.nombre subcategoria, c.nombre categria, usuario 
 FROM anuncios a, subcategorias s, categorias c, usuarios u 
 WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario AND id_categoria=:id_categoria;");
-    $stmt->execute($data);
-    return $stmt->fetchAll(PDO::FETCH_OBJ);
+    if ($stmt->execute($data) === true) {
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -193,8 +220,11 @@ WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario AND i
 function searchUsuarioAll($dbh)
 {
     $stmt = $dbh->prepare("SELECT id, usuario FROM usuarios;");
-    $stmt->execute();
-    return $stmt->fetchAll(PDO::FETCH_OBJ);
+    if ($stmt->execute() === true) {
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -210,8 +240,33 @@ function searchUsuarioOne($dbh, $usuario)
         'usuario' => $usuario,
     );
     $stmt = $dbh->prepare("SELECT id, usuario FROM usuarios WHERE usuario=:usuario;");
-    $stmt->execute($data);
-    return $stmt->fetchObject();
+    if ($stmt->execute($data) === true) {
+        return $stmt->fetchObject();
+    } else {
+        return false;
+    }
+}
+
+/**
+ * buscar un usuario por nombre
+ *
+ * @param $dbh variable para conectarse a la base de datos
+ * @param $usuario nombre del usuario
+ * @param $pass contraseña del usuario
+ * @return mixed un objeto de la busqueda
+ */
+function searchUsuarioAndPassword($dbh, $usuario, $pass)
+{
+    $data = array(
+        'usuario' => $usuario,
+        'password' => $pass,
+    );
+    $stmt = $dbh->prepare("SELECT id, usuario FROM usuarios WHERE usuario=:usuario AND password=:password;");
+    if ($stmt->execute($data) === true) {
+        return $stmt->fetchObject();
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -262,9 +317,9 @@ where id=:id;");
     return $stmt->rowCount();
 }
 
-$dbh=connect();
-$categorias=searchCategoriaAll($dbh);
-foreach ($categorias as $value){
+$dbh = connect();
+$categorias = searchCategoriaAll($dbh);
+foreach ($categorias as $value) {
     echo $value->id;
     echo $value->nombre;
 }

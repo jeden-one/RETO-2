@@ -13,7 +13,7 @@ form {
     flex-wrap: wrap;
     justify-content: center;
     grid-row: 2/4;
-    grid-colum: 1/2;
+    grid-column: 1/2;
 }
 
 form p {
@@ -36,7 +36,7 @@ input[type="email"] {
     padding: 15px;
 }
 
-form input[type="button"] {
+form input[type="submit"] {
     width: 80%;
     padding: 20px;
     border-radius: 20px;
@@ -48,6 +48,7 @@ form input[type="button"] {
 #divLogin {
     width: 100%;
     text-align: center;
+    margin-bottom: 100px;
 }
 
 #divLogin a {
