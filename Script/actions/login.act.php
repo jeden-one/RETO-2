@@ -5,7 +5,7 @@ if (isset($_POST["usuario"]) && isset($_POST["pass"])) {
     $pass = $_POST["pass"];
     $usuario = $_POST["usuario"];
     $dbh = connect();
-    $resultado = searchUsuarioOne($dbh, $usuario);
+    $resultado = searchUsuarioOneEmail($dbh, $usuario);
     close($dbh);
     if ($resultado == false) {
         header("location: ../login.php?error=2");

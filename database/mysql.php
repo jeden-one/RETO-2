@@ -228,18 +228,38 @@ function searchUsuarioAll($dbh)
 }
 
 /**
- * buscar un usuario por nombre
+ * buscar un usuario por email
  *
  * @param $dbh variable para conectarse a la base de datos
  * @param $usuario nombre del usuario
  * @return mixed un objeto de la busqueda
  */
-function searchUsuarioOne($dbh, $usuario)
+function searchUsuarioOneEmail($dbh, $usuario)
 {
     $data = array(
         'usuario' => $usuario,
     );
     $stmt = $dbh->prepare("SELECT id, usuario,password FROM usuarios WHERE usuario=:usuario;");
+    if ($stmt->execute($data) === true) {
+        return $stmt->fetchObject();
+    } else {
+        return false;
+    }
+}
+
+/**
+ * buscar un usuario por nombre
+ *
+ * @param $dbh variable para conectarse a la base de datos
+ * @param $nombre nombre del usuario
+ * @return mixed un objeto de la busqueda
+ */
+function searchUsuarioOneNombre($dbh, $nombre)
+{
+    $data = array(
+        'nombre' => $nombre,
+    );
+    $stmt = $dbh->prepare("SELECT id, usuario FROM usuarios WHERE nombre=:nombre;");
     if ($stmt->execute($data) === true) {
         return $stmt->fetchObject();
     } else {
