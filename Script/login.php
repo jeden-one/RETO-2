@@ -1,8 +1,13 @@
 <?php include("Includes/inc_header2.php");
 if (isset($_GET['error'])) {
-    if ($_GET['error'] = 1) {
+    if ($_GET['error'] == 1) {
         ?>
-        <script>alert('datos incorrectos')</script>
+        <script>alert('contraseña incorrecta')</script>
+        <?php
+    }
+    if ($_GET['error'] == 2) {
+        ?>
+        <script>alert('usuario no encontrado')</script>
         <?php
     }
 } ?>

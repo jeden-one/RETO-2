@@ -8,7 +8,7 @@
 function connect()
 {
     $dbname = 'proyecto_ajebask';
-    $host = '172.20.224.133';
+    $host = 'localhost';
     $user = 'root';
     $pass = '';
     try {
@@ -239,7 +239,7 @@ function searchUsuarioOne($dbh, $usuario)
     $data = array(
         'usuario' => $usuario,
     );
-    $stmt = $dbh->prepare("SELECT id, usuario FROM usuarios WHERE usuario=:usuario;");
+    $stmt = $dbh->prepare("SELECT id, usuario,password FROM usuarios WHERE usuario=:usuario;");
     if ($stmt->execute($data) === true) {
         return $stmt->fetchObject();
     } else {
@@ -317,9 +317,3 @@ where id=:id;");
     return $stmt->rowCount();
 }
 
-$dbh = connect();
-$categorias = searchCategoriaAll($dbh);
-foreach ($categorias as $value) {
-    echo $value->id;
-    echo $value->nombre;
-}
