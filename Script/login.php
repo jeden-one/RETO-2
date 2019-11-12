@@ -22,6 +22,6 @@ if (isset($_GET['error'])) {
     </div>
 
 </form>
-</div>
+
 <script src="login.js"></script>
 <?php include("Includes/inc_footer.php") ?>

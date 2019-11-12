@@ -1,14 +1,16 @@
 <?php
+
 ?>
+
 <div id="categorias">
     <ul id="listaCategorias">
         <li class="elementosCategorias" onclick="mostrarSubcategorias(0)">
             Alimentación
-            <img src="../../img/flechaAbajo.svg" class="flechaAbajo">
+            <img src="../img/flechaAbajo.svg" class="flechaAbajo">
         </li>
 
         <ul class="listaSubcategorias">
-            <li class="elementosSubcategorias"><a>hrfd</a></li>
+            <li class="elementosSubcategorias"><a>fbge</a></li>
             <li class="elementosSubcategorias"><a>htd</a></li>
             <li class="elementosSubcategorias"><a>hdt</a></li>
             <li class="elementosSubcategorias"><a>hdt</a></li>
@@ -16,7 +18,7 @@
 
         <li class="elementosCategorias" onclick="mostrarSubcategorias(1)">
             Videojuegos
-            <img src="../../img/flechaAbajo.svg" class="flechaAbajo">
+            <img src="../img/flechaAbajo.svg" class="flechaAbajo">
         </li>
 
         <ul class="listaSubcategorias">
@@ -28,7 +30,7 @@
 
         <li class="elementosCategorias" onclick="mostrarSubcategorias(2)">
             Motor
-            <img src="../../img/flechaAbajo.svg" class="flechaAbajo">
+            <img src="../img/flechaAbajo.svg" class="flechaAbajo">
         </li>
 
         <ul class="listaSubcategorias">
@@ -40,7 +42,7 @@
 
         <li class="elementosCategorias" onclick="mostrarSubcategorias(3)">
             Bricolaje
-            <img src="../../img/flechaAbajo.svg" class="flechaAbajo">
+            <img src="../img/flechaAbajo.svg" class="flechaAbajo">
         </li>
 
         <ul class="listaSubcategorias">

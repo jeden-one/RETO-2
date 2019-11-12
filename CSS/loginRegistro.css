@@ -36,7 +36,7 @@ input[type="email"] {
     padding: 15px;
 }
 
-form input[type="button"] {
+form input[type="submit"] {
     width: 80%;
     padding: 20px;
     border-radius: 20px;
@@ -48,6 +48,7 @@ form input[type="button"] {
 #divLogin {
     width: 100%;
     text-align: center;
+    margin-bottom: 100px;
 }
 
 #divLogin a {

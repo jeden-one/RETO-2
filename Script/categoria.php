@@ -29,7 +29,7 @@
     <?php include("Includes/inc_anunciosCategoria.php") ?>
     <?php include("Includes/inc_footer.php") ?>
 
-</div>
+
 </body>
 </html>
 </div>
