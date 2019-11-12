@@ -70,6 +70,28 @@ WHERE c.id=s.id_categoria AND s.nombre=:nombre;");
 }
 
 /**
+ * Buscar subcategoria a partir del i de la categoria
+ *
+ * @param $dbh
+ * @param $id_Categoria
+ * @return bool
+ */
+function searchSubcategoriaByIdCategoria($dbh, $id_Categoria)
+{
+    $data = array(
+        'id_Categoria' => $id_Categoria,
+    );
+    $stmt = $dbh->prepare("SELECT s.id id_subcategoria, s.nombre subcategoria, c.id id_Categoria, c.nombre categoria
+FROM subcategorias s, categorias c
+WHERE c.id=s.id_categoria AND s.id_categoria=:id_Categoria;");
+    if ($stmt->execute($data) === true) {
+        return $stmt->fetchObject();
+    } else {
+        return false;
+    }
+}
+
+/**
  * buscar todas las categorias
  *
  * @param $dbh variable para conectarse a la base de datos
@@ -336,4 +358,3 @@ where id=:id;");
     $stmt->execute($data);
     return $stmt->rowCount();
 }
-

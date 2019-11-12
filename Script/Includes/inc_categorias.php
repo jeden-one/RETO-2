@@ -1,7 +1,15 @@
-<?php
+<div id="categorias">
+    <ul id="listaCategorias">
+        <?php
+        include_once "../../database/mysql.php";
+        $dbh = connect();
 
-?>
+        echo "Hola mundo";
+        ?>
+    </ul>
+</div>
 
+<!--
 <div id="categorias">
     <ul id="listaCategorias">
         <li class="elementosCategorias" onclick="mostrarSubcategorias(0)">
@@ -144,3 +152,4 @@
         </ul>
     </ul>
 </div>
+

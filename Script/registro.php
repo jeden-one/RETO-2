@@ -4,7 +4,7 @@
     <input type="text" name="nif" id="nif" placeholder="NIF">
     <input type="text" name="nombre" id="nombre" placeholder="Nombre">
     <input type="email" name="email" id="email" placeholder="Email">
-    <input type="submit" value="Enviar Petición" onclick="enviarCorreo()">
+    <input type="button" value="Enviar Petición" onclick="enviarCorreo()">
 
     <div id="separar"></div>
 
