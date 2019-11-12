@@ -1,8 +1,7 @@
 <div id="categorias">
     <ul id="listaCategorias">
         <?php
-        include_once "../../database/mysql.php";
-        $dbh = connect();
+        include_once "../database/mysql.php";
 
         echo "Hola mundo";
         ?>

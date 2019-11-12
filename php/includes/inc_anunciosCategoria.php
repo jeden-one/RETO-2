@@ -1,7 +1,7 @@
 <div>
     <?php
 
-    include "../../database/mysql.php";
+    include "../database/mysql.php";
     $dbh = connect();
 
     echo "Hola mundo";
