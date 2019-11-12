@@ -7,3 +7,5 @@ vagrantServidor/
 
 .DS_Store
 ubuntu-bionic-18.04-cloudimg-console.log
+
+Vagrantfile
