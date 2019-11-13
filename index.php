@@ -12,6 +12,7 @@
     <a href="#header"><img src="img/flecha.svg" id="flechaSubir"></a>
 
 <?php
+include_once "php/database/mysql.php";
 include "php/includes/inc_categorias.php";
 include "php/includes/inc_footer.php";
 

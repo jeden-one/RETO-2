@@ -1,8 +1,6 @@
-<script src="../../script/index.js"></script>
 <div id="categorias">
     <ul id="listaCategorias">
         <?php
-        include_once "../database/mysql.php";
         $dbh = connect();
         $resultado = searchCategoriaAll($dbh);
         foreach ($resultado as $value) {
