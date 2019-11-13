@@ -1,11 +1,17 @@
-//
+<?php
+if (isset($_GET["usuario"])) {
+    session_start();
+    $_SESSION["usuario"] = $_GET["usuario"];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="CSS/index.css">
-    <script src="index.js"></script>
+    <script src="Script/index.js"></script>
 </head>
 <body>
 <div id="contenedor">
@@ -18,9 +24,9 @@
         <input type="button" name="buscar" value="Buscar" id="buscar">
 
         <div id="botones">
-            <input type="button" value="Mis Anuncios">
-            <input type="button" value="Publicar Anuncio">
-            <input type="button" value="Editar Perfil">
+            <a>Mis Anuncios</a>
+            <a>Publicar Anuncio</a>
+            <a href="php/editarPerfil.php?usuario=<?php echo $_SESSION["usuario"]?>">Editar Perfil</a>
         </div>
     </nav>
     <a href="#header"><img src="img/flecha.svg" id="flechaSubir"></a>
@@ -34,7 +40,7 @@
                 $subcategorias = searchSubcategoriaByIdCategoria($dbh, $value->id);
                 $subcategoriasIl = '';
                 foreach ($subcategorias as $valor) {
-                    $subcategoriasIl = $subcategoriasIl . '<li class="elementosSubcategorias">'.'<a href="">' . $valor->subcategoria . '</a>'.'</li>';
+                    $subcategoriasIl = $subcategoriasIl . '<li class="elementosSubcategorias">'.'<a href="" class="enlaceSubcategoria">' . $valor->subcategoria . '</a>'.'</li>';
                 }
                 $subcategoriasUl = '<ul class="listaSubcategorias">' . $subcategoriasIl . '</ul>';
                 echo '<li class="elementosCategorias" onclick="mostrarSubcategorias(' . $value->id . ')">'. $value->nombre . '
@@ -58,4 +64,5 @@
 </div>
 </body>
 </html>
-?>
+
+

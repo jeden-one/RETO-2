@@ -31,10 +31,6 @@ nav input {
     width: 100%;
 }
 
-#botones input[type="button"] {
-    width: 30%;
-}
-
 #categorias {
     grid-column: 1/2;
     grid-row: 3/4;
@@ -53,16 +49,11 @@ nav input {
     margin-bottom: 30px;
     padding: 10px;
     height: 10%;
+    font-size: 50px;
 }
 
 .elementosCategorias img {
     width: 3%;
-}
-
-.elementosCategorias:hover {
-    -moz-box-shadow: 3px 3px 4px #000;
-    -webkit-box-shadow: 3px 3px 4px #000;
-    box-shadow: 3px 3px 4px #000;
 }
 
 .listaSubcategorias {
@@ -94,6 +85,7 @@ nav input {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 22% 13% 63% 17%;
+
 }
 
 nav input[type="text"] {
@@ -102,8 +94,18 @@ nav input[type="text"] {
 }
 
 nav input[type="button"]{
-    font-size: 24px;
+    font-size: 34px;
     border: 1px solid black;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+nav a {
+    font-size: 34px;
+    background: #e1e1e1;
+    padding: 10px;
+    border-radius: 15px;
+    text-decoration: none;
 }
 
 #buscar {
@@ -127,6 +129,7 @@ header {
     grid-column: 1/2;
     grid-row: 1/2;
     height: 600px;
+    scroll-behavior: smooth;
 }
 
 header p {

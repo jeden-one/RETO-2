@@ -2,7 +2,7 @@
 #contenedor2 {
     height: 130%;
     display: grid;
-    grid-template-rows: 25% 1% 60% 16%;
+    grid-template-rows: 24% 1% 60% 16%;
     grid-template-columns: 100%;
 }
 
@@ -36,7 +36,7 @@ input[type="email"] {
     padding: 15px;
 }
 
-form input[type="button"] {
+form input[type="button"], form input[type="submit"] {
     width: 80%;
     padding: 20px;
     border-radius: 20px;

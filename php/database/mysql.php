@@ -234,7 +234,7 @@ WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario AND i
 }
 
 /**
- * buscar todos los usuarios
+ * Buscar todos los usuarios
  *
  * @param $dbh variable para conectarse a la base de datos
  * @return mixed array de objetos de la busqueda
@@ -244,6 +244,24 @@ function searchUsuarioAll($dbh)
     $stmt = $dbh->prepare("SELECT id, usuario FROM usuarios;");
     if ($stmt->execute() === true) {
         return $stmt->fetchAll(PDO::FETCH_OBJ);
+    } else {
+        return false;
+    }
+}
+
+/**
+ * Buscar todos los datos de un usuario;
+ *
+ * @param $dbh
+ * @return bool
+ */
+function searchUsuario($dbh,$usuario) {
+    $data = array(
+        'usuario' => $usuario
+    );
+    $stmt = $dbh->prepare("SELECT * FROM usuarios WHERE usuario=:usuario;");
+    if ($stmt->execute($data) === true) {
+        return $stmt->fetchObject();
     } else {
         return false;
     }
@@ -359,6 +377,17 @@ where id=:id;");
     return $stmt->rowCount();
 }
 
+/**
+ * Función para actualizar los datos del usuario
+ *
+ * @param $dbh
+ * @param $nombre
+ * @param $contraseña
+ * @param $usuario
+ * @param $descripcion
+ * @param $id
+ * @return mixed
+ */
 function updateUsuarioOne($dbh, $nombre, $contraseña, $usuario, $descripcion,$id)
 {
     $data = array(
@@ -374,4 +403,24 @@ function updateUsuarioOne($dbh, $nombre, $contraseña, $usuario, $descripcion,$i
     WHERE id=:id");
     $stmt->execute($data);
     return $stmt->rowCount();
+}
+
+/**
+ * Función para sacar el id de un usuario
+ *
+ * @param $dbh
+ * @param $nombre
+ * @return bool
+ */
+function searchUserIdByNombre($dbh, $nombre)
+{
+    $data = array(
+        'nombre' => $nombre
+    );
+    $stmt = $dbh->prepare("SELECT id FROM usuarios WHERE nombre=:nombre");
+    if ($stmt->execute($data) === true) {
+        return $stmt->fetchObject();
+    } else {
+        return false;
+    }
 }
