@@ -12,7 +12,7 @@
 <body>
 <div id="contenedor3">
     <header>
-        <img src="../img/ajebask.jpeg">
+        <img src="../img/aje_logo.png">
         <p>Mas de "numero" de anuncios publicados en nuestra pagina web</p>
     </header>
     <nav>

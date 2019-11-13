@@ -18,7 +18,7 @@ if (isset($_GET["filas"])) {
 <body>
 <div id="contenedor5">
     <header id="header">
-        <img src="../img/ajebask.jpeg">
+        <img src="../img/aje_logo.png>
         <p>Mas de "numero" de anuncios publicados en nuestra pagina web</p>
     </header>
 

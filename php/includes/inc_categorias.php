@@ -9,11 +9,11 @@
             $subcategorias = searchSubcategoriaByIdCategoria($dbh, $value->id);
             $subcategoriasIl = '';
             foreach ($subcategorias as $valor) {
-                $subcategoriasIl = $subcategoriasIl . '<li class="elementosSubcategorias">' . $valor->subcategoria . '</li>';
+                $subcategoriasIl = $subcategoriasIl . '<li class="elementosSubcategorias">'.'<a href="">' . $valor->subcategoria . '</a>'.'</li>';
             }
             $subcategoriasUl = '<ul class="listaSubcategorias">' . $subcategoriasIl . '</ul>';
-            echo '<li class="elementosCategorias" onclick="mostrarSubcategorias(' . $value->id . ')">' . $value->nombre . '
-                <img src="../../img/flechaAbajo.svg" class="flechaAbajo">' . $subcategoriasUl . '</li>';
+            echo '<li class="elementosCategorias" onclick="mostrarSubcategorias(' . $value->id . ')">'. $value->nombre . '
+                <img src="../../img/flechaAbajo.svg" class="flechaAbajo">' . $subcategoriasUl .'</li>';
         }
         ?>
     </ul>

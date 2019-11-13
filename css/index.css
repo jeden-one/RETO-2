@@ -52,7 +52,7 @@ nav input {
     list-style-type: none;
     margin-bottom: 30px;
     padding: 10px;
-    height: 30%;
+    height: 10%;
 }
 
 .elementosCategorias img {
@@ -80,7 +80,7 @@ nav input {
 }
 
 .flechaAbajo {
-    width: 5%;
+    width: 7%;
     float: right;
 }
 
@@ -93,12 +93,12 @@ nav input {
 #contenedor {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 23% 10% 63% 14%;
+    grid-template-rows: 22% 13% 63% 17%;
 }
 
 nav input[type="text"] {
-    height: 30%;
-    font-size: 30px;
+    height: 25%;
+    font-size: 34px;
 }
 
 nav input[type="button"]{
@@ -130,12 +130,12 @@ header {
 }
 
 header p {
-    margin: 0;
-    font-size: 35px;
+    margin-top: 40px;
+    font-size: 34px;
 }
 
 header img {
-    width: 50%;
+    width: 100%;
 }
 
 footer {
