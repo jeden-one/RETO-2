@@ -7,8 +7,7 @@ function mostrarSubcategorias(numero) {
     let subCategorias = document.getElementsByClassName("listaSubcategorias");
     let num = numero - 1;
     if (subCategorias[num].style.display === "none") {
-        subCategorias[num].style.display = "flex";
-        subCategorias[num].style.flexDirection = "column";
+        subCategorias[num].style.display = "block";
     } else {
         subCategorias[num].style.display = "none";
     }

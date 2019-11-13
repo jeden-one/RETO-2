@@ -135,7 +135,8 @@ function searchCategoriaOne($dbh, $nombre)
  */
 function searchAnuncioAll($dbh)
 {
-    $stmt = $dbh->prepare("SELECT id, titulo, descripcion, foto, s.nombre subcategoria, c.nombre categria, usuario 
+    $stmt = $dbh->prepare("SELECT a.id anuncio, titulo, a.descripcion descripcionAnuncio, a.foto fotoAnuncio,a.fecha_creacion fechaCreacion,
+ s.nombre subcategoria, c.nombre categria, u.nombre nombreUsuario 
 FROM anuncios a, subcategorias s, categorias c, usuarios u 
 WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario;");
     if ($stmt->execute() === true) {
