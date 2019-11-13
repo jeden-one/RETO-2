@@ -1,12 +1,13 @@
 <?php
+include_once "../database/mysql.php";
 ?>
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="../../CSS/categoria.css">
+    <script src="../script/index.js"></script>
 </head>
 
 <body>
@@ -29,9 +30,6 @@
     <?php include("includes/inc_categorias.php") ?>
     <?php include("includes/inc_footer.php") ?>
 
-
-</body>
-</html>
 </div>
 </body>
 
