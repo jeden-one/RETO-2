@@ -1,4 +1,18 @@
-<?php include "php/includes/inc_header.php"; ?>
+//
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+<div id="contenedor">
+    <header id="header">
+        <img src="img/aje_logo.png">
+        <p>Mas de "numero" de anuncios publicados en nuestra pagina web</p>
+    </header>
     <nav>
         <input type="text">
         <input type="button" name="buscar" value="Buscar" id="buscar">
@@ -10,10 +24,38 @@
         </div>
     </nav>
     <a href="#header"><img src="img/flecha.svg" id="flechaSubir"></a>
+    <div id="categorias">
+        <ul id="listaCategorias">
+            <?php
+            include_once "php/database/mysql.php";
+            $dbh = connect();
+            $resultado = searchCategoriaAll($dbh);
+            foreach ($resultado as $value) {
+                $subcategorias = searchSubcategoriaByIdCategoria($dbh, $value->id);
+                $subcategoriasIl = '';
+                foreach ($subcategorias as $valor) {
+                    $subcategoriasIl = $subcategoriasIl . '<li class="elementosSubcategorias">'.'<a href="">' . $valor->subcategoria . '</a>'.'</li>';
+                }
+                $subcategoriasUl = '<ul class="listaSubcategorias">' . $subcategoriasIl . '</ul>';
+                echo '<li class="elementosCategorias" onclick="mostrarSubcategorias(' . $value->id . ')">'. $value->nombre . '
+                    <img src="img/flechaAbajo.svg" class="flechaAbajo">' . $subcategoriasUl .'</li>';
+            }
+            ?>
+        </ul>
+    </div>
+    <footer>
+        <p>Siguenos en nuestras redes sociales</p>
 
-<?php
-include_once "php/database/mysql.php";
-include "php/includes/inc_categorias.php";
-include "php/includes/inc_footer.php";
+        <div id="divIconos">
+            <a href=""><img src="../../img/facebook.svg"></a>
+            <a href=""><img src="../../img/twitter.svg"></a>
+            <a href=""><img src="../../img/instagram.svg"></a>
+            <a href="https://github.com/jeden-one/RETO-2"><img src="../../img/github.svg"></a>
+        </div>
 
+        <p>Copyright © Todos los Derechos Reservados 2019</p>
+    </footer>
+</div>
+</body>
+</html>
 ?>
