@@ -1,4 +1,4 @@
-<?php require_once "php/includes/inc_header_ind.php"; ?>
+<?php require_once "php/includes/inc_header_index.php"; ?>
     <nav>
         <input type="text">
         <input type="button" name="buscar" value="Buscar" id="buscar">
