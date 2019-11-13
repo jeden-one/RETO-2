@@ -44,7 +44,6 @@
         </ul>
     </div>
     <footer>
-
         <p>Siguenos en nuestras redes sociales</p>
 
         <div id="divIconos">
@@ -59,5 +58,4 @@
 </div>
 </body>
 </html>
-
 ?>
