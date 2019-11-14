@@ -389,16 +389,8 @@ where id=:id;");
  * @param $id
  * @return mixed
  */
-function updateUsuarioOne($dbh, $nombre, $password, $usuario, $descripcion,$id)
+function updateUsuarioOne($dbh, $data)
 {
-    $data = array(
-        'id' => $id,
-        'nombre' => $nombre,
-        'usuario' => $usuario,
-        'password' => $password,
-        'descripcion' => $descripcion
-
-    );
     $stmt = $dbh->prepare("UPDATE usuarios
     SET usuario=:usuario,nombre=:nombre,password=:password,descripcion=:descripcion
     WHERE id=:id");
@@ -407,26 +399,21 @@ function updateUsuarioOne($dbh, $nombre, $password, $usuario, $descripcion,$id)
 }
 
 /**
- * Funcion para actualizar datos de un usuario menos la contraseña
- *
  * @param $dbh
- * @param $nombre
- * @param $usuario
- * @param $descripcion
- * @param $id
- * @return mixed
+ * @param $busqueda
+ * @return bool
  */
-function updateUsuarioSinPass($dbh, $nombre, $usuario, $descripcion,$id) {
-    $data = array(
-        'id' => $id,
-        'nombre' => $nombre,
-        'usuario' => $usuario,
-        'descripcion' => $descripcion
-    );
 
-    $stmt = $dbh->prepare("UPDATE usuarios
-    SET usuario=:usuario,nombre=:nombre,descripcion=:descripcion
-    WHERE id=:id");
-    $stmt->execute($data);
-    return $stmt->rowCount();
+function searchAnuncioByBusqueda($dbh, $busqueda) {
+    $data = array(
+        'busqueda' => $busqueda
+    );
+    $stmt = $dbh->prepare("SELECT id, titulo, descripcion, foto, s.nombre subcategoria, c.nombre categria, usuario 
+    FROM anuncios a, subcategorias s, categorias c, usuarios u 
+    WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario AND a.");
+    if ($stmt->execute($data) === true) {
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    } else {
+        return false;
+    }
 }

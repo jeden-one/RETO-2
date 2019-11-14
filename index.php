@@ -20,12 +20,12 @@ if (isset($_GET["usuario"])) {
     </header>
     <nav>
         <form action="php/actions/buscador.act.php" method="post">
-            <input type="text" name="buscador">
+            <input type="text" name="busqueda" value="<?php echo $_POST["busqueda"]?>">
             <input type="submit" name="buscar" value="Buscar" id="buscar">
         </form>
 
         <div id="botones">
-            <a href="php/categoria.php">Mis Anuncios</a>
+            <a href="#">Mis Anuncios</a>
             <a>Publicar Anuncio</a>
             <a href="php/editarPerfil.php">Editar Perfil</a>
         </div>
