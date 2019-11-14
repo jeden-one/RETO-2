@@ -1,7 +1,6 @@
 <?php
-if (isset($_POST['usuario'])){
-    echo $_POST['usuario'];
-}
-else{
-    echo 'mal';
+if (isset($_POST['usuario'])) {
+    die("Lo que vas a recibir " . $_POST['usuario']);
+} else {
+    die('mal');
 }
