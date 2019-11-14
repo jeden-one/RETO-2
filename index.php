@@ -2,6 +2,7 @@
 if (isset($_GET["usuario"])) {
     session_start();
     $_SESSION["usuario"] = $_GET["usuario"];
+    echo $_SESSION["usuario"];
 }
 ?>
 
@@ -10,7 +11,7 @@ if (isset($_GET["usuario"])) {
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="css/index.css">
     <script src="Script/index.js"></script>
 </head>
 <body>
@@ -20,11 +21,14 @@ if (isset($_GET["usuario"])) {
         <p>Mas de "numero" de anuncios publicados en nuestra pagina web</p>
     </header>
     <nav>
-        <input type="text">
-        <input type="button" name="buscar" value="Buscar" id="buscar">
+        <form action="php/actions/buscador.act.php" method="get">
+            <input type="text" name="buscador">
+            <input type="submit" name="buscar" value="Buscar" id="buscar">
+        </form>
+
 
         <div id="botones">
-            <a>Mis Anuncios</a>
+            <a href="php/categoria.php">Mis Anuncios</a>
             <a>Publicar Anuncio</a>
             <a href="php/editarPerfil.php?usuario=<?php echo $_SESSION["usuario"]?>">Editar Perfil</a>
         </div>

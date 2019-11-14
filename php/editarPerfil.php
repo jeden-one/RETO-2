@@ -4,7 +4,9 @@ include "database/mysql.php";
 if (isset($_GET["usuario"])) {
     $dbh = connect();
 
-    $resultado = searchUsuario($dbh,$_GET["usuario"]);
+    $_SESSION["usuario"] = $_GET["usuario"];
+
+    $resultado = searchUsuario($dbh,$_SESSION["usuario"]);
 
     $nombre = $resultado ->nombre;
     $usuario = $resultado ->usuario;
@@ -12,22 +14,21 @@ if (isset($_GET["usuario"])) {
     $descripcion = $resultado->descripcion;
 
     close($dbh);
+} else {
+    echo "Usuario no encontrado";
 }
 
 if (isset($_GET["filas"])) {
-    ?>
-    <script>alert('<?php $_GET["filas"] ?> filas modificadas')</script>
-    <?php
-}
+    echo "  " . $_GET["filas"] . " filas modificadas";
+    }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../CSS/editarPerfil.css">
+    <link rel="stylesheet" href="../css/editarPerfil.css">
 </head>
 
 <body>
@@ -37,17 +38,17 @@ if (isset($_GET["filas"])) {
         <p>Mas de "numero" de anuncios publicados en nuestra pagina web</p>
     </header>
 
-    <form id="Datos" action="actions/editarPerfil.act.php" method="post">
+    <form id="Datos" action="actions/editarPerfil.act.php?usuario=<?php echo $_SESSION["usuario"]; ?>" method="post">
         <h1>Editar Perfil</h1>
 
         <label><input type="hidden" name="id"></label>
         <label>Foto: <input type="file"></label>
         <label>Nombre: <input type="text" name="nombre" value="<?php echo $nombre ?>"> </label>
-        <label>Contraseña: <input type="password" name="password" value="<?php echo $password ?>"> </label>
-        <label>Email: <input type="email" name="email" value="<?php echo $usuario ?>"></label>
+        <label>Contraseña: <input type="text" name="password" value="<?php echo $password ?>"> </label>
+        <label>Email: <input type="text" name="email" value="<?php echo $usuario ?>"></label>
         <label>Descripcion: <textarea name="descripcion" value="<?php echo $descripcion ?>"></textarea></label>
 
-        <input type="button" value="Actualizar Usuario">
+        <input type="submit" value="Actualizar Usuario">
     </form>
 
     <?php include("includes/inc_footer.php") ?>

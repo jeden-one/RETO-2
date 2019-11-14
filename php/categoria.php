@@ -6,7 +6,7 @@ include_once "database/mysql.php";
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../../CSS/categoria.css">
+    <link rel="stylesheet" href="../../css/categoria.css">
     <script src="../script/index.js"></script>
 </head>
 
@@ -17,8 +17,10 @@ include_once "database/mysql.php";
         <p>Mas de "numero" de anuncios publicados en nuestra pagina web</p>
     </header>
     <nav>
-        <input type="text">
-        <input type="button" name="buscar" value="Buscar" id="buscar">
+        <form action="php/actions/buscador.act.php" method="get">
+            <input type="text" name="buscador">
+            <input type="button" name="buscar" value="Buscar" id="buscar">
+        </form>
 
         <div id="botones">
             <input type="button" value="Mis Anuncios">

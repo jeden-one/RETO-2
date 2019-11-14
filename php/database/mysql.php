@@ -389,39 +389,19 @@ where id=:id;");
  * @param $id
  * @return mixed
  */
-function updateUsuarioOne($dbh, $nombre, $contraseña, $usuario, $descripcion,$id)
+function updateUsuarioOne($dbh, $nombre, $password, $usuario, $descripcion,$id)
 {
     $data = array(
         'id' => $id,
         'nombre' => $nombre,
         'usuario' => $usuario,
-        'contraseña' => $contraseña,
+        'password' => $password,
         'descripcion' => $descripcion
 
     );
     $stmt = $dbh->prepare("UPDATE usuarios
-    SET usuario=:usuario,nombre=:nombre,contraseña=:contraseña,descripcion=:descripcion
+    SET usuario=:usuario,nombre=:nombre,password=:password,descripcion=:descripcion
     WHERE id=:id");
     $stmt->execute($data);
     return $stmt->rowCount();
-}
-
-/**
- * Función para sacar el id de un usuario
- *
- * @param $dbh
- * @param $nombre
- * @return bool
- */
-function searchUserIdByNombre($dbh, $nombre)
-{
-    $data = array(
-        'nombre' => $nombre
-    );
-    $stmt = $dbh->prepare("SELECT id FROM usuarios WHERE nombre=:nombre");
-    if ($stmt->execute($data) === true) {
-        return $stmt->fetchObject();
-    } else {
-        return false;
-    }
 }

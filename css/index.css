@@ -93,11 +93,15 @@ nav input[type="text"] {
     font-size: 34px;
 }
 
-nav input[type="button"]{
+nav input[type="button"], nav input[type="submit"]{
     font-size: 34px;
     border: 1px solid black;
     padding: 10px;
     border-radius: 15px;
+}
+
+form {
+    width: 100%;
 }
 
 nav a {
