@@ -1,8 +1,6 @@
 <?php
 if (isset($_GET["usuario"])) {
-    session_start();
-    $_SESSION["usuario"] = $_GET["usuario"];
-    echo $_SESSION["usuario"];
+    setcookie("usuario",$_GET["usuario"]);
 }
 ?>
 
@@ -29,7 +27,7 @@ if (isset($_GET["usuario"])) {
         <div id="botones">
             <a href="php/categoria.php">Mis Anuncios</a>
             <a>Publicar Anuncio</a>
-            <a href="php/editarPerfil.php?usuario=<?php echo $_SESSION["usuario"]?>">Editar Perfil</a>
+            <a href="php/editarPerfil.php">Editar Perfil</a>
         </div>
     </nav>
     <a href="#header"><img src="img/flecha.svg" id="flechaSubir"></a>
