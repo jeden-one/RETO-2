@@ -24,7 +24,7 @@ include 'database/mysql.php';
             <label>descripcion: <textarea name="descripcion"></textarea> </label>
             <label>Imagen: <input type="file" name="foto"> </label>
             <label for="categoria">Categoria</label>
-            <select name="categoria" id="categoria">
+            <select id="categoria">
                 <?php include 'includes/inc_categoriasSolo.php'?>
             </select>
             <label for="subcategoria">Subcategoria</label>
