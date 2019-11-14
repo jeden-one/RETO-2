@@ -26,7 +26,7 @@ if (isset($_GET["usuario"])) {
 
         <div id="botones">
             <a href="php/categoria.php">Mis Anuncios</a>
-            <a>Publicar Anuncio</a>
+            <a href="php/publicarAnuncio.php">Publicar Anuncio</a>
             <a href="php/editarPerfil.php">Editar Perfil</a>
         </div>
     </nav>
