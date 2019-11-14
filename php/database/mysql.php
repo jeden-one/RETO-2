@@ -175,14 +175,14 @@ WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario AND t
  * @param $id_usuario id del usuario
  * @return mixed array de objetos de la busqueda
  */
-function searchAnuncioByUsuario($dbh, $id_usuario)
+function searchAnuncioByUsuario($dbh, $usuario)
 {
     $data = array(
-        'id_usuario' => $id_usuario,
+        'usuario' => $usuario,
     );
     $stmt = $dbh->prepare("SELECT id, titulo, descripcion, foto, s.nombre subcategoria, c.nombre categria, usuario 
 FROM anuncios a, subcategorias s, categorias c, usuarios u 
-WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario AND id_usuario=:id_usuario;");
+WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario AND u.usuario=:usuario;");
     if ($stmt->execute($data) === true) {
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     } else {
@@ -390,9 +390,9 @@ function searchAnuncioByBusqueda($dbh, $busqueda) {
     $data = array(
         'busqueda' => $busqueda
     );
-    $stmt = $dbh->prepare("SELECT id, titulo, descripcion, foto, s.nombre subcategoria, c.nombre categria, usuario 
-    FROM anuncios a, subcategorias s, categorias c, usuarios u 
-    WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario AND a.");
+    $stmt = $dbh->prepare("SELECT a.titulo titulo, a.foto fotoAnuncio, u.nombre nombreUsuario, a.fecha fechaCreacion
+    FROM anuncios a, usuarios u 
+    WHERE u.id=a.id_usuario AND (a.titulo LIKE '%:busqueda%' OR u.nombre LIKE '%:busqueda%'");
     if ($stmt->execute($data) === true) {
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     } else {
