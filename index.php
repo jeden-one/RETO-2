@@ -19,14 +19,14 @@ if (isset($_GET["usuario"])) {
         <p><strong>'Algunos'</strong> anuncios publicados</p>
     </header>
     <nav>
-        <form action="php/busqueda.php" method="post">
+        <form action="php/actions/buscador.act.php" method="post">
             <input type="text" name="busqueda" value="<?php echo $_POST["busqueda"]?>">
             <input type="submit" name="buscar" value="Buscar" id="buscar">
         </form>
 
         <div id="botones">
 
-            <a href="#">Mis Anuncios</a>
+            <a href="php/busqueda.php">Mis Anuncios</a>
             <a href="php/publicarAnuncio.php">Publicar Anuncio</a>
             <a href="php/editarPerfil.php">Editar Perfil</a>
         </div>
