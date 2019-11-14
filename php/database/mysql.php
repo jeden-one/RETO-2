@@ -135,7 +135,8 @@ function searchCategoriaOne($dbh, $nombre)
  */
 function searchAnuncioAll($dbh)
 {
-    $stmt = $dbh->prepare("SELECT id, titulo, descripcion, foto, s.nombre subcategoria, c.nombre categria, usuario 
+    $stmt = $dbh->prepare("SELECT a.id anuncio, titulo, a.descripcion descripcionAnuncio, a.foto fotoAnuncio,a.fecha_creacion fechaCreacion,
+ s.nombre subcategoria, c.nombre categria, u.nombre nombreUsuario 
 FROM anuncios a, subcategorias s, categorias c, usuarios u 
 WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario;");
     if ($stmt->execute() === true) {
@@ -244,25 +245,6 @@ function searchUsuarioAll($dbh)
     $stmt = $dbh->prepare("SELECT id, usuario FROM usuarios;");
     if ($stmt->execute() === true) {
         return $stmt->fetchAll(PDO::FETCH_OBJ);
-    } else {
-        return false;
-    }
-}
-
-/**
- * Buscar todos los datos de un usuario;
- *
- * @param $dbh
- * @return bool
- */
-function searchUsuario($dbh, $usuario)
-{
-    $data = array(
-        'usuario' => $usuario
-    );
-    $stmt = $dbh->prepare("SELECT * FROM usuarios WHERE usuario=:usuario;");
-    if ($stmt->execute($data) === true) {
-        return $stmt->fetchObject();
     } else {
         return false;
     }
@@ -389,39 +371,44 @@ where id=:id;");
  * @param $id
  * @return mixed
  */
-function updateUsuarioOne($dbh, $nombre, $contraseña, $usuario, $descripcion, $id)
+function updateUsuarioOne($dbh, $nombre, $password, $usuario, $descripcion,$id)
 {
     $data = array(
         'id' => $id,
         'nombre' => $nombre,
         'usuario' => $usuario,
-        'contraseña' => $contraseña,
+        'password' => $password,
         'descripcion' => $descripcion
 
     );
     $stmt = $dbh->prepare("UPDATE usuarios
-    SET usuario=:usuario,nombre=:nombre,contraseña=:contraseña,descripcion=:descripcion
+    SET usuario=:usuario,nombre=:nombre,password=:password,descripcion=:descripcion
     WHERE id=:id");
     $stmt->execute($data);
     return $stmt->rowCount();
 }
 
 /**
- * Función para sacar el id de un usuario
+ * Funcion para actualizar datos de un usuario menos la contraseña
  *
  * @param $dbh
  * @param $nombre
- * @return bool
+ * @param $usuario
+ * @param $descripcion
+ * @param $id
+ * @return mixed
  */
-function searchUserIdByNombre($dbh, $nombre)
-{
+function updateUsuarioSinPass($dbh, $nombre, $usuario, $descripcion,$id) {
     $data = array(
-        'nombre' => $nombre
+        'id' => $id,
+        'nombre' => $nombre,
+        'usuario' => $usuario,
+        'descripcion' => $descripcion
     );
-    $stmt = $dbh->prepare("SELECT id FROM usuarios WHERE nombre=:nombre");
-    if ($stmt->execute($data) === true) {
-        return $stmt->fetchObject();
-    } else {
-        return false;
-    }
+
+    $stmt = $dbh->prepare("UPDATE usuarios
+    SET usuario=:usuario,nombre=:nombre,descripcion=:descripcion
+    WHERE id=:id");
+    $stmt->execute($data);
+    return $stmt->rowCount();
 }

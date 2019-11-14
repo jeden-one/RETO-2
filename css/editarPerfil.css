@@ -83,7 +83,7 @@ footer {
 #Datos input[type="text"],
 input[type="password"],
 input[type="email"] {
-    width: 80%;
+    width: 75%;
     border: 1px solid black;
     font-size: 24px;
     margin-bottom: 30px;
@@ -95,7 +95,7 @@ input[type="email"] {
     margin-bottom: 30px;
 }
 
-#Datos input[type="button"] {
+#Datos input[type="button"], #Datos input[type="submit"] {
     width: 40%;
     height: 10%;
     font-size: 30px;

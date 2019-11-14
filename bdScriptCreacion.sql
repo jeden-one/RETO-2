@@ -174,15 +174,15 @@ INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Ganado',11);
 
 /*INSERTAR anuncios*/
 
-INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
-('Vendo coches', 'cosas de vender coches', 1,1);
-INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
-('Ps4 chachi', 'cosas de afasfafsafasfgasga', 3,3);
-INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
-('Barcos virtuales', 'cosas de barcos bien chulos', 8,2);
-INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
-('rpg barato', 'para usar con tu vecino', 6,1);
-INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
-('Teles random', 'tele plasma lap', 3,3);
-INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario) VALUES
-('Calzoncillos', 'estas usados', 5,3);
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('Vendo coches', 'cosas de vender coches', 1,1,'coche.jpeg');
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('Ps4 chachi', 'cosas de afasfafsafasfgasga', 3,3,'coche.jpeg');
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('Barcos virtuales', 'cosas de barcos bien chulos', 8,2,'coche.jpeg');
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('rpg barato', 'para usar con tu vecino', 6,1,'coche.jpeg');
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('Teles random', 'tele plasma lap', 3,3,'coche.jpeg');
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('Calzoncillos', 'estas usados', 5,3,'coche.jpeg');

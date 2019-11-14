@@ -104,6 +104,10 @@ nav input[type="button"] {
     color: #850018;
 }
 
+form {
+    width: 100%;
+}
+
 nav a {
     font-size: 34px;
     background: #850018;

@@ -2,20 +2,43 @@
 include "../database/mysql.php";
 $dbh = connect();
 
-if (isset($_POST["nombre"]) && isset($_POST["password"]) && isset($_POST["email"]) && isset($_POST["descripcion"])) {
+if (isset($_POST["nombre"]) && isset($_POST["email"])  && isset($_COOKIE["usuario"])) {
     $nombre = $_POST["nombre"];
-    $contraseña = $_POST["password"];
+    $password = $_POST["password"];
+    $repetirPassword = $_POST["repetirPassword"];
     $usuario = $_POST["email"];
     $descripcion = $_POST["descripcion"];
-    $id = '';
+    $nombreBuscar = $_COOKIE["usuario"];
 
-    $resultado = searchUserIdByNombre($dbh);
+    if (empty($password) && empty($repetirPassword)) {
+        $resultado = searchUsuarioOneEmail($dbh,$nombreBuscar);
 
-    $id = $resultado->id;
+        $id = $resultado->id;
 
-    $filasModificadas = updateUsuarioOne($dbh,$nombre,$contraseña,$usuario,$descripcion,$id);
-    close($dbh);
+        $filasModificadas = updateUsuarioSinPass($dbh,$nombre,$usuario,$descripcion,$id);
 
-    header("location: ../editarPerfil.php?filas=" . $filasModificadas);
+        close($dbh);
+
+        header("location: ../editarPerfil.php? filas=" . $filasModificadas);
+    } else {
+        if ($password == $repetirPassword) {
+            $hash = password_hash($password,PASSWORD_DEFAULT);
+
+            $resultado = searchUsuarioOneEmail($dbh,$nombreBuscar);
+
+            $id = $resultado->id;
+
+            $filasModificadas = updateUsuarioOne($dbh,$nombre,$hash,$usuario,$descripcion,$id);
+            close($dbh);
+
+            header("location: ../editarPerfil.php?filas=" . $filasModificadas);
+        } else {
+            echo "Las contraseñas introducidas no coinciden";
+        }
+    }
+
+
+} else {
+    echo "Campos sin introducir";
 }
 ?>
