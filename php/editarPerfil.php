@@ -36,10 +36,11 @@ if (isset($_GET["filas"])) {
         <p>Mas de "numero" de anuncios publicados en nuestra pagina web</p>
     </header>
 
-    <form id="Datos" action="actions/editarPerfil.act.php?usuario=<?php echo $_SESSION["usuario"]; ?>" method="post">
+    <form id="Datos" action="actions/editarPerfil.act.php" method="post">
         <h1>Editar Perfil</h1>
 
-        <label><input type="hidden" name="id"></label>
+
+        <input type="hidden" name="passwordPasar" value="<?php echo $password ?>">
         <label>Foto: <input type="file"></label>
         <label>Nombre: <input type="text" name="nombre" value="<?php echo $nombre ?>"> </label>
         <label>Contraseña: <input type="text" name="password" value=""> </label>

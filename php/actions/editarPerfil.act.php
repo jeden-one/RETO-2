@@ -11,15 +11,25 @@ if (isset($_POST["nombre"]) && isset($_POST["email"])  && isset($_COOKIE["usuari
     $nombreBuscar = $_COOKIE["usuario"];
 
     if (empty($password) && empty($repetirPassword)) {
+        $password = $_POST["passwordPasar"];
         $resultado = searchUsuarioOneEmail($dbh,$nombreBuscar);
 
         $id = $resultado->id;
 
-        $filasModificadas = updateUsuarioSinPass($dbh,$nombre,$usuario,$descripcion,$id);
+        $data = array(
+            'id' => $id,
+            'nombre' => $nombre,
+            'usuario' => $usuario,
+            'password' => $password,
+            'descripcion' => $descripcion
+        );
+
+        $filasModificadas = updateUsuarioOne($dbh,$data);
 
         close($dbh);
-
+        setcookie("usuario", $usuario);
         header("location: ../editarPerfil.php? filas=" . $filasModificadas);
+
     } else {
         if ($password == $repetirPassword) {
             $hash = password_hash($password,PASSWORD_DEFAULT);
@@ -28,10 +38,23 @@ if (isset($_POST["nombre"]) && isset($_POST["email"])  && isset($_COOKIE["usuari
 
             $id = $resultado->id;
 
-            $filasModificadas = updateUsuarioOne($dbh,$nombre,$hash,$usuario,$descripcion,$id);
+            $data = array(
+                'id' => $id,
+                'nombre' => $nombre,
+                'usuario' => $usuario,
+                'password' => $hash,
+                'descripcion' => $descripcion
+            );
+
+
+
+            $filasModificadas = updateUsuarioOne($dbh,$data);
+
             close($dbh);
+            setcookie("usuario", $usuario);
 
             header("location: ../editarPerfil.php?filas=" . $filasModificadas);
+
         } else {
             echo "Las contraseñas introducidas no coinciden";
         }
