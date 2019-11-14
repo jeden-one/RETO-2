@@ -1,31 +1,30 @@
 <?php
 include '../database/mysql.php';
-if (isset($_POST['titulo']) && isset($_POST['descripcion'])&& isset($_POST['subcategoria'])) {
+session_start();
+if (isset($_POST['titulo']) && isset($_POST['descripcion']) && isset($_POST['subcategoria'])) {
     $titulo = $_POST['titulo'];
     $descripcion = $_POST['descripcion'];
-    $subcategoria=$_POST['subcategoria'];
-    //$usuario=id del usuario de la sesion;
+    $subcategoria = $_POST['subcategoria'];
     $rutaFotoTemporal = $_FILES['foto']["tmp_name"];
-    echo $rutaFotoTemporal.'<br>';
     $nombreFoto = basename($_FILES['foto']["name"]);
     $nuevaRuta = "../../img/" . $nombreFoto;
     //Movemos el archivo desde su ubicación temporal hacia la nueva ruta
-    if(move_uploaded_file($rutaFotoTemporal, $nuevaRuta)){//no funciona
+    /*if (move_uploaded_file($rutaFotoTemporal, $nuevaRuta)) {//no funciona
         echo 'movido';
-    }
-    else{
+    } else {
         echo 'no movido';
-    }
+    }*/
 
-    /*$dbh=connect();
-
-    $data=array(
-        'titulo'=>$titulo,
-        'descripcion'=>$descripcion,
-        'foto'=>$nombreFoto,
-        'id_subcategoria'=>$subcategoria,
-        'id_usuario'=>2,//temporal
+    $dbh = connect();
+    $respuesta = searchUsuarioOneEmail($dbh, $_SESSION["usuario"]);
+    $data = array(
+        'titulo' => $titulo,
+        'descripcion' => $descripcion,
+        'foto' => $nombreFoto,
+        'id_subcategoria' => $subcategoria,
+        'id_usuario' => $respuesta->id,
     );
     $resultado=insertAnuncio($dbh,$data);
-    echo $resultado.' filas afectadas';*/
+    close($dbh);
+    echo $resultado.' filas afectadas';
 }

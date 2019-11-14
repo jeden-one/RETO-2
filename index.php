@@ -25,7 +25,7 @@ if (isset($_GET["usuario"])) {
 
         <div id="botones">
             <a>Mis Anuncios</a>
-            <a>Publicar Anuncio</a>
+            <a href="php/publicarAnuncio.php">Publicar Anuncio</a>
             <a href="php/editarPerfil.php?usuario=<?php echo $_SESSION["usuario"]?>">Editar Perfil</a>
         </div>
     </nav>

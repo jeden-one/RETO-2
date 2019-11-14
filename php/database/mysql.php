@@ -251,24 +251,6 @@ function searchUsuarioAll($dbh)
 }
 
 /**
- * Buscar todos los datos de un usuario;
- *
- * @param $dbh
- * @return bool
- */
-function searchUsuario($dbh,$usuario) {
-    $data = array(
-        'usuario' => $usuario
-    );
-    $stmt = $dbh->prepare("SELECT * FROM usuarios WHERE usuario=:usuario;");
-    if ($stmt->execute($data) === true) {
-        return $stmt->fetchObject();
-    } else {
-        return false;
-    }
-}
-
-/**
  * buscar un usuario por email
  *
  * @param $dbh variable para conectarse a la base de datos
@@ -389,7 +371,7 @@ where id=:id;");
  * @param $id
  * @return mixed
  */
-function updateUsuarioOne($dbh, $nombre, $contraseña, $usuario, $descripcion,$id)
+function updateUsuarioOne($dbh, $nombre, $contraseña, $usuario, $descripcion, $id)
 {
     $data = array(
         'id' => $id,
