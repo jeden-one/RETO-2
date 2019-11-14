@@ -12,7 +12,7 @@ function connect()
     $user = 'root';
     $pass = '';
     try {
-        $dbh = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+        $dbh = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
         return $dbh;
     } catch (PDOException $e) {
         echo $e->getMessage();
@@ -99,7 +99,7 @@ WHERE c.id=s.id_categoria AND s.id_categoria=:id_categoria;");
  */
 function searchCategoriaAll($dbh)
 {
-    $stmt = $dbh->prepare("SELECT id, nombre FROM categorias;");
+    $stmt = $dbh->prepare("SELECT id, nombre FROM categorias ORDER BY id;");
     if ($stmt->execute() === true) {
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     } else {
@@ -245,24 +245,6 @@ function searchUsuarioAll($dbh)
     $stmt = $dbh->prepare("SELECT id, usuario FROM usuarios;");
     if ($stmt->execute() === true) {
         return $stmt->fetchAll(PDO::FETCH_OBJ);
-    } else {
-        return false;
-    }
-}
-
-/**
- * Buscar todos los datos de un usuario;
- *
- * @param $dbh
- * @return bool
- */
-function searchUsuario($dbh,$usuario) {
-    $data = array(
-        'usuario' => $usuario
-    );
-    $stmt = $dbh->prepare("SELECT * FROM usuarios WHERE usuario=:usuario;");
-    if ($stmt->execute($data) === true) {
-        return $stmt->fetchObject();
     } else {
         return false;
     }
