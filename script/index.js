@@ -6,15 +6,28 @@
 function mostrarSubcategorias(numero) {
     let subCategorias = document.getElementsByClassName("listaSubcategorias");
     let enlaceSubcategorias = document.getElementsByClassName("enlaceSubcategoria");
+    let elementosSubcategorias = document.getElementsByClassName("elementosSubcategorias");
+    Array.from(elementosSubcategorias).forEach(value => {
+        value.style.margin = "10px";
+        value.style.border = "1px solid #910000";
+        value.style.borderRadius = "20px";
+        value.style.backgroundColor = "#910000";
+        value.style.padding = "5px 15px";
+        value.style.border = "5px 15px";
+        value.style.padding = "5px 15px";
+    })
     let num = numero - 1;
 
     if (subCategorias[num].style.display === "none") {
         subCategorias[num].style.display = "flex";
-        subCategorias[num].style.flexDirection = "row";
-        subCategorias[num].style.padding= "25px";
-        enlaceSubcategorias.style.border = "1px solid black";
-        enlaceSubcategorias.style.textDecoration = "none";
-
+        subCategorias[num].style.flexWrap = "wrap";
+        //subCategorias[num].style.justifyContent = "space-between";
+        let arraySubcategorias = Array.from(enlaceSubcategorias);
+        arraySubcategorias.forEach(value => {
+            //console.log(value);
+            value.style.textDecoration = "none";
+            value.style.color = "white";
+        });
     } else {
         subCategorias[num].style.display = "none";
     }

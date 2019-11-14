@@ -64,25 +64,113 @@ INSERT INTO usuarios (usuario,password,nombre) VALUES ('usuario5', '$2y$10$nkA9L
 
 /*INSERTAR categorias*/
 
-INSERT INTO categorias(nombre) Values ('categoria1');
-INSERT INTO categorias(nombre) Values ('categoria2');
-INSERT INTO categorias(nombre) Values ('categoria3');
-INSERT INTO categorias(nombre) Values ('categoria4');
-INSERT INTO categorias(nombre) Values ('categoria5');
-INSERT INTO categorias(nombre) Values ('categoria6');
-INSERT INTO categorias(nombre) Values ('categoria7');
+INSERT INTO categorias(nombre) Values ('Alimentación');
+INSERT INTO categorias(nombre) Values ('Videojuegos');
+INSERT INTO categorias(nombre) Values ('Motor');
+INSERT INTO categorias(nombre) Values ('Bricolaje');
+INSERT INTO categorias(nombre) Values ('Deporte');
+INSERT INTO categorias(nombre) Values ('Electrónica');
+INSERT INTO categorias(nombre) Values ('Informática');
+INSERT INTO categorias(nombre) Values ('Literatura');
+INSERT INTO categorias(nombre) Values ('Música');
+INSERT INTO categorias(nombre) Values ('Moda');
+INSERT INTO categorias(nombre) Values ('Mascotas');
 
 /*INSERTAR subcategorias*/
 
-INSERT INTO subcategorias (nombre,id_categoria) VALUES ('sub1',1);
-INSERT INTO subcategorias (nombre,id_categoria) VALUES ('sub2',1);
-INSERT INTO subcategorias (nombre,id_categoria) VALUES ('sub3',2);
-INSERT INTO subcategorias (nombre,id_categoria) VALUES ('sub4',3);
-INSERT INTO subcategorias (nombre,id_categoria) VALUES ('sub5',4);
-INSERT INTO subcategorias (nombre,id_categoria) VALUES ('sub6',4);
-INSERT INTO subcategorias (nombre,id_categoria) VALUES ('sub7',5);
-INSERT INTO subcategorias (nombre,id_categoria) VALUES ('sub8',2);
-INSERT INTO subcategorias (nombre,id_categoria) VALUES ('sub9',3);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Productos frescos',1);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Carnes',1);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Conservas',1);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Pescados',1);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Lácteos',1);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Congelados',1);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Bebidas y licores',1);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Dulces',1);
+
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Consolas',2);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Accesorios consolas',2);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Playstation',2);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Nintendo',2);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Xbox',2);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('PC',2);
+
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Coches',3);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Motos',3);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Furgonetas',3);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Camiones',3);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Coches eléctricos / Híbridos',3);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Piezas coches',3);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Piezas motos',3);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Accesorios vehículos',3);
+
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Pintura',4);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Ferretería',4);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Herramientas',4);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Electricidad',4);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Fontanería',4);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Decoración interior',4);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Decoración exterior',4);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Muebles',4);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Iluminación',4);
+
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Ciclismo',5);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Baloncesto',5);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Fútbol',5);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Tenis',5);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Atletismo',5);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Hockey',5);
+
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Componentes electrónica',6);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Cableado',6);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Herramientas electrónica',6);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Soldadores',6);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Sonido',6);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Vídeo',6);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Placas controladoras',6);
+
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Servicios informáticos y soporte',7);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Software',7);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('PC y MAC',7);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Componentes',7);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Monitores',7);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Tablet',7);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Smartphone',7);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Portátil',7);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Accesorios portátil',7);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Accesorios smartphone / tablet',7);
+
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Aventura',8);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Ciencia ficción',8);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Biografía',8);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Romántica',8);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Infantil',8);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Histórica',8);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Policíaca',8);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Audiolibro',8);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Libros de partituras',8);
+
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Reproductores',9);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Tocadiscos',9);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Vinilos',9);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Clásica',9);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('CD',9);
+
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Unisex',10);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Mujer',10);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Hombre',10);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Niño',10);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Niña',10);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Joyería',10);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Complementos',10);
+
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Perros',11);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Gatos',11);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Animales acuáticos',11);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Aves',11);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Equinos',11);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Reptiles',11);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Arácnidos y animales exóticos',11);
+INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Ganado',11);
 
 /*INSERTAR anuncios*/
 
