@@ -7,6 +7,10 @@ nav {
     align-items: center;
     flex-wrap: wrap;
 }
+nav form{
+    display: flex;
+    justify-content: center;
+}
 
 nav input[type="text"] {
     width: 75%;
@@ -94,7 +98,7 @@ nav input {
 
 }
 
-nav input[type="button"] {
+nav form input[type="submit"] {
     font-size: 34px;
     border: 1px solid black;
     padding: 10px;

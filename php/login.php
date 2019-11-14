@@ -13,9 +13,9 @@ if (isset($_GET['error'])) {
 } ?>
 
 <form method="post" action="actions/login.act.php">
-    <h1>Inicia sesión y empieza a publicitar tus productos </h1>
-    <input type="text" id="usuario" name="usuario" placeholder="Usuario" autofocus>
-    <input type="text" id="pass" name="pass" placeholder="Contraseña">
+    <h1>Inicio de sesión</h1>
+    <input type="email" id="usuario" name="usuario" placeholder="Usuario" autofocus>
+    <input type="password" id="pass" name="pass" placeholder="Contraseña">
     <input type="submit" id="login" value="Iniciar sesión">
 
     <div id="separar"></div>
