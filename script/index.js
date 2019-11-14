@@ -33,8 +33,4 @@ function mostrarSubcategorias(numero) {
     }
 }
 
-$('#publicar').click(function () {
-    window.open('/publicarAnuncio.php')
-})
-
 
