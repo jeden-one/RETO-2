@@ -2,6 +2,7 @@
 if (isset($_GET["usuario"])) {
     session_start();
     $_SESSION["usuario"] = $_GET["usuario"];
+    echo $_SESSION["usuario"];
 }
 ?>
 
@@ -22,7 +23,7 @@ if (isset($_GET["usuario"])) {
     <nav>
         <form action="php/actions/buscador.act.php" method="get">
             <input type="text" name="buscador">
-            <input type="button" name="buscar" value="Buscar" id="buscar">
+            <input type="submit" name="buscar" value="Buscar" id="buscar">
         </form>
 
 
