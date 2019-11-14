@@ -67,5 +67,3 @@ if (isset($_GET["usuario"])) {
 </div>
 </body>
 </html>
-
-
