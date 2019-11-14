@@ -17,7 +17,7 @@ include_once "../database/mysql.php";
         <p>Mas de "numero" de anuncios publicados en nuestra pagina web</p>
     </header>
     <nav>
-        <form action="php/actions/buscador.act.php" method="get">
+        <form action="actions/buscador.act.php" method="post">
             <input type="text" name="buscador">
             <input type="button" name="buscar" value="Buscar" id="buscar">
         </form>

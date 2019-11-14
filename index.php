@@ -21,11 +21,10 @@ if (isset($_GET["usuario"])) {
         <p>Mas de "numero" de anuncios publicados en nuestra pagina web</p>
     </header>
     <nav>
-        <form action="php/actions/buscador.act.php" method="get">
+        <form action="php/actions/buscador.act.php" method="post">
             <input type="text" name="buscador">
             <input type="submit" name="buscar" value="Buscar" id="buscar">
         </form>
-
 
         <div id="botones">
             <a href="php/categoria.php">Mis Anuncios</a>
