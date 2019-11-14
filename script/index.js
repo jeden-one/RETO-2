@@ -14,10 +14,13 @@ function mostrarSubcategorias(numero) {
         subCategorias[num].style.padding= "25px";
         enlaceSubcategorias.style.border = "1px solid black";
         enlaceSubcategorias.style.textDecoration = "none";
-
     } else {
         subCategorias[num].style.display = "none";
     }
 }
+
+$('#publicar').click(function () {
+    window.open('/publicarAnuncio.php')
+})
 
 
