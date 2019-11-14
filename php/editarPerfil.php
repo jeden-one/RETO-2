@@ -1,12 +1,10 @@
 <?php
 include "database/mysql.php";
 
-if (isset($_GET["usuario"])) {
+if (isset($_COOKIE["usuario"])) {
     $dbh = connect();
 
-    $_SESSION["usuario"] = $_GET["usuario"];
-
-    $resultado = searchUsuario($dbh,$_SESSION["usuario"]);
+    $resultado = searchUsuario($dbh,$_COOKIE["usuario"]);
 
     $nombre = $resultado ->nombre;
     $usuario = $resultado ->usuario;
