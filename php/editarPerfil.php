@@ -15,7 +15,7 @@ if (isset($_GET["usuario"])) {
 
     close($dbh);
 } else {
-    echo "Usuario no encontrado";
+    header("location: login.php");
 }
 
 if (isset($_GET["filas"])) {
@@ -44,7 +44,8 @@ if (isset($_GET["filas"])) {
         <label><input type="hidden" name="id"></label>
         <label>Foto: <input type="file"></label>
         <label>Nombre: <input type="text" name="nombre" value="<?php echo $nombre ?>"> </label>
-        <label>Contraseña: <input type="text" name="password" value="<?php echo $password ?>"> </label>
+        <label>Contraseña: <input type="text" name="password" value=""> </label>
+        <label>Repite contraseña: <input type="text" name="repetirPassword" value=""></label>
         <label>Email: <input type="text" name="email" value="<?php echo $usuario ?>"></label>
         <label>Descripcion: <textarea name="descripcion" value="<?php echo $descripcion ?>"></textarea></label>
 

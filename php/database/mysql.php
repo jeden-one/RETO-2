@@ -405,3 +405,28 @@ function updateUsuarioOne($dbh, $nombre, $password, $usuario, $descripcion,$id)
     $stmt->execute($data);
     return $stmt->rowCount();
 }
+
+/**
+ * Funcion para actualizar datos de un usuario menos la contraseña
+ *
+ * @param $dbh
+ * @param $nombre
+ * @param $usuario
+ * @param $descripcion
+ * @param $id
+ * @return mixed
+ */
+function updateUsuarioSinPass($dbh, $nombre, $usuario, $descripcion,$id) {
+    $data = array(
+        'id' => $id,
+        'nombre' => $nombre,
+        'usuario' => $usuario,
+        'descripcion' => $descripcion
+    );
+
+    $stmt = $dbh->prepare("UPDATE usuarios
+    SET usuario=:usuario,nombre=:nombre,descripcion=:descripcion
+    WHERE id=:id");
+    $stmt->execute($data);
+    return $stmt->rowCount();
+}
