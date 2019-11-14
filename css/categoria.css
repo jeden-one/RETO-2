@@ -102,12 +102,12 @@ header {
 }
 
 header p {
-    margin: 0;
+    margin-top: 40px;
     font-size: 35px;
 }
 
 header img {
-    width: 50%;
+    width: 100%;
 }
 
 footer {

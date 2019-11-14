@@ -1,4 +1,5 @@
 <?php
+include_once "../database/mysql.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +13,7 @@
 <body>
 <div id="contenedor4">
     <header>
-        <img src="../img/ajebask.jpeg">
+        <img src="../img/aje_logo.png">
         <p>Mas de "numero" de anuncios publicados en nuestra pagina web</p>
     </header>
     <div id="containerAnuncio">

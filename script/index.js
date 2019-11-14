@@ -5,13 +5,19 @@
  */
 function mostrarSubcategorias(numero) {
     let subCategorias = document.getElementsByClassName("listaSubcategorias");
-    alert(numero);
+    let enlaceSubcategorias = document.getElementsByClassName("enlaceSubcategoria");
+    let num = numero - 1;
 
-        if (subCategorias[numero-1].style.display === "none") {
-            subCategorias[numero-1].style.display = "inline-flex";
-       } else {
-            subCategorias[numero-1].style.display = "none";
-        }
+    if (subCategorias[num].style.display === "none") {
+        subCategorias[num].style.display = "flex";
+        subCategorias[num].style.flexDirection = "row";
+        subCategorias[num].style.padding= "25px";
+        enlaceSubcategorias.style.border = "1px solid black";
+        enlaceSubcategorias.style.textDecoration = "none";
+
+    } else {
+        subCategorias[num].style.display = "none";
+    }
 }
 
 
