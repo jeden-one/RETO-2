@@ -1,4 +1,20 @@
 <?php include("includes/inc_header2.php");
+
+switch ($_GET['action']) {
+    case 'publicarAnuncio':
+        $action = 'publicarAnuncio';
+        break;
+    case 'editarPerfil':
+        $action = 'editarPerfil';
+        break;
+    case 'misAnuncios':
+        $action = 'misAnuncios';
+        break;
+    case 'login':
+        $action = 'login';
+        break;
+}
+
 if (isset($_GET['error'])) {
     if ($_GET['error'] == 1) {
         ?>
@@ -16,6 +32,7 @@ if (isset($_GET['error'])) {
     <h1>Inicia sesión y empieza a publicitar tus productos </h1>
     <input type="text" id="usuario" name="usuario" placeholder="Usuario" autofocus>
     <input type="text" id="pass" name="pass" placeholder="Contraseña">
+    <input type="hidden" name="action" value="<?= $action ?>">
     <input type="submit" id="login" value="Iniciar sesión">
 
     <div id="separar"></div>

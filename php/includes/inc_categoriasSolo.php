@@ -1,4 +1,5 @@
 <?php
+
 $dbh = connect();
 $categorias = searchCategoriaAll($dbh);
 close($dbh);

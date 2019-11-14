@@ -13,7 +13,7 @@ if (isset($_COOKIE["usuario"])) {
 
     close($dbh);
 } else {
-    header("location: login.php");
+    header("location: login.php?action=editarPerfil");
 }
 
 if (isset($_GET["filas"])) {
