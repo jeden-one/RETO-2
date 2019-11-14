@@ -26,8 +26,7 @@
         <input type="button" value="Publicar Anuncio">
         <input type="button" value="Ordenar Por">
     </div>
-    <div>
 
-    </div>
+
     <?php include "includes/inc_footer.php" ?>
 </div>
