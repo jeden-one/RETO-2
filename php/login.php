@@ -31,7 +31,7 @@ if (isset($_GET['error'])) {
 <form method="post" action="actions/login.act.php">
     <h1>Inicia sesión y empieza a publicitar tus productos </h1>
     <input type="text" id="usuario" name="usuario" placeholder="Usuario" autofocus>
-    <input type="text" id="pass" name="pass" placeholder="Contraseña">
+    <input type="text" id="pass" name="pass" placeholder="Contraseña" disabled>
     <input type="hidden" name="action" value="<?= $action ?>">
     <input type="submit" id="login" value="Iniciar sesión">
 

@@ -1,6 +1,11 @@
 <?php
+include '../database/mysql.php';
 if (isset($_POST['usuario'])) {
-    die("Lo que vas a recibir " . $_POST['usuario']);
-} else {
-    die('mal');
+    $dbh = connect();
+    $usuario = searchUsuarioOneEmail($dbh, $_POST['usuario']);
+    if ($usuario) {
+        die('true');
+    } else {
+        die('false');
+    }
 }
