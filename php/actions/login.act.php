@@ -14,7 +14,6 @@ if (isset($_POST["usuario"]) && isset($_POST["pass"])) {
             setcookie("usuario",$_POST["usuario"],time()+(60*60*24*7),"/");
             switch ($_POST['action']) {
                 case 'publicarAnuncio':
-                    echo 'a publicar Anuncio';
                     header("location: ../publicarAnuncio.php");
                     break;
                 case 'editarPerfil':

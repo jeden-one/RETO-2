@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Ajebask</title>
     <link rel="stylesheet" href="../../css/index.css">
     <script src="index.js"></script>
 </head>
