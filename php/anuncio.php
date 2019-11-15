@@ -6,7 +6,7 @@ include_once "database/mysql.php";
 
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Anuncio</title>
     <link rel="stylesheet" href="../css/anuncio.css">
 </head>
 

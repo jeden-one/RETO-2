@@ -262,7 +262,7 @@ function searchUsuarioOneEmail($dbh, $usuario)
     $data = array(
         'usuario' => $usuario,
     );
-    $stmt = $dbh->prepare("SELECT id, usuario,password FROM usuarios WHERE usuario=:usuario;");
+    $stmt = $dbh->prepare("SELECT id, usuario,password,nombre,foto,descripcion FROM usuarios WHERE usuario=:usuario;");
     if ($stmt->execute($data) === true) {
         return $stmt->fetchObject();
     } else {
@@ -361,20 +361,16 @@ where id=:id;");
 }
 
 /**
- * Función para actualizar los datos del usuario
+ * editar los datos del usuario
  *
- * @param $dbh
- * @param $nombre
- * @param $contraseña
- * @param $usuario
- * @param $descripcion
- * @param $id
- * @return mixed
+ * @param $dbh variable para conectarse a la base de datos
+ * @param $data array asociativo con todos los apartados del usuario
+ * @return mixed cantidad de filas afectadas
  */
 function updateUsuarioOne($dbh, $data)
 {
     $stmt = $dbh->prepare("UPDATE usuarios
-    SET usuario=:usuario,nombre=:nombre,password=:password,descripcion=:descripcion
+    SET usuario=:usuario,nombre=:nombre,password=:password,foto=:foto,descripcion=:descripcion
     WHERE id=:id");
     $stmt->execute($data);
     return $stmt->rowCount();
