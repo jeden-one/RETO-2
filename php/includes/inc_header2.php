@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Ajebask</title>
     <link href="../../css/loginRegistro.css" rel="stylesheet">
     <script src="index.js"></script>
     <script src="../../script/librerias/jQuery/jquery-3.4.1.js"></script>

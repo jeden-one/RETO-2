@@ -5,7 +5,7 @@ session_start()
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Busqueda</title>
     <link rel="stylesheet" href="../../css/categoria.css">
 </head>
 

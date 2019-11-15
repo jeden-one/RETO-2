@@ -2,17 +2,20 @@
 include "../database/mysql.php";
 $dbh = connect();
 
-if (isset($_POST["nombre"]) && isset($_POST["email"])  && isset($_COOKIE["usuario"])) {
+if (isset($_POST["nombre"]) && isset($_POST["email"]) && isset($_COOKIE["usuario"])) {
     $nombre = $_POST["nombre"];
     $password = $_POST["password"];
     $repetirPassword = $_POST["repetirPassword"];
     $usuario = $_POST["email"];
     $descripcion = $_POST["descripcion"];
     $nombreBuscar = $_COOKIE["usuario"];
-
+    $nombreFoto = null;
+    if (isset($_FILES['foto'])) {
+        include '../includes/inc_foto.php';
+    }
     if (empty($password) && empty($repetirPassword)) {
         $password = $_POST["passwordPasar"];
-        $resultado = searchUsuarioOneEmail($dbh,$nombreBuscar);
+        $resultado = searchUsuarioOneEmail($dbh, $nombreBuscar);
 
         $id = $resultado->id;
 
@@ -21,20 +24,21 @@ if (isset($_POST["nombre"]) && isset($_POST["email"])  && isset($_COOKIE["usuari
             'nombre' => $nombre,
             'usuario' => $usuario,
             'password' => $password,
+            'foto' => $nombreFoto,
             'descripcion' => $descripcion
         );
 
-        $filasModificadas = updateUsuarioOne($dbh,$data);
+        $filasModificadas = updateUsuarioOne($dbh, $data);
 
         close($dbh);
-        setcookie("usuario", $usuario);
+        setcookie("usuario", $usuario, time() + (60 * 60 * 24 * 7), "/");
         header("location: ../editarPerfil.php? filas=" . $filasModificadas);
 
     } else {
         if ($password == $repetirPassword) {
-            $hash = password_hash($password,PASSWORD_DEFAULT);
+            $hash = password_hash($password, PASSWORD_DEFAULT);
 
-            $resultado = searchUsuarioOneEmail($dbh,$nombreBuscar);
+            $resultado = searchUsuarioOneEmail($dbh, $nombreBuscar);
 
             $id = $resultado->id;
 
@@ -43,15 +47,14 @@ if (isset($_POST["nombre"]) && isset($_POST["email"])  && isset($_COOKIE["usuari
                 'nombre' => $nombre,
                 'usuario' => $usuario,
                 'password' => $hash,
+                'foto' => $nombreFoto,
                 'descripcion' => $descripcion
             );
 
-
-
-            $filasModificadas = updateUsuarioOne($dbh,$data);
+            $filasModificadas = updateUsuarioOne($dbh, $data);
 
             close($dbh);
-            setcookie("usuario", $usuario);
+            setcookie("usuario", $usuario, time() + (60 * 60 * 24 * 7), "/");
 
             header("location: ../editarPerfil.php?filas=" . $filasModificadas);
 
@@ -64,4 +67,3 @@ if (isset($_POST["nombre"]) && isset($_POST["email"])  && isset($_COOKIE["usuari
 } else {
     echo "Campos sin introducir";
 }
-?>

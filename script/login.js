@@ -30,7 +30,13 @@ $('#usuario').focusout(function () {
         data: usuario,
         datatype: 'application/json',
         success: function (data) {
-            console.log(data);
+            console.log(data)
+            if(data=='true'){
+                $('#pass').removeAttr('disabled');
+            }
+            else{
+                $('#pass').attr('disabled','disabled');
+            }
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.log(jqXHR + " " + textStatus + " " + errorThrown);
