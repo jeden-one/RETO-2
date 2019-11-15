@@ -22,6 +22,8 @@ form h1 {
     text-align: center;
     margin-bottom: 30px;
     line-height: 1.3em;
+    font-size: 100%;
+    flex-basis: 100%;
 }
 
 form input[type="password"],
@@ -29,21 +31,20 @@ input[type="email"], input[type="text"] {
     width: 75%;
     border: 1px solid #850018;
     border-radius: 20px;
-    padding: 25px 25px 25px 25px;
-    min-height: 90px;
+    padding: 3vw 1vw;
     margin-bottom: 20px;
     outline: none;
     background-color: #ebebeb;
-    font-size: 45px;
+    font-size: 8vw;
 }
 
 form input[type="button"], form input[type="submit"] {
     width: 75%;
-    padding: 20px;
+    padding: 10px 5px;
     border-radius: 20px;
     border: 1px solid #690000;
-    font-size: 50px;
-    margin: 50px 0px 100px 0px;
+    font-size: 8vw;
+    margin: 10px 0 10px 0;
     background-color: #850018;
     color: white;
 }
@@ -51,14 +52,13 @@ form input[type="button"], form input[type="submit"] {
 #divLogin {
     width: 100%;
     text-align: center;
-    margin-bottom: 100px;
     color: #690000;
     text-decoration: #690000;
-    font-size: 140%;
+    font-size: 6vw;
 }
 
 #divLogin a {
-    font-size: 50px;
+    font-size: 6vw;
     list-style: none;
     color: #690000;
 }
@@ -67,7 +67,7 @@ form input[type="button"], form input[type="submit"] {
     height: 2px;
     background: black;
     width: 100%;
-    margin-bottom: 90px;
+    margin-bottom: 10px;
 }
 
 /* GENERAL */
@@ -84,8 +84,7 @@ body {
 }
 
 header {
-    padding-top: 20px;
-    padding-left: 20px;
+    padding: 10px 0;
     grid-column: 1/2;
     grid-row: 1/2;
     font-size: 35px;
@@ -96,10 +95,11 @@ header p {
 }
 
 header img {
-    width: 100%;
+    width: 70%;
 }
 
 footer {
+    font-size: 6vw;
     width: 100%;
     display: flex;
     text-align: center;
@@ -110,6 +110,12 @@ footer {
     padding: 5px 0px;
     grid-column: 1/2;
     grid-row: 4/5;
+    position: absolute;
+    bottom: 0vh;
+}
+
+footer p {
+    margin: 10px 0;
 }
 
 #divIconos {

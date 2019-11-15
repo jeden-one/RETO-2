@@ -4,7 +4,7 @@ include "database/mysql.php";
 if (isset($_COOKIE["usuario"])) {
     $dbh = connect();
 
-    $resultado = searchUsuario($dbh,$_COOKIE["usuario"]);
+    $resultado = searchUsuarioOneEmail($dbh,$_COOKIE["usuario"]);
 
     $nombre = $resultado ->nombre;
     $usuario = $resultado ->usuario;
@@ -13,7 +13,7 @@ if (isset($_COOKIE["usuario"])) {
 
     close($dbh);
 } else {
-    header("location: login.php");
+    header("location: login.php?action=editarPerfil");
 }
 
 if (isset($_GET["filas"])) {
@@ -25,23 +25,23 @@ if (isset($_GET["filas"])) {
 
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Editar Perfil</title>
     <link rel="stylesheet" href="../css/editarPerfil.css">
 </head>
 
 <body>
 <div id="contenedor5">
     <header id="header">
-        <img src="../img/aje_logo.png>
+        <img src="../../img/aje_logo.png">
         <p>Mas de "numero" de anuncios publicados en nuestra pagina web</p>
     </header>
 
-    <form id="Datos" action="actions/editarPerfil.act.php" method="post">
+    <form id="Datos" action="actions/editarPerfil.act.php" method="post" enctype="multipart/form-data">
         <h1>Editar Perfil</h1>
 
 
         <input type="hidden" name="passwordPasar" value="<?php echo $password ?>">
-        <label>Foto: <input type="file"></label>
+        <label>Foto: <input type="file" name="foto"></label>
         <label>Nombre: <input type="text" name="nombre" value="<?php echo $nombre ?>"> </label>
         <label>Contraseña: <input type="text" name="password" value=""> </label>
         <label>Repite contraseña: <input type="text" name="repetirPassword" value=""></label>

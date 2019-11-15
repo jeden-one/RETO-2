@@ -5,16 +5,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Ajebask</title>
     <link href="../../css/loginRegistro.css" rel="stylesheet">
-    <script src="index.js"></script>
     <script src="../../script/librerias/jQuery/jquery-3.4.1.js"></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function goIndex() {
+            window.location.href="../../index.php";
+        }
+    </script>
 </head>
 
 <body>
 <div id="contenedor2">
     <header>
-        <img src="../../img/aje_logo.png">
-        <p>Mas de "numero" de anuncios publicados en nuestra pagina web</p>
+        <img src="../../img/aje_logo.png" onclick="goIndex()">
     </header>

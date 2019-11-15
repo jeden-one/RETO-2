@@ -1,7 +1,7 @@
 <?php
-include "database/mysql.php";
+include 'database/mysql.php';
 if (!isset($_COOKIE["usuario"])) {
-    header("location: login.php");
+    header("location: login.php?action=publicarAnuncio");
 }
 ?>
 <!DOCTYPE html>
@@ -43,4 +43,3 @@ if (!isset($_COOKIE["usuario"])) {
 </body>
 
 </html>
-
