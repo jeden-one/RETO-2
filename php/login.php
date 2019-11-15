@@ -21,11 +21,8 @@ if (isset($_GET['error'])) {
     <div id="separar"></div>
 
     <div id="divLogin">
-        Aún no tienes una cuenta? <br><br>
-        <a href="registro.php">Solicítala aquí</a>
+        <a href="registro.php">Aún no tienes una cuenta?</a>
     </div>
-
 </form>
-</div>
 <script src="../script/login.js"></script>
 <?php include("includes/inc_footer.php") ?>

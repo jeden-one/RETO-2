@@ -386,7 +386,8 @@ function updateUsuarioOne($dbh, $data)
  * @return bool
  */
 
-function searchAnuncioByBusqueda($dbh, $busqueda) {
+function searchAnuncioByBusqueda($dbh, $busqueda)
+{
     $data = array(
         'busqueda' => $busqueda
     );
@@ -395,6 +396,17 @@ function searchAnuncioByBusqueda($dbh, $busqueda) {
     WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario AND a.");
     if ($stmt->execute($data) === true) {
         return $stmt->fetchAll(PDO::FETCH_OBJ);
+    } else {
+        return false;
+    }
+}
+
+function counterAnuncios($dbh)
+{
+    $stmt = $dbh->prepare("SELECT count(*) FROM anuncios");
+    if ($stmt->execute() === true) {
+        $cont =  $stmt->fetchColumn();
+        return $cont;
     } else {
         return false;
     }

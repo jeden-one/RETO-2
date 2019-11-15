@@ -7,30 +7,30 @@ nav {
     align-items: center;
     flex-wrap: wrap;
 }
-nav form{
+
+nav form {
     display: flex;
     justify-content: center;
 }
 
 nav input[type="text"] {
+    font-size: 4.5vw;
     width: 75%;
-    border: 1px solid #850018;
-    border-radius: 20px;
-    padding: 25px 25px 25px 25px;
-    min-height: 90px;
+    border: 2px solid #850018;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    min-height: 45px;
     margin-bottom: 20px;
     outline: none;
     background-color: #ebebeb;
+    user-select: revert;
 }
+
 
 #buscar {
     margin-left: 20px;
-    min-height: 90px;
+    min-height: 45px;
     margin-bottom: 20px;
-}
-
-nav input {
-    font-size: 34px;
 }
 
 #botones {
@@ -43,24 +43,26 @@ nav input {
 #categorias {
     grid-column: 1/2;
     grid-row: 3/4;
-    font-size: 39px;
-    padding: 0 20px;
+    font-size: 20px;
+    padding: 0 1vw;
 }
 
 #listaCategorias {
     width: 100%;
     list-style-type: none;
-    padding: 15px;
+    padding: 1.5vw;
+    margin-top: 0;
     margin-bottom: 0;
+    padding-top: 0;
 }
 
 .elementosCategorias {
     width: 100%;
     list-style-type: none;
-    margin-bottom: 30px;
+    margin-bottom: 1vh;
     padding: 10px;
     height: 10%;
-    font-size: 50px;
+    font-size: 6.5vw;
 }
 
 .elementosCategorias img {
@@ -72,23 +74,40 @@ nav input {
     display: none;
     flex-wrap: wrap;
     margin-bottom: 20px;
+    padding-left: 1vw;
 }
 
 .elementosSubcategorias {
-    /*width: 20%;*/
     list-style-type: none;
     line-height: 1.5em;
-    font-size: 33px;
+    font-size: 4.5vw;
+
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #910000;
+    padding: 5px 15px;
+}
+
+.elementosSubcategorias:hover {
+    background-color: #ac0018;
+    transition: background-color 300ms ease-out;
+}
+
+.enlaceSubcategoria {
+    color: white;
+    text-decoration: none;
 }
 
 .flechaAbajo {
-    width: 7%;
+    flex-basis: 6.5vw;
     float: right;
 }
 
 #flechaSubir {
     float: right;
-    width: 100px;
+    width: 12vw;
+    margin: 3vw;
 }
 
 #contenedor {
@@ -99,13 +118,21 @@ nav input {
 }
 
 nav form input[type="submit"] {
-    font-size: 34px;
-    border: 1px solid black;
+    font-size: 4.5vw;
     padding: 10px;
-    border-radius: 15px;
-    background-color: #ebebeb;
-    border: 1px solid #690000;
+    border-radius: 5px;
+    border: 2px solid #690000;
     color: #850018;
+
+    background: linear-gradient(to right, #850018 50%, #ebebeb 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .25s ease-out;
+}
+
+nav form input[type="submit"]:hover {
+    background-position: left bottom;
+    color: white;
 }
 
 form {
@@ -113,12 +140,17 @@ form {
 }
 
 nav a {
-    font-size: 34px;
+    font-size: 4.5vw;
     background: #850018;
     color: white;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 5px;
     text-decoration: none;
+}
+
+a:hover {
+    background-color: #ac0018;
+    transition: background-color 300ms ease-out;
 }
 
 #buscar {
@@ -128,30 +160,66 @@ nav a {
 /* GENERAL */
 * {
     box-sizing: border-box;
+    user-select: none;
 }
+
 
 html,
 body {
     margin: 0 auto;
     font-family: Candara sans-serif;
     background-color: #dedcdc;
+    width: 100%;
 }
 
+
 header {
-    padding-top: 20px;
-    padding-left: 20px;
+    padding: 10px 0 10px 0;
     grid-column: 1/2;
     grid-row: 1/2;
     scroll-behavior: smooth;
 }
 
-header p {
-    margin-top: 40px;
-    font-size: 34px;
+header div {
+    display: flex;
+    align-items: center;
+    margin: 0 3vw;
+}
+
+header div p {
+    font-size: 4vw;
+    float: left;
+    flex: 1;
+}
+
+header div input[type="button"] {
+    font-size: 7vw;
+    float: right;
+    padding: 1vw 1vw;
+    border-radius: 5px;
+    border: 2px solid #690000;
+    color: #850018;
+    flex: 1.1;
+
+    background: linear-gradient(to right, #850018 50%, #ebebeb 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .25s ease-out;
+}
+
+header div input[type="button"]:hover {
+    background-position: left bottom;
+    color: white;
 }
 
 header img {
-    width: 100%;
+    width: 70%;
+}
+
+.divCatImagen {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 footer {
@@ -165,7 +233,7 @@ footer {
     padding: 5px 0px;
     grid-column: 1/2;
     grid-row: 4/5;
-    font-size: 34px;
+    font-size: 20px;
 }
 
 #divIconos {
