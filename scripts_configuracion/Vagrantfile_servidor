@@ -8,6 +8,7 @@ Vagrant.configure("2") do |config|
       run: "always",
       inline: "sudo route add -net 172.20.0.0 netmask 255.255.0.0 gw 172.20.1.2"
   config.vm.provision :shell, path: "bootstrap.sh"
+  config.vm.provision :shell, path: "scripts_configuracion/configurar_servidor.sh"
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "2048"
     vb.customize ['modifyvm', :id, '--cableconnected1', 'on']
