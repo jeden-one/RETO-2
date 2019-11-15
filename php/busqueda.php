@@ -1,5 +1,4 @@
 <?php
-session_start()
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,25 +34,15 @@ session_start()
 
     <?php
     include "database/mysql.php";
-
-    if (isset($_COOKIE["usuario"])) {
-        $dbh = connect();
-        $anuncios = searchAnuncioByUsuario($dbh,$_COOKIE["usuario"]);
-    ?>
-
-    <div id="anuncios">
-        <?php foreach ($anuncios as $anuncio) { ?>
-        <div class="anuncio">
-        <div class="imagenDiv">
-            <img src="../../img/<?= $anuncios->foto ?>">
-        </div>
-        <h2><?= $anuncios->titulo ?></h2>
-        <h3><?= $anuncios->usuario ?></h3>
-        <p><?= $anuncios->fecha_creacion ?></p>
-        </div>
-        <?php }  ?>
-    </div>
-    <?php } else {
+    if (isset($_GET['action'])&&$_GET['action']=='misAnuncios'){
+        if (!isset($_COOKIE["usuario"])){
+            header('location:login.php?action=misAnuncios');
+        }
+        else{
+            include 'includes/inc_misAnuncios.php';
+        }
+    }
+    else {
         include "includes/inc_anuncios.php";
     } ?>
 

@@ -1,5 +1,4 @@
 <?php
-session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +21,7 @@ session_start();
         </form>
 
         <div id="botones">
-            <a href="php/busqueda.php">Mis Anuncios</a>
+            <a href="php/busqueda.php?action=misAnuncios">Mis Anuncios</a>
             <a href="php/publicarAnuncio.php">Publicar Anuncio</a>
             <a href="php/editarPerfil.php">Editar Perfil</a>
         </div>
