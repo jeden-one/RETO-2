@@ -156,7 +156,7 @@ WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario;");
 function searchAnuncioByTitulo($dbh, $titulo)
 {
     $data = array(
-        'titulo' => '%'.$titulo.'%'
+        'titulo' => '%' . $titulo . '%'
     );
     $stmt = $dbh->prepare("SELECT a.titulo titulo, a.foto fotoAnuncio, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
     FROM anuncios a, usuarios u 
@@ -178,7 +178,7 @@ function searchAnuncioByTitulo($dbh, $titulo)
 function searchAnuncioByNombreUsuario($dbh, $usuario)
 {
     $data = array(
-        'usuario' => '%'.$usuario.'%'
+        'usuario' => '%' . $usuario . '%'
     );
     $stmt = $dbh->prepare("SELECT a.titulo titulo, a.foto fotoAnuncio, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
     FROM anuncios a, usuarios u 
@@ -404,9 +404,24 @@ function updateUsuarioOne($dbh, $data)
  * @return bool
  */
 
-function searchAnuncioByBusqueda($dbh, $busqueda) {
+/**
+ * insertar un usuario (solo admin)
+ *
+ * @param $dbh variable para conectarse a la base de datos
+ * @param $data array asociativo con todos los apartados del usuario
+ * @return mixed cantidad de filas afectadas
+ */
+function insertUsuario($dbh, $data)
+{
+    $stmt = $dbh->prepare("INSERT INTO usuarios (usuario,password,nombre) VALUES (:usuario,:password,:nombre)");
+    $stmt->execute($data);
+    return $stmt->rowCount();
+}
+
+function searchAnuncioByBusqueda($dbh, $busqueda)
+{
     $data = array(
-        'busqueda' => '%'.$busqueda.'%'
+        'busqueda' => '%' . $busqueda . '%'
     );
     $stmt = $dbh->prepare("SELECT a.titulo titulo, a.foto fotoAnuncio, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
     FROM anuncios a, usuarios u 

@@ -1,5 +1,5 @@
 <?php include("includes/inc_header2.php");
-
+echo $_GET['action'];
 switch ($_GET['action']) {
     case 'publicarAnuncio':
         $action = 'publicarAnuncio';

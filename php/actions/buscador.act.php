@@ -1,5 +1,4 @@
 <?php
-session_start();
 include "../database/mysql.php";
 $dbh = connect();
 
