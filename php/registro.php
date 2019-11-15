@@ -9,8 +9,7 @@
     <div id="separar"></div>
 
     <div id="divLogin">
-        Ya tienes una cuenta? <br><br>
-        <a href="login.php">Inicia sesión</a>
+        <a href="login.php">Ya tienes cuenta?</a>
     </div>
 </form>
 <script src="../script/librerias/SmtpJS.com-v3.0.0/SmtpJS.js"></script>

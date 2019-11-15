@@ -28,7 +28,7 @@ if (!isset($_COOKIE["usuario"])) {
             <label>Imagen: <input type="file" name="foto"> </label>
             <label for="categoria">Categoria</label>
             <select id="categoria">
-                <?php include 'includes/inc_categoriasSolo.php'?>
+                <?php include 'includes/inc_categoriasSolo.php' ?>
             </select>
             <label for="subcategoria">Subcategoria</label>
             <select name="subcategoria" id="subcategoria">
@@ -43,4 +43,3 @@ if (!isset($_COOKIE["usuario"])) {
 </body>
 
 </html>
-
