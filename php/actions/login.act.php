@@ -11,14 +11,14 @@ if (isset($_POST["usuario"]) && isset($_POST["pass"])) {
         header("location: ../login.php?error=2");
     } else {
         if (password_verify($pass, $resultado->password)) {
-            setcookie("usuario",$_POST["usuario"],time()*60*60*24*7,"/");
+            setcookie("usuario",$_POST["usuario"],time()+(60*60*24*7),"/");
             switch ($_POST['action']) {
                 case 'publicarAnuncio':
                     echo 'a publicar Anuncio';
                     header("location: ../publicarAnuncio.php");
                     break;
                 case 'editarPerfil':
-                    //header("location: ../editarPerfil.php");
+                    header("location: ../editarPerfil.php");
                     break;
                 case 'misAnuncios':
                     //header("location: ../misAnuncios.php");

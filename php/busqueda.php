@@ -1,4 +1,6 @@
-
+<?php
+session_start()
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,12 +17,17 @@
     </header>
     <nav>
         <form action="actions/buscador.act.php" method="post">
-            <input type="text" name="busqueda" value="<?php echo $_POST["busqueda"] ?>">
+            <input type="text" name="busqueda" value="<?php echo $_COOKIE["busqueda"] ?>">
             <input type="submit" name="buscar" value="Buscar" id="buscar">
         </form>
     </nav>
 
     <div id="botones">
+        <div>
+            <a href="actions/buscador.act.php?action=titulo">Titulo</a>
+            <a href="actions/buscador.act.php?action=usuario">Usuario</a>
+        </div>
+
         <input type="button" value="Mis Anuncios">
         <input type="button" value="Publicar Anuncio">
         <input type="button" value="Ordenar Por">
@@ -31,7 +38,6 @@
 
     if (isset($_COOKIE["usuario"])) {
         $dbh = connect();
-
         $anuncios = searchAnuncioByUsuario($dbh,$_COOKIE["usuario"]);
     ?>
 
@@ -39,44 +45,16 @@
         <?php foreach ($anuncios as $anuncio) { ?>
         <div class="anuncio">
         <div class="imagenDiv">
-            <img src="../../img/<?= $anuncio->fotoAnuncio ?>">
+            <img src="../../img/<?= $anuncios->foto ?>">
         </div>
         <h2><?= $anuncios->titulo ?></h2>
-        <h3><?= $anuncios->nombreUsuario ?></h3>
-        <p><?= $anuncios->fechaCreacion ?></p>
+        <h3><?= $anuncios->usuario ?></h3>
+        <p><?= $anuncios->fecha_creacion ?></p>
+        </div>
+        <?php }  ?>
     </div>
-    <?php } ?>
-</div>";
-}
-     <?php
-    if (empty($_POST["busqueda"])) {
-        header("location: ../../index.php");
-    }
-
-    if (isset($_POST["busqueda"])) {
-    include "../database/mysql.php";
-    connect();
-    $busqueda = $_POST["busqueda"];
-    $dbh = connect();
-
-    $anuncios = searchAnuncioByBusqueda($dbh,$busqueda);
-
-    ?>
-
-    <div id="anuncios">
-        <?php foreach ($anuncios as $anuncio) { ?>
-    <div class="anuncio">
-        <div class="imagenDiv">
-            <img src="../../img/<?= $anuncio->fotoAnuncio ?>">
-        </div>
-        <h2><?= $anuncios->titulo ?></h2>
-        <h3><?= $anuncios->nombreUsuario ?></h3>
-        <p><?= $anuncios->fechaCreacion ?></p>
-        </div>
-        <?php } ?>
-    </div>";
-
-<?php } }?>
+    <?php } else {
+        include "includes/inc_anuncios.php";
+    } ?>
 
     <?php include "includes/inc_footer.php" ?>
-</div>
