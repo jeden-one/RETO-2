@@ -1,7 +1,4 @@
 <?php
-if (isset($_GET["usuario"])) {
-    setcookie("usuario",$_GET["usuario"]);
-}
 ?>
 
 <!DOCTYPE html>
