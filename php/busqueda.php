@@ -1,6 +1,3 @@
-<?php
-session_start()
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,7 +51,7 @@ session_start()
         <?php }  ?>
     </div>
     <?php } else {
-        include "includes/inc_anuncios.php";
+        include "includes/inc_anunciosBusqueda.php";
     } ?>
 
     <?php include "includes/inc_footer.php" ?>
