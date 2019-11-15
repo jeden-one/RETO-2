@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Busqueda</title>
     <link rel="stylesheet" href="../../css/categoria.css">
 </head>
 
@@ -16,18 +16,34 @@
     </header>
     <nav>
         <form action="actions/buscador.act.php" method="post">
-            <input type="text" name="busqueda" value="<?php echo $_POST["busqueda"] ?>">
+            <input type="text" name="busqueda" value="<?php echo $_COOKIE["busqueda"] ?>">
             <input type="submit" name="buscar" value="Buscar" id="buscar">
         </form>
     </nav>
 
     <div id="botones">
+        <div>
+            <a href="actions/buscador.act.php?action=titulo">Titulo</a>
+            <a href="actions/buscador.act.php?action=usuario">Usuario</a>
+        </div>
+
         <input type="button" value="Mis Anuncios">
         <input type="button" value="Publicar Anuncio">
         <input type="button" value="Ordenar Por">
     </div>
-    <div>
 
-    </div>
+    <?php
+    include "database/mysql.php";
+    if (isset($_GET['action'])&&$_GET['action']=='misAnuncios'){
+        if (!isset($_COOKIE["usuario"])){
+            header('location:login.php?action=misAnuncios');
+        }
+        else{
+            include 'includes/inc_misAnuncios.php';
+        }
+    }
+    else {
+        include "includes/inc_anuncios.php";
+    } ?>
+
     <?php include "includes/inc_footer.php" ?>
-</div>

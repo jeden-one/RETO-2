@@ -1,10 +1,5 @@
 <?php
-include "php/database/mysql.php";
-if (isset($_GET["usuario"])) {
-    setcookie("usuario", $_GET["usuario"]);
-}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,13 +23,12 @@ if (isset($_GET["usuario"])) {
     </header>
     <nav>
         <form action="php/actions/buscador.act.php" method="post">
-            <input type="text" name="busqueda" value="<?php echo $_POST["busqueda"] ?>">
-            <input type="submit" name="buscar" value="Buscar" id="buscar"">
+            <input type="text" name="busqueda" value="<?php echo $_COOKIE["busqueda"] ?>">
+            <input type="submit" name="buscar" value="Buscar" id="buscar">
         </form>
 
         <div id="botones">
-
-            <a href="#">Mis Anuncios</a>
+            <a href="php/busqueda.php?action=misAnuncios">Mis Anuncios</a>
             <a href="php/publicarAnuncio.php">Publicar Anuncio</a>
             <a href="php/editarPerfil.php">Editar Perfil</a>
         </div>
@@ -44,6 +38,8 @@ if (isset($_GET["usuario"])) {
         <ul id="listaCategorias">
             <?php
             include_once "php/database/mysql.php";
+            include "php/actions/buscador.act.php";
+
             $dbh = connect();
             $resultado = searchCategoriaAll($dbh);
             foreach ($resultado as $value) {
