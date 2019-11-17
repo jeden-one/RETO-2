@@ -135,7 +135,7 @@ function searchCategoriaOne($dbh, $nombre)
  */
 function searchAnuncioAll($dbh)
 {
- $stmt = $dbh->prepare("SELECT a.id anuncio, titulo, a.descripcion descripcionAnuncio, a.foto fotoAnuncio,a.fecha_creacion fechaCreacion, u.foto fotoUsuario, u.nombre nombreUsuario
+ $stmt = $dbh->prepare("SELECT a.id anuncio, titulo, a.descripcion descripcionAnuncio, a.foto fotoAnuncio,a.fecha_creacion fechaCreacion, u.foto fotoUsuario, u.nombre nombreUsuario. a.id_subcategoria subcategoria
  s.nombre subcategoria, c.nombre categria, u.nombre nombreUsuario 
 FROM anuncios a, subcategorias s, categorias c, usuarios u 
 WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario;");
@@ -226,9 +226,10 @@ function searchAnuncioBySubcategoria($dbh, $id_subcategoria)
     $data = array(
         'id_subcategoria' => $id_subcategoria,
     );
-    $stmt = $dbh->prepare("SELECT id, titulo, descripcion, foto, s.nombre subcategoria, c.nombre categria, usuario
-FROM anuncios a, subcategorias s, categorias c, usuarios u
-WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario AND id_subcategoria=:id_subcategoria;");
+    $stmt = $dbh->prepare("SELECT a.id anuncio, titulo, a.descripcion descripcionAnuncio, a.foto fotoAnuncio,a.fecha_creacion fechaCreacion, u.foto fotoUsuario, u.nombre nombreUsuario. a.id_subcategoria subcategoria
+ s.nombre subcategoria, c.nombre categria, u.nombre nombreUsuario 
+FROM anuncios a, subcategorias s, categorias c, usuarios u 
+WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario AND a.id_subcategoria=:id_subcategoria;");
     if ($stmt->execute($data) === true) {
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     } else {

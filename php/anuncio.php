@@ -17,7 +17,6 @@ include_once "database/mysql.php";
         <p>Mas de "numero" de anuncios publicados en nuestra pagina web</p>
     </header>
     <?php include "includes/inc_anuncio.php" ;
-    include("includes/inc_anunciosCategoria.php") ;
     include("includes/inc_footer.php") ?>
 
 </body>
