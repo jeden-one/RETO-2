@@ -20,7 +20,7 @@ if (isset($_POST["usuario"]) && isset($_POST["pass"])) {
                     header("location: ../editarPerfil.php");
                     break;
                 case 'misAnuncios':
-                    //header("location: ../misAnuncios.php");
+                    header("location: ../busqueda.php?action=misAnuncios");
                     break;
                 case 'login':
                     //header("location: ../../index.php");
