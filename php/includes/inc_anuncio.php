@@ -1,4 +1,7 @@
 <?php
+include "../database/mysql.php";
+$dbh = connect();
+
 if (isset($_GET['anuncio'])) {
     $anuncio = unserialize($_GET['anuncio']);
     ?>
@@ -12,11 +15,9 @@ if (isset($_GET['anuncio'])) {
         <h2><?= $anuncio->titulo ?></h2>
 
     </div>
-
-
-
-
-
+    <?php
+        $anuncios = searchAnuncioBySubcategoria($dbh, $anuncio->subcategoria);
+    ?>
     <div id="anuncios">
         <?php foreach ($anuncios as $anuncio) {
             $anuncioSerializado = serialize($anuncio); ?>
@@ -30,18 +31,5 @@ if (isset($_GET['anuncio'])) {
                 </div></a>
         <?php } ?>
     </div>
-
-
 <?php } ?>
 
-<div id="containerAnuncio">
-    <div id="navAnuncio">
-        <img src="../img/ajebask.jpeg">
-        <p>Nombre del anunciante</p>
-        <input type="button" value="Contactar" id="contactar">
-    </div>
-    <img src="../img/coche.jpeg" id="imgAnuncio">
-    <h2>Titulo del producto</h2>
-    <label>1500$</label>
-    <p>sdrglafffffffffeiughslrfs ajgfsbkdfsfjlblds kdfvdfnhyjntdjhnyjtyyyy yyyyyyyyyyyyf</p>
-</div>
