@@ -16,19 +16,9 @@ include_once "database/mysql.php";
         <img src="../img/aje_logo.png">
         <p>Mas de "numero" de anuncios publicados en nuestra pagina web</p>
     </header>
-    <div id="containerAnuncio">
-        <div id="navAnuncio">
-            <img src="../img/ajebask.jpeg">
-            <p>Nombre del anunciante</p>
-            <input type="button" value="Contactar" id="contactar">
-        </div>
-        <img src="../img/coche.jpeg" id="imgAnuncio">
-        <h2>Titulo del producto</h2>
-        <label>1500$</label>
-        <p>sdrglafffffffffeiughslrfs ajgfsbkdfsfjlblds kdfvdfnhyjntdjhnyjtyyyy yyyyyyyyyyyyf</p>
-    </div>
-    <?php include("includes/inc_anunciosCategoria.php") ?>
-    <?php include("includes/inc_footer.php") ?>
+    <?php include "includes/inc_anuncio.php" ;
+    include("includes/inc_anunciosCategoria.php") ;
+    include("includes/inc_footer.php") ?>
 
 </body>
 

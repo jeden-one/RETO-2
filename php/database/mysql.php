@@ -135,9 +135,9 @@ function searchCategoriaOne($dbh, $nombre)
  */
 function searchAnuncioAll($dbh)
 {
-    $stmt = $dbh->prepare("SELECT a.id anuncio, titulo, a.descripcion descripcionAnuncio, a.foto fotoAnuncio,a.fecha_creacion fechaCreacion,
- s.nombre subcategoria, c.nombre categria, u.nombre nombreUsuario
-FROM anuncios a, subcategorias s, categorias c, usuarios u
+ $stmt = $dbh->prepare("SELECT a.id anuncio, titulo, a.descripcion descripcionAnuncio, a.foto fotoAnuncio,a.fecha_creacion fechaCreacion, u.foto fotoUsuario, u.nombre nombreUsuario
+ s.nombre subcategoria, c.nombre categria, u.nombre nombreUsuario 
+FROM anuncios a, subcategorias s, categorias c, usuarios u 
 WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario;");
     if ($stmt->execute() === true) {
         return $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -158,8 +158,9 @@ function searchAnuncioByTitulo($dbh, $titulo)
     $data = array(
         'titulo' => '%' . $titulo . '%'
     );
-    $stmt = $dbh->prepare("SELECT a.titulo titulo, a.foto fotoAnuncio, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
-    FROM anuncios a, usuarios u
+
+    $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
+    FROM anuncios a, usuarios u 
     WHERE u.id=a.id_usuario AND titulo LIKE :titulo");
     if ($stmt->execute($data) === true) {
         return $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -180,8 +181,9 @@ function searchAnuncioByNombreUsuario($dbh, $usuario)
     $data = array(
         'usuario' => '%' . $usuario . '%'
     );
-    $stmt = $dbh->prepare("SELECT a.titulo titulo, a.foto fotoAnuncio, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
-    FROM anuncios a, usuarios u
+
+    $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
+    FROM anuncios a, usuarios u 
     WHERE u.id=a.id_usuario AND u.nombre LIKE :usuario");
     if ($stmt->execute($data) === true) {
         return $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -423,8 +425,9 @@ function searchAnuncioByBusqueda($dbh, $busqueda)
     $data = array(
         'busqueda' => '%' . $busqueda . '%'
     );
-    $stmt = $dbh->prepare("SELECT a.titulo titulo, a.foto fotoAnuncio, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
-    FROM anuncios a, usuarios u
+
+    $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
+    FROM anuncios a, usuarios u 
     WHERE u.id=a.id_usuario AND (titulo LIKE :busqueda OR u.nombre LIKE :busqueda)");
     if ($stmt->execute($data) === true) {
         return $stmt->fetchAll(PDO::FETCH_OBJ);
