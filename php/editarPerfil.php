@@ -1,24 +1,5 @@
 <?php
-include "database/mysql.php";
-
-if (isset($_COOKIE["usuario"])) {
-    $dbh = connect();
-
-    $resultado = searchUsuarioOneEmail($dbh,$_COOKIE["usuario"]);
-
-    $nombre = $resultado ->nombre;
-    $usuario = $resultado ->usuario;
-    $password = $resultado->password;
-    $descripcion = $resultado->descripcion;
-
-    close($dbh);
-} else {
-    header("location: login.php?action=editarPerfil");
-}
-
-if (isset($_GET["filas"])) {
-    echo "  " . $_GET["filas"] . " filas modificadas";
-    }
+require "includes/inc_editarPerfil.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,9 +26,8 @@ if (isset($_GET["filas"])) {
     </header>
 
     <form id="Datos" action="actions/editarPerfil.act.php" method="post" enctype="multipart/form-data">
+        <?php mensajeRespuesta() ?>
         <h1>Editar Perfil</h1>
-
-
         <input type="hidden" name="passwordPasar" value="<?php echo $password ?>">
         <label>Foto: <input type="file" name="foto" accept="image/x-png,image/gif,image/jpeg"></label>
         <label>Nombre: <input type="text" name="nombre" value="<?php echo $nombre ?>"> </label>
