@@ -17,10 +17,27 @@ include_once "php/database/mysql.php";
     <header id="header">
         <img src="img/aje_logo.png" onclick="goIndex()">
         <div>
-            <p><strong><?php $dbh = connect();
+            <p><strong>
+                    <?php $dbh = connect();
                     $cont = counterAnuncios($dbh);
-                    echo $cont; ?></strong> anuncios publicados</p>
-            <input type="button" value="Iniciar sesión" onclick="goLogin()">
+                    echo $cont; ?>
+                </strong> anuncios publicados
+            </p>
+            <?php
+
+            if (isset($_GET['action'])) {
+                if ($_GET['action'] === "cerrarSesion") {
+                    setcookie("usuario", "", -1);
+                    header("Location:index.php");
+                }
+            }
+
+            if (!isset($_COOKIE["usuario"])) {
+                echo '<input type="button" value="Iniciar sesión" onclick="goLogin()">';
+            } else {
+                echo "<p id='usLog'>Bienvenido, " . $_COOKIE["usuario"] . "<br><a href='index.php?action=cerrarSesion'>Cerrar sesión</a></p>";
+            }
+            ?>
         </div>
     </header>
     <nav>
@@ -61,10 +78,10 @@ include_once "php/database/mysql.php";
         <p>Siguenos en nuestras redes sociales</p>
 
         <div id="divIconos">
-            <a href=""><img src="../../img/facebook.svg"></a>
-            <a href=""><img src="../../img/twitter.svg"></a>
-            <a href=""><img src="../../img/instagram.svg"></a>
-            <a href="https://github.com/jeden-one/RETO-2"><img src="../../img/github.svg"></a>
+            <a href=""><img src="img/facebook.svg"></a>
+            <a href=""><img src="img/twitter.svg"></a>
+            <a href=""><img src="img/instagram.svg"></a>
+            <a href="https://github.com/jeden-one/RETO-2"><img src="img/github.svg"></a>
         </div>
         <p>Copyright © Todos los Derechos Reservados 2019</p>
     </footer>
