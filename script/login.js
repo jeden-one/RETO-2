@@ -1,28 +1,6 @@
 //se usara para hacer una funcion axaj para ver si el usuario existe
-/*$('#usuario').focusout(function () {
-    let usuario = {"usuario": $('#usuario').val()};
-    $.ajax({
-        url: "actions/validarUsuario.act.php",
-        type: 'POST',
-        data: usuario,
-        dataType: 'json',
-        success: console.log("bien")
-
-
-        function () {
-        console.log('enviado');
-    },
-    error: function () {
-        console.log("no se ha podido obtener la informacion");
-    }
-
-
-    })
-})*/
-
-//se usara para hacer una funcion axaj para ver si el usuario existe
 $('#usuario').focusout(function () {
-    var usuario = new Object();
+    let usuario = new Object();
     usuario.usuario = $('#usuario').val();
     $.ajax({
         url: "actions/validarUsuario.act.php",
@@ -30,16 +8,21 @@ $('#usuario').focusout(function () {
         data: usuario,
         datatype: 'application/json',
         success: function (data) {
-            console.log(data)
-            if(data=='true'){
-                $('#pass').removeAttr('disabled');
-            }
-            else{
-                $('#pass').attr('disabled','disabled');
+            if (data == 'true') {
+                $('#pass').removeAttr('readonly');
+                $('#pass').css('backgroundColor', '#ebebeb');
+            } else {
+                $('#pass').attr('readonly');
+                $('#pass').css('backgroundColor', '#a7afae');
             }
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.log(jqXHR + " " + textStatus + " " + errorThrown);
         }
-    })
+    });
+
+    let contrasenya = $('#pass');
+    contrasenya.click(function () {
+        $('#usuario').trigger('focusout');
+    });
 });

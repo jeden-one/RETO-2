@@ -1,5 +1,5 @@
 <?php include("includes/inc_header2.php");
-if (isset($_COOKIE['usuario'])){
+if (isset($_COOKIE['usuario'])) {
     header("Location:../index.php");
 }
 switch ($_GET['action']) {
@@ -33,7 +33,7 @@ if (isset($_GET['error'])) {
 <form method="post" action="actions/login.act.php">
     <h1>Inicia sesión y empieza a publicitar tus productos </h1>
     <input type="text" id="usuario" name="usuario" placeholder="Usuario" autofocus>
-    <input type="text" id="pass" name="pass" placeholder="Contraseña" disabled>
+    <input type="text" id="pass" name="pass" placeholder="Contraseña" readonly>
     <input type="hidden" name="action" value="<?= $action ?>">
     <input type="submit" id="login" value="Iniciar sesión">
 
