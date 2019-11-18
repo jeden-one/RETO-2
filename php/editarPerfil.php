@@ -20,9 +20,8 @@ require "includes/inc_editarPerfil.php";
     </header>
 
     <form id="Datos" action="actions/editarPerfil.act.php" method="post" enctype="multipart/form-data">
+        <?php mensajeRespuesta() ?>
         <h1>Editar Perfil</h1>
-
-
         <input type="hidden" name="passwordPasar" value="<?php echo $password ?>">
         <label>Foto: <input type="file" name="foto" accept="image/x-png,image/gif,image/jpeg"></label>
         <label>Nombre: <input type="text" name="nombre" value="<?php echo $nombre ?>"> </label>
