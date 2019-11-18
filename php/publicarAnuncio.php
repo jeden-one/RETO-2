@@ -20,7 +20,13 @@ if (!isset($_COOKIE["usuario"])) {
 <div id="contenedor6">
     <header>
         <img src="../../img/aje_logo.png">
-        <p>Mas de "numero" de anuncios publicados en nuestra pagina web</p>
+        <p>
+            <strong>
+                <?php $dbh = connect();
+                $cont = counterAnuncios($dbh);
+                echo $cont; ?>
+            </strong> anuncios publicados
+        </p>
     </header>
 
 <?php
