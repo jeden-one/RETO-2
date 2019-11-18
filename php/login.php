@@ -1,37 +1,10 @@
 <?php include("includes/inc_header2.php");
-if (isset($_COOKIE['usuario'])) {
-    header("Location:../index.php");
-}
-switch ($_GET['action']) {
-    case 'publicarAnuncio':
-        $action = 'publicarAnuncio';
-        break;
-    case 'editarPerfil':
-        $action = 'editarPerfil';
-        break;
-    case 'misAnuncios':
-        $action = 'misAnuncios';
-        break;
-    case 'login':
-        $action = 'login';
-        break;
-}
-
-if (isset($_GET['error'])) {
-    if ($_GET['error'] == 1) {
-        ?>
-        <script>alert('contraseña incorrecta')</script>
-        <?php
-    }
-    if ($_GET['error'] == 2) {
-        ?>
-        <script>alert('usuario no encontrado')</script>
-        <?php
-    }
-} ?>
+include('includes/inc_loginEntrada.php');
+?>
 
 <form method="post" action="actions/login.act.php">
     <h1>Inicia sesión y empieza a publicitar tus productos </h1>
+    <?php comprobarDatos(); ?>
     <input type="text" id="usuario" name="usuario" placeholder="Usuario" autofocus>
     <input type="text" id="pass" name="pass" placeholder="Contraseña" readonly>
     <input type="hidden" name="action" value="<?= $action ?>">
@@ -44,4 +17,5 @@ if (isset($_GET['error'])) {
     </div>
 </form>
 <script src="../script/login.js"></script>
-<?php include("includes/inc_footer.php") ?>
+<?php
+include("includes/inc_footer.php") ?>

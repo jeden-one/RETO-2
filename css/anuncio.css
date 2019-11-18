@@ -6,16 +6,17 @@
     height: 100px;
     font-size: 35px;
     align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
-#navAnuncio img {
+#fotoPerfil {
     width: 15%;
     border-radius: 50%;
 }
 
-#imgAnuncio {
-    width: 100%;
-    border-radius: 15px;
+#navAnuncio p {
+    width: 20%;
 }
 
 #containerAnuncio {
@@ -24,21 +25,27 @@
     grid-row: 2/3;
     border-radius: 15px;
     font-size: 34px;
+    text-align: center;
+}
+
+#containerAnuncio a {
+    font-size: 4.5vw;
+    background: #850018;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#containerAnuncio a:hover {
+    background-color: #ac0018;
+    transition: background-color 300ms ease-out;
 }
 
 #contenedor4 {
     display: grid;
-    grid-template-rows: 23% 25% 80% 6%;
+    grid-template-rows: 27% auto auto 35%;
     grid-template-columns: 100%;
-}
-
-#contactar {
-    height: 75px;
-}
-
-#containerAnuncio input[type="button"] {
-    font-size: 34px;
-    padding: 20px;
 }
 
 #anuncios {
@@ -50,10 +57,9 @@
     justify-content: center;
 }
 
-.imagenDiv img {
-    height: 100%;
-    width: 100%;
+#fotoAnuncio{
     object-fit: cover;
+    width: 95%;
 }
 
 .anuncio {
@@ -69,18 +75,6 @@
 
 .anuncio>* {
     width: 100%;
-}
-
-.anuncio img {
-    width: 100%;
-    border-radius: 15px;
-    margin-bottom: 10px;
-}
-
-.anuncio p {
-    line-height: 1.5em;
-    width: 100%;
-    font-size: 20px;
 }
 
 .anuncio h2 {

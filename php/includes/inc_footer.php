@@ -1,8 +1,6 @@
 <?php ?>
 <footer>
-
     <p>Siguenos en nuestras redes sociales</p>
-
     <div id="divIconos">
         <a href=""><img src="../../img/facebook.svg"></a>
         <a href=""><img src="../../img/twitter.svg"></a>

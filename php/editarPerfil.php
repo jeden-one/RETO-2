@@ -1,24 +1,5 @@
 <?php
-include "database/mysql.php";
-
-if (isset($_COOKIE["usuario"])) {
-    $dbh = connect();
-
-    $resultado = searchUsuarioOneEmail($dbh,$_COOKIE["usuario"]);
-
-    $nombre = $resultado ->nombre;
-    $usuario = $resultado ->usuario;
-    $password = $resultado->password;
-    $descripcion = $resultado->descripcion;
-
-    close($dbh);
-} else {
-    header("location: login.php?action=editarPerfil");
-}
-
-if (isset($_GET["filas"])) {
-    echo "  " . $_GET["filas"] . " filas modificadas";
-    }
+include "includes/inc_editarPerfil.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,20 +9,25 @@ if (isset($_GET["filas"])) {
     <title>Editar Perfil</title>
     <link href="../css/general.css" rel="stylesheet">
     <link href="../css/normalize.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/editarPerfil.css">
+    <link href="../css/editarPerfil.css" rel="stylesheet" >
 </head>
 
 <body>
 <div id="contenedor5">
     <header id="header">
         <img src="../../img/aje_logo.png">
-        <p>Mas de "numero" de anuncios publicados en nuestra pagina web</p>
+        <p>
+            <strong>
+                <?php $dbh = connect();
+                $cont = counterAnuncios($dbh);
+                echo $cont; ?>
+            </strong> anuncios publicados
+        </p>
     </header>
 
     <form id="Datos" action="actions/editarPerfil.act.php" method="post" enctype="multipart/form-data">
+        <?php mensajeRespuesta() ?>
         <h1>Editar Perfil</h1>
-
-
         <input type="hidden" name="passwordPasar" value="<?php echo $password ?>">
         <label>Foto: <input type="file" name="foto" accept="image/x-png,image/gif,image/jpeg"></label>
         <label>Nombre: <input type="text" name="nombre" value="<?php echo $nombre ?>"> </label>

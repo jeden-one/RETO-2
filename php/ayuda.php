@@ -1,4 +1,30 @@
-<?php include "includes/inc_header2.php"; ?>
+<?php include "database/mysql.php"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajebask</title>
+    <link href="../css/general.css" rel="stylesheet">
+    <link href="../css/normalize.css" rel="stylesheet">
+    <link href="../css/ayuda.css" rel="stylesheet">
+    <script src="../../Script/librerias/jQuery/jquery-3.4.1.js"></script>
+    <script src="../../Script/ayuda.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<div id="contenedor2">
+    <header>
+        <img src="../../img/aje_logo.png" onclick="goIndex()">
+
+        <p>
+            <strong>
+                <?php $dbh = connect();
+                $cont = counterAnuncios($dbh);
+                echo $cont; ?>
+            </strong> anuncios publicados
+        </p>
+    </header>
 
 <form action="actions/" method="post">
     <h1>¿En qué podemos ayudarte</h1>

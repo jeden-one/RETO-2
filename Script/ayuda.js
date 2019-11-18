@@ -30,3 +30,7 @@ function enviarAyuda() {
             alert('Solicitud enviada correctamente, espere un email de respuesta por parte de nuestro equipo de soporte técnico')
         );
 }
+
+function goIndex() {
+    window.location.href="../../index.php";
+}

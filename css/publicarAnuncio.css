@@ -2,7 +2,7 @@
 
 #contenedor6 {
     display: grid;
-    grid-template-rows: 35% 100% 25%;
+    grid-template-rows: 20% 100% 27%;
     grid-template-columns: 100%;
 }
 
@@ -21,16 +21,29 @@ header {
 }
 
 input[type="text"] {
+    font-size: 4.5vw;
     width: 75%;
-    border: 1px solid black;
-    font-size: 1em;
-    margin-bottom: 1em;
+    border: 2px solid #850018;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    min-height: 45px;
+    margin-bottom: 20px;
+    outline: none;
+    background-color: #ebebeb;
+    user-select: revert;
 }
 
 textarea {
-    font-size: 0.5em;
-    border: 1px solid black;
-    width: 60%;
+    font-size: 4.5vw;
+    width: 75%;
+    border: 2px solid #850018;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    min-height: 45px;
+    margin-bottom: 20px;
+    outline: none;
+    background-color: #ebebeb;
+    user-select: revert;
 }
 
 input[type="file"] {
@@ -48,6 +61,7 @@ h1 {
 select {
     font-size: 1.3em;
 }
+
 .selector{
     flex-basis: 100%;
     display: flex;
@@ -55,23 +69,33 @@ select {
     justify-content: center;
     align-items: center;
 }
+
 .selector label{
     margin-bottom: 0.5em;
 }
+
 input[type="submit"] {
-    width: 40%;
-    height: 10%;
-    font-size: 1.5em;
-    border: 1px solid black;
-    border-radius: 15px;
+    font-size: 4.5vw;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #690000;
+    color: #850018;
+    background: linear-gradient(to right, #850018 50%, #ebebeb 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .25s ease-out;
+    width: 75%;
+}
+
+input[type="submit"]:hover {
+    background-position: left bottom;
+    color: white;
 }
 
 label {
     flex-basis: 70%;
-    height: 5%;
     font-size: 1.5em;
 }
-
 
 footer {
     grid-row: 3/4;
