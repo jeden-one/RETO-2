@@ -126,6 +126,7 @@ footer {
     grid-column: 1/2;
     grid-row: 4/5;
     font-size: 34px;
+    text-decoration: none;
 }
 
 #divIconos {
