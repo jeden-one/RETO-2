@@ -39,5 +39,5 @@ function goIndex() {
     window.location.href = "index.php";
 }
 function goLogin() {
-    window.location.href = "php/login.php";
+    window.location.href = "php/login.php?action=login";
 }

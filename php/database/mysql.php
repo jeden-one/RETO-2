@@ -9,8 +9,8 @@ function connect()
 {
     $dbname = 'proyecto_ajebask';
     $host = 'localhost';
-    $user = 'jeden';
-    $pass = 'jeden';
+    $user = 'root';
+    $pass = '';
     try {
         $dbh = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
         return $dbh;
@@ -135,9 +135,9 @@ function searchCategoriaOne($dbh, $nombre)
  */
 function searchAnuncioAll($dbh)
 {
-    $stmt = $dbh->prepare("SELECT a.id anuncio, titulo, a.descripcion descripcionAnuncio, a.foto fotoAnuncio,a.fecha_creacion fechaCreacion,
- s.nombre subcategoria, c.nombre categria, u.nombre nombreUsuario
-FROM anuncios a, subcategorias s, categorias c, usuarios u
+ $stmt = $dbh->prepare("SELECT a.id anuncio, titulo, a.descripcion descripcionAnuncio, a.foto fotoAnuncio,a.fecha_creacion fechaCreacion, u.foto fotoUsuario, u.nombre nombreUsuario. a.id_subcategoria subcategoria
+ s.nombre subcategoria, c.nombre categria, u.nombre nombreUsuario 
+FROM anuncios a, subcategorias s, categorias c, usuarios u 
 WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario;");
     if ($stmt->execute() === true) {
         return $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -158,8 +158,9 @@ function searchAnuncioByTitulo($dbh, $titulo)
     $data = array(
         'titulo' => '%' . $titulo . '%'
     );
-    $stmt = $dbh->prepare("SELECT a.titulo titulo, a.foto fotoAnuncio, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
-    FROM anuncios a, usuarios u
+
+    $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
+    FROM anuncios a, usuarios u 
     WHERE u.id=a.id_usuario AND titulo LIKE :titulo");
     if ($stmt->execute($data) === true) {
         return $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -180,8 +181,9 @@ function searchAnuncioByNombreUsuario($dbh, $usuario)
     $data = array(
         'usuario' => '%' . $usuario . '%'
     );
-    $stmt = $dbh->prepare("SELECT a.titulo titulo, a.foto fotoAnuncio, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
-    FROM anuncios a, usuarios u
+
+    $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
+    FROM anuncios a, usuarios u 
     WHERE u.id=a.id_usuario AND u.nombre LIKE :usuario");
     if ($stmt->execute($data) === true) {
         return $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -194,7 +196,7 @@ function searchAnuncioByNombreUsuario($dbh, $usuario)
  * Buscar anuncios por usuario
  *
  * @param $dbh variable para conectarse a la base de datos
- * @param $id_usuario id del usuario
+ * @param $usuario el email del usuario
  * @return mixed array de objetos de la busqueda
  */
 function searchAnuncioByUsuario($dbh, $usuario)
@@ -202,7 +204,7 @@ function searchAnuncioByUsuario($dbh, $usuario)
     $data = array(
         'usuario' => $usuario,
     );
-    $stmt = $dbh->prepare("SELECT a.titulo titulo, a.foto foto, a.fecha_creacion fecha_creacion,u.usuario usuario
+    $stmt = $dbh->prepare("SELECT a.id idAnuncio,a.titulo titulo, a.foto foto, a.fecha_creacion fecha_creacion,u.usuario nombreUsuario, a.descripcion descripcion
 FROM usuarios u, anuncios a
 WHERE u.id = a.id_usuario AND u.usuario=:usuario;");
     if ($stmt->execute($data) === true) {
@@ -224,9 +226,10 @@ function searchAnuncioBySubcategoria($dbh, $id_subcategoria)
     $data = array(
         'id_subcategoria' => $id_subcategoria,
     );
-    $stmt = $dbh->prepare("SELECT id, titulo, descripcion, foto, s.nombre subcategoria, c.nombre categria, usuario
-FROM anuncios a, subcategorias s, categorias c, usuarios u
-WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario AND id_subcategoria=:id_subcategoria;");
+    $stmt = $dbh->prepare("SELECT a.id anuncio, titulo, a.descripcion descripcionAnuncio, a.foto fotoAnuncio,a.fecha_creacion fechaCreacion, u.foto fotoUsuario, u.nombre nombreUsuario. a.id_subcategoria subcategoria
+ s.nombre subcategoria, c.nombre categria, u.nombre nombreUsuario 
+FROM anuncios a, subcategorias s, categorias c, usuarios u 
+WHERE s.id=a.id_subcategoria AND c.id=s.id_categoria AND u.id=a.id_usuario AND a.id_subcategoria=:id_subcategoria;");
     if ($stmt->execute($data) === true) {
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     } else {
@@ -398,11 +401,6 @@ function updateUsuarioOne($dbh, $data)
     return $stmt->rowCount();
 }
 
-/**
- * @param $dbh
- * @param $busqueda
- * @return bool
- */
 
 /**
  * insertar un usuario (solo admin)
@@ -418,13 +416,21 @@ function insertUsuario($dbh, $data)
     return $stmt->rowCount();
 }
 
+/**
+ * buscar por coincidencia en titulo y nombre usuario
+ *
+ * @param $dbh variable para conectarse a la base de datos
+ * @param $busqueda datos insertado en el cuadro de busqueda
+ * @return mixed lista de objetos de la busqueda
+ */
 function searchAnuncioByBusqueda($dbh, $busqueda)
 {
     $data = array(
         'busqueda' => '%' . $busqueda . '%'
     );
-    $stmt = $dbh->prepare("SELECT a.titulo titulo, a.foto fotoAnuncio, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
-    FROM anuncios a, usuarios u
+
+    $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
+    FROM anuncios a, usuarios u 
     WHERE u.id=a.id_usuario AND (titulo LIKE :busqueda OR u.nombre LIKE :busqueda)");
     if ($stmt->execute($data) === true) {
         return $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -433,6 +439,29 @@ function searchAnuncioByBusqueda($dbh, $busqueda)
     }
 }
 
+function searchAnuncioById($dbh, $id)
+{
+    $data = array(
+        'id' =>  $id
+    );
+
+    $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
+    FROM anuncios a, usuarios u 
+    WHERE u.id=a.id_usuario AND id=:id");
+    if ($stmt->execute($data) === true) {
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    } else {
+        return false;
+    }
+}
+
+/**
+
+ * busca la cantidad de anuncios creados
+ *
+ * @param $dbh variable para conectarse a la base de datos
+ * @return mixed la cantidad de anuncios creados
+ */
 function counterAnuncios($dbh)
 {
     $stmt = $dbh->prepare("SELECT count(*) FROM anuncios");
@@ -443,3 +472,4 @@ function counterAnuncios($dbh)
         return false;
     }
 }
+

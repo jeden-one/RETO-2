@@ -2,6 +2,7 @@
 #contenedor2 {
     display: grid;
     grid-template-rows: auto auto auto auto;
+    height: 100vh;
 }
 
 form {
@@ -22,7 +23,7 @@ form h1 {
     text-align: center;
     margin-bottom: 30px;
     line-height: 1.3em;
-    font-size: 100%;
+    font-size: 8vw;
     flex-basis: 100%;
 }
 
@@ -36,6 +37,11 @@ input[type="email"], input[type="text"] {
     outline: none;
     background-color: #ebebeb;
     font-size: 8vw;
+    user-select: revert;
+}
+
+input[type="text"]:hover {
+    box-shadow: 0 0 10px #690000;
 }
 
 form input[type="button"], form input[type="submit"] {
@@ -49,18 +55,29 @@ form input[type="button"], form input[type="submit"] {
     color: white;
 }
 
+form input[type="submit"]:hover, form input[type="button"]:hover {
+    background-color: #ac0018;
+    transition: background-color 300ms ease-out;
+}
+
 #divLogin {
     width: 100%;
     text-align: center;
     color: #690000;
     text-decoration: #690000;
-    font-size: 6vw;
+    min-height: 6.5vw;
+    padding: 0 0 15px 0;
 }
 
 #divLogin a {
     font-size: 6vw;
     list-style: none;
     color: #690000;
+}
+
+#divLogin a:hover {
+    color: #ac0018;
+    transition: background-color 500ms ease-out;
 }
 
 #separar {
@@ -70,66 +87,6 @@ form input[type="button"], form input[type="submit"] {
     margin-bottom: 10px;
 }
 
-/* GENERAL */
-* {
-    box-sizing: border-box;
-}
-
-html,
-body {
-    margin: 0 auto;
-    font-family: Candara;
-    font-size: 30px;
-    background-color: #dedcdc;
-}
-
-header {
-    padding: 10px 0;
-    grid-column: 1/2;
-    grid-row: 1/2;
-    font-size: 35px;
-}
-
-header p {
-    margin-top: 50px;
-}
-
-header img {
-    width: 70%;
-}
-
-footer {
-    font-size: 6vw;
-    width: 100%;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: #666666;
-    padding: 5px 0px;
-    grid-column: 1/2;
-    grid-row: 4/5;
-    position: absolute;
-    bottom: 0vh;
-}
-
-footer p {
-    margin: 10px 0;
-}
-
-#divIconos {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-footer a {
-    width: 10%;
-    margin-right: 20px;
-}
-
-footer a img {
-    width: 100%;
+#pass {
+    background-color: #a7afae;
 }

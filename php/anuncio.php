@@ -7,6 +7,8 @@ include_once "database/mysql.php";
 <head>
     <meta charset="UTF-8">
     <title>Anuncio</title>
+    <link href="../css/general.css" rel="stylesheet">
+    <link href="../css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/anuncio.css">
 </head>
 
@@ -14,21 +16,16 @@ include_once "database/mysql.php";
 <div id="contenedor4">
     <header>
         <img src="../img/aje_logo.png">
-        <p>Mas de "numero" de anuncios publicados en nuestra pagina web</p>
+        <p>
+            <strong>
+                <?php $dbh = connect();
+                $cont = counterAnuncios($dbh);
+                echo $cont; ?>
+            </strong> anuncios publicados
+        </p>
     </header>
-    <div id="containerAnuncio">
-        <div id="navAnuncio">
-            <img src="../img/ajebask.jpeg">
-            <p>Nombre del anunciante</p>
-            <input type="button" value="Contactar" id="contactar">
-        </div>
-        <img src="../img/coche.jpeg" id="imgAnuncio">
-        <h2>Titulo del producto</h2>
-        <label>1500$</label>
-        <p>sdrglafffffffffeiughslrfs ajgfsbkdfsfjlblds kdfvdfnhyjntdjhnyjtyyyy yyyyyyyyyyyyf</p>
-    </div>
-    <?php include("includes/inc_anunciosCategoria.php") ?>
-    <?php include("includes/inc_footer.php") ?>
+    <?php include "includes/inc_anuncio.php";
+    include("includes/inc_footer.php") ?>
 
 </body>
 

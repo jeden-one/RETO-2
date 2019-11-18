@@ -1,73 +1,17 @@
-/* GENERAL */
-* {
-    box-sizing: border-box;
-}
-
-html,
-body {
-    margin: 0 auto;
-    font-family: Candara;
-    font-size: 30px;
-}
-
-header {
-    padding-top: 20px;
-    padding-left: 20px;
-    grid-column: 1/2;
-    grid-row: 1/2;
-}
-
-header p {
-    margin: 0;
-    font-size: 34px;
-}
-
-header img {
-    width: 100%;
-}
-
-footer {
-    width: 100%;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: #666666;
-    padding: 5px 0px;
-    grid-column: 1/2;
-    grid-row: 4/5;
-    font-size: 35px;
-}
-
-#divIconos {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-footer a {
-    width: 10%;
-    margin-right: 20px;
-}
-
-footer a img {
-    width: 100%;
-}
-
-
 /* EDITARPERFIL.PHP */
 
 #contenedor5 {
     display: grid;
-    grid-template-rows: 45% 85% 35%;
+    grid-template-rows: 30% 85% 30%;
     grid-template-columns: 100%;
 }
 
 header {
     grid-column: 1/2;
     grid-row: 1/2;
+}
+header p {
+    margin-top: 30px;
 }
 
 #datos {
@@ -83,10 +27,16 @@ footer {
 #Datos input[type="text"],
 input[type="password"],
 input[type="email"] {
+    font-size: 4.5vw;
     width: 75%;
-    border: 1px solid black;
-    font-size: 24px;
-    margin-bottom: 30px;
+    border: 2px solid #850018;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    min-height: 45px;
+    margin-bottom: 20px;
+    outline: none;
+    background-color: #ebebeb;
+    user-select: revert;
 }
 
 #Datos  input[type="file"] {
@@ -96,11 +46,21 @@ input[type="email"] {
 }
 
 #Datos input[type="button"], #Datos input[type="submit"] {
-    width: 40%;
-    height: 10%;
-    font-size: 30px;
-    border: 1px solid black;
-    border-radius: 15px;
+    font-size: 4.5vw;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #690000;
+    color: #850018;
+    background: linear-gradient(to right, #850018 50%, #ebebeb 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .25s ease-out;
+    width: 75%;
+}
+
+input[type="submit"]:hover, #Datos input[type="button"]:hover{
+    background-position: left bottom;
+    color: white;
 }
 
 #Datos {
