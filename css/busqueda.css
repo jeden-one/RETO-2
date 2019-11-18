@@ -1,4 +1,4 @@
-/* CATEGORIA.PHP */
+/* BUSQUEDA.PHP */
 
 #anuncios {
     flex-wrap: wrap;
@@ -23,6 +23,8 @@
     background-color: white;
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    color: black;
 }
 
 .anuncio > * {
@@ -72,12 +74,86 @@ nav input[type="text"] {
     font-size: 34px;
 }
 
-nav input[type="button"] {
-    width: 30%;
+#buscar {
+    width: 20%;
 }
 
 #botones {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
+    flex-wrap: wrap;
+}
+
+nav a {
+    font-size: 4.5vw;
+    background: #850018;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ac0018;
+    transition: background-color 300ms ease-out;
+}
+
+nav form input[type="submit"],nav input[type="button"] {
+    font-size: 4.5vw;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #690000;
+    color: #850018;
+    background: linear-gradient(to right, #850018 50%, #ebebeb 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .25s ease-out;
+}
+
+nav form input[type="submit"]:hover, nav input[type="button"]:hover{
+    background-position: left bottom;
+    color: white;
+}
+
+#enlaces {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav input[type="button"] {
+    width: 46%;
+    margin-right: 20px;
+}
+
+#enlaces a {
+    width: 46%;
+    text-align: center;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+form {
+    width: 100%;
+    padding: 20px;
+}
+
+nav input[type="text"] {
+    font-size: 4.5vw;
+    width: 75%;
+    border: 2px solid #850018;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    min-height: 45px;
+    margin-bottom: 20px;
+    outline: none;
+    background-color: #ebebeb;
+    user-select: revert;
+}
+
+#contenedor3 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 21% auto auto;
 }

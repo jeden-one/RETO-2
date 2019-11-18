@@ -30,7 +30,7 @@ include 'php/includes/inc_index.php';?>
 
         <div id="botones">
             <a href="php/busqueda.php?action=misAnuncios">Mis Anuncios</a>
-            <a href="php/publicarAnuncio.php">Publicar Anuncio</a>
+            <a href="php/publicarAnuncio.php?action=publicar">Publicar Anuncio</a>
             <a href="php/editarPerfil.php">Editar Perfil</a>
         </div>
     </nav>
