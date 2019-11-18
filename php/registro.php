@@ -1,4 +1,8 @@
-<?php include("includes/inc_header2.php") ?>
+<?php
+if (isset($_COOKIE['usuario'])) {
+    header("Location:../index.php");
+}
+include("includes/inc_header2.php") ?>
 <form method="post">
     <h1>Petición de registro</h1>
     <input type="text" name="nif" id="nif" placeholder="NIF">

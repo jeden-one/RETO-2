@@ -26,6 +26,8 @@ if (isset($_GET["filas"])) {
 <head>
     <meta charset="UTF-8">
     <title>Editar Perfil</title>
+    <link href="../css/general.css" rel="stylesheet">
+    <link href="../css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/editarPerfil.css">
 </head>
 
