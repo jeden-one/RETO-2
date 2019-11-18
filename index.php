@@ -1,4 +1,5 @@
-<?php include_once "php/database/mysql.php"; ?>
+<?php
+include 'php/includes/inc_index.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,32 +16,15 @@
         <img src="img/aje_logo.png" onclick="goIndex()">
         <div>
             <p><strong>
-                    <?php $dbh = connect();
-                    $cont = counterAnuncios($dbh);
-                    echo $cont; ?>
+                    <?php cantidadAnuncios(); ?>
                 </strong> anuncios publicados
             </p>
-            <?php
-
-            if (isset($_GET['accion'])) {
-                if ($_GET['accion'] === "cerrarSesion") {
-                    setcookie("busqueda", "", -1);
-                    setcookie("usuario", "", -1);
-                    header("Location:index.php");
-                }
-            }
-
-            if (!isset($_COOKIE["usuario"])) {
-                echo '<input type="button" value="Iniciar sesión" onclick="goLogin()">';
-            } else {
-                echo "<p id='usLog'>Bienvenido, " . $_COOKIE["usuario"] . "<br><a href='index.php?accion=cerrarSesion'>Cerrar sesión</a></p>";
-            }
-            ?>
+            <?php sesion();?>
         </div>
     </header>
     <nav>
         <form action="php/actions/buscador.act.php" method="post">
-            <input type="text" name="busqueda" value="<?php echo $_COOKIE["busqueda"] ?>">
+            <input type="text" name="busqueda" value="<?= $_COOKIE["busqueda"] ?>">
             <input type="submit" name="buscar" value="Buscar" id="buscar">
         </form>
 
@@ -53,22 +37,7 @@
 
     <div id="categorias">
         <ul id="listaCategorias">
-            <?php
-            include "php/actions/buscador.act.php";
-
-            $dbh = connect();
-            $resultado = searchCategoriaAll($dbh);
-            foreach ($resultado as $value) {
-                $subcategorias = searchSubcategoriaByIdCategoria($dbh, $value->id);
-                $subcategoriasIl = '';
-                foreach ($subcategorias as $valor) {
-                    $subcategoriasIl = $subcategoriasIl . '<li class="elementosSubcategorias">' . '<a href="" class="enlaceSubcategoria">' . $valor->subcategoria . '</a>' . '</li>';
-                }
-                $subcategoriasUl = '<ul class="listaSubcategorias" style="display: none">' . $subcategoriasIl . '</ul>';
-                echo '<li class="elementosCategorias" onclick="mostrarSubcategorias(' . $value->id . ')"> <div class="divCatImagen">' . $value->nombre . '
-                    <img src="img/flechaAbajo.svg" class="flechaAbajo">' . $subcategoriasUl . '</div></li>';
-            }
-            ?>
+            <?php categorias();?>
         </ul>
         <a href="#header"><img src="img/flecha.svg" id="flechaSubir"></a>
     </div>

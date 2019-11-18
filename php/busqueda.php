@@ -1,3 +1,4 @@
+<?php include "database/mysql.php";?>
 <!DOCTYPE html>
 <html>
 <head>
