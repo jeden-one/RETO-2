@@ -9,7 +9,7 @@ if (isset($_GET['anuncio'])) {
         <div id="navAnuncio">
             <img src="../../img/"<?= $anuncio->fotoUsuario ?>>
             <p><?= $anuncio->nombreUsuario ?></p>
-            <input type="button" value="Contactar" id="contactar">
+            <a href="mailto:<?= $anuncio->nombreUsuario ?>" id="contactar">Contactar</a>
         </div>
         <img src="../../img/<?= $anuncio->fotoAnuncio ?>">
         <h2><?= $anuncio->titulo ?></h2>

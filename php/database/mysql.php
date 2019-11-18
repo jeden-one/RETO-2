@@ -8,9 +8,9 @@
 function connect()
 {
     $dbname = 'proyecto_ajebask';
-    $host = '172.20.224.133';
-    $user = 'jeden';
-    $pass = 'jeden';
+    $host = 'localhost';
+    $user = 'root';
+    $pass = '';
     try {
         $dbh = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
         return $dbh;
@@ -204,7 +204,7 @@ function searchAnuncioByUsuario($dbh, $usuario)
     $data = array(
         'usuario' => $usuario,
     );
-    $stmt = $dbh->prepare("SELECT a.titulo titulo, a.foto foto, a.fecha_creacion fecha_creacion,u.usuario usuario
+    $stmt = $dbh->prepare("SELECT a.id idAnuncio,a.titulo titulo, a.foto foto, a.fecha_creacion fecha_creacion,u.usuario nombreUsuario
 FROM usuarios u, anuncios a
 WHERE u.id = a.id_usuario AND u.usuario=:usuario;");
     if ($stmt->execute($data) === true) {
@@ -401,11 +401,6 @@ function updateUsuarioOne($dbh, $data)
     return $stmt->rowCount();
 }
 
-/**
- * @param $dbh
- * @param $busqueda
- * @return bool
- */
 
 /**
  * insertar un usuario (solo admin)
@@ -421,6 +416,13 @@ function insertUsuario($dbh, $data)
     return $stmt->rowCount();
 }
 
+/**
+ * buscar por coincidencia en titulo y nombre usuario
+ *
+ * @param $dbh variable para conectarse a la base de datos
+ * @param $busqueda datos insertado en el cuadro de busqueda
+ * @return mixed lista de objetos de la busqueda
+ */
 function searchAnuncioByBusqueda($dbh, $busqueda)
 {
     $data = array(
@@ -437,6 +439,13 @@ function searchAnuncioByBusqueda($dbh, $busqueda)
     }
 }
 
+/**
+
+ * busca la cantidad de anuncios creados
+ *
+ * @param $dbh variable para conectarse a la base de datos
+ * @return mixed la cantidad de anuncios creados
+ */
 function counterAnuncios($dbh)
 {
     $stmt = $dbh->prepare("SELECT count(*) FROM anuncios");
@@ -447,3 +456,4 @@ function counterAnuncios($dbh)
         return false;
     }
 }
+

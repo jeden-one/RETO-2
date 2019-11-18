@@ -1,7 +1,4 @@
-<?php
-
-include_once "php/database/mysql.php";
-?>
+<?php include_once "php/database/mysql.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
