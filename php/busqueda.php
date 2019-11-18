@@ -44,8 +44,7 @@
             include 'includes/inc_misAnuncios.php';
         }
     }
-    else {
+    elseif(isset($_GET["anuncios"])) {
         include "includes/inc_anunciosBusqueda.php";
-    } ?>
-
-    <?php include "includes/inc_footer.php" ?>
+    }
+    include "includes/inc_footer.php" ?>

@@ -204,7 +204,7 @@ function searchAnuncioByUsuario($dbh, $usuario)
     $data = array(
         'usuario' => $usuario,
     );
-    $stmt = $dbh->prepare("SELECT a.titulo titulo, a.foto foto, a.fecha_creacion fecha_creacion,u.usuario usuario
+    $stmt = $dbh->prepare("SELECT a.id idAnuncio,a.titulo titulo, a.foto foto, a.fecha_creacion fecha_creacion,u.usuario nombreUsuario
 FROM usuarios u, anuncios a
 WHERE u.id = a.id_usuario AND u.usuario=:usuario;");
     if ($stmt->execute($data) === true) {
@@ -440,6 +440,7 @@ function searchAnuncioByBusqueda($dbh, $busqueda)
 }
 
 /**
+
  * busca la cantidad de anuncios creados
  *
  * @param $dbh variable para conectarse a la base de datos
@@ -455,3 +456,4 @@ function counterAnuncios($dbh)
         return false;
     }
 }
+
