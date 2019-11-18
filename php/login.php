@@ -1,5 +1,7 @@
 <?php include("includes/inc_header2.php");
-echo $_GET['action'];
+if (isset($_COOKIE['usuario'])){
+    header("Location:../index.php");
+}
 switch ($_GET['action']) {
     case 'publicarAnuncio':
         $action = 'publicarAnuncio';
