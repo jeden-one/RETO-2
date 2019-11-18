@@ -41,7 +41,7 @@ if (isset($_GET["filas"])) {
 
 
         <input type="hidden" name="passwordPasar" value="<?php echo $password ?>">
-        <label>Foto: <input type="file" name="foto"></label>
+        <label>Foto: <input type="file" name="foto" accept="image/x-png,image/gif,image/jpeg"></label>
         <label>Nombre: <input type="text" name="nombre" value="<?php echo $nombre ?>"> </label>
         <label>Contraseña: <input type="text" name="password" value=""> </label>
         <label>Repite contraseña: <input type="text" name="repetirPassword" value=""></label>
