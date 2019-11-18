@@ -1,5 +1,3 @@
-<?php
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,16 +33,5 @@
     </div>
 
     <?php
-    include "database/mysql.php";
-    if (isset($_GET['action'])&&$_GET['action']=='misAnuncios'){
-        if (!isset($_COOKIE["usuario"])){
-            header('location:login.php?action=misAnuncios');
-        }
-        else{
-            include 'includes/inc_misAnuncios.php';
-        }
-    }
-    elseif(isset($_GET["anuncios"])) {
-        include "includes/inc_anunciosBusqueda.php";
-    }
+    include "includes/inc_busqueda.php";
     include "includes/inc_footer.php" ?>

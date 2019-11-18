@@ -196,7 +196,7 @@ function searchAnuncioByNombreUsuario($dbh, $usuario)
  * Buscar anuncios por usuario
  *
  * @param $dbh variable para conectarse a la base de datos
- * @param $id_usuario id del usuario
+ * @param $usuario el email del usuario
  * @return mixed array de objetos de la busqueda
  */
 function searchAnuncioByUsuario($dbh, $usuario)
