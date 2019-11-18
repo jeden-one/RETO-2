@@ -1,4 +1,5 @@
 <?php
+include "database/mysql.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,7 +36,6 @@
     </div>
 
     <?php
-    include "database/mysql.php";
     if (isset($_GET['action'])&&$_GET['action']=='misAnuncios'){
         if (!isset($_COOKIE["usuario"])){
             header('location:login.php?action=misAnuncios');

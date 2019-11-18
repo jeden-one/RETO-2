@@ -204,7 +204,7 @@ function searchAnuncioByUsuario($dbh, $usuario)
     $data = array(
         'usuario' => $usuario,
     );
-    $stmt = $dbh->prepare("SELECT a.id idAnuncio,a.titulo titulo, a.foto foto, a.fecha_creacion fecha_creacion,u.usuario nombreUsuario
+    $stmt = $dbh->prepare("SELECT a.id idAnuncio,a.titulo titulo, a.foto foto, a.fecha_creacion fecha_creacion,u.usuario nombreUsuario, a.descripcion descripcion
 FROM usuarios u, anuncios a
 WHERE u.id = a.id_usuario AND u.usuario=:usuario;");
     if ($stmt->execute($data) === true) {
@@ -432,6 +432,22 @@ function searchAnuncioByBusqueda($dbh, $busqueda)
     $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
     FROM anuncios a, usuarios u 
     WHERE u.id=a.id_usuario AND (titulo LIKE :busqueda OR u.nombre LIKE :busqueda)");
+    if ($stmt->execute($data) === true) {
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    } else {
+        return false;
+    }
+}
+
+function searchAnuncioById($dbh, $id)
+{
+    $data = array(
+        'id' =>  $id
+    );
+
+    $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
+    FROM anuncios a, usuarios u 
+    WHERE u.id=a.id_usuario AND id=:id");
     if ($stmt->execute($data) === true) {
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     } else {
