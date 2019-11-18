@@ -11,11 +11,7 @@
     <link href="../../css/loginRegistro.css" rel="stylesheet">
     <script src="../../script/librerias/jQuery/jquery-3.4.1.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-        function goIndex() {
-            window.location.href="../../index.php";
-        }
-    </script>
+    <script src="../../script/goIndex.js"></script>
 </head>
 
 <body>
