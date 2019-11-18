@@ -22,8 +22,9 @@
             </p>
             <?php
 
-            if (isset($_GET['action'])) {
-                if ($_GET['action'] === "cerrarSesion") {
+            if (isset($_GET['accion'])) {
+                if ($_GET['accion'] === "cerrarSesion") {
+                    setcookie("busqueda", "", -1);
                     setcookie("usuario", "", -1);
                     header("Location:index.php");
                 }
@@ -32,7 +33,7 @@
             if (!isset($_COOKIE["usuario"])) {
                 echo '<input type="button" value="Iniciar sesión" onclick="goLogin()">';
             } else {
-                echo "<p id='usLog'>Bienvenido, " . $_COOKIE["usuario"] . "<br><a href='index.php?action=cerrarSesion'>Cerrar sesión</a></p>";
+                echo "<p id='usLog'>Bienvenido, " . $_COOKIE["usuario"] . "<br><a href='index.php?accion=cerrarSesion'>Cerrar sesión</a></p>";
             }
             ?>
         </div>
