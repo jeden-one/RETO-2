@@ -2,6 +2,7 @@
 #contenedor2 {
     display: grid;
     grid-template-rows: auto auto auto auto;
+    height: 100vh;
 }
 
 form {
@@ -36,6 +37,11 @@ input[type="email"], input[type="text"] {
     outline: none;
     background-color: #ebebeb;
     font-size: 8vw;
+    user-select: revert;
+}
+
+input[type="text"]:hover {
+    box-shadow: 0 0 10px #690000;
 }
 
 form input[type="button"], form input[type="submit"] {
@@ -47,6 +53,11 @@ form input[type="button"], form input[type="submit"] {
     margin: 10px 0 10px 0;
     background-color: #850018;
     color: white;
+}
+
+form input[type="submit"]:hover, form input[type="button"]:hover {
+    background-color: #ac0018;
+    transition: background-color 300ms ease-out;
 }
 
 #divLogin {
@@ -64,9 +75,18 @@ form input[type="button"], form input[type="submit"] {
     color: #690000;
 }
 
+#divLogin a:hover {
+    color: #ac0018;
+    transition: background-color 500ms ease-out;
+}
+
 #separar {
     height: 2px;
     background: black;
     width: 100%;
     margin-bottom: 10px;
+}
+
+#pass {
+    background-color: #a7afae;
 }
