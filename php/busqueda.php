@@ -5,7 +5,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Busqueda</title>
-    <link rel="stylesheet" href="../../css/categoria.css">
+    <link href="../css/general.css" rel="stylesheet">
+    <link href="../css/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/busqueda.css">
 </head>
 
 <body>
@@ -43,7 +45,7 @@
         }
     }
     else {
-        include "includes/inc_anuncios.php";
+        include "includes/inc_anunciosBusqueda.php";
     } ?>
 
     <?php include "includes/inc_footer.php" ?>
