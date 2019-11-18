@@ -129,7 +129,7 @@ nav form input[type="submit"] {
     transition: all .25s ease-out;
 }
 
-nav form input[type="submit"]:hover {
+nav form input[type="submit"]:hover{
     background-position: left bottom;
     color: white;
 }

@@ -23,7 +23,7 @@ if (isset($_POST["usuario"]) && isset($_POST["pass"])) {
                     header("location: ../busqueda.php?action=misAnuncios");
                     break;
                 case 'login':
-                    //header("location: ../../index.php");
+                    header("location: ../../index.php");
                     break;
             }
         } else {
