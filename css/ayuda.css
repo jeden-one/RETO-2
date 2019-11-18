@@ -1,0 +1,36 @@
+form input[type="password"],
+input[type="email"], input[type="text"] {
+    width: 75%;
+    border: 1px solid #850018;
+    border-radius: 20px;
+    padding: 3vw 1vw;
+    margin-bottom: 20px;
+    outline: none;
+    background-color: #ebebeb;
+    font-size: 8vw;
+}
+
+form input[type="button"], form input[type="submit"] {
+    width: 75%;
+    padding: 10px 5px;
+    border-radius: 20px;
+    border: 1px solid #690000;
+    font-size: 8vw;
+    margin: 10px 0 10px 0;
+    background-color: #850018;
+    color: white;
+}
+
+#contenedor2 {
+    display: grid;
+    grid-template-rows: 30% auto 27%;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+body {
+    max-width: 100%;
+}
+
