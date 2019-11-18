@@ -5,7 +5,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Busqueda</title>
-    <link rel="stylesheet" href="../../css/categoria.css">
+    <link href="../css/general.css" rel="stylesheet">
+    <link href="../css/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/busqueda.css">
 </head>
 
 <body>
@@ -45,5 +47,4 @@
     elseif(isset($_GET["anuncios"])) {
         include "includes/inc_anunciosBusqueda.php";
     }
-
     include "includes/inc_footer.php" ?>
