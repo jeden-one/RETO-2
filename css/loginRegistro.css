@@ -112,6 +112,7 @@ footer {
     grid-row: 4/5;
     position: absolute;
     bottom: 0vh;
+    text-decoration: none;
 }
 
 footer p {

@@ -11,6 +11,8 @@
     </div>
 
     <p>Copyright © Todos los Derechos Reservados 2019</p>
+
+    <a href="../ayuda.php">¿Necesitas ayuda?</a>
 </footer>
 </div>
 
