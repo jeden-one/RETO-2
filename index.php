@@ -1,4 +1,6 @@
 <?php
+
+include_once "php/database/mysql.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +39,6 @@
     <div id="categorias">
         <ul id="listaCategorias">
             <?php
-            include_once "php/database/mysql.php";
             include "php/actions/buscador.act.php";
 
             $dbh = connect();
