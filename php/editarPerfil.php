@@ -9,14 +9,20 @@ include "includes/inc_editarPerfil.php";
     <title>Editar Perfil</title>
     <link href="../css/general.css" rel="stylesheet">
     <link href="../css/normalize.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/editarPerfil.css">
+    <link href="../css/editarPerfil.css" rel="stylesheet" >
 </head>
 
 <body>
 <div id="contenedor5">
     <header id="header">
         <img src="../../img/aje_logo.png">
-        <p>Mas de "numero" de anuncios publicados en nuestra pagina web</p>
+        <p>
+            <strong>
+                <?php $dbh = connect();
+                $cont = counterAnuncios($dbh);
+                echo $cont; ?>
+            </strong> anuncios publicados
+        </p>
     </header>
 
     <form id="Datos" action="actions/editarPerfil.act.php" method="post" enctype="multipart/form-data">

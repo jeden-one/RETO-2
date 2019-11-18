@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", load);
 
 function load () {
     let div = document.getElementById("divOcultar");
-    div.style.display = "none";
+    //div.style.display = "none";
 
 }
 
@@ -13,9 +13,9 @@ function seleccionarValor() {
     let div = document.getElementById("divOcultar");
 
     if (option != "nada") {
-        div.style.display = "block";
+        //div.style.display = "block";
     } else {
-        div.style.display = "none";
+        //div.style.display = "none";
     }
 }
 
@@ -29,4 +29,8 @@ function enviarAyuda() {
         }).then(
             alert('Solicitud enviada correctamente, espere un email de respuesta por parte de nuestro equipo de soporte técnico')
         );
+}
+
+function goIndex() {
+    window.location.href="../../index.php";
 }

@@ -1,6 +1,7 @@
 /* GENERAL */
 * {
     box-sizing: border-box;
+    user-select: none;
 }
 
 html,
@@ -9,6 +10,7 @@ body {
     font-family: Candara;
     font-size: 30px;
     background-color: #dedcdc;
+    height: 100vh;
 }
 
 header {

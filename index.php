@@ -51,6 +51,7 @@ include 'php/includes/inc_index.php';?>
             <a href="https://github.com/jeden-one/RETO-2"><img src="img/github.svg"></a>
         </div>
         <p>Copyright © Todos los Derechos Reservados 2019</p>
+        <a href="php/ayuda.php">¿Necesitas ayuda?</a>
     </footer>
 </div>
 </body>

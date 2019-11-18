@@ -172,9 +172,10 @@ body {
     height: 100vh;
 }
 
-#usLog{
+#usLog {
     text-align: right;
 }
+
 header {
     padding: 10px 0 10px 0;
     grid-column: 1/2;
