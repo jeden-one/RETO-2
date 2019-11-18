@@ -1,5 +1,4 @@
 <?php
-
 include "database/mysql.php";
 if (isset($_COOKIE["usuario"])) {
     $dbh = connect();
@@ -15,12 +14,14 @@ if (isset($_COOKIE["usuario"])) {
 } else {
     header("location: login.php?action=editarPerfil");
 }
-
-if (isset($_GET["filas"])) {
-    if ($_GET["filas"] == 1) {
-        echo "<span>Modificado exitosamente</span>";
-    }
-    if ($_GET["filas"] == 0) {
-        echo "<span>Usuario no modificado</span>";
+function mensajeRespuesta()
+{
+    if (isset($_GET["filas"])) {
+        if ($_GET["filas"] == 1) {
+            echo "<span>Modificado exitosamente</span>";
+        }
+        if ($_GET["filas"] == 0) {
+            echo "<span>Usuario no modificado</span>";
+        }
     }
 }

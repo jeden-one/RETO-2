@@ -1,5 +1,5 @@
 <?php
-require "includes/inc_editarPerfil.php";
+include "includes/inc_editarPerfil.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
