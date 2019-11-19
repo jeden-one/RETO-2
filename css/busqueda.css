@@ -66,7 +66,6 @@ nav {
 
 nav input[type="text"] {
     width: 75%;
-    background: url("../img/lupa.svg") no-repeat 7px;
     padding: 5px;
     padding-left: 40px;
     font-size: 34px;
@@ -166,4 +165,59 @@ nav input[type="text"] {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto auto;
+}
+
+@media screen and (min-width: 769px) {
+    header img {
+        width: 50%;
+        margin-bottom: 50px;
+    }
+
+    #botones input{
+        font-size: 30px;
+    }
+
+    #enlaces a {
+        font-size: 30px;
+    }
+
+    a.anuncio {
+        width: 46%;
+    }
+
+    footer p, a {
+        font-size: 23px;
+    }
+
+    #divIconos a {
+        width: auto;
+    }
+
+    nav form input[type="text"] {
+        padding: 10px 20px;
+        font-size: 30px;
+        line-height: 0.5em;
+        width: 75%;
+
+        flex: none;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+    }
+
+    #botones {
+        margin-bottom: 50px;
+    }
+
+    #enlaces {
+        margin-bottom: 50px;
+    }
+
+    #buscar {
+        height: 100%;
+        font-size: 30px;
+        width: 16%;
+    }
 }
