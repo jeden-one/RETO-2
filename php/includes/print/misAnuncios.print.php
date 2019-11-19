@@ -1,7 +1,7 @@
 <div id="anuncios">
     <?php foreach ($anuncios as $anuncio) {
         $anuncioSerializado = serialize($anuncio) ?>
-        <form action="../actions/modificarEliminar.act.php?anuncio=<?= $anuncioSerializado ?>" method="post">
+        <form action="../../actions/modificarEliminar.act.php?anuncio=<?= $anuncioSerializado ?>" method="post">
             <div class="anuncio">
                 <div class="imagenDiv">
                     <img src="../../img/<?= $anuncio->foto ?>">

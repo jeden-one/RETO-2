@@ -58,4 +58,4 @@
         </div>
     </form>
 
-<?php include "includes/footer.print.php" ?>
+<?php include "includes/print/footer.print.php" ?>

@@ -1,4 +1,3 @@
-<?php include "database/mysql.php"; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,5 +31,6 @@
 
 
     <?php
+    include "database/mysql.php";
     include "includes/busqueda.logic.php";
-    include "includes/footer.print.php" ?>
+    include "includes/print/footer.print.php" ?>

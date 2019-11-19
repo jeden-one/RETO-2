@@ -1,4 +1,4 @@
-<?php include("includes/header.print.php");
+<?php include("includes/print/header.print.php");
 include('includes/loginEntrada.logic.php');
 ?>
 
@@ -18,4 +18,4 @@ include('includes/loginEntrada.logic.php');
 </form>
 <script src="../script/login.js"></script>
 <?php
-include("includes/footer.print.php") ?>
+include("includes/print/footer.print.php") ?>

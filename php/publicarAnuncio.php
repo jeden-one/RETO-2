@@ -34,7 +34,7 @@ if (!isset($_COOKIE["usuario"])) {
             <div class="selector">
                 <label for="categoria">Categoria:</label>
                 <select id="categoria">
-                    <?php include 'includes/categoriasSolo.print.php' ?>
+                    <?php include 'includes/print/categoriasSolo.print.php' ?>
                 </select>
             </div>
             <div class="selector">
@@ -61,7 +61,7 @@ if (!isset($_COOKIE["usuario"])) {
             <div class="selector">
                 <label for="categoria">Categoria:</label>
                 <select id="categoria">
-                    <?php include 'includes/categoriasSolo.print.php' ?>
+                    <?php include 'includes/print/categoriasSolo.print.php' ?>
                 </select>
             </div>
             <div class="selector">
@@ -73,7 +73,7 @@ if (!isset($_COOKIE["usuario"])) {
         </form>
     <?php } ?>
 
-    <?php include("includes/footer.print.php") ?>
+    <?php include("includes/print/footer.print.php") ?>
 </div>
 <script src="../script/publicarAnuncio.js"></script>
 </body>
