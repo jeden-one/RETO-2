@@ -25,7 +25,7 @@ include_once "database/mysql.php";
         </p>
     </header>
     <?php include "includes/anuncio.logic.php";
-    include("includes/footer.print.php") ?>
+    include("includes/print/footer.print.php") ?>
 
 </body>
 

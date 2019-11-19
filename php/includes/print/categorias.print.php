@@ -1,7 +1,7 @@
 <?php
 foreach ($categorias as $categoria) { ?>
     <li class="elementosCategorias" onclick="mostrarSubcategorias(<?= $categoria->id ?>)">
-        <div class="divCatImagen"><?= $categoria->nombre ?><img src="../../img/flechaAbajo.svg" class="flechaAbajo">
+        <div class="divCatImagen"><?= $categoria->nombre ?><img src="../../../img/flechaAbajo.svg" class="flechaAbajo">
             <ul class="listaSubcategorias" style="display: none">
                 <?php $subcategorias = searchSubcategoriaByIdCategoria($dbh, $categoria->id);
                 foreach ($subcategorias as $subcategoria) { ?>
