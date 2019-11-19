@@ -10,7 +10,7 @@ if (isset($_POST["modificar"]) && isset($_GET["anuncio"])) {
 } elseif (isset($_POST["confirmacion"]) && isset($_GET["anuncio"])) {
     $anuncio = $_GET["anuncio"];
 
-    $resultado = deleteAnuncio($dbh,$anuncio->idAnuncio);
+    $resultado = deleteAnuncio($dbh, $anuncio->idAnuncio);
     echo $resultado . "filas borradas";
 }
-?>
+close($dbh);

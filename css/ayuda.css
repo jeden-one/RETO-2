@@ -30,6 +30,7 @@ input[type="button"]:hover {
     color: white;
 }
 
+
 #contenedor2 {
     display: grid;
     grid-template-rows: auto auto auto auto;
@@ -42,8 +43,13 @@ input[type="button"]:hover {
     margin: 0;
 }
 
-body {
-    max-width: 100%;
+form {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    font-size: 16px;
+    padding-left: 10px;
+    max-width: 400px;
+    width: 100%;
 }
 
 #datos {

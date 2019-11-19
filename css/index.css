@@ -20,7 +20,6 @@ nav input[type="text"] {
     border: 2px solid #850018;
     border-radius: 5px;
     padding: 5px 5px 5px 5px;
-    min-height: 45px;
     margin-bottom: 20px;
     outline: none;
     background-color: #ebebeb;
@@ -256,4 +255,111 @@ footer a {
 
 footer a img {
     width: 100%;
+}
+
+@media (min-width: 769px) {
+    nav {
+       margin-bottom: 50px;
+   }
+    #contenedor {
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 100%;
+    }
+
+    .enlaceSubcategoria {
+        font-size: 23px;
+    }
+
+    .listaSubcategorias {
+        display: flex;
+        width: 100%;
+    }
+
+    .elementosSubcategorias {
+        width: 30%;
+        line-height: 1.5em;
+        font-size: 14px;
+
+    }
+
+    .divCatImagen {
+        width: 100%;
+    }
+
+    #listaCategorias {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-size: 30px;
+    }
+
+    #text {
+        font-size: 35px;
+    }
+
+    .elementosCategorias {
+        width: 40%;
+        font-size: 30px;
+    }
+
+    .elementosSubcategorias a {
+        width: 100%;
+        overflow: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flechaAbajo {
+        display: none;
+    }
+
+    #botones a {
+        font-size: 30px;
+    }
+
+    form {
+        margin-bottom: 20px;
+    }
+
+    #flechaSubir {
+        display: none;
+    }
+
+    form input[type="text"] {
+        padding: 1px 5px;
+        font-size: 30px;
+    }
+
+    #buscar {
+        height: 10%;
+        font-size: 30px;
+    }
+
+    header div p {
+        font-size: 30px;
+    }
+
+    header div input[type="button"]{
+        height: 10%;
+        font-size: 30px;
+    }
+
+    header {
+        margin-bottom: 50px;
+    }
+
+    header img {
+        margin-bottom: 50px;
+        width: 50%;
+    }
+
+    footer p, a {
+        font-size: 23px;
+    }
+
+    #divIconos a {
+        width: auto;
+    }
 }

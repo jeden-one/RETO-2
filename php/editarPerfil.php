@@ -1,5 +1,5 @@
 <?php
-include "includes/inc_editarPerfil.php";
+include "includes/editarPerfil.logic.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +9,8 @@ include "includes/inc_editarPerfil.php";
     <title>Editar Perfil</title>
     <link href="../css/general.css" rel="stylesheet">
     <link href="../css/normalize.css" rel="stylesheet">
-    <link href="../css/editarPerfil.css" rel="stylesheet" >
+    <link href="../css/editarPerfil.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../script/goIndex.js"></script>
 </head>
 
@@ -34,10 +35,9 @@ include "includes/inc_editarPerfil.php";
         <input type="submit" value="Actualizar Usuario">
     </form>
 
-    <?php include("includes/inc_footer.php") ?>
+    <?php include("includes/print/footer.print.php") ?>
 </div>
 
 </body>
 
 </html>
-

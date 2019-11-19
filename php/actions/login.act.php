@@ -2,7 +2,7 @@
 include "../database/mysql.php";
 $dbh = connect();
 
-if (isset($_POST["usuario"]) && isset($_POST["pass"])&&$_POST['pass']!='') {
+if (isset($_POST["usuario"]) && isset($_POST["pass"]) && $_POST['pass'] != '') {
     $pass = $_POST["pass"];
     $usuario = $_POST["usuario"];
     $resultado = searchUsuarioOneEmail($dbh, $usuario);

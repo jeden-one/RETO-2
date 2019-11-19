@@ -47,4 +47,4 @@
             </div>
         </form>
 
-<?php include "includes/inc_footer.php" ?>
+<?php include "includes/print/footer.print.php" ?>

@@ -1,5 +1,5 @@
 <?php
-include 'php/includes/inc_index.php';?>
+include 'php/includes/index.logic.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +24,7 @@ include 'php/includes/inc_index.php';?>
     </header>
     <nav>
         <form action="php/actions/buscador.act.php" method="post">
-            <input type="text" name="busqueda" value="<?= $_COOKIE["busqueda"] ?>">
+            <input type="text" name="busqueda" value="<?= $_COOKIE["busqueda"] ?>" placeholder="Que estás buscando?">
             <input type="submit" name="buscar" value="Buscar" id="buscar">
         </form>
 

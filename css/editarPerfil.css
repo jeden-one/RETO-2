@@ -1,5 +1,4 @@
 /* EDITARPERFIL.PHP */
-
 #contenedor5 {
     display: grid;
     grid-template-rows: auto auto auto auto;
@@ -12,6 +11,7 @@ header {
 }
 header p {
     margin-top: 30px;
+    margin-left: 30px;
 }
 
 #datos {
@@ -77,12 +77,57 @@ label {
 }
 
 h1 {
-    margin: 0;
-    font-size: 10vw;
-    grid-column: 1/2;
-    grid-row: 2/3;
-    text-align: center;
+  margin: 0;
+  font-size: 10vw;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  text-align: center;
 }
+
+@media screen and (min-width: 769px) {
+    header img {
+        width: 50%;
+        margin-bottom: 50px;
+    }
+
+    #contenedor5 {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 100%;
+    }
+
+    form input[type="password"],
+    input[type="email"], input[type="text"] {
+        padding: 5px 15px;
+        font-size: 30px;
+        width: 60%;
+    }
+
+    form h1 {
+        font-size: 45px;
+    }
+
+    form input[type="submit"], form input[type="button"] {
+        height: 15%;
+        font-size: 30px;
+        padding: 10px 20px;
+        width: 60%;
+        margin-bottom: 30px;
+    }
+
+    label p {
+        font-size: 23px;
+    }
+
+    footer p, a {
+        font-size: 23px;
+    }
+
+    #divIconos a {
+        width: auto;
+    }
+  }
+
 
 #fotoPerfil{
     grid-column: 1/2;
