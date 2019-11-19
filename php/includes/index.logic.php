@@ -34,5 +34,5 @@ function categorias()
     $dbh = connect();
     $categorias = searchCategoriaAll($dbh);
     close($dbh);
-    include 'categorias.print.php';
+    include 'print/categorias.print.php';
 }

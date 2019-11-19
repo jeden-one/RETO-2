@@ -39,7 +39,7 @@ include "includes/editarPerfil.logic.php";
         <input type="submit" value="Actualizar Usuario">
     </form>
 
-    <?php include("includes/footer.print.php") ?>
+    <?php include("includes/print/footer.print.php") ?>
 </div>
 
 </body>
