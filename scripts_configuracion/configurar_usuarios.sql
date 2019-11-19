@@ -5,5 +5,6 @@ FLUSH PRIVILEGES;
 #
 # Creamos usuario administrador
 GRANT ALL PRIVILEGES ON *.* TO 'jeden'@'172.20.224.133' IDENTIFIED BY 'jeden';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'172.20.224.133' IDENTIFIED BY 'jeden';
 GRANT ALL PRIVILEGES ON *.* TO 'jeden'@'localhost' IDENTIFIED BY 'jeden';
 FLUSH PRIVILEGES;
