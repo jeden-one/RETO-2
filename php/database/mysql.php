@@ -9,8 +9,8 @@ function connect()
 {
     $dbname = 'proyecto_ajebask';
     $host = 'localhost';
-    $user = 'root';
-    $pass = '';
+    $user = 'jeden';
+    $pass = 'jeden';
     try {
         $dbh = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
         return $dbh;
