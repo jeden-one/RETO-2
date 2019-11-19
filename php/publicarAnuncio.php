@@ -20,7 +20,7 @@
 
     <?php include "includes/publicarAnuncio.logic.php";
     include "includes/print/footer.print.php"; ?>
-    
+
 </div>
 <script src="../script/publicarAnuncio.js"></script>
 </body>

@@ -13,7 +13,7 @@
     <div class="selector">
         <label for="categoria">Categoria:</label>
         <select id="categoria">
-            <?php include 'includes/print/categoriasSolo.print.php' ?>
+            <?php include 'categoriasSolo.print.php' ?>
         </select>
     </div>
     <div class="selector">
