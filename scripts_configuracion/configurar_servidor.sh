@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 echo "Borrando archivo de SSH predeterminado"
 sudo rm /etc/ssh/sshd_config
 echo "Copiando archivo de SSH personalizado"
@@ -14,6 +15,3 @@ sudo sudo /etc/init.d/mysql start
 
 mysql -u root </vagrant/bdScriptCreacion.sql
 mysql -u root </vagrant/scripts_configuracion/configurar_usuarios.sql
-
-sudo rm /etc/netplan/50-vagrant.yaml
-sudo cp /vagrant/scripts_configuracion/50-vagrant.yaml /etc/netplan
