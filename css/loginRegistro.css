@@ -92,9 +92,10 @@ form input[type="submit"]:hover, form input[type="button"]:hover {
 }
 
 
-@media (min-width: 600px) {
+@media (min-width: 769px) {
     header img {
         width: 50%;
+        margin-bottom: 50px;
     }
 
     form input[type="password"],

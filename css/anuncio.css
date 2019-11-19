@@ -44,7 +44,7 @@
 
 #contenedor4 {
     display: grid;
-    grid-template-rows: 27% auto auto 35%;
+    grid-template-rows: auto auto auto auto;
     grid-template-columns: 100%;
 }
 
@@ -79,4 +79,12 @@
 
 .anuncio h2 {
     margin: 0;
+}
+
+@media screen and (min-width: 769px) {
+    header img {
+        width: 50%;
+        margin-bottom: 50px;
+    }
+
 }

@@ -4,6 +4,8 @@ $dbh = connect();
 $anuncios = searchAnuncioByUsuario($dbh, $_COOKIE["usuario"]);
 ?>
 
+
+
 <div id="anuncios">
     <?php foreach ($anuncios as $anuncio) {
         $anuncioSerializado=serialize($anuncio)?>
@@ -22,3 +24,5 @@ $anuncios = searchAnuncioByUsuario($dbh, $_COOKIE["usuario"]);
     <?php }
 } ?>
 </div>
+
+
