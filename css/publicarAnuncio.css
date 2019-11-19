@@ -110,7 +110,7 @@ footer {
     grid-column: 1/2;
 }
 
-@media (min-width: 769px) {
+@media screen and (min-width: 769px) {
     header img{
         width: 50%;
         margin-bottom: 50px;
@@ -124,19 +124,19 @@ footer {
         margin-bottom: 30px;
     }
 
-    form input[type="password"],
-    input[type="email"], input[type="text"] {
+    form input[type="text"], textarea, input[type="file"] {
         padding: 5px 15px;
         font-size: 30px;
         width: 60%;
     }
 
     form h1 {
-        font-size: 45px;
+        font-size: 40px;
     }
 
     label {
-        font-size: 23px;
+        font-size: 20px;
+        height: 10%;
     }
 
     footer p, a {

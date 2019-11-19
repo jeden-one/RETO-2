@@ -1,3 +1,8 @@
+<script>
+    let enlaces = document.getElementById("enlaces");
+    enlaces.style.display = "none";
+</script>
+
 <div id="anuncios">
     <?php foreach ($anuncios as $anuncio) {
         $anuncioSerializado = serialize($anuncio) ?>
