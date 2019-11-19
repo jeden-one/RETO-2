@@ -2,7 +2,7 @@
 if (isset($_COOKIE['usuario'])) {
     header("Location:../index.php");
 }
-include("includes/inc_header2.php") ?>
+include("includes/header.print.php") ?>
 <form method="post">
     <h1>Petición de registro</h1>
     <input type="text" name="nif" id="nif" placeholder="NIF">
@@ -18,4 +18,4 @@ include("includes/inc_header2.php") ?>
 </form>
 <script src="../script/librerias/SmtpJS.com-v3.0.0/SmtpJS.js"></script>
 <script src="../script/envioCorreo.js"></script>
-<?php include("includes/inc_footer.php") ?>
+<?php include("includes/footer.print.php") ?>

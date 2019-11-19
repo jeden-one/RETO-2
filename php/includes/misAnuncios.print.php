@@ -1,12 +1,6 @@
-<?php
-if (isset($_COOKIE["usuario"])) {
-$dbh = connect();
-$anuncios = searchAnuncioByUsuario($dbh, $_COOKIE["usuario"]);
-?>
-
 <div id="anuncios">
     <?php foreach ($anuncios as $anuncio) {
-        $anuncioSerializado=serialize($anuncio)?>
+        $anuncioSerializado = serialize($anuncio) ?>
         <form action="../actions/modificarEliminar.act.php?anuncio=<?= $anuncioSerializado ?>" method="post">
             <div class="anuncio">
                 <div class="imagenDiv">
@@ -20,5 +14,5 @@ $anuncios = searchAnuncioByUsuario($dbh, $_COOKIE["usuario"]);
             </div>
         </form>
     <?php }
-} ?>
+    ?>
 </div>

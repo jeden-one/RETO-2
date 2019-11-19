@@ -34,5 +34,5 @@
 
 
     <?php
-    include "includes/inc_busqueda.php";
-    include "includes/inc_footer.php" ?>
+    include "includes/busqueda.logic.php";
+    include "includes/footer.print.php" ?>

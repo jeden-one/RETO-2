@@ -24,8 +24,8 @@ include_once "database/mysql.php";
             </strong> anuncios publicados
         </p>
     </header>
-    <?php include "includes/inc_anuncio.php";
-    include("includes/inc_footer.php") ?>
+    <?php include "includes/anuncio.logic.php";
+    include("includes/footer.print.php") ?>
 
 </body>
 
