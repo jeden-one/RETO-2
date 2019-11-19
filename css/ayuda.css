@@ -1,17 +1,20 @@
+body {
+    width: 90%;
+}
+
 form input[type="password"],
-input[type="email"], input[type="text"] {
-    width: 75%;
+input[type="email"], input[type="text"], form select {
+    width: 95%;
     border: 1px solid #850018;
     border-radius: 20px;
-    padding: 3vw 1vw;
+    padding: 2vw 4vw;
     margin-bottom: 20px;
     outline: none;
     background-color: #ebebeb;
-    font-size: 8vw;
 }
 
 form input[type="button"], form input[type="submit"] {
-    width: 75%;
+    width: 95%;
     padding: 10px 5px;
     border-radius: 20px;
     border: 1px solid #690000;
@@ -19,18 +22,40 @@ form input[type="button"], form input[type="submit"] {
     margin: 10px 0 10px 0;
     background-color: #850018;
     color: white;
+    font-size: 16px;
 }
+
 
 #contenedor2 {
     display: grid;
-    grid-template-rows: 30% auto 27%;
+    grid-template-rows: 27% auto auto 27%;
+}
+
+textarea {
+    width: 95%;
+    border: 1px solid #850018;
+    border-radius: 20px;
+    padding: 2vw 4vw;
+    margin-bottom: 20px;
+    background-color: #ebebeb;
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 26px;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
-body {
-    max-width: 100%;
+form {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    font-size: 16px;
+    padding-left: 10px;
+    max-width: 400px;
+    width: 100%;
 }
 
+header {
+    padding: 10px;
+    font-size: 16px;
+}
