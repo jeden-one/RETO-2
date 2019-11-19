@@ -1,4 +1,4 @@
-<?php include "database/mysql.php";?>
+<?php include "database/mysql.php"; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,15 +7,13 @@
     <link href="../css/general.css" rel="stylesheet">
     <link href="../css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/busqueda.css">
+    <script src="../../script/goIndex.js"></script>
 </head>
 
 <body>
 <div id="contenedor3">
     <header>
-        <img src="../img/aje_logo.png">
-        <p><strong><?php $dbh = connect();
-                $cont = counterAnuncios($dbh);
-                echo $cont; ?></strong> anuncios publicados</p>
+        <img src="../img/aje_logo.png" onclick="goIndex()">
     </header>
     <nav>
         <form action="actions/buscador.act.php" method="post">
@@ -26,13 +24,13 @@
             <input type="button" value="Mis Anuncios">
             <input type="button" value="Publicar Anuncio">
 
-            <div id="enlaces">
-                <a href="actions/buscador.act.php?action=titulo">Titulo</a>
-                <a href="actions/buscador.act.php?action=usuario">Usuario</a>
-            </div>
+
+        </div>
+        <div id="enlaces">
+            <a href="actions/buscador.act.php?action=titulo">Titulo</a>
+            <a href="actions/buscador.act.php?action=usuario">Usuario</a>
         </div>
     </nav>
-
 
 
     <?php

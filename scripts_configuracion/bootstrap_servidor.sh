@@ -58,5 +58,6 @@ ln -s /vagrant/ /var/www/html
 # shellcheck disable=SC2164
 # Cambiar de directorio donde están los archivos de configuración y ejecutar el script
 cd /vagrant/scripts_configuracion
+chmod +x configurar_servidor.sh
 ./configurar_servidor.sh
 sudo netplan apply

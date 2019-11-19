@@ -2,7 +2,7 @@
 
 #contenedor6 {
     display: grid;
-    grid-template-rows: 20% 100% 27%;
+    grid-template-rows: auto auto auto auto;
     grid-template-columns: 100%;
 }
 
@@ -12,30 +12,38 @@ header {
 }
 
 #datos {
-    grid-row: 2/3;
+    grid-row: 3/4;
     grid-column: 1/2;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    width: 80%;
+    justify-self: center;
+    padding-bottom: 25px;
+}
+
+#datos label{
+    flex-basis: 100%;
+    font-size: 5vw;
 }
 
 input[type="text"] {
-    font-size: 4.5vw;
-    width: 75%;
+    font-size: 3.8vw;
+    flex-basis: 100%;
     border: 2px solid #850018;
     border-radius: 5px;
-    padding: 5px 5px 5px 5px;
     min-height: 45px;
     margin-bottom: 20px;
     outline: none;
     background-color: #ebebeb;
     user-select: revert;
+    padding-left: 5px;
 }
 
 textarea {
-    font-size: 4.5vw;
-    width: 75%;
+    font-size: 3.8vw;
+    flex-basis: 100%;
     border: 2px solid #850018;
     border-radius: 5px;
     padding: 5px 5px 5px 5px;
@@ -47,22 +55,29 @@ textarea {
 }
 
 input[type="file"] {
-    width: 78%;
-    font-size: 0.5em;
+    flex-basis: 100%;
+    font-size: 3.8vw;
     margin-bottom: 1em;
 }
 
 h1 {
-    margin-bottom: 0;
     flex-basis: 100%;
     text-align: center;
+    font-size: 10vw;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    margin: 0 0 15px 0;
 }
 
 select {
-    font-size: 1.3em;
+    font-size: 3.8vw;
+    width: 100%;
+    margin-bottom: 25px;
+    background-color: #ebebeb;
+    border: 2px solid #690000;
 }
 
-.selector{
+.selector {
     flex-basis: 100%;
     display: flex;
     flex-direction: column;
@@ -70,34 +85,27 @@ select {
     align-items: center;
 }
 
-.selector label{
+.selector label {
     margin-bottom: 0.5em;
 }
 
 input[type="submit"] {
-    font-size: 4.5vw;
+    font-size: 8vw;
     padding: 10px;
     border-radius: 5px;
     border: 2px solid #690000;
-    color: #850018;
-    background: linear-gradient(to right, #850018 50%, #ebebeb 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: all .25s ease-out;
-    width: 75%;
+    background-color: #850018;
+    color: white;
+    flex-basis: 100%;
 }
 
 input[type="submit"]:hover {
-    background-position: left bottom;
+    transition: all .25s ease-out;
+    background-color: #ac0018;
     color: white;
 }
 
-label {
-    flex-basis: 70%;
-    font-size: 1.5em;
-}
-
 footer {
-    grid-row: 3/4;
+    grid-row: 4/5;
     grid-column: 1/2;
 }
