@@ -11,7 +11,7 @@ if (isset($_POST["nombre"]) && isset($_POST["email"]) && isset($_COOKIE["usuario
     $nombreBuscar = $_COOKIE["usuario"];
     $nombreFoto = null;
     if (isset($_FILES['foto'])) {
-        include '../includes/inc_foto.php';
+        include '../includes/foto.logic.php';
     }
     if (empty($password) && empty($repetirPassword)) {
         $password = $_POST["passwordPasar"];

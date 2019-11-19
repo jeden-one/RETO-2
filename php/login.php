@@ -1,5 +1,5 @@
-<?php include("includes/inc_header2.php");
-include('includes/inc_loginEntrada.php');
+<?php include("includes/header.print.php");
+include('includes/loginEntrada.logic.php');
 ?>
 
 <form method="post" action="actions/login.act.php">
@@ -18,4 +18,4 @@ include('includes/inc_loginEntrada.php');
 </form>
 <script src="../script/login.js"></script>
 <?php
-include("includes/inc_footer.php") ?>
+include("includes/footer.print.php") ?>
