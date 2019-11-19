@@ -37,8 +37,8 @@ function categorias()
         foreach ($subcategorias as $valor) {
             $subcategoriasIl = $subcategoriasIl . '<li class="elementosSubcategorias">' . '<a href="" class="enlaceSubcategoria">' . $valor->subcategoria . '</a>' . '</li>';
         }
-        $subcategoriasUl = '<ul class="listaSubcategorias" style="display: none">' . $subcategoriasIl . '</ul>';
-        echo '<li class="elementosCategorias" onclick="mostrarSubcategorias(' . $value->id . ')"> <div class="divCatImagen">' . $value->nombre . '
+        $subcategoriasUl = '<ul class="listaSubcategorias" >' . $subcategoriasIl . '</ul>';
+        echo '<li class="elementosCategorias" onclick="mostrarSubcategorias(' . $value->id . ')"> <div class="divCatImagen"><p id="text">' . $value->nombre . '</p>
                     <img src="img/flechaAbajo.svg" class="flechaAbajo">' . $subcategoriasUl . '</div></li>';
     }
 }
