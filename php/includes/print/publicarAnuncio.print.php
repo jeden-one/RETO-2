@@ -14,7 +14,7 @@
         </select>
     </div>
     <div class="selector">
-        <label for="subcategoria">Subcategoria:</label>
+        <label for="subcategoria"><p class="text">Subcategoria: </p></label>
         <select name="subcategoria" id="subcategoria">
         </select>
     </div>

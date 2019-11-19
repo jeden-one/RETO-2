@@ -83,10 +83,6 @@ select {
     align-items: center;
 }
 
-.selector label {
-    margin-bottom: 0.5em;
-}
-
 input[type="submit"] {
     font-size: 8vw;
     padding: 10px;
@@ -125,16 +121,17 @@ footer {
     form input[type="text"], textarea, input[type="file"] {
         padding: 5px 15px;
         font-size: 30px;
-        width: 60%;
     }
 
-    form h1 {
-        font-size: 40px;
+    h1 {
+        font-size: 100px;
+        margin-bottom: 50px;
     }
 
     label {
-        font-size: 20px;
         height: 10%;
+        width: 100%;
+        margin: 0;
     }
 
     footer p, a {
@@ -142,6 +139,20 @@ footer {
     }
 
     #divIconos a {
-        width: auto;
+        width: 5%;
+    }
+
+    .text {
+        font-size: 23px;
+    }
+
+    .selector select {
+        padding: 5px 15px;
+        font-size: 30px;
+        width: 100%;
+    }
+
+    .selector {
+        margin-bottom: 50px;
     }
 }
