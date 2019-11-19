@@ -96,11 +96,10 @@ h1 {
         grid-template-columns: 100%;
     }
 
-    form input[type="password"],
+    #datos input[type="password"],
     input[type="email"], input[type="text"] {
         padding: 5px 15px;
         font-size: 30px;
-        width: 60%;
     }
 
     form h1 {
@@ -115,8 +114,15 @@ h1 {
         margin-bottom: 30px;
     }
 
-    label p {
-        font-size: 23px;
+    h1 {
+        font-size: 100px;
+        margin-bottom: 50px;
+    }
+
+    label {
+        height: 10%;
+        width: 100%;
+        margin: 0;
     }
 
     footer p, a {
@@ -125,6 +131,10 @@ h1 {
 
     #divIconos a {
         width: 5%;
+    }
+
+    .text {
+        font-size: 23px;
     }
   }
 
