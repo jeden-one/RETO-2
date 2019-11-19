@@ -1,9 +1,4 @@
-<?php
-include 'database/mysql.php';
-if (!isset($_COOKIE["usuario"])) {
-    header("location: login.php?action=publicarAnuncio");
-}
-?>
+<?php include "includes/publicarAnuncioEntrada.logic.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,10 +18,9 @@ if (!isset($_COOKIE["usuario"])) {
         <img src="../../img/aje_logo.png" onclick="goIndex()">
     </header>
 
-    <?php
-    include "includes/publicarAnuncio.logic.php";
-    include "includes/print/footer.print.php";
-    ?>
+    <?php include "includes/publicarAnuncio.logic.php";
+    include "includes/print/footer.print.php"; ?>
+    
 </div>
 <script src="../script/publicarAnuncio.js"></script>
 </body>
