@@ -11,6 +11,7 @@ nav {
 nav form {
     display: flex;
     justify-content: center;
+    margin: 0 5px;
 }
 
 nav input[type="text"] {
@@ -37,7 +38,7 @@ nav input[type="text"] {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    margin-bottom: 20px;
+    margin: 0 5px 20px;
 }
 
 #categorias {

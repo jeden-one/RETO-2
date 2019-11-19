@@ -8,7 +8,8 @@ include("includes/inc_header2.php") ?>
     <input type="text" name="nif" id="nif" placeholder="NIF">
     <input type="text" name="nombre" id="nombre" placeholder="Nombre">
     <input type="email" name="email" id="email" placeholder="Email">
-    <input type="button" value="Enviar Petición" onclick="enviarCorreo($('#email').val())">
+    <input type="button" value="Enviar Petición"
+           onclick="enviarCorreo($('#email').val(),'registro'); enviarCorreo('ajebask.notificaciones@gmail.com','registro')">
 
     <div id="separar"></div>
 

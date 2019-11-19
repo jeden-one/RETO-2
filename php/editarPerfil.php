@@ -10,31 +10,26 @@ include "includes/inc_editarPerfil.php";
     <link href="../css/general.css" rel="stylesheet">
     <link href="../css/normalize.css" rel="stylesheet">
     <link href="../css/editarPerfil.css" rel="stylesheet" >
+    <script src="../script/goIndex.js"></script>
 </head>
 
 <body>
 <div id="contenedor5">
     <header id="header">
-        <img src="../../img/aje_logo.png">
-        <p>
-            <strong>
-                <?php $dbh = connect();
-                $cont = counterAnuncios($dbh);
-                echo $cont; ?>
-            </strong> anuncios publicados
-        </p>
+        <img src="../../img/aje_logo.png" onclick="goIndex()">
     </header>
 
-    <form id="Datos" action="actions/editarPerfil.act.php" method="post" enctype="multipart/form-data">
+    <h1>Editar Perfil</h1>
+    <img id="fotoPerfil" src="../img/<?php echo $nombreFoto;?>" alt="">
+    <form id="datos" action="actions/editarPerfil.act.php" method="post" enctype="multipart/form-data">
         <?php mensajeRespuesta() ?>
-        <h1>Editar Perfil</h1>
-        <input type="hidden" name="passwordPasar" value="<?php echo $password ?>">
-        <label>Foto: <input type="file" name="foto" accept="image/x-png,image/gif,image/jpeg"></label>
-        <label>Nombre: <input type="text" name="nombre" value="<?php echo $nombre ?>"> </label>
-        <label>Contraseña: <input type="text" name="password" value=""> </label>
-        <label>Repite contraseña: <input type="text" name="repetirPassword" value=""></label>
-        <label>Email: <input type="text" name="email" value="<?php echo $usuario ?>"></label>
-        <label>Descripcion: <textarea name="descripcion" value="<?php echo $descripcion ?>"></textarea></label>
+        <input type="hidden" name="passwordPasar" value="<?php echo $password;?>">
+        <label>Foto: </label><input type="file" name="foto" accept="image/x-png,image/gif,image/jpeg">
+        <label>Nombre: </label><input type="text" name="nombre" value="<?php echo $nombre;?>">
+        <label>Contraseña: </label><input type="text" name="password" value="">
+        <label>Repite contraseña: </label><input type="text" name="repetirPassword" value="">
+        <label>Email: </label><input type="text" name="email" value="<?php echo $usuario;?>">
+        <label>Descripcion: </label><textarea name="descripcion" value="<?php echo $descripcion;?>"><?php echo $descripcion;?></textarea>
 
         <input type="submit" value="Actualizar Usuario">
     </form>

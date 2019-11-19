@@ -1,36 +1,72 @@
-form input[type="password"],
-input[type="email"], input[type="text"] {
-    width: 75%;
+input[type="text"], #textarea {
+    width: 100%;
     border: 1px solid #850018;
-    border-radius: 20px;
-    padding: 3vw 1vw;
+    border-radius: 5px;
+    padding: 5px 5px;
     margin-bottom: 20px;
     outline: none;
     background-color: #ebebeb;
-    font-size: 8vw;
+    font-size: 6vw;
 }
 
-form input[type="button"], form input[type="submit"] {
-    width: 75%;
-    padding: 10px 5px;
-    border-radius: 20px;
-    border: 1px solid #690000;
-    font-size: 8vw;
-    margin: 10px 0 10px 0;
+#textarea {
+    resize: vertical;
+    overflow-scrolling: unset;
+}
+
+input[type="button"] {
+    font-size: 7.5vw;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #690000;
     background-color: #850018;
+    color: white;
+    flex-basis: 100%;
+}
+
+input[type="button"]:hover {
+    transition: all .25s ease-out;
+    background-color: #ac0018;
     color: white;
 }
 
 #contenedor2 {
     display: grid;
-    grid-template-rows: 30% auto 27%;
+    grid-template-rows: auto auto auto auto;
+    height: 100vh;
 }
 
-h1 {
-    font-size: 30px;
+#titulo {
+    font-size: 10vw;
+    text-align: center;
+    margin: 0;
 }
 
 body {
     max-width: 100%;
 }
 
+#datos {
+    width: 80%;
+    justify-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 25px;
+}
+
+#datos div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+p, label {
+    font-size: 7vw;
+    margin-bottom: 15px;
+    flex-basis: 100%;
+}
+
+#listaAsuntos {
+    flex-basis: 100%;
+    margin-bottom: 15px;
+}

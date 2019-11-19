@@ -1,4 +1,8 @@
 /* GENERAL */
+input[type="text"], textarea {
+    user-select: revert;
+}
+
 * {
     box-sizing: border-box;
     user-select: none;
@@ -8,7 +12,6 @@ html,
 body {
     margin: 0 auto;
     font-family: Candara;
-    font-size: 30px;
     background-color: #dedcdc;
     height: 100vh;
 }

@@ -9,6 +9,7 @@ if (isset($_COOKIE["usuario"])) {
     $usuario = $resultado->usuario;
     $password = $resultado->password;
     $descripcion = $resultado->descripcion;
+    $nombreFoto = $resultado->foto;
 
     close($dbh);
 } else {
