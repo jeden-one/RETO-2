@@ -6,7 +6,7 @@
     <link href="../css/general.css" rel="stylesheet">
     <link href="../css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/busqueda.css">
-    <script src="../../script/goIndex.js"></script>
+    <script src="../../script/busqueda.js"></script>
 </head>
 
 <body>
@@ -20,8 +20,8 @@
             <input type="submit" name="buscar" value="Buscar" id="buscar">
         </form>
         <div id="botones">
-            <input type="button" value="Mis Anuncios">
-            <input type="button" value="Publicar Anuncio">
+            <input type="button" value="Mis Anuncios" onclick="goMisAnuncios()">
+            <input type="button" value="Publicar Anuncio" onclick="goPublicarAnuncio()">
 
 
         </div>
