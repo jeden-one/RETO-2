@@ -1,4 +1,3 @@
-<?php include "database/mysql.php"; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +6,7 @@
     <link href="../css/general.css" rel="stylesheet">
     <link href="../css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/busqueda.css">
-    <script src="../../script/goIndex.js"></script>
+    <script src="../../script/busqueda.js"></script>
 </head>
 
 <body>
@@ -21,8 +20,8 @@
             <input type="submit" name="buscar" value="Buscar" id="buscar">
         </form>
         <div id="botones">
-            <input type="button" value="Mis Anuncios">
-            <input type="button" value="Publicar Anuncio">
+            <input type="button" value="Mis Anuncios" onclick="goMisAnuncios()">
+            <input type="button" value="Publicar Anuncio" onclick="goPublicarAnuncio()">
         </div>
         <div id="enlaces">
             <a href="actions/buscador.act.php?action=titulo">Titulo</a>
@@ -32,5 +31,6 @@
 
 
     <?php
-    include "includes/inc_busqueda.php";
-    include "includes/inc_footer.php" ?>
+    include "database/mysql.php";
+    include "includes/busqueda.logic.php";
+    include "includes/print/footer.print.php" ?>

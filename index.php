@@ -1,5 +1,5 @@
 <?php
-include 'php/includes/inc_index.php';?>
+include 'php/includes/index.logic.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

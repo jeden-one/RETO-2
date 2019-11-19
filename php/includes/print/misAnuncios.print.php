@@ -1,15 +1,12 @@
-<?php
-if (isset($_COOKIE["usuario"])) {
-$dbh = connect();
-$anuncios = searchAnuncioByUsuario($dbh, $_COOKIE["usuario"]);
-?>
-
-
+<script>
+    let enlaces = document.getElementById("enlaces");
+    enlaces.style.display = "none";
+</script>
 
 <div id="anuncios">
     <?php foreach ($anuncios as $anuncio) {
-        $anuncioSerializado=serialize($anuncio)?>
-        <form action="../actions/modificarEliminar.act.php?anuncio=<?= $anuncioSerializado ?>" method="post">
+        $anuncioSerializado = serialize($anuncio) ?>
+        <form action="../../actions/modificarEliminar.act.php?anuncio=<?= $anuncioSerializado ?>" method="post">
             <div class="anuncio">
                 <div class="imagenDiv">
                     <img src="../../img/<?= $anuncio->foto ?>">
@@ -22,7 +19,7 @@ $anuncios = searchAnuncioByUsuario($dbh, $_COOKIE["usuario"]);
             </div>
         </form>
     <?php }
-} ?>
+    ?>
 </div>
 
 

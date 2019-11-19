@@ -83,7 +83,7 @@ nav input[type="text"] {
     margin-bottom: 10px;
 }
 
-input[type="button"] {
+input[type="button"], input[type="submit"] {
     font-size: 4.5vw;
     border-radius: 5px;
     border: 2px solid #690000;
@@ -93,6 +93,7 @@ input[type="button"] {
     background-position: right bottom;
     transition: all .25s ease-out;
     padding: 10px;
+    margin-bottom: 15px;
 }
 
 nav a {
@@ -104,20 +105,9 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover {
-    background-color: #ac0018;
-    transition: background-color 300ms ease-out;
-}
-
-nav form input[type="submit"] {
-    font-size: 4.5vw;
-    border-radius: 5px;
-    border: 2px solid #690000;
-    color: #850018;
-    background: linear-gradient(to right, #850018 50%, #ebebeb 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: all .25s ease-out;
+input[type="submit"]:hover{
+    background-position: left bottom;
+    color: white;
 }
 
 nav form input[type="submit"]:hover, nav input[type="button"]:hover {
@@ -183,6 +173,7 @@ nav input[type="text"] {
 
     a.anuncio {
         width: 46%;
+
     }
 
     footer p, a {
@@ -219,5 +210,9 @@ nav input[type="text"] {
         height: 100%;
         font-size: 30px;
         width: 16%;
+    }
+
+    input[type="button"], input[type="submit"] {
+        font-size: 30px;
     }
 }

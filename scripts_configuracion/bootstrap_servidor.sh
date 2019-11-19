@@ -60,4 +60,3 @@ ln -s /vagrant/ /var/www/html
 cd /vagrant/scripts_configuracion
 chmod +x configurar_servidor.sh
 ./configurar_servidor.sh
-sudo netplan apply

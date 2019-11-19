@@ -10,12 +10,13 @@ include_once "database/mysql.php";
     <link href="../css/general.css" rel="stylesheet">
     <link href="../css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/anuncio.css">
+    <script src="../script/goIndex.js"></script>
 </head>
 
 <body>
 <div id="contenedor4">
     <header>
-        <img src="../img/aje_logo.png">
+        <img src="../img/aje_logo.png" onclick="goIndex()">
         <p>
             <strong>
                 <?php $dbh = connect();
@@ -24,8 +25,8 @@ include_once "database/mysql.php";
             </strong> anuncios publicados
         </p>
     </header>
-    <?php include "includes/inc_anuncio.php";
-    include("includes/inc_footer.php") ?>
+    <?php include "includes/anuncio.logic.php";
+    include("includes/print/footer.print.php") ?>
 
 </body>
 
