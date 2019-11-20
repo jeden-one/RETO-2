@@ -43,8 +43,6 @@ footer {
     padding: 5px 0px;
     grid-column: 1/2;
     grid-row: 4/5;
-    position: relative;
-    bottom: 0vh;
     flex-direction: column;
 }
 

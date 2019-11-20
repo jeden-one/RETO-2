@@ -9,11 +9,6 @@
     justify-content: center;
 }
 
-.imagenDiv img {
-    width: 100%;
-    object-fit: cover;
-}
-
 .anuncio {
     margin: 20px 10px 20px 10px;
     width: 90%;
@@ -24,6 +19,7 @@
     flex-direction: column;
     text-decoration: none;
     color: black;
+    height: max-content;
 }
 
 .anuncio img {
@@ -155,27 +151,35 @@ nav input[type="text"] {
 #contenedor3 {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
 }
 
 .datosAnuncio {
     flex-basis: 100%;
 }
-
 .divanuncio {
     flex-basis: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.datosAnuncioBusqueda {
+.imagenDiv{
+    flex-basis: 100%;
 
 }
-
+.imagenDiv img {
+    width: 50%;
+    object-fit: cover;
+}
 .botonesAnuncio {
     flex-basis: 100%;
     align-self: self-end;
     text-align: right;
+}
+.datosAnuncioBusqueda{
+    display: flex;
 }
 
 @media screen and (min-width: 769px) {
@@ -246,6 +250,10 @@ nav input[type="text"] {
     .imagenDiv {
         flex-basis: 30%;
     }
+    .imagenDiv img {
+        width: 100%;
+        object-fit: cover;
+    }
 
     .infoanuncio {
         flex-basis: 49%;
@@ -293,4 +301,5 @@ nav input[type="text"] {
     #divIconos {
         width: 33%;
     }
+
 }
