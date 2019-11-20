@@ -19,32 +19,35 @@
         <header>
             <img src="../img/aje_logo.png" onclick="goIndex()">
         </header>
-        <h1 id="titulo">¿En qué podemos ayudarte?</h1>
-        <form action="#" method="post" id="datos">
-            <p>Indica el motivo de contacto</p>
-            <select id="listaAsuntos" onchange="seleccionarValor()">
-                <option value="nada">-</option>
-                <option value="Modificar y borrar un anuncio">Modificar y borrar un anuncio</option>
-                <option value="Problemas con mi contraseña">Problemas con mi contraseña</option>
-                <option value="No puedo actualizar mis datos">No puedo actualizar mis datos</option>
-                <option value="Eliminar mi cuenta">Eliminar mi cuenta</option>
-                <option value="He sido victima de una estafa">He sido victima de una estafa</option>
-                <option value="Sugerencia">Sugerencia</option>
-            </select>
+        <div id="bloque">
+            <h1 id="titulo">¿En qué podemos ayudarte?</h1>
+            <form action="#" method="post" id="datos">
+                <p>Indica el motivo de contacto</p>
+                <select id="listaAsuntos" onchange="seleccionarValor()">
+                    <option value="nada">-</option>
+                    <option value="Modificar y borrar un anuncio">Modificar y borrar un anuncio</option>
+                    <option value="Problemas con mi contraseña">Problemas con mi contraseña</option>
+                    <option value="No puedo actualizar mis datos">No puedo actualizar mis datos</option>
+                    <option value="Eliminar mi cuenta">Eliminar mi cuenta</option>
+                    <option value="He sido victima de una estafa">He sido victima de una estafa</option>
+                    <option value="Sugerencia">Sugerencia</option>
+                </select>
 
-            <div id="divOcultar">
-                <label for="asunto">Asunto: </label>
-                <input type="text" id="asunto">
+                <div id="divOcultar">
+                    <label for="asunto">Asunto: </label>
+                    <input type="text" id="asunto">
 
-                <label for="correo">Correo: </label>
-                <input type="text" id="correo">
+                    <label for="correo">Correo: </label>
+                    <input type="text" id="correo">
 
-                <label for="textarea">Textarea: </label>
-                <textarea id="textarea" autogrow></textarea>
+                    <label for="textarea">Textarea: </label>
+                    <textarea id="textarea" autogrow></textarea>
 
-                <input type="button" value="Enviar"
-                       onclick="enviarAyuda($('#correo').val(),$('#asunto').val(),$('#listaAsuntos option:selected').text(),$('#textarea').val())">
-            </div>
-        </form>
+                    <input type="button" value="Enviar"
+                           onclick="enviarAyuda($('#correo').val(),$('#asunto').val(),$('#listaAsuntos option:selected').text(),$('#textarea').val())">
+                </div>
+            </form>
+        </div>
+
 
 <?php include "includes/print/footer.print.php" ?>

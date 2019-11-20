@@ -71,6 +71,9 @@ p, label {
     margin-bottom: 15px;
     flex-basis: 100%;
 }
+p{
+    margin-top: 0;
+}
 
 #listaAsuntos {
     flex-basis: 100%;
