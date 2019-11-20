@@ -172,13 +172,9 @@ nav input[type="text"] {
     header {
         margin-left: 10px;
     }
-
+  
     footer p, a {
         font-size: 2vw;
-    }
-
-    #divIconos a {
-        width: 5%;
     }
 
     nav form input[type="text"] {
@@ -229,5 +225,38 @@ nav input[type="text"] {
 
     .anuncio .imagenDiv img {
         width: 75%;
+    }
+
+    footer {
+        font-size: unset;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    footer p {
+        font-size: 1vw;
+        margin: 0;
+    }
+
+    footer a img {
+        width: 50%;
+    }
+
+    footer div {
+        width: 33%;
+    }
+
+    #divIconos p {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #divIconos a {
+        width: 15%;
+    }
+
+    #divIconos {
+        width: 33%;
     }
 }
