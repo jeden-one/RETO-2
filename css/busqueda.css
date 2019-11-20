@@ -17,7 +17,7 @@
 
 .anuncio {
     margin: 20px 10px 20px 10px;
-    width: 90%;
+    width: 100%;
     border-radius: 15px;
     padding: 15px;
     background-color: white;
@@ -25,10 +25,6 @@
     flex-direction: column;
     text-decoration: none;
     color: black;
-}
-
-.anuncio > * {
-    width: 100%;
 }
 
 .anuncio img {
@@ -105,7 +101,7 @@ nav a {
     text-decoration: none;
 }
 
-input[type="submit"]:hover{
+input[type="submit"]:hover {
     background-position: left bottom;
     color: white;
 }
@@ -159,21 +155,19 @@ nav input[type="text"] {
 
 @media screen and (min-width: 769px) {
     header img {
-        width: 50%;
+        width: 25%;
         margin-bottom: 50px;
     }
+    header{
+        margin-left: 10px;
+    }
 
-    #botones input{
+    #botones input {
         font-size: 30px;
     }
 
     #enlaces a {
         font-size: 30px;
-    }
-
-    a.anuncio {
-        width: 46%;
-
     }
 
     footer p, a {
@@ -199,7 +193,7 @@ nav input[type="text"] {
     }
 
     #botones {
-        margin-bottom: 50px;
+        margin-bottom: 10px;
     }
 
     #enlaces {
@@ -214,5 +208,25 @@ nav input[type="text"] {
 
     input[type="button"], input[type="submit"] {
         font-size: 30px;
+    }
+
+    .anuncio {
+        flex-basis: 80%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .imagenDiv {
+        flex-basis: 49%;
+    }
+    .infoanuncio{
+
+        flex-basis: 49%;
+    }
+
+    .anuncio .imagenDiv img {
+        width: 100%;
     }
 }

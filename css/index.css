@@ -240,6 +240,7 @@ footer {
     font-size: 4.5vw;
     position: relative;
     bottom: 0vh;
+    flex-direction: column;
 }
 
 #divIconos {
@@ -249,13 +250,13 @@ footer {
     justify-content: center;
 }
 
-footer a {
-    width: 10%;
-    margin-right: 20px;
+footer p {
+    font-size: 3.5vw;
+    margin: 0;
 }
 
 footer a img {
-    width: 100%;
+    width: 65%;
 }
 
 @media (min-width: 769px) {
@@ -346,14 +347,14 @@ footer a img {
     header div p {
         font-size: 2vw;
         flex: 2;
-        margin: 0;
+        margin: 10px 0 0 0;
     }
 
     header img {
         width: 25%;
     }
 
-    header div input[type="button"]{
+    header div input[type="button"] {
         font-size: 2.5vw;
     }
 
@@ -369,5 +370,18 @@ footer a img {
         font-size: 2vw;
         margin-left: 25px;
         flex: 1;
+    }
+
+    footer {
+        font-size: unset;
+    }
+
+    footer p {
+        font-size: 1vw;
+        margin: 0;
+    }
+
+    footer a img {
+        width: 50%;
     }
 }

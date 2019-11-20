@@ -42,16 +42,14 @@ include 'php/includes/index.logic.php'; ?>
         <a href="#header"><img src="img/flecha.svg" id="flechaSubir"></a>
     </div>
     <footer>
-        <p>Siguenos en nuestras redes sociales</p>
-
         <div id="divIconos">
-            <a href=""><img src="img/facebook.svg"></a>
-            <a href=""><img src="img/twitter.svg"></a>
-            <a href=""><img src="img/instagram.svg"></a>
-            <a href="https://github.com/jeden-one/RETO-2"><img src="img/github.svg"></a>
+            <a href="https://es-es.facebook.com/ajebask"><img src="img/facebook.svg"></a>
+            <a href="https://twitter.com/AjebaskAlava"><img src="img/twitter.svg"></a>
+            <a href="http://ajebaskalava.es/"><img src="img/internet.svg"></a>
         </div>
         <p>Copyright © Todos los Derechos Reservados 2019</p>
-        <a href="php/ayuda.php">¿Necesitas ayuda?</a>
+        <p>Powered by <a href="https://github.com/Jeden-one" target="_blank">Jeden</a></p>
+        <p><a href="php/ayuda.php">¿Necesitas ayuda?</a></p>
     </footer>
 </div>
 </body>

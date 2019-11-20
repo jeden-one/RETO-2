@@ -91,6 +91,13 @@
         width: 50%;
         margin-bottom: 50px;
     }
+    footer p{
+        font-size: 2vw;
+        margin: 0;
+    }
+    footer a img{
+        width: 50%;
+    }
 
     #navAnuncio a{
         font-size: 50px;
