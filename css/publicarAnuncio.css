@@ -111,7 +111,6 @@ footer {
     }
 
     form input[type="submit"], form input[type="button"] {
-        height: 15%;
         font-size: 2vw;
         padding: 10px 20px;
         width: 60%;
@@ -153,6 +152,5 @@ footer {
     }
 
     .selector {
-        margin-bottom: 50px;
     }
 }
