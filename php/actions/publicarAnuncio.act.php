@@ -19,7 +19,9 @@ if ($_GET["action"] == "publicar") {
         );
         $resultado = insertAnuncio($dbh, $data);
         close($dbh);
-        echo $resultado . ' filas afectadas';
+        if($resultado==1){
+            header("location: ../busqueda.php?action=misAnuncios");
+        }
     }
 } elseif ($_GET["action"] == "modificar") {
     if (isset($_POST['titulo']) && isset($_POST['descripcion']) && isset($_POST['subcategoria']) && isset($_GET["anuncio"])) {
@@ -43,6 +45,8 @@ if ($_GET["action"] == "publicar") {
         );
         $resultado = updateAnuncioOne($dbh, $data);
         close($dbh);
-        echo $resultado . " filas modificadas";
+        if($resultado==1){
+            header("location: ../busqueda.php?action=misAnuncios");
+        }
     }
 }
