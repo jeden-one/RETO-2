@@ -19,8 +19,9 @@
         <header>
             <img src="../img/aje_logo.png" onclick="goIndex()">
         </header>
-        <h1 id="titulo">¿En qué podemos ayudarte?</h1>
+
         <form action="#" method="post" id="datos">
+            <h1 id="titulo">¿En qué podemos ayudarte?</h1>
             <p>Indica el motivo de contacto</p>
             <select id="listaAsuntos" onchange="seleccionarValor()">
                 <option value="nada">-</option>

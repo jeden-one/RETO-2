@@ -53,7 +53,7 @@ form {
 }
 
 #datos {
-    width: 80%;
+    width: 100%;
     justify-self: center;
     display: flex;
     flex-wrap: wrap;
@@ -67,7 +67,7 @@ form {
 }
 
 p, label {
-    font-size: 7vw;
+    font-size: 5vw;
     margin-bottom: 15px;
     flex-basis: 100%;
 }
@@ -75,4 +75,23 @@ p, label {
 #listaAsuntos {
     flex-basis: 100%;
     margin-bottom: 15px;
+}
+
+h1 {
+    width: 100%;
+    font-size: 7vw;
+}
+
+@media screen and(min-width: 769px) {
+    header img {
+        width: 50%;
+    }
+
+    footer p, a {
+        font-size: 1.5vw;
+    }
+
+    #divIconos a {
+        width: 5%;
+    }
 }
