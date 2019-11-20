@@ -133,14 +133,6 @@ footer {
         margin: 0;
     }
 
-    footer p, a {
-        font-size: 23px;
-    }
-
-    #divIconos a {
-        width: 5%;
-    }
-
     .text {
         font-size: 23px;
     }
@@ -152,5 +144,38 @@ footer {
     }
 
     .selector {
+    }
+
+    footer {
+        font-size: unset;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    footer p {
+        font-size: 1vw;
+        margin: 0;
+    }
+
+    footer a img {
+        width: 50%;
+    }
+
+    footer div {
+        width: 33%;
+    }
+
+    #divIconos p {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #divIconos a {
+        width: 15%;
+    }
+
+    #divIconos {
+        width: 33%;
     }
 }
