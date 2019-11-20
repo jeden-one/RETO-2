@@ -295,20 +295,15 @@ footer a img {
         font-size: 30px;
     }
 
-    #text {
-        font-size: 35px;
-    }
-
     .elementosCategorias {
         flex-basis: 100%;
-        font-size: 30px;
+        font-size: 3vw;
     }
-
 
     .enlaceSubcategoria {
         display: flex;
         justify-content: center;
-        font-size: 2vw;
+        font-size: 1.5vw;
         padding: 7px 0;
     }
 
@@ -361,6 +356,10 @@ footer a img {
 
     header div input[type="button"] {
         font-size: 2.5vw;
+    }
+
+    footer p, a {
+        font-size: 23px;
     }
 
     #divIconos a {

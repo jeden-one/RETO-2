@@ -34,7 +34,6 @@ include "includes/editarPerfil.logic.php";
         <label>Email: </label><input type="text" name="email" value="<?php echo $usuario; ?>">
         <label>Descripcion: </label><textarea name="descripcion"
                                               value="<?php echo $descripcion; ?>"><?php echo $descripcion; ?></textarea>
-
         <input type="submit" value="Actualizar Usuario">
     </form>
 

@@ -99,4 +99,20 @@
         width: 50%;
     }
 
+    #navAnuncio a{
+        font-size: 50px;
+    }
+
+    footer p, a {
+        font-size: 23px;
+    }
+
+    #divIconos a {
+        width: 5%;
+    }
+
+    #fotoAnuncio {
+        width: 50%;
+    }
+
 }
