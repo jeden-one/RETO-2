@@ -16,7 +16,7 @@
 
 .anuncio {
     margin: 20px 10px 20px 10px;
-    width: 100%;
+    width: 90%;
     border-radius: 15px;
     padding: 15px;
     background-color: white;
@@ -34,12 +34,13 @@
 .anuncio p {
     line-height: 1.5em;
     width: 100%;
-    font-size: 1.75vw;
+    font-size: 5vw;
+    margin-bottom: 0;
 }
 
 .anuncio h2 {
     margin: 0;
-    font-size: 2vw;
+    font-size: 7.5vw;
 }
 
 
@@ -75,6 +76,10 @@ nav input[type="text"] {
     margin-bottom: 10px;
 }
 
+input[type="submit"] {
+    margin-bottom: 15px;
+}
+
 input[type="button"], input[type="submit"] {
     font-size: 4.5vw;
     border-radius: 5px;
@@ -85,7 +90,6 @@ input[type="button"], input[type="submit"] {
     background-position: right bottom;
     transition: all .25s ease-out;
     padding: 10px;
-    margin-bottom: 15px;
 }
 
 nav a {
@@ -133,6 +137,7 @@ form {
     padding: 0 10px;
     display: flex;
     margin: 0 10px;
+    justify-content: center;
 }
 
 nav input[type="text"] {
@@ -155,6 +160,16 @@ nav input[type="text"] {
 
 .datosAnuncio {
     flex-basis: 100%;
+}
+
+.divanuncio {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.datosAnuncioBusqueda {
+
 }
 
 .botonesAnuncio {
@@ -190,6 +205,16 @@ nav input[type="text"] {
         flex: none;
     }
 
+    .anuncio h2 {
+        margin: 0;
+        font-size: 2vw;
+    }
+
+    h3 {
+        margin-top: 5px;
+        font-size: 1.9vw;
+    }
+
     form {
         display: flex;
         justify-content: center;
@@ -200,11 +225,11 @@ nav input[type="text"] {
     }
 
     #enlaces {
-        margin-bottom: 50px;
+        margin-bottom: 10px;
     }
 
 
-    input[type="submit"],input[type="button"] {
+    input[type="submit"], input[type="button"] {
         font-size: 2vw;
         flex-basis: 20%;
     }
@@ -216,9 +241,14 @@ nav input[type="text"] {
         display: flex;
         justify-content: space-between;
     }
+    .anuncio p {
+        flex-basis: 100%;
+        font-size: 1.75vw;
+        margin-bottom: 0;
+    }
 
     .imagenDiv {
-        flex-basis: 40%;
+        flex-basis: 30%;
     }
 
     .infoanuncio {
@@ -228,6 +258,10 @@ nav input[type="text"] {
     }
 
     .anuncio .imagenDiv img {
-        width: 75%;
+        width: 100%;
+    }
+
+    nav a {
+        font-size: 2vw;
     }
 }
