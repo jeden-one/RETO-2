@@ -259,6 +259,10 @@ footer a img {
     width: 65%;
 }
 
+#divIconos p {
+    width: 100%;
+}
+
 @media (min-width: 769px) {
     nav {
         margin-bottom: 50px;
@@ -362,10 +366,6 @@ footer a img {
         font-size: 23px;
     }
 
-    #divIconos a {
-        width: 5%;
-    }
-
     #usLog {
         font-size: 2vw;
         margin-left: 25px;
@@ -374,6 +374,9 @@ footer a img {
 
     footer {
         font-size: unset;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
     }
 
     footer p {
@@ -383,5 +386,22 @@ footer a img {
 
     footer a img {
         width: 50%;
+    }
+
+    footer div {
+        width: 33%;
+    }
+
+    #divIconos p {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #divIconos a {
+        width: 15%;
+    }
+
+    #divIconos {
+        width: 33%;
     }
 }
