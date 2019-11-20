@@ -126,6 +126,6 @@ form input[type="submit"]:hover, form input[type="button"]:hover {
     }
 
     #divIconos a {
-        width: auto;
+        width: 5%;
     }
 }

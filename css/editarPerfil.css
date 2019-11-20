@@ -1,7 +1,7 @@
 /* EDITARPERFIL.PHP */
 #contenedor5 {
     display: grid;
-    grid-template-rows: 30% 85% 30%;
+    grid-template-rows: auto auto auto auto;
     grid-template-columns: 100%;
 }
 
@@ -15,69 +15,73 @@ header p {
 }
 
 #datos {
-    grid-row: 2/3;
+    grid-row: 4/5;
     grid-column: 1/2;
+    width: 80%;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 15px;
 }
 
 footer {
-    grid-row: 3/4;
+    grid-row: 5/6;
     grid-column: 1/2;
 }
 
-#Datos input[type="text"],
+#datos input[type="text"],
 input[type="password"],
-input[type="email"] {
-    font-size: 4.5vw;
-    width: 75%;
+input[type="email"],textarea {
+    font-size: 5vw;
+    flex-basis: 100%;
     border: 2px solid #850018;
     border-radius: 5px;
     padding: 5px 5px 5px 5px;
-    min-height: 45px;
     margin-bottom: 20px;
     outline: none;
     background-color: #ebebeb;
     user-select: revert;
 }
 
-#Datos  input[type="file"] {
-    width: 80%;
-    font-size: 24px;
-    margin-bottom: 30px;
+#datos  input[type="file"] {
+    flex-basis: 100%;
+    font-size: 5vw;
+    margin-bottom: 15px;
+    display: block;
 }
 
-#Datos input[type="button"], #Datos input[type="submit"] {
-    font-size: 4vw;
+
+
+input[type="submit"] {
+    font-size: 8vw;
     padding: 10px;
     border-radius: 5px;
     border: 2px solid #690000;
-    color: #850018;
-    background: linear-gradient(to right, #850018 50%, #ebebeb 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: all .25s ease-out;
-    width: 75%;
+    background-color: #850018;
+    color: white;
+    flex-basis: 100%;
 }
 
-input[type="submit"]:hover, #Datos input[type="button"]:hover{
-    background-position: left bottom;
+input[type="submit"]:hover {
+    transition: all .25s ease-out;
+    background-color: #ac0018;
     color: white;
 }
 
-#Datos {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
 label {
-    width: 100%;
+    flex-basis: 100%;
     height: 5%;
+    font-size: 6.5vw;
 }
 
 h1 {
-    margin-bottom: 0;
+  margin: 0;
+  font-size: 10vw;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  text-align: center;
 }
 
 @media screen and (min-width: 769px) {
@@ -120,6 +124,14 @@ h1 {
     }
 
     #divIconos a {
-        width: auto;
+        width: 5%;
     }
+  }
+
+
+#fotoPerfil{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    width: 50%;
+    justify-self: center;
 }

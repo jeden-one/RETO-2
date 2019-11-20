@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", load);
 
 
-function load () {
+function load() {
     let div = document.getElementById("divOcultar");
     div.style.display = "none";
 
@@ -19,18 +19,17 @@ function seleccionarValor() {
     }
 }
 
-function enviarAyuda() {
-
-        Email.send({
-            SecureToken: "8b6e9d56-dad7-459d-9ea7-331845c3ddb0",
-            To: 'jeden.egibide@gmail.com',
-            From: $("#correo"),
-            Subject: $("#asunto")
-        }).then(
-            alert('Solicitud enviada correctamente, espere un email de respuesta por parte de nuestro equipo de soporte técnico')
-        );
+function enviarAyuda(correoUser, asunto, motivo, mensaje) {
+    let regExpCorreo = new RegExp("^[A-Z]{3,}[@][A-Z]{3,}[.][A-Z]{2,}$");
+    if (regExpCorreo.test(correoUser.toUpperCase())) {
+        enviarCorreo("ajebask.notificaciones@gmail.com", "ayuda", "Ayuda: " + motivo + " - " + asunto, mensaje);
+        enviarCorreo(correoUser, "ayuda", "Ayuda: " + motivo + " - " + asunto, mensaje);
+        console.log("Mail bien");
+    } else {
+        console.log("Mail mal");
+    }
 }
 
 function goIndex() {
-    window.location.href="../../index.php";
+    window.location.href = "../../index.php";
 }

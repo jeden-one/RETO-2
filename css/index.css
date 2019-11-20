@@ -11,6 +11,7 @@ nav {
 nav form {
     display: flex;
     justify-content: center;
+    margin: 0 5px;
 }
 
 nav input[type="text"] {
@@ -36,7 +37,7 @@ nav input[type="text"] {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    margin-bottom: 20px;
+    margin: 0 5px 20px;
 }
 
 #categorias {
@@ -83,7 +84,7 @@ nav input[type="text"] {
     margin: 10px;
     border: 2px solid black;
     border-radius: 5px;
-    background-color: #910000;
+    background-color: #850018;
     padding: 5px 15px;
 }
 
@@ -128,7 +129,7 @@ nav form input[type="submit"] {
     transition: all .25s ease-out;
 }
 
-nav form input[type="submit"]:hover{
+nav form input[type="submit"]:hover {
     background-position: left bottom;
     color: white;
 }
@@ -177,6 +178,7 @@ body {
 
 header {
     padding: 10px 0 10px 0;
+    margin-left: 10px;
     grid-column: 1/2;
     grid-row: 1/2;
     scroll-behavior: smooth;
@@ -258,32 +260,31 @@ footer a img {
 
 @media (min-width: 769px) {
     nav {
-       margin-bottom: 50px;
-   }
+        margin-bottom: 50px;
+    }
+
     #contenedor {
         display: grid;
         grid-template-rows: auto auto auto auto;
         grid-template-columns: 100%;
     }
 
-    .enlaceSubcategoria {
-        font-size: 23px;
-    }
 
     .listaSubcategorias {
         display: flex;
         width: 100%;
+        justify-content: center;
     }
 
     .elementosSubcategorias {
         width: 30%;
         line-height: 1.5em;
         font-size: 14px;
-
     }
 
     .divCatImagen {
-        width: 100%;
+        justify-content: center;
+        border-bottom: #690000 solid 2px;
     }
 
     #listaCategorias {
@@ -298,24 +299,27 @@ footer a img {
     }
 
     .elementosCategorias {
-        width: 40%;
+        flex-basis: 100%;
         font-size: 30px;
     }
 
-    .elementosSubcategorias a {
-        width: 100%;
-        overflow: auto;
+
+    .enlaceSubcategoria {
         display: flex;
         justify-content: center;
-        align-items: center;
+        font-size: 2vw;
+        padding: 7px 0;
     }
 
     .flechaAbajo {
         display: none;
     }
 
+
     #botones a {
-        font-size: 30px;
+        font-size: 2vw;
+        flex-basis: 30%;
+        text-align: center;
     }
 
     form {
@@ -336,29 +340,35 @@ footer a img {
         font-size: 30px;
     }
 
-    header div p {
-        font-size: 30px;
-    }
-
-    header div input[type="button"]{
-        height: 10%;
-        font-size: 30px;
-    }
-
     header {
-        margin-bottom: 50px;
+        margin-bottom: 25px;
+    }
+
+    header div {
+        align-items: flex-start;
+    }
+
+    header div p {
+        font-size: 2vw;
+        flex: 2;
+        margin: 0;
     }
 
     header img {
-        margin-bottom: 50px;
-        width: 50%;
+        width: 25%;
     }
 
-    footer p, a {
-        font-size: 23px;
+    header div input[type="button"]{
+        font-size: 2.5vw;
     }
 
     #divIconos a {
-        width: auto;
+        width: 5%;
+    }
+
+    #usLog {
+        font-size: 2vw;
+        margin-left: 25px;
+        flex: 1;
     }
 }
