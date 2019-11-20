@@ -299,7 +299,7 @@ function searchAnuncioByBusqueda($dbh, $busqueda)
     );
 
     $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio,a.id_subcategoria subcategoria,
- u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
+ u.nombre nombreUsuario, a.fecha_creacion fechaCreacion, u.foto fotoUsuario
     FROM anuncios a, usuarios u 
     WHERE u.id=a.id_usuario AND (titulo LIKE :busqueda OR u.nombre LIKE :busqueda)");
     if ($stmt->execute($data) === true) {
