@@ -1,7 +1,7 @@
 <div id="anuncios">
     <?php foreach ($anuncios as $anuncio) {
         $anuncioSerializado = serialize($anuncio); ?>
-        <a class="anuncio" href="anuncio.php?anuncio="<?php $anuncioSerializado ?>>
+        <a class="anuncio" href='anuncio.php?anuncio=<?= $anuncioSerializado ?>'>
             <div class="anuncio">
                 <div class="imagenDiv">
                     <img src="../../img/<?= $anuncio->fotoAnuncio ?>">
