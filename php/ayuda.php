@@ -32,7 +32,6 @@
                     <option value="He sido victima de una estafa">He sido victima de una estafa</option>
                     <option value="Sugerencia">Sugerencia</option>
                 </select>
-
                 <div id="divOcultar">
                     <label for="asunto">Asunto: </label>
                     <input type="text" id="asunto">

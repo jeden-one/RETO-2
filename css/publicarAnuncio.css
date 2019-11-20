@@ -112,7 +112,7 @@ footer {
 
     form input[type="submit"], form input[type="button"] {
         height: 15%;
-        font-size: 30px;
+        font-size: 2vw;
         padding: 10px 20px;
         width: 60%;
         margin-bottom: 30px;
@@ -120,7 +120,7 @@ footer {
 
     form input[type="text"], textarea, input[type="file"] {
         padding: 5px 15px;
-        font-size: 30px;
+        font-size: 2vw;
     }
 
     h1 {

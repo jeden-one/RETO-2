@@ -50,9 +50,8 @@ input[type="email"],textarea {
     font-size: 5vw;
     margin-bottom: 15px;
     display: block;
+    width: 60%;
 }
-
-
 
 input[type="submit"] {
     font-size: 8vw;
@@ -96,11 +95,8 @@ h1 {
         grid-template-columns: 100%;
     }
 
-    form input[type="password"],
-    input[type="email"], input[type="text"] {
-        padding: 5px 15px;
-        font-size: 30px;
-        width: 60%;
+    #datos input[type="password"], input[type="email"], input[type="text"], input[type="file"]{
+        font-size: 2vw;
     }
 
     form h1 {
@@ -108,15 +104,21 @@ h1 {
     }
 
     form input[type="submit"], form input[type="button"] {
-        height: 15%;
-        font-size: 30px;
+        font-size: 2vw;
         padding: 10px 20px;
         width: 60%;
         margin-bottom: 30px;
     }
 
-    label p {
-        font-size: 23px;
+    h1 {
+        font-size: 100px;
+        margin-bottom: 50px;
+    }
+
+    label {
+        height: 10%;
+        width: 100%;
+        margin: 0;
     }
 
     footer p, a {
@@ -125,6 +127,10 @@ h1 {
 
     #divIconos a {
         width: 5%;
+    }
+
+    .text {
+        font-size: 23px;
     }
   }
 
