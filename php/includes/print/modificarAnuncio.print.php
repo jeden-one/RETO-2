@@ -1,14 +1,13 @@
 
-<form id="datos" method="post" action="actions/publicarAnuncio.act.php?action=modificar"
+<form id="datos" method="post" action="actions/publicarAnuncio.act.php?action=modificar&&anuncio=<?= $anuncioSeializado ?>"
       enctype="multipart/form-data">
     <h1>Modificar Anuncio</h1>
-    <label for="titulo">Titulo: </label><input id="titulo" type="text" name="titulo"
-                                               value="<?= $anuncio->titulo ?>">
-    <label for="desc">descripcion: </label><textarea id="desc"
-                                                     name="descripcion"><?= $anuncio->descripcion ?></textarea>
-    <label for="imagen">Imagen: </label>
-    <input id="imagen" type="file" name="foto" accept="image/x-png,image/gif,image/jpeg"
-           value="<?= $anuncio->foto ?>"/>
+    <label for="imagen"><input type="image" src="../img/<?= $anuncio->foto ?>"></label>
+    <input id="imagen" type="file" name="foto" accept="image/x-png,image/gif,image/jpeg"/>
+    <label for="titulo">Titulo: </label>
+    <input id="titulo" type="text" name="titulo" value="<?= $anuncio->titulo ?>">
+    <label for="desc">descripcion: </label>
+    <textarea id="desc" name="descripcion"><?= $anuncio->descripcion ?></textarea>
     <div class="selector">
         <label for="categoria">Categoria:</label>
         <select id="categoria">

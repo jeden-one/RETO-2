@@ -104,6 +104,8 @@ footer {
     grid-column: 1/2;
 }
 
+
+
 @media screen and (min-width: 769px) {
     header img{
         width: 50%;
