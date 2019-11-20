@@ -1,5 +1,5 @@
 <?php
-include 'php/includes/index.logic.php';?>
+include 'php/includes/index.logic.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +19,7 @@ include 'php/includes/index.logic.php';?>
                     <?php cantidadAnuncios(); ?>
                 </strong> anuncios publicados
             </p>
-            <?php sesion();?>
+            <?php sesion(); ?>
         </div>
     </header>
     <nav>
@@ -37,7 +37,7 @@ include 'php/includes/index.logic.php';?>
 
     <div id="categorias">
         <ul id="listaCategorias">
-            <?php categorias();?>
+            <?php categorias(); ?>
         </ul>
         <a href="#header"><img src="img/flecha.svg" id="flechaSubir"></a>
     </div>

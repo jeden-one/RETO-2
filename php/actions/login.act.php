@@ -12,7 +12,7 @@ if (isset($_POST["usuario"]) && isset($_POST["pass"]) && $_POST['pass'] != '') {
             setcookie("usuario", $_POST["usuario"], time() + (60 * 60 * 24 * 7), "/");
             switch ($_POST['action']) {
                 case 'publicarAnuncio':
-                    header("location: ../publicarAnuncio.php");
+                    header("location: ../publicarAnuncio.php?action=publicar");
                     break;
                 case 'editarPerfil':
                     header("location: ../editarPerfil.php");

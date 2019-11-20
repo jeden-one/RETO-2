@@ -7,3 +7,14 @@ function goPublicarAnuncio() {
 function goIndex() {
     window.location.href = "../../index.php";
 }
+
+$('#anuncio').click(function () {
+    $.ajax({
+        url:'includes/print/anunciosBusqueda.print.php',
+        type:'GET',
+        success:function () {
+
+        }
+
+    })
+})
