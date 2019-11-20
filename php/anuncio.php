@@ -11,6 +11,7 @@ include_once "database/mysql.php";
     <link href="../css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/anuncio.css">
     <script src="../script/goIndex.js"></script>
+    <script src="../script/goAnuncio.js"></script>
 </head>
 
 <body>
