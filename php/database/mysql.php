@@ -80,7 +80,8 @@ function searchAnuncioByTitulo($dbh, $titulo)
         'titulo' => '%' . $titulo . '%'
     );
 
-    $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
+    $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio, u.nombre nombreUsuario,
+ a.fecha_creacion fechaCreacion
     FROM anuncios a, usuarios u 
     WHERE u.id=a.id_usuario AND titulo LIKE :titulo");
     if ($stmt->execute($data) === true) {
@@ -103,7 +104,8 @@ function searchAnuncioByNombreUsuario($dbh, $usuario)
         'usuario' => '%' . $usuario . '%'
     );
 
-    $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
+    $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio, u.nombre nombreUsuario,
+ a.fecha_creacion fechaCreacion
     FROM anuncios a, usuarios u 
     WHERE u.id=a.id_usuario AND u.nombre LIKE :usuario");
     if ($stmt->execute($data) === true) {
@@ -125,9 +127,10 @@ function searchAnuncioByUsuario($dbh, $usuario)
     $data = array(
         'usuario' => $usuario,
     );
-    $stmt = $dbh->prepare("SELECT a.id idAnuncio,a.titulo titulo, a.foto foto, a.fecha_creacion fecha_creacion,u.usuario nombreUsuario, a.descripcion descripcion
-FROM usuarios u, anuncios a
-WHERE u.id = a.id_usuario AND u.usuario=:usuario;");
+    $stmt = $dbh->prepare("SELECT a.id idAnuncio,a.titulo titulo, a.foto foto, a.fecha_creacion fecha_creacion,
+u.usuario nombreUsuario, a.descripcion descripcion,s.id subcategoria,s.id_categoria categoria
+FROM usuarios u, anuncios a,subcategorias s
+WHERE u.id = a.id_usuario AND a.id_subcategoria=s.id AND u.usuario=:usuario;");
     if ($stmt->execute($data) === true) {
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     } else {
@@ -147,7 +150,8 @@ function searchAnuncioBySubcategoria($dbh, $id_subcategoria)
     $data = array(
         'id_subcategoria' => $id_subcategoria
     );
-    $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio,a.id_subcategoria subcategoria, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
+    $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio,a.id_subcategoria subcategoria,
+ u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
     FROM anuncios a, usuarios u 
     WHERE u.id=a.id_usuario AND a.id_subcategoria=:id_subcategoria;");
     if ($stmt->execute($data) === true) {
@@ -171,7 +175,8 @@ function searchAnuncioBySubcategoriaSinUnAnuncio($dbh, $id_subcategoria, $id_anu
         'id_subcategoria' => $id_subcategoria,
         'id_anuncio' => $id_anuncio
     );
-    $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio,a.id_subcategoria subcategoria, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
+    $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio,a.id_subcategoria subcategoria,
+ u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
     FROM anuncios a, usuarios u 
     WHERE u.id=a.id_usuario AND a.id_subcategoria=:id_subcategoria and a.id!=:id_anuncio;");
     if ($stmt->execute($data) === true) {
@@ -293,7 +298,8 @@ function searchAnuncioByBusqueda($dbh, $busqueda)
         'busqueda' => '%' . $busqueda . '%'
     );
 
-    $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio,a.id_subcategoria subcategoria, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
+    $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio,a.id_subcategoria subcategoria,
+ u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
     FROM anuncios a, usuarios u 
     WHERE u.id=a.id_usuario AND (titulo LIKE :busqueda OR u.nombre LIKE :busqueda)");
     if ($stmt->execute($data) === true) {
