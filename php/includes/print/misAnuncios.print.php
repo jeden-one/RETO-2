@@ -6,7 +6,7 @@
 <div id="anuncios">
     <?php foreach ($anuncios as $anuncio) {
         $anuncioSerializado = serialize($anuncio) ?>
-        <form action="../../actions/modificarEliminar.act.php?anuncio=<?= $anuncioSerializado ?>" method="post">
+        <form action='../php/actions/modificarEliminar.act.php' method="post">
             <div class="anuncio">
                 <div class="imagenDiv">
                     <img src="../../img/<?= $anuncio->foto ?>">
@@ -15,6 +15,7 @@
                     <div class="datosAnuncio">
                         <h2><?= $anuncio->titulo ?></h2>
                         <p><?= $anuncio->fecha_creacion ?></p>
+                        <input type="hidden" name="anuncio" value='<?= $anuncioSerializado?>'>
                     </div>
                     <div class="botonesAnuncio">
                         <input type="submit" name="eliminar" value="Eliminar">

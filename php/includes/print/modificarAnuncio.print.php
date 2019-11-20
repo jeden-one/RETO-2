@@ -1,6 +1,5 @@
-<?php
-?>
-<form id="datos" method="post" action="actions/publicarAnuncio.act.php?action=modificar&anuncio=<?= $anuncio ?>"
+
+<form id="datos" method="post" action="actions/publicarAnuncio.act.php?action=modificar"
       enctype="multipart/form-data">
     <h1>Modificar Anuncio</h1>
     <label for="titulo">Titulo: </label><input id="titulo" type="text" name="titulo"
@@ -13,12 +12,13 @@
     <div class="selector">
         <label for="categoria">Categoria:</label>
         <select id="categoria">
-            <?php include 'categoriasSolo.print.php' ?>
+            <?php include 'categoriaSelectMisAnuncios.print.php' ?>
         </select>
     </div>
     <div class="selector">
         <label for="subcategoria">Subcategoria:</label>
         <select name="subcategoria" id="subcategoria">
+            <?php include 'subcategoriasMisAnuncios.print.php' ?>
         </select>
     </div>
     <input type="submit" value="Actualizar Anuncio">
