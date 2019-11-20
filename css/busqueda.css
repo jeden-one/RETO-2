@@ -10,14 +10,13 @@
 }
 
 .imagenDiv img {
-    height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
 .anuncio {
     margin: 20px 10px 20px 10px;
-    width: 90%;
+    width: 100%;
     border-radius: 15px;
     padding: 15px;
     background-color: white;
@@ -27,29 +26,22 @@
     color: black;
 }
 
-.anuncio > * {
-    width: 100%;
-}
-
 .anuncio img {
     width: 100%;
     border-radius: 15px;
-    margin-bottom: 10px;
 }
 
 .anuncio p {
     line-height: 1.5em;
     width: 100%;
-    font-size: 20px;
+    font-size: 1.75vw;
 }
 
 .anuncio h2 {
     margin: 0;
+    font-size: 2vw;
 }
 
-nav input {
-    font-size: 34px;
-}
 
 #buscar {
     margin-left: 20px;
@@ -105,7 +97,7 @@ nav a {
     text-decoration: none;
 }
 
-input[type="submit"]:hover{
+input[type="submit"]:hover {
     background-position: left bottom;
     color: white;
 }
@@ -113,6 +105,10 @@ input[type="submit"]:hover{
 nav form input[type="submit"]:hover, nav input[type="button"]:hover {
     background-position: left bottom;
     color: white;
+}
+
+nav form input[type='text'] {
+    margin-bottom: 15px;
 }
 
 #enlaces {
@@ -136,7 +132,7 @@ form {
     width: 100%;
     padding: 0 10px;
     display: flex;
-    margin: 0 10px 10px 10px;
+    margin: 0 10px;
 }
 
 nav input[type="text"] {
@@ -157,36 +153,33 @@ nav input[type="text"] {
     grid-template-rows: auto auto auto auto;
 }
 
+.datosAnuncio {
+    flex-basis: 100%;
+}
+
+.botonesAnuncio {
+    flex-basis: 100%;
+    align-self: self-end;
+    text-align: right;
+}
+
 @media screen and (min-width: 769px) {
     header img {
-        width: 50%;
-        margin-bottom: 50px;
+        width: 25%;
+        margin-bottom: 10px;
     }
 
-    #botones input{
-        font-size: 30px;
+    header {
+        margin-left: 10px;
     }
-
-    #enlaces a {
-        font-size: 30px;
-    }
-
-    a.anuncio {
-        width: 46%;
-
-    }
-
+  
     footer p, a {
-        font-size: 23px;
-    }
-
-    #divIconos a {
-        width: 5%;
+        font-size: 2vw;
     }
 
     nav form input[type="text"] {
         padding: 10px 20px;
-        font-size: 30px;
+        font-size: 2vw;
         line-height: 0.5em;
         width: 75%;
 
@@ -199,20 +192,71 @@ nav input[type="text"] {
     }
 
     #botones {
-        margin-bottom: 50px;
+        margin-bottom: 10px;
     }
 
     #enlaces {
         margin-bottom: 50px;
     }
 
-    #buscar {
-        height: 100%;
-        font-size: 30px;
-        width: 16%;
+
+    input[type="submit"],input[type="button"] {
+        font-size: 2vw;
+        flex-basis: 20%;
     }
 
-    input[type="button"], input[type="submit"] {
-        font-size: 30px;
+    .anuncio {
+        flex-basis: 70%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .imagenDiv {
+        flex-basis: 40%;
+    }
+
+    .infoanuncio {
+        flex-basis: 49%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .anuncio .imagenDiv img {
+        width: 75%;
+    }
+
+    footer {
+        font-size: unset;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    footer p {
+        font-size: 1vw;
+        margin: 0;
+    }
+
+    footer a img {
+        width: 50%;
+    }
+
+    footer div {
+        width: 33%;
+    }
+
+    #divIconos p {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #divIconos a {
+        width: 15%;
+    }
+
+    #divIconos {
+        width: 33%;
     }
 }

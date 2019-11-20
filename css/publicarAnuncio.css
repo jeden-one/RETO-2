@@ -111,8 +111,7 @@ footer {
     }
 
     form input[type="submit"], form input[type="button"] {
-        height: 15%;
-        font-size: 30px;
+        font-size: 2vw;
         padding: 10px 20px;
         width: 60%;
         margin-bottom: 30px;
@@ -120,7 +119,7 @@ footer {
 
     form input[type="text"], textarea, input[type="file"] {
         padding: 5px 15px;
-        font-size: 30px;
+        font-size: 2vw;
     }
 
     h1 {
@@ -134,14 +133,6 @@ footer {
         margin: 0;
     }
 
-    footer p, a {
-        font-size: 23px;
-    }
-
-    #divIconos a {
-        width: 5%;
-    }
-
     .text {
         font-size: 23px;
     }
@@ -153,6 +144,38 @@ footer {
     }
 
     .selector {
-        margin-bottom: 50px;
+    }
+
+    footer {
+        font-size: unset;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    footer p {
+        font-size: 1vw;
+        margin: 0;
+    }
+
+    footer a img {
+        width: 50%;
+    }
+
+    footer div {
+        width: 33%;
+    }
+
+    #divIconos p {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #divIconos a {
+        width: 15%;
+    }
+
+    #divIconos {
+        width: 33%;
     }
 }

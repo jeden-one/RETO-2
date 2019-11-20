@@ -240,6 +240,7 @@ footer {
     font-size: 4.5vw;
     position: relative;
     bottom: 0vh;
+    flex-direction: column;
 }
 
 #divIconos {
@@ -249,12 +250,16 @@ footer {
     justify-content: center;
 }
 
-footer a {
-    width: 10%;
-    margin-right: 20px;
+footer p {
+    font-size: 3.5vw;
+    margin: 0;
 }
 
 footer a img {
+    width: 65%;
+}
+
+#divIconos p {
     width: 100%;
 }
 
@@ -294,20 +299,15 @@ footer a img {
         font-size: 30px;
     }
 
-    #text {
-        font-size: 35px;
-    }
-
     .elementosCategorias {
         flex-basis: 100%;
-        font-size: 30px;
+        font-size: 3vw;
     }
-
 
     .enlaceSubcategoria {
         display: flex;
         justify-content: center;
-        font-size: 2vw;
+        font-size: 1.5vw;
         padding: 7px 0;
     }
 
@@ -351,24 +351,53 @@ footer a img {
     header div p {
         font-size: 2vw;
         flex: 2;
-        margin: 0;
+        margin: 10px 0 0 0;
     }
 
     header img {
         width: 25%;
     }
 
-    header div input[type="button"]{
+    header div input[type="button"] {
         font-size: 2.5vw;
-    }
-
-    #divIconos a {
-        width: 5%;
     }
 
     #usLog {
         font-size: 2vw;
         margin-left: 25px;
         flex: 1;
+    }
+
+    footer {
+        font-size: unset;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    footer p {
+        font-size: 1vw;
+        margin: 0;
+    }
+
+    footer a img {
+        width: 50%;
+    }
+
+    footer div {
+        width: 33%;
+    }
+
+    #divIconos p {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #divIconos a {
+        width: 15%;
+    }
+
+    #divIconos {
+        width: 33%;
     }
 }

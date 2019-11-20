@@ -11,12 +11,17 @@
                 <div class="imagenDiv">
                     <img src="../../img/<?= $anuncio->foto ?>">
                 </div>
-                <h2><?= $anuncio->titulo ?></h2>
-                <h3><?= $anuncio->usuario ?></h3>
-                <p><?= $anuncio->fecha_creacion ?></p>
-                <input type="submit" name="eliminar" value="Eliminar">
-                <input type="hidden" name="anuncio" value='<?= $anuncioSerializado?>'>
-                <input type="submit" name="modificar" value="Modificar">
+                <div class="infoanuncio">
+                    <div class="datosAnuncio">
+                        <h2><?= $anuncio->titulo ?></h2>
+                        <p><?= $anuncio->fecha_creacion ?></p>
+                        <input type="hidden" name="anuncio" value='<?= $anuncioSerializado?>'>
+                    </div>
+                    <div class="botonesAnuncio">
+                        <input type="submit" name="eliminar" value="Eliminar">
+                        <input type="submit" name="modificar" value="Modificar">
+                    </div>
+                </div>
             </div>
         </form>
     <?php }
