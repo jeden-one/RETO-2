@@ -10,7 +10,6 @@
 }
 
 .imagenDiv img {
-    height: 100%;
     width: 100%;
     object-fit: cover;
 }
@@ -30,22 +29,19 @@
 .anuncio img {
     width: 100%;
     border-radius: 15px;
-    margin-bottom: 10px;
 }
 
 .anuncio p {
     line-height: 1.5em;
     width: 100%;
-    font-size: 20px;
+    font-size: 1.75vw;
 }
 
 .anuncio h2 {
     margin: 0;
+    font-size: 2vw;
 }
 
-nav input {
-    font-size: 34px;
-}
 
 #buscar {
     margin-left: 20px;
@@ -111,6 +107,10 @@ nav form input[type="submit"]:hover, nav input[type="button"]:hover {
     color: white;
 }
 
+nav form input[type='text'] {
+    margin-bottom: 15px;
+}
+
 #enlaces {
     flex-basis: 100%;
     display: flex;
@@ -132,7 +132,7 @@ form {
     width: 100%;
     padding: 0 10px;
     display: flex;
-    margin: 0 10px 10px 10px;
+    margin: 0 10px;
 }
 
 nav input[type="text"] {
@@ -153,30 +153,33 @@ nav input[type="text"] {
     grid-template-rows: auto auto auto auto;
 }
 
+.datosAnuncio {
+    flex-basis: 100%;
+}
+
+.botonesAnuncio {
+    flex-basis: 100%;
+    align-self: self-end;
+    text-align: right;
+}
+
 @media screen and (min-width: 769px) {
     header img {
         width: 25%;
-        margin-bottom: 50px;
+        margin-bottom: 10px;
     }
-    header{
+
+    header {
         margin-left: 10px;
     }
-
-    #botones input {
-        font-size: 30px;
-    }
-
-    #enlaces a {
-        font-size: 30px;
-    }
-
-    #divIconos a {
-        width: 5%;
+  
+    footer p, a {
+        font-size: 2vw;
     }
 
     nav form input[type="text"] {
         padding: 10px 20px;
-        font-size: 30px;
+        font-size: 2vw;
         line-height: 0.5em;
         width: 75%;
 
@@ -196,18 +199,14 @@ nav input[type="text"] {
         margin-bottom: 50px;
     }
 
-    #buscar {
-        height: 100%;
-        font-size: 30px;
-        width: 16%;
-    }
 
-    input[type="button"], input[type="submit"] {
-        font-size: 30px;
+    input[type="submit"],input[type="button"] {
+        font-size: 2vw;
+        flex-basis: 20%;
     }
 
     .anuncio {
-        flex-basis: 80%;
+        flex-basis: 70%;
         flex-direction: row;
         flex-wrap: wrap;
         display: flex;
@@ -215,15 +214,17 @@ nav input[type="text"] {
     }
 
     .imagenDiv {
-        flex-basis: 49%;
+        flex-basis: 40%;
     }
-    .infoanuncio{
 
+    .infoanuncio {
         flex-basis: 49%;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .anuncio .imagenDiv img {
-        width: 100%;
+        width: 75%;
     }
 
     footer {
