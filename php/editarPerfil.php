@@ -27,6 +27,7 @@ include "includes/editarPerfil.logic.php";
     <form id="datos" action="actions/editarPerfil.act.php" method="post" enctype="multipart/form-data">
         <?php mensajeRespuesta() ?>
         <input type="hidden" name="passwordPasar" value="<?php echo $password; ?>">
+        <input type="hidden" name="fotoPasar" value="<?php echo $nombreFoto ?>">
         <input type="file" name="foto" accept="image/x-png,image/gif,image/jpeg">
         <label>Nombre: </label><input type="text" name="nombre" value="<?php echo $nombre; ?>">
         <label>Contraseña: </label><input type="text" name="password" value="">
