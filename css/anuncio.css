@@ -64,21 +64,26 @@
 
 .anuncio {
     margin: 20px 10px 20px 10px;
-    width: 47%;
     border-radius: 15px;
     padding: 15px;
     background-color: white;
     display: flex;
     flex-direction: column;
-    font-size: 34px;
 }
 
-.anuncio>* {
+.anuncio * {
     width: 100%;
 }
 
 .anuncio h2 {
     margin: 0;
+    font-size: 8vw;
+}
+.anuncio h3{
+    font-size: 7vw;
+}
+.anuncio p{
+    font-size: 6vw;
 }
 
 @media screen and (min-width: 769px) {
