@@ -25,6 +25,7 @@ if (isset($_POST["busqueda"])) {
     setcookie("busqueda", $_POST["busqueda"], time() + 60 * 60, '/');
 }
 if (isset($_GET['subcategoria'])) {
+    echo $_GET['subcategoria'];
     $anuncios = searchAnuncioBySubcategoria($dbh, $_GET['subcategoria']);
     print_r($anuncios);
     $anunciosSerializado = serialize($anuncios);

@@ -140,14 +140,36 @@ WHERE u.id = a.id_usuario AND u.usuario=:usuario;");
  *
  * @param $dbh variable para conectarse a la base de datos
  * @param $id_subcategoria id de la subcategoria
+ * @return mixed array de objetos de la busqueda
+ */
+function searchAnuncioBySubcategoria($dbh, $id_subcategoria)
+{
+    $data = array(
+        'id_subcategoria' => $id_subcategoria
+    );
+    $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio,a.id_subcategoria subcategoria, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
+    FROM anuncios a, usuarios u 
+    WHERE u.id=a.id_usuario AND a.id_subcategoria=:id_subcategoria;");
+    if ($stmt->execute($data) === true) {
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    } else {
+        return false;
+    }
+}
+
+/**
+ * buscar anuncios por subcategoria pero sin el anuncio elegido
+ *
+ * @param $dbh variable para conectarse a la base de datos
+ * @param $id_subcategoria id de la subcategoria
  * @param $id_anuncio id del anuncio elegido
  * @return mixed array de objetos de la busqueda
  */
-function searchAnuncioBySubcategoria($dbh, $id_subcategoria,$id_anuncio)
+function searchAnuncioBySubcategoriaSinUnAnuncio($dbh, $id_subcategoria, $id_anuncio)
 {
     $data = array(
         'id_subcategoria' => $id_subcategoria,
-        'id_anuncio'=>$id_anuncio
+        'id_anuncio' => $id_anuncio
     );
     $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio,a.id_subcategoria subcategoria, u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
     FROM anuncios a, usuarios u 

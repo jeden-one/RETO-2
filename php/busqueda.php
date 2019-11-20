@@ -6,6 +6,7 @@
     <link href="../css/general.css" rel="stylesheet">
     <link href="../css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/busqueda.css">
+    <script src="../script/librerias/jQuery/jquery-3.4.1.js"></script>
     <script src="../../script/busqueda.js"></script>
 </head>
 
