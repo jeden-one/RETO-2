@@ -112,8 +112,8 @@ nav input[type="text"] {
 #contenedor {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto;
-    height: 100vh;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
 }
 
 nav form input[type="submit"] {
