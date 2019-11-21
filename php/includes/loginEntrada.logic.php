@@ -5,20 +5,25 @@
 if (isset($_COOKIE['usuario'])) {
     header("Location:../index.php");
 }
-switch ($_GET['action']) {
-    case 'publicarAnuncio':
-        $action = 'publicarAnuncio';
-        break;
-    case 'editarPerfil':
-        $action = 'editarPerfil';
-        break;
-    case 'misAnuncios':
-        $action = 'misAnuncios';
-        break;
-    case 'login':
-        $action = 'login';
-        break;
+if (isset($_GET['action'])) {
+    switch ($_GET['action']) {
+        case 'publicarAnuncio':
+            $action = 'publicarAnuncio';
+            break;
+        case 'editarPerfil':
+            $action = 'editarPerfil';
+            break;
+        case 'misAnuncios':
+            $action = 'misAnuncios';
+            break;
+        case 'login':
+            $action = 'login';
+            break;
+    }
+} else {
+    $action = 'login';
 }
+
 
 /**
  * mostrar los mensajes de error
