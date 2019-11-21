@@ -20,23 +20,25 @@
     text-decoration: none;
     color: black;
     height: max-content;
+    justify-content: space-between;
 }
 
-.anuncio img {
-    width: 100%;
-    border-radius: 15px;
+.infoanuncio{
+    flex-basis: 50%;
 }
-
-.anuncio p {
-    line-height: 1.5em;
-    width: 100%;
-    font-size: 5vw;
-    margin-bottom: 0;
-}
-
-.anuncio h2 {
+.infoanuncio p{
+    text-align: right;
+    font-size: 3.5vw;
     margin: 0;
-    font-size: 7.5vw;
+}
+h2{
+    font-size: 6vw;
+    margin: 0;
+}
+h3{
+    text-align: right;
+    font-size: 5vw;
+    margin: 0 0 15px;
 }
 
 
@@ -210,13 +212,13 @@ nav input[type="text"] {
 }
 
 .imagenDiv{
-    flex-basis: 100%;
+    flex-basis: 49%;
 
 }
 
 .imagenDiv img {
-    width: 50%;
-    object-fit: cover;
+    width: 100%;
+    max-height: 35vw;
 }
 
 .botonesAnuncio {
@@ -254,12 +256,16 @@ nav input[type="text"] {
 
     .anuncio h2 {
         margin: 0;
-        font-size: 2vw;
+        font-size: 4vw;
+        flex-basis: 100%;
     }
 
     h3 {
         margin-top: 5px;
-        font-size: 1.9vw;
+        margin-bottom: 0;
+        flex-basis: 100%;
+        font-size: 3.5vw;
+        text-align: right;
     }
 
     form {
@@ -291,11 +297,12 @@ nav input[type="text"] {
     .anuncio p {
         flex-basis: 100%;
         font-size: 1.75vw;
-        margin-bottom: 0;
+        margin: 0;
+        text-align: right;
     }
 
     .imagenDiv {
-        flex-basis: 30%;
+        flex-basis: 49%;
     }
     .imagenDiv img {
         width: 100%;
@@ -310,6 +317,7 @@ nav input[type="text"] {
 
     .anuncio .imagenDiv img {
         width: 100%;
+        max-height: 30vw;
     }
 
     nav a {

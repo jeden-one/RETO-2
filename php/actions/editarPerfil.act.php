@@ -64,7 +64,9 @@ if (isset($_POST["nombre"]) && isset($_POST["email"]) && isset($_COOKIE["usuario
         );
 
         $filasModificadas = updateUsuarioOne($dbh, $data);
-
+        if($_POST['fotoPasar']!='logodefecto.png'){
+            unlink('../../img'.$_POST['fotoPasar']);
+        }
         close($dbh);
         setcookie("usuario", $usuario, time() + (60 * 60 * 24 * 7), "/");
         header("location: ../editarPerfil.php? filas=" . $filasModificadas);
@@ -118,7 +120,9 @@ if (isset($_POST["nombre"]) && isset($_POST["email"]) && isset($_COOKIE["usuario
             );
 
             $filasModificadas = updateUsuarioOne($dbh, $data);
-
+            if($_POST['fotoPasar']!='logodefecto.png'){
+                unlink('../../img'.$_POST['fotoPasar']);
+            }
             close($dbh);
             setcookie("usuario", $usuario, time() + (60 * 60 * 24 * 7), "/");
 

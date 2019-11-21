@@ -13,12 +13,10 @@
                     <img src="../../img/<?= $anuncio->fotoAnuncio ?>">
                 </div>
                 <div class="infoanuncio">
-                    <div class="datosAnuncioBusqueda">
                         <h2><?= $anuncio->titulo ?></h2>
                         <h3><?= $anuncio->nombreUsuario ?></h3>
                         <p><?= $anuncio->fechaCreacion ?></p>
                     </div>
-                </div>
             </div>
         </a>
     <?php } ?>

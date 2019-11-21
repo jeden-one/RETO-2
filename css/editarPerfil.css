@@ -53,7 +53,8 @@ footer a {
 #datos input[type="file"] {
     flex-basis: 100%;
     font-size: 5vw;
-    text-align: right;
+    text-align: left;
+    margin-bottom: 20px;
 }
 input[type="submit"] {
     font-size: 8vw;
@@ -131,6 +132,8 @@ h1 {
     #datos input[type="file"] {
         font-size: 2vw;
         width: 60%;
+        margin-bottom: 0;
+        text-align: right;
     }
 
     h1 {

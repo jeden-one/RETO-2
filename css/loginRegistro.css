@@ -1,12 +1,11 @@
 /* REGISTRO.PHP y LOGIN.PHP */
 #contenedor2 {
     display: grid;
-    grid-template-rows: auto auto auto auto;
-    height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 
 form {
-    font-size: 35px;
     line-height: 1.5em;
     display: flex;
     flex-wrap: wrap;
@@ -93,31 +92,35 @@ form input[type="submit"]:hover, form input[type="button"]:hover {
 
 @media (min-width: 769px) {
     header img {
-        width: 50%;
-        margin-bottom: 50px;
+        width: 25%;
+    }
+
+    form {
+        width: 80%;
+        justify-self: center;
     }
 
     form input[type="password"],
     input[type="email"], input[type="text"] {
-        padding: 5px 15px;
-        font-size: 30px;
+        padding: 0 15px;
+        font-size: 2.5vw;
         width: 60%;
     }
 
     form h1 {
-        font-size: 45px;
+        font-size: 3.7vw;
+        margin: 0;
     }
 
     form input[type="submit"], form input[type="button"] {
-        height: 15%;
-        font-size: 30px;
-        padding: 10px 20px;
+        font-size: 3vw;
+        padding: 0;
         width: 60%;
         margin-bottom: 30px;
     }
 
     #divLogin a {
-        font-size: 23px;
+        font-size: 2.5vw;
     }
 
     footer {

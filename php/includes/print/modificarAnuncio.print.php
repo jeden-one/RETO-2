@@ -9,6 +9,7 @@ enctype="multipart/form-data">
     <?php include "errorPublicarAnuncio.print.php" ?>
 
     <input type="hidden" value="<?= $anuncio->idAnuncio ?>" name="idPasar">
+    <input type="hidden" value="<?= $anuncio->fotoAnuncio ?>" name="fotoAnuncio">
     <input id="imagen" type="file" name="foto" accept="image/x-png,image/gif,image/jpeg"/>
     <label for="titulo">Titulo: </label>
     <input id="titulo" type="text" name="titulo" value="<?= $anuncio->titulo ?>">
