@@ -31,22 +31,8 @@ header img {
     width: 70%;
 }
 
-footer {
-    font-size: 3.5vw;
-    width: 100%;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: #666666;
-    padding: 5px 0px;
-    grid-column: 1/2;
-    grid-row: 4/5;
-    flex-direction: column;
-}
-
 footer p {
+    font-size: 5vw;
     margin: 0;
 }
 
@@ -64,5 +50,35 @@ footer a {
 }
 
 footer a img {
-    width: 50%;
+    width: 65%;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #666666;
+    padding: 5px 0px;
+    grid-column: 1/2;
+    grid-row: 4/5;
+    font-size: 4.5vw;
+    position: relative;
+    bottom: 0vh;
+    flex-direction: column;
+}
+
+#divIconos p {
+    width: 100%;
+}
+
+#divIconos a {
+    margin-top: 5px;
+    width: 18%;
+}
+
+#copy, #ayuda, #divIconos {
+    margin-bottom: 10px;
 }

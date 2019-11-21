@@ -145,6 +145,7 @@ nav a {
     padding: 10px;
     border-radius: 5px;
     text-decoration: none;
+    width: 25%;
 }
 
 nav a:hover {
@@ -251,7 +252,7 @@ footer {
 }
 
 footer p {
-    font-size: 3.5vw;
+    font-size: 5vw;
     margin: 0;
 }
 
@@ -262,6 +263,16 @@ footer a img {
 #divIconos p {
     width: 100%;
 }
+
+#divIconos a {
+    margin-top: 5px;
+    width: 18%;
+}
+
+#copy, #ayuda, #divIconos {
+    margin-bottom: 10px;
+}
+
 
 @media (min-width: 769px) {
     nav {
@@ -395,6 +406,7 @@ footer a img {
 
     #divIconos a {
         width: 15%;
+        margin-top: 5px;
     }
 
     #divIconos {

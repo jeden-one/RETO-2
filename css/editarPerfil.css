@@ -32,6 +32,10 @@ footer {
     grid-column: 1/2;
 }
 
+footer a {
+    font-size: 5vw;
+}
+
 #datos input[type="text"],
 #datos input[type="password"],
 #datos input[type="email"], #datos textarea {
