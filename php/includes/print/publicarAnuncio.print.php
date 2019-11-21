@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * imprimir el formulario para publicar anuncio tuyo en publicar anuncio
+ */
 ?>
 <h1>Publicar Anuncio</h1>
 <form id="datos" method="post" action="actions/publicarAnuncio.act.php?action=publicar"

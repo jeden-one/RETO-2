@@ -1,4 +1,7 @@
 <?php
+/**
+ * publicar un annuncio o editar uno tuyo si vienes de mis anuncios
+ */
 include '../database/mysql.php';
 if ($_GET["action"] == "publicar") {
     if (isset($_POST['titulo']) && isset($_POST['descripcion']) && isset($_POST['subcategoria'])) {

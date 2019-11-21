@@ -1,6 +1,11 @@
 <?php
+/**
+ * todo el php relacionado con el index
+ */
 include_once "php/database/mysql.php";
-
+/**
+ * mostar la cantidad de anuncios publicados en total
+ */
 function cantidadAnuncios()
 {
     $dbh = connect();
@@ -9,6 +14,9 @@ function cantidadAnuncios()
     echo $cont;
 }
 
+/**
+ * mostar el estado del usuario en la pagina
+ */
 function sesion()
 {
     if (isset($_GET['accion'])) {
@@ -29,6 +37,9 @@ function sesion()
     }
 }
 
+/**
+ * buscar todas las categorias y mostrarlas
+ */
 function categorias()
 {
     $dbh = connect();

@@ -1,4 +1,9 @@
+<?php
+/**
+ * imprimir el formulario para modificar un anuncio tuyo en publicar anuncio
+ */
 
+?>
 <form id="datos" method="post" action="actions/publicarAnuncio.act.php?action=modificar"
       enctype="multipart/form-data">
     <h1>Modificar Anuncio</h1>

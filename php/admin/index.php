@@ -1,3 +1,7 @@
+<?php
+/**
+ * pagina para el administrado para insertar usuarios
+ */ ?>
 <!DOCTYPE html>
 <html lang="en">
 

@@ -1,3 +1,8 @@
+<?php
+/**
+ * imprimir el anuncio elegido de busqueda en anuncio
+ */
+?>
 <div id="containerAnuncio">
     <div id="navAnuncio">
         <img src="../../img/<?= $anuncioElegido->fotoUsuario ?>" id="fotoPerfil">
