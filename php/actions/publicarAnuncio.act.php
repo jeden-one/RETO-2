@@ -1,6 +1,6 @@
 <?php
 include '../database/mysql.php';
-if ($_GET["action"] == "publicar") {
+if ($_POST["action"] == "Publicar") {
     if (isset($_POST['titulo']) && isset($_POST['descripcion']) && isset($_POST['subcategoria'])) {
         $titulo = $_POST['titulo'];
         $descripcion = $_POST['descripcion'];
@@ -23,16 +23,13 @@ if ($_GET["action"] == "publicar") {
             header("location: ../busqueda.php?action=misAnuncios");
         }
     }
-} elseif ($_GET["action"] == "modificar") {
-    if (isset($_POST['titulo']) && isset($_POST['descripcion']) && isset($_POST['subcategoria']) && isset($_FILES["foto"]) && isset($_GET["anuncio"]) && isset($_COOKIE["usuario"]) ) {
-        $anuncioSerializado = $_GET["anuncio"];
-        $anuncio = unserialize($anuncioSerializado);
-        $id = $anuncio->idAnuncio;
-        echo $id;
+} elseif ($_POST["action"] == "Modificar") {
+    if (isset($_POST['titulo']) && isset($_POST['descripcion']) && isset($_POST['subcategoria']) && isset($_FILES["foto"])) {
+
         $titulo = $_POST['titulo'];
         $descripcion = $_POST['descripcion'];
         $subcategoria = $_POST['subcategoria'];
-        $nombreFoto = $_FILES["foto"];
+        $id = $_POST["idPasar"];
 
         include '../includes/foto.logic.php';
 
@@ -45,7 +42,7 @@ if ($_GET["action"] == "publicar") {
             'descripcion' => $descripcion,
             'foto' => $nombreFoto,
             'id_subcategoria' => $subcategoria,
-            'id_usuario' => $respuesta->id,
+            'id_usuario' => $respuesta->id
         );
         $resultado = updateAnuncioOne($dbh, $data);
         close($dbh);

@@ -2,7 +2,7 @@
 
 ?>
 <h1>Publicar Anuncio</h1>
-<form id="datos" method="post" action="actions/publicarAnuncio.act.php?action=publicar"
+<form id="datos" method="post" action="actions/publicarAnuncio.act.php"
       enctype="multipart/form-data">
     <label for="titulo"><p class="text">Titulo:</p> </label><input type="text" name="titulo" id="titulo">
     <label for="descripcion"><p class="text">Descripcion:</p> </label><textarea name="descripcion" id="descripcion"></textarea>
@@ -18,5 +18,5 @@
         <select name="subcategoria" id="subcategoria">
         </select>
     </div>
-    <input type="submit" value="Publicar">
+    <input type="submit" name="action" value="Publicar">
 </form>
