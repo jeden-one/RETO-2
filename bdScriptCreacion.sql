@@ -56,13 +56,11 @@ subcategorias (id),
 
 /*INSERTAR usuarios*/
 
-INSERT INTO usuarios (usuario,password,nombre) VALUES ('usuario1', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','enpresa1');
-INSERT INTO usuarios (usuario,password,nombre) VALUES ('usuario2', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','enpresa2');
-INSERT INTO usuarios (usuario,password,nombre) VALUES ('usuario3', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','enpresa3');
-INSERT INTO usuarios (usuario,password,nombre) VALUES ('usuario4', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','enpresa4');
-INSERT INTO usuarios (usuario,password,nombre) VALUES ('usuario5', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','enpresa5');
-
-/*Nuevas inserciones de usuarios  */
+INSERT INTO usuarios (usuario,password,nombre) VALUES ('usuario1', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','enpresa1@gmail.com');
+INSERT INTO usuarios (usuario,password,nombre) VALUES ('usuario2', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','enpresa2@gmail.com');
+INSERT INTO usuarios (usuario,password,nombre) VALUES ('usuario3', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','enpresa3@gmail.com');
+INSERT INTO usuarios (usuario,password,nombre) VALUES ('usuario4', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','enpresa4@gmail.com');
+INSERT INTO usuarios (usuario,password,nombre) VALUES ('usuario5', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','enpresa5@gmail.com');
 INSERT INTO usuarios (usuario,password,nombre) VALUES ('Jon', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','jon.santos@gmail.com');
 INSERT INTO usuarios (usuario,password,nombre) VALUES ('Eric', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','eric.muñoz@gmail.com');
 INSERT INTO usuarios (usuario,password,nombre) VALUES ('Miguel', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','miguel.barros@gmail.com');
@@ -181,7 +179,6 @@ INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Ganado',11);
 
 /*INSERTAR anuncios*/
 
-
 INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
 ('Vendo coches', 'cosas de vender coches', 1,1,'coche.jpeg');
 INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
@@ -195,9 +192,6 @@ INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUE
 INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
 ('Calzoncillos', 'estas usados', 5,3,'coche.jpeg');
 
-
-INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
-('Vendo ovejas', 'cosas de vender ovejas', 3,6,'coche.jpeg');
 
 INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
 ('Vendo coches', 'cosas de vender coches', 2,6,'coche.jpeg');
@@ -251,7 +245,16 @@ INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUE
 ('Tocadisco de los 40', 'tocadisco de mi abuelo', 63,1,'tocadisco.jpeg');
 
 INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
-('oveja descarriada', 'oveja que esta totalmente descarriada', 49,6,'portatil.jpeg');
+('portatil', 'portatil de gran calidad', 49,6,'portatil.jpeg');
 
 INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
 ('lupa', 'cosas de vender lupa', 15,6, 'lupa.jpeg');
+
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('el principito', 'el mejor libro de la historia', 52,2, 'libro.jpeg');
+
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('un libro', 'gran libro', 52,2, 'libro.jpg');
+
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('smartphone', 'un movil de ultima generacion', 52,2, 'movil.jpg');
