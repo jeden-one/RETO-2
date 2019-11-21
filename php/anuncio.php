@@ -20,14 +20,6 @@ include_once "database/mysql.php";
 <div id="contenedor4">
     <header>
         <img src="../img/aje_logo.png" onclick="goIndex()">
-        <p>
-            <strong>
-                <?php $dbh = connect();
-                $cont = counterAnuncios($dbh);
-                close($dbh);
-                echo $cont; ?>
-            </strong> anuncios publicados
-        </p>
     </header>
     <?php include "includes/anuncio.logic.php";
     include("includes/print/footer.print.php") ?>
