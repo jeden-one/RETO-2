@@ -2,7 +2,6 @@
 <form id="datos" method="post" action="actions/publicarAnuncio.act.php"
       enctype="multipart/form-data">
     <h1>Modificar Anuncio</h1>
-    <label for="imagen"><input type="image" src="../img/<?= $anuncio->foto ?>"></label>
     <input type="hidden" value="<?= $anuncio->idAnuncio ?>" name="idPasar">
     <input id="imagen" type="file" name="foto" accept="image/x-png,image/gif,image/jpeg"/>
     <label for="titulo">Titulo: </label>
