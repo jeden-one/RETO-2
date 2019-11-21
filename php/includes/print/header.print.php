@@ -1,4 +1,7 @@
 <?php
+/**
+ * imprimir el header para el login y el registro
+ */
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +14,7 @@
     <link href="../../../css/loginRegistro.css" rel="stylesheet">
     <script src="../../../script/librerias/jQuery/jquery-3.4.1.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../../../script/goIndex.js"></script>
+    <script src="../../../script/enrutado.js"></script>
 </head>
 
 <body>

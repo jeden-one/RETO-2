@@ -1,4 +1,7 @@
 <?php
+/**
+ * pagina para mostrar el anuncio elegido en la busqueda
+ */
 include_once "database/mysql.php";
 ?>
 <!DOCTYPE html>
@@ -10,8 +13,7 @@ include_once "database/mysql.php";
     <link href="../css/general.css" rel="stylesheet">
     <link href="../css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/anuncio.css">
-    <script src="../script/goIndex.js"></script>
-    <script src="../script/goAnuncio.js"></script>
+    <script src="../script/enrutado.js"></script>
 </head>
 
 <body>
@@ -22,6 +24,7 @@ include_once "database/mysql.php";
             <strong>
                 <?php $dbh = connect();
                 $cont = counterAnuncios($dbh);
+                close($dbh);
                 echo $cont; ?>
             </strong> anuncios publicados
         </p>
