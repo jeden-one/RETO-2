@@ -22,6 +22,8 @@
         <img src="../../img/aje_logo.png" onclick="goIndex()">
     </header>
 
+
+
     <?php include "includes/publicarAnuncio.logic.php";
     include "includes/print/footer.print.php"; ?>
 
