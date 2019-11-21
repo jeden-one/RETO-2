@@ -97,7 +97,7 @@ h1 {
     }
 
     #form {
-
+        max-width: none;
     }
 
     label, p {
@@ -122,7 +122,8 @@ h1 {
     }
 
     #datos {
-        max-width: none;
+        width: 80%;
+        margin: 0 auto;
     }
 
     footer {
