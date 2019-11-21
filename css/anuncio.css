@@ -79,12 +79,16 @@
     margin: 0;
     font-size: 8vw;
 }
+
 .anuncio h3{
     font-size: 7vw;
 }
+
 .anuncio p{
     font-size: 6vw;
 }
+
+
 
 @media screen and (min-width: 769px) {
     header img {

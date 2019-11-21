@@ -4,30 +4,38 @@
  */
 include '../database/mysql.php';
 if ($_POST["action"] == "Publicar") {
-    if (isset($_POST['titulo']) && isset($_POST['descripcion']) && isset($_POST['subcategoria']) && $_FILES['foto']['name']!="") {
-        $titulo = $_POST['titulo'];
-        $descripcion = $_POST['descripcion'];
-        $subcategoria = $_POST['subcategoria'];
+    if (isset($_POST['titulo']) && isset($_POST['descripcion']) && isset($_POST['subcategoria']) && $_FILES['foto']['name'] != "") {
+        if ($_POST['titulo'] == '') {
+            header("location: ../publicarAnuncio.php?action=publicar&error=1");
+        } else {
 
-        include '../includes/foto.logic.php';
+            $titulo = $_POST['titulo'];
+            $descripcion = $_POST['descripcion'];
+            $subcategoria = $_POST['subcategoria'];
 
-        $dbh = connect();
-        $respuesta = searchUsuarioOneEmail($dbh, $_COOKIE["usuario"]);
-        $data = array(
-            'titulo' => $titulo,
-            'descripcion' => $descripcion,
-            'foto' => $nombreFoto,
-            'id_subcategoria' => $subcategoria,
-            'id_usuario' => $respuesta->id,
-        );
+            include '../includes/foto.logic.php';
 
-        $resultado = insertAnuncio($dbh, $data);
-        close($dbh);
-        if($resultado==1){
-            header("location: ../busqueda.php?action=misAnuncios");
+            $dbh = connect();
+            $respuesta = searchUsuarioOneEmail($dbh, $_COOKIE["usuario"]);
+            $data = array(
+                'titulo' => $titulo,
+                'descripcion' => $descripcion,
+                'foto' => $nombreFoto,
+                'id_subcategoria' => $subcategoria,
+                'id_usuario' => $respuesta->id,
+            );
+
+            $resultado = insertAnuncio($dbh, $data);
+            close($dbh);
+            if ($resultado == 1) {
+                header("location: ../busqueda.php?action=misAnuncios");
+            }
         }
 
-    } elseif($_FILES['foto']['size'] == 0 ) {
+    } elseif ($_FILES['foto']['size'] == 0 && isset($_POST['titulo']) && isset($_POST['descripcion']) && isset($_POST['subcategoria'])) {
+        if ($_POST['titulo'] == '') {
+            header("location: ../publicarAnuncio.php?action=publicar&error=1");
+        } else {
             $titulo = $_POST['titulo'];
             $descripcion = $_POST['descripcion'];
             $subcategoria = $_POST['subcategoria'];
@@ -47,70 +55,77 @@ if ($_POST["action"] == "Publicar") {
 
             close($dbh);
 
-            if($resultado==1){
+            if ($resultado == 1) {
                 header("location: ../busqueda.php?action=misAnuncios");
             }
-
+        }
     } else {
-        echo "Nose han introducido datos";
+        header("location: ../publicarAnuncio.php?action=publicar&error=1");
     }
 
 } elseif ($_POST["action"] == "Modificar") {
-    if (isset($_POST['titulo']) && isset($_POST['descripcion']) && isset($_POST['subcategoria']) && $_FILES['foto']['name']!="") {
+    if (isset($_POST['titulo']) && isset($_POST['descripcion']) && isset($_POST['subcategoria']) && $_FILES['foto']['name'] != "") {
+        if ($_POST['titulo'] == '') {
+            header("location: ../publicarAnuncio.php?action=modificar&error=1");
+        } else {
+            $titulo = $_POST['titulo'];
+            $descripcion = $_POST['descripcion'];
+            $subcategoria = $_POST['subcategoria'];
+            $id = $_POST["idPasar"];
 
-        $titulo = $_POST['titulo'];
-        $descripcion = $_POST['descripcion'];
-        $subcategoria = $_POST['subcategoria'];
-        $id = $_POST["idPasar"];
+            include '../includes/foto.logic.php';
 
-        include '../includes/foto.logic.php';
+            $dbh = connect();
+            $respuesta = searchUsuarioOneEmail($dbh, $_COOKIE["usuario"]);
 
-        $dbh = connect();
-        $respuesta = searchUsuarioOneEmail($dbh, $_COOKIE["usuario"]);
+            $data = array(
+                'id' => $id,
+                'titulo' => $titulo,
+                'descripcion' => $descripcion,
+                'foto' => $nombreFoto,
+                'id_subcategoria' => $subcategoria,
+                'id_usuario' => $respuesta->id
+            );
 
-        $data = array(
-            'id' => $id,
-            'titulo' => $titulo,
-            'descripcion' => $descripcion,
-            'foto' => $nombreFoto,
-            'id_subcategoria' => $subcategoria,
-            'id_usuario' => $respuesta->id
-        );
+            $resultado = updateAnuncioOne($dbh, $data);
+            close($dbh);
 
-        $resultado = updateAnuncioOne($dbh, $data);
-        close($dbh);
-
-        if($resultado==1){
-            header("location: ../busqueda.php?action=misAnuncios");
+            if ($resultado == 1) {
+                header("location: ../busqueda.php?action=misAnuncios");
+            }
         }
 
-    } elseif($_FILES['foto']['size'] == 0 ) {
-        $titulo = $_POST['titulo'];
-        $descripcion = $_POST['descripcion'];
-        $subcategoria = $_POST['subcategoria'];
-        $id = $_POST["idPasar"];
-        $nombreFoto = "default.jpg";
+    } elseif ($_FILES['foto']['size'] == 0 && isset($_POST['titulo']) && isset($_POST['descripcion']) && isset($_POST['subcategoria'])) {
+        if ($_POST['titulo'] == '') {
+            header("location: ../publicarAnuncio.php?action=modificar&error=1");
+        } else {
+            $titulo = $_POST['titulo'];
+            $descripcion = $_POST['descripcion'];
+            $subcategoria = $_POST['subcategoria'];
+            $id = $_POST["idPasar"];
+            $nombreFoto = "default.jpg";
 
-        $dbh = connect();
-        $respuesta = searchUsuarioOneEmail($dbh, $_COOKIE["usuario"]);
+            $dbh = connect();
+            $respuesta = searchUsuarioOneEmail($dbh, $_COOKIE["usuario"]);
 
-        $data = array(
-            'id' => $id,
-            'titulo' => $titulo,
-            'descripcion' => $descripcion,
-            'foto' => $nombreFoto,
-            'id_subcategoria' => $subcategoria,
-            'id_usuario' => $respuesta->id
-        );
+            $data = array(
+                'id' => $id,
+                'titulo' => $titulo,
+                'descripcion' => $descripcion,
+                'foto' => $nombreFoto,
+                'id_subcategoria' => $subcategoria,
+                'id_usuario' => $respuesta->id
+            );
 
-        $resultado = updateAnuncioOne($dbh, $data);
-        close($dbh);
+            $resultado = updateAnuncioOne($dbh, $data);
+            close($dbh);
 
-        if($resultado==1){
-            header("location: ../busqueda.php?action=misAnuncios");
+            if ($resultado == 1) {
+                header("location: ../busqueda.php?action=misAnuncios");
+            }
         }
 
     } else {
-        echo "Faltan datos por introducir";
+        header("location: ../publicarAnuncio.php?action=modificar&error=1");
     }
 }

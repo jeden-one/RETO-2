@@ -35,7 +35,6 @@
         </div>
     </nav>
 
-
     <?php
     include "database/mysql.php";
     include "includes/busqueda.logic.php";
