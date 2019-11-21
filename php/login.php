@@ -6,7 +6,7 @@ include('includes/loginEntrada.logic.php');
     <h1>Inicia sesión y empieza a publicitar tus productos </h1>
     <?php comprobarDatos(); ?>
     <input type="text" id="usuario" name="usuario" placeholder="Usuario" autofocus>
-    <input type="text" id="pass" name="pass" placeholder="Contraseña" readonly>
+    <input type="password" id="pass" name="pass" placeholder="Contraseña" readonly>
     <input type="hidden" name="action" value="<?= $action ?>">
     <input type="submit" id="login" value="Iniciar sesión">
 

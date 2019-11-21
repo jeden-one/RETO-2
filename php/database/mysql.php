@@ -299,9 +299,9 @@ function searchAnuncioByBusqueda($dbh, $busqueda)
     );
 
     $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio,a.id_subcategoria subcategoria,
- u.nombre nombreUsuario, a.fecha_creacion fechaCreacion, u.foto fotoUsuario, u.usuario usuario
-    FROM anuncios a, usuarios u 
-    WHERE u.id=a.id_usuario AND (titulo LIKE :busqueda OR u.nombre LIKE :busqueda)");
+ u.nombre nombreUsuario, a.fecha_creacion fechaCreacion, a.descripcion descripcion, u.foto fotoUsuario, u.usuario usuario, sc.nombre subcat, c.nombre cat
+    FROM anuncios a, usuarios u, subcategorias sc, categorias c
+    WHERE u.id=a.id_usuario AND a.id_subcategoria=sc.id AND sc.id_categoria=c.id AND (titulo LIKE :busqueda OR u.nombre LIKE :busqueda)");
     if ($stmt->execute($data) === true) {
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     } else {

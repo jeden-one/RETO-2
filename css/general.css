@@ -13,7 +13,7 @@ body {
     margin: 0 auto;
     font-family: Candara;
     background-color: #dedcdc;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 header {
@@ -21,6 +21,7 @@ header {
     grid-column: 1/2;
     grid-row: 1/2;
     font-size: 35px;
+    margin-left: 10px;
 }
 
 header p {

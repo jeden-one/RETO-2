@@ -2,8 +2,9 @@
 
 #contenedor6 {
     display: grid;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto 1fr auto;
     grid-template-columns: 100%;
+    min-height: 100vh;
 }
 
 header {
@@ -50,6 +51,7 @@ textarea {
     outline: none;
     background-color: #ebebeb;
     user-select: revert;
+    resize: vertical;
 }
 
 input[type="file"] {
@@ -106,14 +108,12 @@ footer {
 
 @media screen and (min-width: 769px) {
     header img{
-        width: 50%;
-        margin-bottom: 50px;
+        width: 25%;
     }
 
     form input[type="submit"], form input[type="button"] {
-        font-size: 2vw;
+        font-size: 3vw;
         padding: 10px 20px;
-        width: 60%;
         margin-bottom: 30px;
     }
 
@@ -123,14 +123,14 @@ footer {
     }
 
     h1 {
-        font-size: 100px;
-        margin-bottom: 50px;
+        font-size: 4vw;
+        margin-bottom: 10px;
     }
 
-    label {
-        height: 10%;
+    #datos label {
         width: 100%;
         margin: 0;
+        font-size: 2.5vw;
     }
 
     .text {
@@ -143,8 +143,6 @@ footer {
         width: 100%;
     }
 
-    .selector {
-    }
 
     footer {
         font-size: unset;
