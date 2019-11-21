@@ -6,6 +6,7 @@ if (isset($_POST['usuario']) && isset($_POST['pass']) && isset($_POST['nombre'])
         'usuario' => $_POST['usuario'],
         'nombre' => $_POST['nombre'],
         'password' => $password,
+        'foto' => "logodefecto.png"
     );
     $dbh = connect();
     $resultado = insertUsuario($dbh, $data);

@@ -6,7 +6,7 @@
     </div>
 
     <div id="ayuda">
-        <p><a href="../../ayuda.php" target="_blank">¿Necesitas ayuda?</a></p>
+        <p><a href="ayuda.php">¿Necesitas ayuda?</a></p>
     </div>
 
     <div id="divIconos">

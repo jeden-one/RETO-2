@@ -280,7 +280,7 @@ function updateUsuarioOne($dbh, $data)
  */
 function insertUsuario($dbh, $data)
 {
-    $stmt = $dbh->prepare("INSERT INTO usuarios (usuario,password,nombre) VALUES (:usuario,:password,:nombre)");
+    $stmt = $dbh->prepare("INSERT INTO usuarios (usuario,password,nombre,foto) VALUES (:usuario,:password,:nombre,:foto)");
     $stmt->execute($data);
     return $stmt->rowCount();
 }
@@ -299,7 +299,7 @@ function searchAnuncioByBusqueda($dbh, $busqueda)
     );
 
     $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio,a.id_subcategoria subcategoria,
- u.nombre nombreUsuario, a.fecha_creacion fechaCreacion, u.foto fotoUsuario
+ u.nombre nombreUsuario, a.fecha_creacion fechaCreacion, u.foto fotoUsuario, u.usuario usuario
     FROM anuncios a, usuarios u 
     WHERE u.id=a.id_usuario AND (titulo LIKE :busqueda OR u.nombre LIKE :busqueda)");
     if ($stmt->execute($data) === true) {
