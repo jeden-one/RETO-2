@@ -1,3 +1,13 @@
+<?php
+/**
+ * imprimir mis anuncios en la busqueda con los botones para editar y eliminar
+ */
+
+
+/**
+ * deshabilitar los enlaces de busqueda por titulo y usuario
+ */
+?>
 <script>
     let enlaces = document.getElementById("enlaces");
     enlaces.style.display = "none";

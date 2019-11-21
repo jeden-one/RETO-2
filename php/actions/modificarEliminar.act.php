@@ -1,4 +1,7 @@
 <?php
+/**
+ * si en mis anuncios has pulsado modificar o eliminar un anuncio
+ */
 include "../database/mysql.php";
 $dbh = connect();
 

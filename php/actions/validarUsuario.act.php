@@ -1,4 +1,7 @@
 <?php
+/**
+ * validar si el usuario existe para habilitar el campo contraseña en login
+ */
 include '../database/mysql.php';
 if (isset($_POST['usuario'])) {
     $dbh = connect();

@@ -1,3 +1,9 @@
+<?php
+/**
+ * imprimir los anuncios de la misma subcategoria que el anuncio elegido en la pagina anuncio
+ */
+?>
+
 <div id="anuncios">
     <?php foreach ($anuncios as $anuncio) {
         $anuncioSerializado = serialize($anuncio); ?>

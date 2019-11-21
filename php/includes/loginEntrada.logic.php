@@ -1,4 +1,7 @@
 <?php
+/**
+ * mirar desde que pagina has entrado a login o si lo ahs hecho directamente desde la url
+ */
 if (isset($_COOKIE['usuario'])) {
     header("Location:../index.php");
 }

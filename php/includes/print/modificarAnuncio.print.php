@@ -1,6 +1,9 @@
-
+<?php
+/**
+ * imprimir el formulario para modificar un anuncio tuyo en publicar anuncio
+ */
 <form id="datos" method="post" action="actions/publicarAnuncio.act.php"
-      enctype="multipart/form-data">
+enctype="multipart/form-data"> ?>  
     <h1>Modificar Anuncio</h1>
     <input type="hidden" value="<?= $anuncio->idAnuncio ?>" name="idPasar">
     <input id="imagen" type="file" name="foto" accept="image/x-png,image/gif,image/jpeg"/>

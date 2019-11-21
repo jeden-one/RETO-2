@@ -1,4 +1,7 @@
 <?php
+/**
+ * publicar un annuncio o editar uno tuyo si vienes de mis anuncios
+ */
 include '../database/mysql.php';
 if ($_POST["action"] == "Publicar") {
     if (isset($_POST['titulo']) && isset($_POST['descripcion']) && isset($_POST['subcategoria']) && $_FILES['foto']['name']!="") {

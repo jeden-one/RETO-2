@@ -1,4 +1,8 @@
-<?php ?>
+<?php
+/**
+ * imprimir el footer para todas las paginas excepto la de index
+ */
+?>
 <footer>
     <div id="copy">
         <p>Copyright © Todos los Derechos Reservados 2019 </p>

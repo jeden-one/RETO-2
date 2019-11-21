@@ -1,4 +1,7 @@
 <?php
+/**
+ * pagina donde mandas un correo a ajebask para solicitar una cuenta de usuario
+ */
 if (isset($_COOKIE['usuario'])) {
     header("Location:../index.php");
 }

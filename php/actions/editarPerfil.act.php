@@ -1,7 +1,12 @@
 <?php
+/**
+ * cuando editas el perfil
+ */
 include "../database/mysql.php";
 $dbh = connect();
-
+/**
+ * si recibe el nombre email y esta registrado mirando la cookie
+ */
 if (isset($_POST["nombre"]) && isset($_POST["email"]) && isset($_COOKIE["usuario"])) {
     $nombre = $_POST["nombre"];
     $password = $_POST["password"];
@@ -14,6 +19,10 @@ if (isset($_POST["nombre"]) && isset($_POST["email"]) && isset($_COOKIE["usuario
     if (isset($_FILES['foto'])) {
         include '../includes/foto.logic.php';
     }
+
+    /**
+     * mirar si los campos de las contraseñas y las fotos estan vacios para insertar los anteriores
+     */
     if (empty($password) && empty($repetirPassword) && empty($nombreFoto)) {
         $password = $_POST["passwordPasar"];
         $nombreFoto = $_POST["fotoPasar"];
@@ -36,6 +45,9 @@ if (isset($_POST["nombre"]) && isset($_POST["email"]) && isset($_COOKIE["usuario
         setcookie("usuario", $usuario, time() + (60 * 60 * 24 * 7), "/");
         header("location: ../editarPerfil.php? filas=" . $filasModificadas);
 
+    /**
+     * mirar si los campos de las contraseñas estan vacios para insertar los anteriores
+     */
     } elseif (empty($password) && empty($repetirPassword)) {
         $password = $_POST["passwordPasar"];
         $resultado = searchUsuarioOneEmail($dbh, $nombreBuscar);
@@ -57,6 +69,9 @@ if (isset($_POST["nombre"]) && isset($_POST["email"]) && isset($_COOKIE["usuario
         setcookie("usuario", $usuario, time() + (60 * 60 * 24 * 7), "/");
         header("location: ../editarPerfil.php? filas=" . $filasModificadas);
 
+    /**
+     * mirar si los campos de las contraseñas y la foto esta vacia para insertar la anterior
+     */
     } elseif (empty($nombreFoto)) {
         if ($password == $repetirPassword) {
             $hash = password_hash($password, PASSWORD_DEFAULT);
@@ -81,6 +96,10 @@ if (isset($_POST["nombre"]) && isset($_POST["email"]) && isset($_COOKIE["usuario
             setcookie("usuario", $usuario, time() + (60 * 60 * 24 * 7), "/");
             header("location: ../editarPerfil.php? filas=" . $filasModificadas);
         }
+
+    /**
+     * mirar si la contraseña introducida es la misma que la repetida
+     */
     } else {
         if ($password == $repetirPassword) {
             $hash = password_hash($password, PASSWORD_DEFAULT);

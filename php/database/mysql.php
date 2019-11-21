@@ -1,4 +1,7 @@
 <?php
+/**
+ * sentencias de la para conectarse a la base de datos para insertar, editar, borrar o consultar
+ */
 
 /**
  * Conectar a la base de datos

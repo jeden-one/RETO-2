@@ -1,4 +1,6 @@
-//se usara para hacer una funcion axaj para ver si el usuario existe
+/**
+ * cuando se pierde el foco al insertar el usuario mira si en la base de datos existe para habilitar el apartado de la contraseña
+ */
 $('#usuario').focusout(function () {
     let usuario = new Object();
     usuario.usuario = $('#usuario').val();

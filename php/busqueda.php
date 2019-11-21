@@ -1,3 +1,8 @@
+<?php
+/**
+ * pagina de busqueda de anuncios
+ */
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +12,7 @@
     <link href="../css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/busqueda.css">
     <script src="../script/librerias/jQuery/jquery-3.4.1.js"></script>
-    <script src="../../script/busqueda.js"></script>
+    <script src="../../script/enrutado.js"></script>
 </head>
 
 <body>
