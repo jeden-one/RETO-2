@@ -1,4 +1,7 @@
 <?php
+/**
+ * imprimir el index las categorias y subcategorias
+ */
 foreach ($categorias as $categoria) { ?>
     <li class="elementosCategorias" onclick="mostrarSubcategorias(<?= $categoria->id ?>)">
         <div class="divCatImagen"><?= $categoria->nombre ?><img src="../../../img/flechaAbajo.svg" class="flechaAbajo">

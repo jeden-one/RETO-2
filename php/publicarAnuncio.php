@@ -1,4 +1,8 @@
-<?php include "includes/publicarAnuncioEntrada.logic.php"; ?>
+<?php
+/**
+ * pagina donde publicas o modificas un anuncio tuyo
+ */
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +13,7 @@
     <link href="../css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/publicarAnuncio.css">
     <script src="../../script/librerias/jQuery/jquery-3.4.1.js"></script>
-    <script src="../script/goIndex.js"></script>
+    <script src="../script/enrutado.js"></script>
 </head>
 
 <body>
@@ -17,6 +21,8 @@
     <header>
         <img src="../../img/aje_logo.png" onclick="goIndex()">
     </header>
+
+
 
     <?php include "includes/publicarAnuncio.logic.php";
     include "includes/print/footer.print.php"; ?>

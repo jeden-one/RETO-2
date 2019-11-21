@@ -1,4 +1,8 @@
-<?php include "database/mysql.php" ?>
+<?php
+/**
+ * pagina del boton de ayuda del footer donde mandas un correo a un correo de notifcaciones de ajebask
+ */
+include "database/mysql.php" ?>
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -11,6 +15,7 @@
         <script src="../script/envioCorreo.js"></script>
         <script src="../Script/librerias/jQuery/jquery-3.4.1.js"></script>
         <script src="../Script/ayuda.js"></script>
+        <script src="../script/enrutado.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 

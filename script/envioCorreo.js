@@ -1,3 +1,10 @@
+/**
+ *
+ * @param destinatario
+ * @param proposito
+ * @param asunto
+ * @param mensaje
+ */
 function enviarCorreo(destinatario, proposito, asunto, mensaje) {
     switch (proposito) {
         case "registro":

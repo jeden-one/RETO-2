@@ -1,4 +1,7 @@
 <?php
+/**
+ * sentencias de la para conectarse a la base de datos para insertar, editar, borrar o consultar
+ */
 
 /**
  * Conectar a la base de datos
@@ -248,7 +251,7 @@ function deleteAnuncio($dbh, $id)
 function updateAnuncioOne($dbh, $data)
 {
     $stmt = $dbh->prepare("UPDATE anuncios
-SET titulo=:titulo,descripcion=:descripcion, foto=:foto, id_subcategoria=:id_subcategoria,id_usuario=:usuario
+SET titulo=:titulo,descripcion=:descripcion, foto=:foto, id_subcategoria=:id_subcategoria,id_usuario=:id_usuario
 where id=:id;");
     $stmt->execute($data);
     return $stmt->rowCount();

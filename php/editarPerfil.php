@@ -1,4 +1,7 @@
 <?php
+/**
+ * pagina donde editas el perfil
+ */
 include "includes/editarPerfil.logic.php";
 ?>
 <!DOCTYPE html>
@@ -11,7 +14,7 @@ include "includes/editarPerfil.logic.php";
     <link href="../css/normalize.css" rel="stylesheet">
     <link href="../css/editarPerfil.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../script/goIndex.js"></script>
+    <script src="../script/enrutado.js"></script>
 </head>
 
 <body>

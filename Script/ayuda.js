@@ -1,12 +1,17 @@
 document.addEventListener("DOMContentLoaded", load);
 
-
+/**
+ *
+ */
 function load() {
     let div = document.getElementById("divOcultar");
     div.style.display = "none";
 
 }
 
+/**
+ *
+ */
 function seleccionarValor() {
     let select = document.getElementById("listaAsuntos");
     let option = select.options[select.selectedIndex].value;
@@ -19,6 +24,13 @@ function seleccionarValor() {
     }
 }
 
+/**
+ *
+ * @param correoUser
+ * @param asunto
+ * @param motivo
+ * @param mensaje
+ */
 function enviarAyuda(correoUser, asunto, motivo, mensaje) {
     let regExpCorreo = new RegExp("^[A-Z]{3,}[@][A-Z]{3,}[.][A-Z]{2,}$");
     if (regExpCorreo.test(correoUser.toUpperCase())) {
@@ -28,8 +40,4 @@ function enviarAyuda(correoUser, asunto, motivo, mensaje) {
     } else {
         console.log("Mail mal");
     }
-}
-
-function goIndex() {
-    window.location.href = "../../index.php";
 }

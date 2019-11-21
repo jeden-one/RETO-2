@@ -1,5 +1,9 @@
-<?php include("includes/print/header.print.php");
-include('includes/loginEntrada.logic.php');
+<?php
+/**
+ * pagina donde haces login
+ */
+include"includes/print/header.print.php";
+include'includes/loginEntrada.logic.php';
 ?>
 
 <form method="post" action="actions/login.act.php">

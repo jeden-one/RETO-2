@@ -1,4 +1,7 @@
 <?php
+/**
+ * buscar en la base de datos si esta el usuario con la contraseña correcta y mandarlo a la pagina de donde a venido en login
+ */
 include "../database/mysql.php";
 $dbh = connect();
 

@@ -1,10 +1,13 @@
 <?php
+/**
+ * pagina principal
+ */
 include 'php/includes/index.logic.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Ajebask</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="script/index.js"></script>

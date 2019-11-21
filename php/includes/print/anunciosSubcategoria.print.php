@@ -1,3 +1,9 @@
+<?php
+/**
+ * imprimir los anuncios de la misma subcategoria que el anuncio elegido en la pagina anuncio
+ */
+?>
+
 <div id="anuncios">
     <h3>Abajo se muestran anuncios que podrían interesarte</h3>
     <?php foreach ($anuncios as $anuncio) {

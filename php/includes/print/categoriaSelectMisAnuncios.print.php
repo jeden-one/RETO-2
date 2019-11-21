@@ -1,4 +1,7 @@
 <?php
+/**
+ * imprimir las categorias en la select de pubilcar anuncio en el apartado de editar y elegir la categoria del anuncio a editar
+ */
 foreach ($categorias as $categoria) {
     if ($anuncio->categoria == $categoria->id) {
         ?>
