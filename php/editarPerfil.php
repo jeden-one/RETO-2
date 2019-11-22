@@ -25,7 +25,7 @@ include "includes/editarPerfil.logic.php";
 
     <h1>Editar Perfil</h1>
     <div id="divImg">
-        <img id="fotoPerfil" src="../img/<?php echo $nombreFoto; ?>" alt="">
+        <img id="fotoPerfil" src="../img/<?php echo $nombreFoto; ?>" alt="Error al cargar la foto">
     </div>
     <form id="datos" action="actions/editarPerfil.act.php" method="post" enctype="multipart/form-data">
         <?php mensajeRespuesta() ?>

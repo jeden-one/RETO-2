@@ -35,11 +35,11 @@ function comprobarDatos()
         switch ($_GET['error']) {
             case 1:
                 ?>
-                <span style="color: red">contraseña incorrecta</span>
+                <span>contraseña incorrecta</span>
                 <?php break;
             case 2:
                 ?>
-                <span style="color: red">datos no introducidos</span>
+                <span>datos no introducidos</span>
                 <?php break;
         }
     }
