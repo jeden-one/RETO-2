@@ -24,8 +24,6 @@
   * Iniciar sesión.
   * Si necesitamos ayuda podremos ir al link del footer.
 
-## Descarga de la aplicación 
-
 
 ## Desarrolladores y redes sociales
 Aplicación creada por los desarrolladores del equipo Jeden:
