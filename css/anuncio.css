@@ -55,6 +55,7 @@
 .imgAnuncio {
     flex-basis: 60%;
     border-radius: 5px;
+    margin: 0 auto;
 }
 
 #fotoAnuncio {
@@ -64,8 +65,8 @@
 }
 
 .tituloycat {
-    flex-basis: 40%;
-    text-align: left;
+    flex-basis: 100%;
+    text-align: center;
     display: flex;
     flex-wrap: wrap;
     padding-right: 10px;
@@ -224,6 +225,19 @@
 
 #fotoPerfil {
     max-width: 20%;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+#navAnuncio strong {
+    margin-bottom: 10px;
+    text-align: center;
+    flex-basis: 100%;
+}
+
+.datosAnuncio p {
+    text-align: right;
+    margin-bottom: 10px;
 }
 
 @media screen and (min-width: 769px) {
@@ -244,7 +258,7 @@
     }
 
     .tituloycat h2 {
-        font-size: 2vw;
+        font-size: 3vw;
         text-align: center;
     }
 
@@ -325,14 +339,7 @@
         margin-bottom: 20px;
     }
 
-    #navAnuncio strong {
-        margin-bottom: 10px;
-        text-align: center;
-        flex-basis: 100%;
-    }
-
     #fotoPerfil {
-        margin: 0 auto;
         margin-bottom: 5px;
     }
 }
