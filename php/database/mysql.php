@@ -179,7 +179,7 @@ function searchAnuncioBySubcategoriaSinUnAnuncio($dbh, $id_subcategoria, $id_anu
         'id_anuncio' => $id_anuncio
     );
     $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio,a.id_subcategoria subcategoria,
- u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
+ u.nombre nombreUsuario, a.fecha_creacion fechaCreacion, u.foto fotoUsuario
     FROM anuncios a, usuarios u 
     WHERE u.id=a.id_usuario AND a.id_subcategoria=:id_subcategoria and a.id!=:id_anuncio;");
     if ($stmt->execute($data) === true) {
