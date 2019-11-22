@@ -1,4 +1,4 @@
-![Jeden logo](/images/logo.png)
+![Jeden logo](img/jeden.png)
 
 # Reto 2 Agencia de publicidad
 
@@ -26,16 +26,16 @@
 
 ## Descarga de la aplicación 
 
+
 ## Desarrolladores y redes sociales
 Aplicación creada por los desarrolladores del equipo Jeden:
-  * Jon Santos
-  * Eric Muñoz
-  * Miguel Barros
+  * [Jon Santos](https://github.com/Santoxjon)
+  * [Eric Muñoz](https://github.com/EricMunozFernandez)
+  * [Miguel Barros](https://github.com/miguelbarrosv)
   
 Redes sociales de Jeden :
-  * Twitter
-  * Github
-  * Facebook
+  * [Twitter](https://twitter.com/Jeden__)
+  * [Github](https://github.com/jeden-one)
   
 ## Soporte 
 Para cualquier incidencia relacionada con la aplicación no dudes en contactar con el equipo de Jeden a través del correo

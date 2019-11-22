@@ -32,4 +32,12 @@ function mensajeRespuesta()
             echo "<span>Usuario no modificado</span>";
         }
     }
+    if(isset($_GET['error'])){
+        if($_GET['error']==1) {
+            echo "<span>las contraseñas no coinciden</span>";
+        }
+        if ($_GET['error']==2){
+            echo "<span>Datos obligatorios no introducidos (nombre o email)</span>";
+        }
+    }
 }
