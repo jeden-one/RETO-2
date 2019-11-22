@@ -243,6 +243,8 @@ nav input[type="text"] {
 
     header {
         margin-left: 10px;
+        width: 60%;
+        justify-self: center;
     }
 
     footer p, a {
@@ -256,24 +258,38 @@ nav input[type="text"] {
 
     nav form input[type="text"] {
         padding: 10px 20px;
-        font-size: 2vw;
+        font-size: 1.5vw;
         line-height: 0.5em;
         width: 75%;
 
         flex: none;
     }
 
+    nav form {
+        flex-basis: 93%;
+    }
+
+    #enlaces a {
+        font-size: 1.5vw;
+    }
+
+    #anuncios {
+        width: 100%;
+        justify-self: center;
+    }
+
     .anuncio h2 {
         margin: 0;
-        font-size: 4vw;
+        font-size: 3vw;
         flex-basis: 100%;
+        text-align: right;
     }
 
     h3 {
         margin-top: 5px;
         margin-bottom: 0;
         flex-basis: 100%;
-        font-size: 3.5vw;
+        font-size: 2vw;
         text-align: right;
     }
 
@@ -293,12 +309,12 @@ nav input[type="text"] {
 
 
     input[type="submit"], input[type="button"] {
-        font-size: 2vw;
+        font-size: 1.5vw;
         flex-basis: 20%;
     }
 
     .anuncio {
-        flex-basis: 70%;
+        flex-basis: 55%;
         flex-direction: row;
         flex-wrap: wrap;
         display: flex;
@@ -313,7 +329,8 @@ nav input[type="text"] {
     }
 
     .imagenDiv {
-        flex-basis: 49%;
+        flex-basis: 39%;
+        margin: 0 auto;
     }
 
     .imagenDiv img {
@@ -322,9 +339,10 @@ nav input[type="text"] {
     }
 
     .infoanuncio {
-        flex-basis: 49%;
+        flex-basis: 29%;
         display: flex;
         flex-wrap: wrap;
+        margin: 0 auto;
     }
 
     .anuncio .imagenDiv img {
