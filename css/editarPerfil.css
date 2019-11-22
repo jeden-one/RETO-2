@@ -1,0 +1,165 @@
+/* EDITARPERFIL.PHP */
+#contenedor5 {
+    display: grid;
+    grid-template-rows: auto auto auto 1fr auto;
+    grid-template-columns: 100%;
+    min-height: 100vh;
+}
+
+header {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+header p {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+#datos {
+    grid-row: 4/5;
+    grid-column: 1/2;
+    width: 80%;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 15px;
+}
+
+footer {
+    grid-row: 5/6;
+    grid-column: 1/2;
+}
+
+#datos input[type="text"],
+#datos input[type="password"],
+#datos input[type="email"], #datos textarea {
+    font-size: 5vw;
+    flex-basis: 100%;
+    border: 2px solid #850018;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    margin-bottom: 20px;
+    outline: none;
+    background-color: #ebebeb;
+    user-select: revert;
+}
+
+#datos input[type="file"] {
+    flex-basis: 100%;
+    font-size: 5vw;
+    text-align: left;
+    margin-bottom: 30px;
+}
+input[type="submit"] {
+    font-size: 8vw;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #690000;
+    background-color: #850018;
+    color: white;
+    flex-basis: 100%;
+}
+
+input[type="submit"]:hover {
+    transition: all .25s ease-out;
+    background-color: #ac0018;
+    color: white;
+}
+
+label {
+    flex-basis: 100%;
+    font-size: 6.5vw;
+}
+
+h1 {
+    margin: 0;
+    font-size: 10vw;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    text-align: center;
+}
+
+#divImg {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    justify-self: center;
+    width: 80%;
+    display: flex;
+    justify-content: right;
+}
+
+#divImg img {
+    flex-basis: 25%;
+}
+#fotoPerfil{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    width: 50%;
+    justify-self: center;
+}
+
+@media screen and (min-width: 769px) {
+    header img {
+        width: 25%;
+        margin: 0;
+    }
+
+    header {
+        margin-left: 10px;
+        justify-self: center;
+    }
+
+    #contenedor5 {
+        display: grid;
+        grid-template-rows: auto auto auto 1fr auto;
+        grid-template-columns: 100%;
+    }
+
+    #datos{
+        width: 50%;
+    }
+
+    #datos input[type="text"],
+    #datos input[type="password"],
+    #datos input[type="email"], #datos textarea {
+        padding: 5px 15px;
+        font-size: 1.3vw;
+        width: 60%;
+    }
+
+    #datos input[type="file"] {
+        font-size: 1.3vw;
+        width: 60%;
+        margin-bottom: 20px;
+        text-align: right;
+    }
+
+    h1 {
+        font-size: 2vw;
+        margin-bottom: 25px;
+    }
+
+    form input[type="submit"], form input[type="button"] {
+        font-size: 1.7vw;
+        padding: 10px 20px;
+        width: 60%;
+        margin-bottom: 30px;
+    }
+
+    label {
+        font-size: 1.3vw;
+    }
+
+    #divImg {
+        margin-bottom: 20px;
+        width: 50%;
+    }
+
+    #fotoPerfil {
+        width: 30%;
+        border-radius: 50%;
+    }
+}
