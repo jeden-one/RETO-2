@@ -1,7 +1,7 @@
 /* REGISTRO.PHP y LOGIN.PHP */
 #contenedor2 {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 1fr 3fr auto;
     min-height: 100vh;
 }
 
@@ -110,6 +110,7 @@ form input[type="submit"]:hover, form input[type="button"]:hover {
         padding: 0 15px;
         font-size: 1.3vw;
         width: 60%;
+        max-height: 5vw;
     }
 
     form h1 {
@@ -126,5 +127,12 @@ form input[type="submit"]:hover, form input[type="button"]:hover {
 
     #divLogin a {
         font-size: 1.7vw;
+    }
+    span{
+        flex-basis: 100%;
+        text-align: center;
+        font-size: 1.5vw;
+        color: #850018;
+        max-height: 2vw;
     }
 }

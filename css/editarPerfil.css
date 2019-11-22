@@ -1,8 +1,9 @@
 /* EDITARPERFIL.PHP */
 #contenedor5 {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto auto auto 1fr auto;
     grid-template-columns: 100%;
+    min-height: 100vh;
 }
 
 header {
@@ -113,7 +114,7 @@ h1 {
 
     #contenedor5 {
         display: grid;
-        grid-template-rows: auto 1fr auto;
+        grid-template-rows: auto auto auto 1fr auto;
         grid-template-columns: 100%;
     }
 

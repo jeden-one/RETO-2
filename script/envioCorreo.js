@@ -12,16 +12,30 @@
 function enviarCorreo(destinatario, proposito, asunto, mensaje) {
     switch (proposito) {
         case "registro":
-            Email.send({
-                SecureToken: "7732a245-1148-45c9-a28b-2c1ac72e73bc",
-                To: destinatario,
-                From: "ajebask.notificaciones@gmail.com",
-                Subject: "Solicitud de inscripcion de nueva empresa",
-                Body: 'NIF de la Empresa:' + $("#nif").val() + '<br>' +
-                    'Nombre de la empresa:' + $("#nombre").val() + '<br>' +
-                    'Email de la empresa: ' + $("#email").val()
-            }).then(
-            );
+            document.getElementById("btnRegistro").addEventListener("click", function () {
+                if (validarNif(document.getElementById("nif").value.toUpperCase())) {
+                    if (validarTexto(document.getElementById("nombre").value.toUpperCase())) {
+                        if (validarMail(document.getElementById("email").value.toUpperCase())) {
+                            Email.send({
+                                SecureToken: "7732a245-1148-45c9-a28b-2c1ac72e73bc",
+                                To: destinatario,
+                                From: "ajebask.notificaciones@gmail.com",
+                                Subject: "Solicitud de inscripcion de nueva empresa",
+                                Body: 'NIF de la Empresa:' + $("#nif").val() + '<br>' +
+                                    'Nombre de la empresa:' + $("#nombre").val() + '<br>' +
+                                    'Email de la empresa: ' + $("#email").val()
+                            }).then(
+                            );
+                        } else {
+                            alert("No es un email válido");
+                        }
+                    } else {
+                        alert("No es un nombre de empresa válido, mínimo 2 caracteres alfanuméricos, sin ñ ni símbolos");
+                    }
+                } else {
+                    alert("No es un Nif válido, debe estar escrito de estar forma Ejemplo: 30444713G");
+                }
+            });
             break;
         case "ayuda":
             Email.send({
