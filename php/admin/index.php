@@ -16,7 +16,7 @@ include '../includes/print/adminMensajes.print.php';
 <body>
 <div id="contenedor">
     <header id="header">
-        <img src="../../img/ajebask.jpeg">
+        <img src="../../img/aje_logo.png">
     </header>
     <?php mensajes(); ?>
     <form method="post" action="../actions/insertarUsuario.act.php">
