@@ -1,0 +1,294 @@
+/* BUSQUEDA.PHP */
+
+#anuncios {
+    flex-wrap: wrap;
+    display: flex;
+    background-color: #cececa;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    justify-content: center;
+}
+
+.anuncio {
+    margin: 20px 10px 20px 10px;
+    width: 90%;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+    height: max-content;
+    justify-content: space-between;
+}
+
+.infoanuncio {
+    flex-basis: 50%;
+}
+
+.infoanuncio p {
+    text-align: right;
+    font-size: 3.5vw;
+    margin: 0;
+}
+
+h2 {
+    font-size: 6vw;
+    margin: 0;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+h3 {
+    text-align: right;
+    font-size: 5vw;
+    margin: 0 0 15px;
+}
+
+nav {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav input[type="text"] {
+
+}
+
+#buscar {
+    width: 23%;
+}
+
+#botones {
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    margin-bottom: 15px;
+}
+
+input[type="button"], input[type="submit"] {
+    font-size: 4.5vw;
+    border-radius: 5px;
+    border: 2px solid #690000;
+    color: #850018;
+    background: linear-gradient(to right, #850018 50%, #ebebeb 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .25s ease-out;
+    padding: 10px;
+}
+
+nav a {
+    font-size: 4.5vw;
+    background: #850018;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+input[type="submit"]:hover {
+    background-position: left bottom;
+    color: white;
+}
+
+nav form input[type="submit"]:hover, nav input[type="button"]:hover {
+    background-position: left bottom;
+    color: white;
+}
+
+nav form input[type='text'] {
+    margin-bottom: 15px;
+}
+
+nav form {
+    width: 90%;
+}
+
+#enlaces {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+nav input[type="button"] {
+    flex-basis: 40%;
+}
+
+#enlaces a {
+    flex-basis: 40%;
+    text-align: center;
+    padding: 10px;
+}
+
+nav input[type="text"] {
+    font-size: 4.5vw;
+    flex: 2;
+    border: 2px solid #850018;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    min-height: 45px;
+    outline: none;
+    background-color: #ebebeb;
+    user-select: revert;
+    width: 75%;
+}
+
+#contenedor3 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+}
+
+.datosAnuncio {
+    flex-basis: 100%;
+}
+
+.divanuncio {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.imagenDiv {
+    flex-basis: 49%;
+
+}
+
+.imagenDiv img {
+    width: 100%;
+    max-height: 35vw;
+}
+
+.botonesAnuncio {
+    flex-basis: 100%;
+    align-self: self-end;
+    text-align: right;
+}
+
+.datosAnuncioBusqueda {
+    display: flex;
+}
+
+@media screen and (min-width: 769px) {
+    header img {
+        width: 25%;
+        margin-bottom: 10px;
+    }
+
+
+    nav {
+    width: 60%;
+        justify-self: center;
+    }
+
+    nav form input[type="text"] {
+        padding: 10px 20px;
+        font-size: 1.5vw;
+        line-height: 0.5em;
+        width: 75%;
+
+        flex: none;
+    }
+
+    nav form {
+        flex-basis: 93%;
+    }
+
+    #enlaces a {
+        font-size: 1.5vw;
+    }
+
+    #anuncios {
+        width: 100%;
+        justify-self: center;
+    }
+
+    .anuncio h2 {
+        margin: 0;
+        font-size: 3vw;
+        flex-basis: 100%;
+        text-align: right;
+    }
+
+    h3 {
+        margin-top: 5px;
+        margin-bottom: 0;
+        flex-basis: 100%;
+        font-size: 2vw;
+        text-align: right;
+    }
+
+    form {
+        flex-basis: 70%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #botones {
+        margin-bottom: 10px;
+    }
+
+    #enlaces {
+        margin-bottom: 10px;
+    }
+
+
+    input[type="submit"], input[type="button"] {
+        font-size: 1.5vw;
+        flex-basis: 20%;
+    }
+
+    .anuncio {
+        flex-basis: 55%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .anuncio p {
+        flex-basis: 100%;
+        font-size: 1.75vw;
+        margin: 0;
+        text-align: right;
+    }
+
+    .imagenDiv {
+        flex-basis: 39%;
+        margin: 0 auto;
+    }
+
+    .imagenDiv img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .infoanuncio {
+        flex-basis: 29%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    .anuncio .imagenDiv img {
+        width: 100%;
+        max-height: 30vw;
+    }
+
+    nav a {
+        font-size: 2vw;
+    }
+
+}

@@ -1,0 +1,120 @@
+/* GENERAL */
+input[type="text"], textarea {
+    user-select: revert;
+}
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html,
+body {
+    margin: 0 auto;
+    font-family: Candara;
+    background-color: #dedcdc;
+    min-height: 100vh;
+}
+
+header {
+    padding: 10px 0;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-size: 35px;
+    margin-left: 10px;
+}
+
+header p {
+    margin-top: 50px;
+}
+
+header img {
+    width: 70%;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #666666;
+    padding: 5px 0px;
+    grid-column: 1/2;
+    grid-row: 4/5;
+    font-size: 4.5vw;
+    position: relative;
+    bottom: 0vh;
+    flex-direction: column;
+}
+
+#divIconos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer p {
+    font-size: 5vw;
+    margin: 0;
+}
+
+footer a img {
+    width: 65%;
+}
+
+#divIconos p {
+    width: 100%;
+}
+
+#divIconos a {
+    margin-top: 5px;
+    width: 18%;
+}
+
+#copy, #ayuda, #divIconos {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 769px)  {
+
+
+    footer p, a {
+        font-size: 2vw;
+    }
+    footer {
+        font-size: unset;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    #copy p,  #ayuda p,#divIconos p{
+        font-size: 1.3vw;
+        margin: 0;
+    }
+
+    footer a img {
+        width: 50%;
+    }
+
+    footer div {
+        width: 33%;
+    }
+
+    #divIconos p {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #divIconos a {
+        width: 15%;
+        margin-top: 5px;
+    }
+
+    #divIconos {
+        width: 33%;
+    }
+}

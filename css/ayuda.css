@@ -1,0 +1,131 @@
+input[type="text"], #textarea {
+    width: 90%;
+    border: 1px solid #850018;
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin-bottom: 20px;
+    outline: none;
+    background-color: #ebebeb;
+    font-size: 3.5vw;
+}
+
+#textarea {
+    resize: vertical;
+    overflow-scrolling: unset;
+}
+
+input[type="button"] {
+    font-size: 5.5vw;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #690000;
+    background-color: #850018;
+    color: white;
+    width: 90%;
+}
+
+input[type="button"]:hover {
+    transition: all .25s ease-out;
+    background-color: #ac0018;
+    color: white;
+}
+
+
+#contenedor2 {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+#titulo {
+    font-size: 10vw;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+form {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    font-size: 16px;
+    padding-left: 10px;
+    max-width: 400px;
+    width: 100%;
+}
+
+#datos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 25px;
+    margin: 0 auto;
+}
+
+#datos div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+p, label {
+    font-size: 5vw;
+    margin-bottom: 15px;
+    flex-basis: 100%;
+}
+
+p {
+    margin-top: 0;
+}
+
+#listaAsuntos {
+    flex-basis: 100%;
+    margin-bottom: 15px;
+}
+
+h1 {
+    width: 100%;
+    font-size: 7vw;
+}
+
+@media (min-width: 769px) {
+    #titulo {
+        font-size: 3vw;
+    }
+
+    header img {
+        width: 25%;
+    }
+
+    label, p {
+        font-size: 2vw;
+    }
+
+    input[type="button"] {
+        font-size: 2vw;
+    }
+
+    input[type="text"], #textarea {
+        font-size: 1.6vw;
+        width: 100%;
+    }
+
+    #bloque {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #datos {
+        width: 80%;
+        justify-self: center;
+    }
+
+    #listaAsuntos {
+        font-size: 1.6vw;
+        margin-bottom: 25px;
+        height: 3vw;
+        padding-left: 10px;
+    }
+    #listaAsuntos option{
+        padding: 10px;
+    }
+}
