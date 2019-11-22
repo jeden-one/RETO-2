@@ -18,16 +18,14 @@ if (isset($_POST["nombre"]) && isset($_POST["email"]) && isset($_COOKIE["usuario
     $resultado = searchUsuarioOneEmail($dbh, $nombreBuscar);
     $id = $resultado->id;
 
-    if (isset($_FILES['foto'])) {
-        include '../includes/foto.logic.php';
-    }
-    else{
+    if ($_FILES['foto']['name'] == '') {
         $nombreFoto = $_POST["fotoPasar"];
+    } else {
+        include '../includes/foto.logic.php';
     }
     if (empty($password) && empty($repetirPassword)) {
         $pass = $_POST["passwordPasar"];
-    }
-     else {
+    } else {
         if ($password == $repetirPassword) {
             $pass = password_hash($password, PASSWORD_DEFAULT);
         } else {
@@ -44,14 +42,13 @@ if (isset($_POST["nombre"]) && isset($_POST["email"]) && isset($_COOKIE["usuario
     );
 
     $filasModificadas = updateUsuarioOne($dbh, $data);
-    if($_POST['fotoPasar']!='logodefecto.png'){
-        unlink('../../img'.$_POST['fotoPasar']);
+    if ($_POST['fotoPasar'] != 'logodefecto.png' && $_FILES['foto']['name'] != '') {
+        unlink('../../img' . $_POST['fotoPasar']);
     }
     close($dbh);
     setcookie("usuario", $usuario, time() + (60 * 60 * 24 * 7), "/");
 
     header("location: ../editarPerfil.php?filas=" . $filasModificadas);
-
 } else {
     header("location: ../editarPerfil.php?error=2");
 }

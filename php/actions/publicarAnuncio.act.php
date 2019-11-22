@@ -11,11 +11,10 @@ if ($_POST["action"] == "Publicar") {
             $titulo = $_POST['titulo'];
             $descripcion = $_POST['descripcion'];
             $subcategoria = $_POST['subcategoria'];
-            if(isset($_FILES['foto'])){
+            if ($_FILES['foto']['name'] == '') {
+                $nombreFoto = 'default.jpg';
+            } else {
                 include '../includes/foto.logic.php';
-            }
-            else{
-                $nombreFoto = "default.jpg";
             }
             $dbh = connect();
             $respuesta = searchUsuarioOneEmail($dbh, $_COOKIE["usuario"]);
@@ -45,11 +44,10 @@ if ($_POST["action"] == "Publicar") {
             $descripcion = $_POST['descripcion'];
             $subcategoria = $_POST['subcategoria'];
             $id = $_POST["idPasar"];
-            if(isset($_FILES['foto'])){
-                include '../includes/foto.logic.php';
-            }
-            else{
+            if ($_FILES['foto']['name'] == '') {
                 $nombreFoto = $_POST['fotoAnuncio'];
+            } else {
+                include '../includes/foto.logic.php';
             }
             $dbh = connect();
             $respuesta = searchUsuarioOneEmail($dbh, $_COOKIE["usuario"]);
@@ -65,13 +63,13 @@ if ($_POST["action"] == "Publicar") {
             $resultado = updateAnuncioOne($dbh, $data);
             close($dbh);
             if ($resultado == 1) {
-                if($_POST['fotoAnuncio']!='default.jpg'){
-                unlink('../../img'.$_POST['fotoAnuncio']);
+                if ($_POST['fotoAnuncio'] != 'default.jpg' && $_FILES['foto']['name'] != '') {
+                    unlink('../../img' . $_POST['fotoPasar']);
                 }
                 header("location: ../busqueda.php?action=misAnuncios");
             }
         }
-    }else {
+    } else {
         header("location: ../publicarAnuncio.php?action=modificar&error=1");
     }
 }

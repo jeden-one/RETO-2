@@ -10,7 +10,7 @@ enctype="multipart/form-data">
     <h1>Modificar Anuncio</h1>
 
     <input type="hidden" value="<?= $anuncio->idAnuncio ?>" name="idPasar">
-    <input type="hidden" value="<?= $anuncio->fotoAnuncio ?>" name="fotoAnuncio">
+    <input type="hidden" value="<?= $anuncio->foto ?>" name="fotoAnuncio">
     <input id="imagen" type="file" name="foto" accept="image/x-png,image/gif,image/jpeg"/>
     <label for="titulo">Titulo: </label>
     <input id="titulo" type="text" name="titulo" value="<?= $anuncio->titulo ?>">
