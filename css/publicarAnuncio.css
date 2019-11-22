@@ -113,26 +113,35 @@ footer {
         width: 25%;
     }
 
+    #datos {
+        width: 50%;
+    }
+
+    header {
+        width: 50%;
+        justify-self: center;
+    }
+
     form input[type="submit"], form input[type="button"] {
-        font-size: 3vw;
+        font-size: 2vw;
         padding: 10px 20px;
         margin-bottom: 30px;
     }
 
     form input[type="text"], textarea, input[type="file"] {
         padding: 5px 15px;
-        font-size: 2vw;
+        font-size: 1.3vw;
     }
 
     h1 {
-        font-size: 4vw;
+        font-size: 2vw;
         margin-bottom: 10px;
     }
 
     #datos label {
         width: 100%;
         margin: 0;
-        font-size: 2.5vw;
+        font-size: 1.3vw;
     }
 
     .text {
@@ -144,7 +153,6 @@ footer {
         font-size: 30px;
         width: 100%;
     }
-
 
     footer {
         font-size: unset;
