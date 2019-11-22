@@ -110,7 +110,6 @@ h1 {
     header {
         margin-left: 10px;
         justify-self: center;
-        width: 50%;
     }
 
     #contenedor5 {
@@ -154,5 +153,13 @@ h1 {
         font-size: 1.3vw;
     }
 
+    #divImg {
+        margin-bottom: 20px;
+        width: 50%;
+    }
 
+    #fotoPerfil {
+        width: 30%;
+        border-radius: 50%;
+    }
 }

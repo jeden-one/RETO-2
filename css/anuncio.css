@@ -55,6 +55,7 @@
 .imgAnuncio {
     flex-basis: 60%;
     border-radius: 5px;
+    margin: 0 auto;
 }
 
 #fotoAnuncio {
@@ -64,8 +65,8 @@
 }
 
 .tituloycat {
-    flex-basis: 40%;
-    text-align: left;
+    flex-basis: 100%;
+    text-align: center;
     display: flex;
     flex-wrap: wrap;
     padding-right: 10px;
@@ -222,6 +223,23 @@
     margin: 0;
 }
 
+#fotoPerfil {
+    max-width: 20%;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+#navAnuncio strong {
+    margin-bottom: 10px;
+    text-align: center;
+    flex-basis: 100%;
+}
+
+.datosAnuncio p {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
 @media screen and (min-width: 769px) {
     header img {
         width: 25%;
@@ -234,34 +252,57 @@
     #containerAnuncio{
         width: 65%;
     }
+
     .tituloycat{
         flex-basis: 100%;
     }
-    .tituloycat h2{
-        font-size: 2vw;
-    }
-    .titDescripcion{
+
+    .tituloycat h2 {
         font-size: 3vw;
-    }
-    .descripcion{
-        font-size: 2.5vw;
-    }
-    .medio h3{
-        font-size: 3vw;
-    }
-    .medio h4{
-        font-size: 2.5vw;
-    }
-    .medio h5{
-        font-size: 2vw;
-    }
-    #navAnuncio strong{
-        font-size: 3.5vw;
-    }
-    .imgAnuncio{
-        flex-basis: 100%;
         text-align: center;
     }
+
+    .titDescripcion{
+        font-size: 2vw;
+    }
+
+    .descripcion{
+        font-size: 1.5vw;
+    }
+
+    .medio h3{
+        font-size: 2vw;
+        margin-bottom: 5px;
+    }
+
+    .medio h4{
+        font-size: 1.7vw;
+    }
+
+    .medio h5{
+        font-size: 1.5vw;
+    }
+
+    #navAnuncio strong{
+        font-size: 2vw;
+    }
+
+    #navAnuncio strong p {
+        margin: 5px;
+    }
+
+    .imgAnuncio{
+        flex-basis: 80%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    #contactar {
+        font-size: 2.5vw;
+        flex-basis: 65%;
+        margin: 0 auto;
+    }
+
     #fotoAnuncio{
         width: 100%;
         max-height: 25vw;
@@ -271,4 +312,34 @@
         width: 50%;
     }
 
+    #anuncios h3 {
+        font-size: 2vw;
+    }
+
+    .datosAnuncio p {
+        text-align: right;
+        font-size: 2vw;
+    }
+
+    .anuncio {
+        flex-basis: 45%;
+    }
+
+    .datosAnuncio :nth-child(2), .datosAnuncio :nth-child(3) {
+        text-align: right;
+        font-size: 1.5vw;
+    }
+
+    .anuncio p {
+        margin: 15px;
+    }
+
+    #anuncios h3 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #fotoPerfil {
+        margin-bottom: 5px;
+    }
 }
