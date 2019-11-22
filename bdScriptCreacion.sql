@@ -61,6 +61,12 @@ INSERT INTO usuarios (usuario,password,nombre) VALUES ('usuario2', '$2y$10$nkA9L
 INSERT INTO usuarios (usuario,password,nombre) VALUES ('usuario3', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','enpresa3');
 INSERT INTO usuarios (usuario,password,nombre) VALUES ('usuario4', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','enpresa4');
 INSERT INTO usuarios (usuario,password,nombre) VALUES ('usuario5', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','enpresa5');
+INSERT INTO usuarios (usuario,password,nombre) VALUES ('usuario6', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','enpresa6');
+INSERT INTO usuarios (usuario,password,nombre) VALUES ('Jon', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','jon santos');
+INSERT INTO usuarios (usuario,password,nombre) VALUES ('Eric', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','eric muñoz');
+INSERT INTO usuarios (usuario,password,nombre) VALUES ('Miguel', '$2y$10$nkA9LB1SmjxpGMkH4wgH7uUjeopQBr4kwWU6uD77EONf5c5OJTb1q','miguel barros');
+
+
 
 /*INSERTAR categorias*/
 
@@ -175,14 +181,75 @@ INSERT INTO subcategorias (nombre,id_categoria) VALUES ('Ganado',11);
 /*INSERTAR anuncios*/
 
 INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
-('Vendo coches', 'cosas de vender coches', 1,1,'coche.jpeg');
+('Vendo coches', 'cosas de vender coches', 15,6,'coche.jpeg');
+
 INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
-('Ps4 chachi', 'cosas de afasfafsafasfgasga', 3,3,'coche.jpeg');
+('Vendo todoterreno', 'cosas de vender todoterrenos', 15,7,'coche.jpeg');
+
 INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
-('Barcos virtuales', 'cosas de barcos bien chulos', 8,2,'coche.jpeg');
+('Vendo camisetas', 'cosas de vender camisetas', 70,6,'camiseta.jpeg');
+
 INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
-('rpg barato', 'para usar con tu vecino', 6,1,'coche.jpeg');
+('Vendo camisetas', 'cosas de vender camisetas', 67,7,'camiseta.jpeg');
+
 INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
-('Teles random', 'tele plasma lap', 3,3,'coche.jpeg');
+('Vendo camiseta básica', 'camiseta manchada', 69,8,'camiseta.jpeg');
+
 INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
-('Calzoncillos', 'estas usados', 5,3,'coche.jpeg');
+('Vendo camiseta básica', 'camiseta manchada', 68,6,'camiseta.jpeg');
+
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('Vendo balon', 'camiseta manchada', 34,2,'balon.jpeg');
+
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('Vendo canasta', 'chiquita canasta', 33,4,'canasta.jpeg');
+
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('Vendo playstation 4', ' se vende sin mando', 9,8,'play.jpeg');
+
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('playsation 4', 'camiseta manchada', 11,5,'play.jpeg');
+
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('Vendo xbox one', 'xbox sin juegos', 13,3,'xbox.jpeg');
+
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('xbox one', 'xbox sin juegos', 9,2,'xbox.jpeg');
+
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('oveja', 'oveja que esta totalmente descarriada', 83,3,'oveja.jpeg');
+
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('oveja acuatica', 'oveja que nada', 79,8,'oveja.jpeg');
+
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('Tocadisco de los 40', 'tocadisco de mi abuelo', 66,1,'tocadisco.jpeg');
+
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('portatil', 'portatil de gran calidad', 52,6,'portatil.jpeg');
+
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('el principito', 'el libro más emociannate de la historia', 59,2, 'libro.jpeg');
+
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('smartphone', 'un movil de ultima generacion', 51,5, 'movil.jpg');
+
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('placa controladora', 'placa un poco anticuada', 45,9, 'placaControladora.jpeg');
+
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('Cámara', 'cámara canon se vende por falta de uso ', 43,9, 'camara.jpeg');
+
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('grifo', 'grifo en muy buen estado', 27,4, 'grifo.jpeg');
+
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('palmera', 'palmera para decorar el interior o exterior de tu casa', 28,1, 'palmera.jpeg');
+
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('monster', 'bebida energética con la que aguntaras todo el dia', 7,3, 'monster.jpeg');
+
+INSERT INTO anuncios (titulo, descripcion,id_subcategoria,id_usuario,foto) VALUES
+('Brownies', 'brownies caseros, con extra de chocolate', 8,9, 'dulce.jpeg');
+
+
