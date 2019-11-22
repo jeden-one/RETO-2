@@ -275,27 +275,88 @@ footer a img {
 
 
 @media (min-width: 769px) {
-    nav {
-        margin-bottom: 50px;
-    }
-
     #contenedor {
         display: grid;
-        grid-template-rows: auto auto auto auto;
+        grid-template-rows: auto auto 1fr auto;
         grid-template-columns: 100%;
+        min-height: 100vh;
     }
 
-
-    .listaSubcategorias {
+    header{
         display: flex;
-        width: 100%;
-        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    header div {
+        width: 60%;
+        align-self: center;
+    }
+
+    header img {
+        width: 25%;
+        align-self: center;
+        margin-bottom: 15px;
+    }
+
+    header div p {
+        font-size: 1.5vw;
+        margin: 10px 15px 0 0;
+        flex: 4;
+    }
+
+    header div input[type="button"] {
+        font-size: 1.5vw;
+        flex: 1;
+    }
+
+    nav {
+        width: 60%;
+        justify-self: center;
+        justify-content: space-between;
+    }
+    nav form{
+        margin: 0;
+    }
+    nav input[type="text"]{
+        font-size: 1.2vw;
+        flex: 1;
+    }
+    #botones{
+        flex-basis: 100%;
+        justify-content: space-between;
+        margin: 0 0 15px;
+    }
+    #botones a {
+        font-size: 1.2vw;
+        flex-basis: 30%;
+        text-align: center;
+    }
+    #buscar {
+        font-size: 1.2vw;
+    }
+    #categorias{
+        width: 65%;
+        justify-self: center;
+    }
+
+    .elementosCategorias {
+        flex-basis: 100%;
+        font-size: 1.5vw;
     }
 
     .elementosSubcategorias {
         width: 30%;
-        line-height: 1.5em;
-        font-size: 14px;
+        font-size: 1.35vw;
+    }
+    .enlaceSubcategoria {
+        display: flex;
+        justify-content: center;
+        font-size: 1.35vw;
+    }
+    .listaSubcategorias {
+        display: flex;
+        width: 100%;
+        justify-content: center;
     }
 
     .divCatImagen {
@@ -310,27 +371,8 @@ footer a img {
         font-size: 30px;
     }
 
-    .elementosCategorias {
-        flex-basis: 100%;
-        font-size: 3vw;
-    }
-
-    .enlaceSubcategoria {
-        display: flex;
-        justify-content: center;
-        font-size: 1.5vw;
-        padding: 7px 0;
-    }
-
     .flechaAbajo {
         display: none;
-    }
-
-
-    #botones a {
-        font-size: 2vw;
-        flex-basis: 30%;
-        text-align: center;
     }
 
     form {
@@ -341,44 +383,6 @@ footer a img {
         display: none;
     }
 
-    form input[type="text"] {
-        padding: 1px 5px;
-        font-size: 30px;
-    }
-
-    #buscar {
-        height: 10%;
-        font-size: 30px;
-    }
-
-    header {
-        margin-bottom: 25px;
-    }
-
-    header div {
-        align-items: flex-start;
-    }
-
-    header div p {
-        font-size: 2vw;
-        flex: 2;
-        margin: 10px 0 0 0;
-    }
-
-    header img {
-        width: 25%;
-    }
-
-    header div input[type="button"] {
-        font-size: 2.5vw;
-    }
-
-    #usLog {
-        font-size: 2vw;
-        margin-left: 25px;
-        flex: 1;
-    }
-
     footer {
         font-size: unset;
         display: flex;
@@ -386,8 +390,8 @@ footer a img {
         flex-direction: row;
     }
 
-    footer p {
-        font-size: 1vw;
+    #copy p,  #ayuda p,#divIconos p{
+        font-size: 1.3vw;
         margin: 0;
     }
 

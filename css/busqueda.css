@@ -23,19 +23,22 @@
     justify-content: space-between;
 }
 
-.infoanuncio{
+.infoanuncio {
     flex-basis: 50%;
 }
-.infoanuncio p{
+
+.infoanuncio p {
     text-align: right;
     font-size: 3.5vw;
     margin: 0;
 }
-h2{
+
+h2 {
     font-size: 6vw;
     margin: 0;
 }
-h3{
+
+h3 {
     text-align: right;
     font-size: 5vw;
     margin: 0 0 15px;
@@ -204,6 +207,7 @@ nav input[type="text"] {
 .datosAnuncio {
     flex-basis: 100%;
 }
+
 .divanuncio {
     flex-basis: 100%;
     display: flex;
@@ -211,7 +215,7 @@ nav input[type="text"] {
     flex-wrap: wrap;
 }
 
-.imagenDiv{
+.imagenDiv {
     flex-basis: 49%;
 
 }
@@ -227,7 +231,7 @@ nav input[type="text"] {
     text-align: right;
 }
 
-.datosAnuncioBusqueda{
+.datosAnuncioBusqueda {
     display: flex;
 }
 
@@ -240,9 +244,14 @@ nav input[type="text"] {
     header {
         margin-left: 10px;
     }
-  
+
     footer p, a {
         font-size: 2vw;
+    }
+
+    nav {
+    width: 60%;
+        justify-self: center;
     }
 
     nav form input[type="text"] {
@@ -269,6 +278,7 @@ nav input[type="text"] {
     }
 
     form {
+        flex-basis: 70%;
         display: flex;
         justify-content: center;
     }
@@ -294,6 +304,7 @@ nav input[type="text"] {
         display: flex;
         justify-content: space-between;
     }
+
     .anuncio p {
         flex-basis: 100%;
         font-size: 1.75vw;
@@ -304,6 +315,7 @@ nav input[type="text"] {
     .imagenDiv {
         flex-basis: 49%;
     }
+
     .imagenDiv img {
         width: 100%;
         object-fit: cover;
