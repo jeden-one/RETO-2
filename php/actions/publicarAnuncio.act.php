@@ -91,6 +91,9 @@ if ($_POST["action"] == "Publicar") {
             close($dbh);
 
             if ($resultado == 1) {
+                if($_POST['fotoAnuncio']!='default.jpg'){
+                unlink('../../img'.$_POST['fotoAnuncio']);
+                }
                 header("location: ../busqueda.php?action=misAnuncios");
             }
         }
@@ -103,7 +106,7 @@ if ($_POST["action"] == "Publicar") {
             $descripcion = $_POST['descripcion'];
             $subcategoria = $_POST['subcategoria'];
             $id = $_POST["idPasar"];
-            $nombreFoto = "default.jpg";
+            $nombreFoto = $_POST['fotoAnuncio'];
 
             $dbh = connect();
             $respuesta = searchUsuarioOneEmail($dbh, $_COOKIE["usuario"]);
