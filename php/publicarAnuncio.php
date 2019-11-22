@@ -12,6 +12,7 @@
     <link href="../css/general.css" rel="stylesheet">
     <link href="../css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/publicarAnuncio.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../../script/librerias/jQuery/jquery-3.4.1.js"></script>
     <script src="../script/enrutado.js"></script>
 </head>

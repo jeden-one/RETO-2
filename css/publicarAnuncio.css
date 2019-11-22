@@ -106,33 +106,35 @@ footer {
     grid-column: 1/2;
 }
 
-
-
 @media screen and (min-width: 769px) {
     header img{
         width: 25%;
     }
 
+    #datos {
+        width: 50%;
+    }
+
     form input[type="submit"], form input[type="button"] {
-        font-size: 3vw;
+        font-size: 2vw;
         padding: 10px 20px;
         margin-bottom: 30px;
     }
 
     form input[type="text"], textarea, input[type="file"] {
         padding: 5px 15px;
-        font-size: 2vw;
+        font-size: 1.3vw;
     }
 
     h1 {
-        font-size: 4vw;
+        font-size: 2vw;
         margin-bottom: 10px;
     }
 
     #datos label {
         width: 100%;
         margin: 0;
-        font-size: 2.5vw;
+        font-size: 1.3vw;
     }
 
     .text {
@@ -143,39 +145,5 @@ footer {
         padding: 5px 15px;
         font-size: 30px;
         width: 100%;
-    }
-
-
-    footer {
-        font-size: unset;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-    }
-
-    footer p {
-        font-size: 1vw;
-        margin: 0;
-    }
-
-    footer a img {
-        width: 50%;
-    }
-
-    footer div {
-        width: 33%;
-    }
-
-    #divIconos p {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    #divIconos a {
-        width: 15%;
-    }
-
-    #divIconos {
-        width: 33%;
     }
 }
