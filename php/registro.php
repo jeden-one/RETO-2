@@ -12,7 +12,7 @@ include("includes/print/header.print.php") ?>
     <input type="text" name="nombre" id="nombre" placeholder="Nombre">
     <input type="email" name="email" id="email" placeholder="Email">
     <input type="button" value="Enviar Petición"
-           onclick="enviarCorreo($('#email').val(),'registro'); enviarCorreo('ajebask.notificaciones@gmail.com','registro')">
+           onclick="enviarCorreo($('#email').val(),'registro'); enviarCorreo('ajebask.notificaciones@gmail.com','registro');">
 
     <div id="separar"></div>
 
