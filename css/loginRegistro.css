@@ -127,37 +127,4 @@ form input[type="submit"]:hover, form input[type="button"]:hover {
     #divLogin a {
         font-size: 1.7vw;
     }
-
-    footer {
-        font-size: unset;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-    }
-
-    footer p {
-        font-size: 1vw;
-        margin: 0;
-    }
-
-    footer a img {
-        width: 50%;
-    }
-
-    footer div {
-        width: 33%;
-    }
-
-    #divIconos p {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    #divIconos a {
-        width: 15%;
-    }
-
-    #divIconos {
-        width: 33%;
-    }
 }

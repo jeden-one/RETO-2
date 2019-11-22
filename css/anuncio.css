@@ -70,24 +70,28 @@
     flex-wrap: wrap;
     padding-right: 10px;
 }
+
 .tituloycat h2{
     flex-basis: 100%;
     font-size: 5.5vw;
     margin: 0 0 10px 0;
     font-size: 6vw;
 }
+
 .medio h3{
     margin: 20px 0 0 0;
     flex-basis: 100%;
     align-self: flex-end;
     font-size: 6vw;
 }
+
 .medio h4{
     font-size: 4vw;
     flex-basis: 100%;
     margin: 0 0 5px;
     align-self: flex-end;
 }
+
 .medio h5{
     font-size: 3vw;
     text-align: right;
@@ -95,6 +99,7 @@
     align-self: flex-end;
     margin: 0;
 }
+
 .titDescripcion {
     flex-basis: 100%;
     font-size: 6vw;
@@ -222,6 +227,10 @@
         width: 25%;
     }
 
+    header {
+        justify-self: center;
+    }
+
     #containerAnuncio{
         width: 65%;
     }
@@ -229,7 +238,7 @@
         flex-basis: 100%;
     }
     .tituloycat h2{
-        font-size: 3.5vw;
+        font-size: 2vw;
     }
     .titDescripcion{
         font-size: 3vw;
@@ -257,49 +266,9 @@
         width: 100%;
         max-height: 25vw;
     }
-    #anuncios{
-
-    }
-
-    #divIconos a {
-        width: 5%;
-    }
 
     #fotoAnuncio {
         width: 50%;
-    }
-
-    footer {
-        font-size: unset;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-    }
-
-    footer p {
-        font-size: 1vw;
-        margin: 0;
-    }
-
-    footer a img {
-        width: 50%;
-    }
-
-    footer div {
-        width: 33%;
-    }
-
-    #divIconos p {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    #divIconos a {
-        width: 15%;
-    }
-
-    #divIconos {
-        width: 33%;
     }
 
 }
