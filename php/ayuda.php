@@ -16,6 +16,11 @@ include "database/mysql.php" ?>
         <script src="../Script/librerias/jQuery/jquery-3.4.1.js"></script>
         <script src="../Script/ayuda.js"></script>
         <script src="../script/enrutado.js"></script>
+        <script>
+            window.onload=function () {
+                document.getElementById("listaAsuntos").selectedIndex =0;
+            }
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
@@ -29,7 +34,7 @@ include "database/mysql.php" ?>
             <form action="#" method="post" id="datos">
                 <p>Indica el motivo de contacto</p>
                 <select id="listaAsuntos" onchange="seleccionarValor()">
-                    <option value="nada">-</option>
+                    <option value="nada" selected>-</option>
                     <option value="Modificar y borrar un anuncio">Modificar y borrar un anuncio</option>
                     <option value="Problemas con mi contraseña">Problemas con mi contraseña</option>
                     <option value="No puedo actualizar mis datos">No puedo actualizar mis datos</option>

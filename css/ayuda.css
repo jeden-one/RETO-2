@@ -33,7 +33,7 @@ input[type="button"]:hover {
 
 #contenedor2 {
     display: grid;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto 1fr auto;
     height: 100vh;
 }
 
@@ -87,29 +87,26 @@ h1 {
     font-size: 7vw;
 }
 
-@media screen and(min-width: 769px) {
+@media (min-width: 769px) {
     #titulo {
-        font-size: 6vw;
+        font-size: 3vw;
     }
 
     header img {
-        width: 50%;
-    }
-
-    #form {
-        max-width: none;
+        width: 25%;
     }
 
     label, p {
-        font-size: 3vw;
+        font-size: 2vw;
     }
 
     input[type="button"] {
-        font-size: 3vw;
+        font-size: 2vw;
     }
 
     input[type="text"], #textarea {
-        font-size: 2vw;
+        font-size: 1.6vw;
+        width: 100%;
     }
 
     #divIconos a {
@@ -123,7 +120,7 @@ h1 {
 
     #datos {
         width: 80%;
-        margin: 0 auto;
+        justify-self: center;
     }
 
     footer {
@@ -160,7 +157,12 @@ h1 {
     }
 
     #listaAsuntos {
-        font-size: 2vw;
+        font-size: 1.6vw;
         margin-bottom: 25px;
+        height: 3vw;
+        padding-left: 10px;
+    }
+    #listaAsuntos option{
+        padding: 10px;
     }
 }
