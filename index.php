@@ -26,7 +26,7 @@ include 'php/includes/index.logic.php'; ?>
         </div>
     </header>
     <nav>
-        <form action="php/actions/buscador.act.php" method="post">
+        <form action="php/busqueda.php" method="post">
             <input type="text" name="busqueda" value="<?= $_COOKIE["busqueda"] ?>" placeholder="Que estás buscando?">
             <input type="submit" name="buscar" value="Buscar" id="buscar">
         </form>

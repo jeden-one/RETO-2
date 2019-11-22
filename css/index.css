@@ -282,11 +282,12 @@ footer a img {
         min-height: 100vh;
     }
 
-    header{
+    header {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
     }
+
     header div {
         width: 60%;
         align-self: center;
@@ -314,27 +315,33 @@ footer a img {
         justify-self: center;
         justify-content: space-between;
     }
-    nav form{
+
+    nav form {
         margin: 0;
     }
-    nav input[type="text"]{
+
+    nav input[type="text"] {
         font-size: 1.2vw;
         flex: 1;
     }
-    #botones{
+
+    #botones {
         flex-basis: 100%;
         justify-content: space-between;
         margin: 0 0 15px;
     }
+
     #botones a {
         font-size: 1.2vw;
         flex-basis: 30%;
         text-align: center;
     }
+
     #buscar {
         font-size: 1.2vw;
     }
-    #categorias{
+
+    #categorias {
         width: 65%;
         justify-self: center;
     }
@@ -347,12 +354,15 @@ footer a img {
     .elementosSubcategorias {
         width: 30%;
         font-size: 1.35vw;
+        padding: 0;
     }
+
     .enlaceSubcategoria {
         display: flex;
         justify-content: center;
         font-size: 1.35vw;
     }
+
     .listaSubcategorias {
         display: flex;
         width: 100%;
@@ -390,7 +400,7 @@ footer a img {
         flex-direction: row;
     }
 
-    #copy p,  #ayuda p,#divIconos p{
+    #copy p, #ayuda p, #divIconos p {
         font-size: 1.3vw;
         margin: 0;
     }

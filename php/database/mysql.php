@@ -287,7 +287,32 @@ function insertUsuario($dbh, $data)
     $stmt->execute($data);
     return $stmt->rowCount();
 }
-
+/**
+ * insertar una categoria (solo admin)
+ *
+ * @param $dbh variable para conectarse a la base de datos
+ * @param $data array asociativo con todos los apartados de la categoria
+ * @return mixed cantidad de filas afectadas
+ */
+function insertCategoria($dbh, $data)
+{
+    $stmt = $dbh->prepare("INSERT INTO categorias (nombre) VALUES (:nombre)");
+    $stmt->execute($data);
+    return $stmt->rowCount();
+}
+/**
+ * insertar una subcategoria (solo admin)
+ *
+ * @param $dbh variable para conectarse a la base de datos
+ * @param $data array asociativo con todos los apartados de la subcategoria
+ * @return mixed cantidad de filas afectadas
+ */
+function insertSubcategoria($dbh, $data)
+{
+    $stmt = $dbh->prepare("INSERT INTO categorias (nombre,id_categoria) VALUES (:nombre,:categoria)");
+    $stmt->execute($data);
+    return $stmt->rowCount();
+}
 /**
  * buscar por coincidencia en titulo y nombre usuario
  *
