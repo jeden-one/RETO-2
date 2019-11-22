@@ -153,8 +153,8 @@ function searchAnuncioBySubcategoria($dbh, $id_subcategoria)
     $data = array(
         'id_subcategoria' => $id_subcategoria
     );
-    $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio,a.id_subcategoria subcategoria,
- u.nombre nombreUsuario, a.fecha_creacion fechaCreacion
+    $stmt = $dbh->prepare("SELECT a.id id,a.titulo titulo, a.foto fotoAnuncio,a.id_subcategoria subcategoria,a.descripcion descripcion,
+ u.nombre nombreUsuario, u.foto fotoUsuario, a.fecha_creacion fechaCreacion
     FROM anuncios a, usuarios u 
     WHERE u.id=a.id_usuario AND a.id_subcategoria=:id_subcategoria;");
     if ($stmt->execute($data) === true) {

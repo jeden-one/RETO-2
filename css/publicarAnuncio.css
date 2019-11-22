@@ -115,11 +115,6 @@ footer {
         width: 50%;
     }
 
-    header {
-        width: 50%;
-        justify-self: center;
-    }
-
     form input[type="submit"], form input[type="button"] {
         font-size: 2vw;
         padding: 10px 20px;
