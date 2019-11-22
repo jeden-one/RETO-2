@@ -13,6 +13,7 @@ include_once "database/mysql.php";
     <link href="../css/general.css" rel="stylesheet">
     <link href="../css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/anuncio.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../script/enrutado.js"></script>
 </head>
 
