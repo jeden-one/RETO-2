@@ -30,12 +30,12 @@
 ## Desarrolladores y redes sociales
 Aplicación creada por los desarrolladores del equipo Jeden:
   * [Jon Santos](https://github.com/Santoxjon)
-  * [Eric Muñoz] (https://github.com/EricMunozFernandez)
-  * [Miguel Barros] (https://github.com/miguelbarrosv)
+  * [Eric Muñoz](https://github.com/EricMunozFernandez)
+  * [Miguel Barros](https://github.com/miguelbarrosv)
   
 Redes sociales de Jeden :
-  * [Twitter] (https://twitter.com/Jeden__)
-  * [Github] (https://github.com/jeden-one)
+  * [Twitter](https://twitter.com/Jeden__)
+  * [Github](https://github.com/jeden-one)
   
 ## Soporte 
 Para cualquier incidencia relacionada con la aplicación no dudes en contactar con el equipo de Jeden a través del correo
