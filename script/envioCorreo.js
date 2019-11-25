@@ -17,14 +17,15 @@ function enviarCorreo(destinatario, proposito, asunto, mensaje) {
                     if (validarTexto(document.getElementById("nombre").value.toUpperCase())) {
                         if (validarMail(document.getElementById("email").value.toUpperCase())) {
                             Email.send({
-                                SecureToken: "7732a245-1148-45c9-a28b-2c1ac72e73bc",
+                                SecureToken: "c3bc4c76-1735-49dc-ba90-5de15fba9b96",
                                 To: destinatario,
-                                From: "ajebask.notificaciones@gmail.com",
+                                From: "notif.ajebask@gmail.com",
                                 Subject: "Solicitud de inscripcion de nueva empresa",
                                 Body: 'NIF de la Empresa:' + $("#nif").val() + '<br>' +
                                     'Nombre de la empresa:' + $("#nombre").val() + '<br>' +
                                     'Email de la empresa: ' + $("#email").val()
                             }).then(
+                                message => alert(message)
                             );
                         } else {
                             alert("No es un email válido");
@@ -39,14 +40,19 @@ function enviarCorreo(destinatario, proposito, asunto, mensaje) {
             break;
         case "ayuda":
             Email.send({
-                SecureToken: "7732a245-1148-45c9-a28b-2c1ac72e73bc",
+                SecureToken: "c3bc4c76-1735-49dc-ba90-5de15fba9b96",
                 To: destinatario,
-                From: "ajebask.notificaciones@gmail.com",
+                From: "notif.ajebask@gmail.com",
                 Subject: asunto,
                 Body: mensaje
             }).then(
+                message => alert(message)
             );
             break;
     }
-    window.location.href ="../index.php";
+}
+
+function envioRegistro() {
+    enviarCorreo($('#email').val(), 'registro');
+    enviarCorreo('notif.ajebask@gmail.com', 'registro');
 }

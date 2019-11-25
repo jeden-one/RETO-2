@@ -13,8 +13,8 @@ include "database/mysql.php" ?>
         <link href="../css/normalize.css" rel="stylesheet">
         <script src="../script/librerias/SmtpJS.com-v3.0.0/SmtpJS.js"></script>
         <script src="../script/envioCorreo.js"></script>
-        <script src="../Script/librerias/jQuery/jquery-3.4.1.js"></script>
-        <script src="../Script/ayuda.js"></script>
+        <script src="../script/librerias/jQuery/jquery-3.4.1.js"></script>
+        <script src="../script/ayuda.js"></script>
         <script src="../script/enrutado.js"></script>
         <script>
             window.onload=function () {
