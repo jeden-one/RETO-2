@@ -9,7 +9,7 @@ foreach ($categorias as $categoria) { ?>
                 <?php $subcategorias = searchSubcategoriaByIdCategoria($dbh, $categoria->id);
                 foreach ($subcategorias as $subcategoria) { ?>
                     <li class="elementosSubcategorias"><a
-                                href="php/actions/buscador.act.php?subcategoria=<?= $subcategoria->id_subcategoria ?>"
+                                href="php/busqueda.php?subcategoria=<?= $subcategoria->id_subcategoria ?>"
                                 class="enlaceSubcategoria"><?= $subcategoria->subcategoria ?></a></li>
                 <?php } ?>
             </ul>
