@@ -16,6 +16,7 @@ include "database/mysql.php" ?>
         <script src="../script/librerias/jQuery/jquery-3.4.1.js"></script>
         <script src="../script/ayuda.js"></script>
         <script src="../script/enrutado.js"></script>
+        <script src="../script/validaciones.js"></script>
         <script>
             window.onload=function () {
                 document.getElementById("listaAsuntos").selectedIndex =0;

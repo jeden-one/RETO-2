@@ -22,5 +22,9 @@ echo "Copiando fichero configuración preconfigurado Apache2-Ajebask"
 sudo cp /vagrant/scripts_configuracion/000-default.conf /etc/apache2/sites-enabled/
 sudo /etc/init.d/apache2 restart
 
+echo "Generando permisos para la carpeta de imágenes"
+sudo chmod 777 /vagrant/img
+
+echo "Generando base de datos"
 mysql -u root </vagrant/bdScriptCreacion.sql
 mysql -u root </vagrant/scripts_configuracion/configurar_usuarios.sql
